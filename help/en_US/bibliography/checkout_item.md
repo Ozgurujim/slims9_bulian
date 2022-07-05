@@ -1,6 +1,6 @@
 #### Checkout items
 <hr>
-This menu provides information about the item being borrowed. This menu is also equipped with a search facility to find bibliographic items and titles. The information contained in this menu is: 
+This menu provides information about the item being borrowed. This menu is also equipped with a search facility to find bibliographic items and titles. The selections contained in this menu are: 
 - Item Code, 
 - Member ID Borrower, 
 - Title, 
