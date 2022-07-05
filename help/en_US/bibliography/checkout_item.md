@@ -5,4 +5,4 @@ This menu provides information about the item being borrowed. This menu is also 
 - Member ID Borrower, 
 - Title, 
 - Loan Date (when lent), 
-- Due Date (date of return).
+- Due Date (when item should be returned).
