@@ -742,7 +742,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'history') {
 
     if (!($can_read AND $can_write)) {
 
-        die('<div class="errorBox">' . __('_ _ _ _You are not authorized to view this section') . '</div>');
+        die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
     }
     /* RECORD FORM */
     // try query
