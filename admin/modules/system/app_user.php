@@ -148,7 +148,6 @@ if (isset($_POST['removeImage']) && isset($_POST['uimg']) && isset($_POST['img']
 if (isset($_POST['saveData'])) { //echo '<pre>'; var_dump($_SESSION); echo '</pre>'; die();
     $userName = $_SESSION['uid'] > 1 ? $_SESSION['uname'] : trim(strip_tags($_POST['userName']));
     $realName = trim(strip_tags($_POST['realName']));
-    #$old_passwd = $dbs->escape_string(trim($_POST['old_passwd']));
     $passwd1 = $dbs->escape_string(trim($_POST['passwd1']));
     $passwd2 = $dbs->escape_string(trim($_POST['passwd2']));
     // check form validity
@@ -193,15 +192,18 @@ if (isset($_POST['saveData'])) { //echo '<pre>'; var_dump($_SESSION); echo '</pr
             $data['groups'] = trim($groups);
         }
         if (($passwd1 AND $passwd2) AND ($passwd1 === $passwd2)) {
-            $old_passwd = $dbs->escape_string(trim($_POST['old_passwd']));
-            $up_q = $dbs->query('SELECT passwd FROM user WHERE user_id='.$_SESSION['uid']);
-            $up_d = $up_q->fetch_row();
-            if (password_verify($old_passwd, $up_d[0])) {
-                $data['passwd'] = password_hash($passwd2, PASSWORD_BCRYPT);
-                // $data['passwd'] = 'literal{MD5(\''.$passwd2.'\')}';
+            if ( (isset($_GET['changecurrent'])) AND ($_GET['changecurrent']='true') ) {
+                $old_passwd = $dbs->escape_string(trim($_POST['old_passwd']));
+                $up_q = $dbs->query('SELECT passwd FROM user WHERE user_id='.$_SESSION['uid']);
+                $up_d = $up_q->fetch_row();
+                if (password_verify($old_passwd, $up_d[0])) {
+                    $data['passwd'] = password_hash($passwd2, PASSWORD_BCRYPT);
+                } else {
+                    toastr(__('Password change failed. Make sure you input the old password.'))->error();
+                    exit();
+                }
             } else {
-                toastr(__('Password change failed. Make sure you input the old password.'))->error();
-                exit();
+                $data['passwd'] = password_hash($passwd2, PASSWORD_BCRYPT);
             }
         }
         $data['input_date'] = date('Y-m-d');
@@ -484,7 +486,9 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
         $form->addCheckBox('groups', __('Group(s)'), $group_options, unserialize($rec_d['groups']??''));
     }
     // user password
-    $form->addTextField('password', 'old_passwd', __('Old Password').'*', '', 'style="width: 50%;" class="form-control"');
+    if ( (isset($_GET['changecurrent'])) AND ($_GET['changecurrent']='true') ) {
+        $form->addTextField('password', 'old_passwd', __('Old Password').'*', '', 'style="width: 50%;" class="form-control"');
+    }
     $form->addTextField('password', 'passwd1', __('New Password').'*', '', 'style="width: 50%;" class="form-control"');
     // user password confirm
     $form->addTextField('password', 'passwd2', __('Confirm New Password').'*', '', 'style="width: 50%;" class="form-control"');
