@@ -59,7 +59,13 @@ $can_read = utility::havePrivilege('bibliography', 'r');
 $can_write = utility::havePrivilege('bibliography', 'w');
 
 if (!$can_read) {
-    die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
+    die('<div class="errorBox">' . __('_You are not authorized to view this section') . '</div>');
+}
+# CHECK ACCESS
+if ($_SESSION['uid'] != 1) {
+    if (!utility::haveAccess('bibliography.bibliography-list')) {
+        die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
+    }
 }
 
 // execute registered hook
@@ -109,12 +115,13 @@ if (isset($_POST['removeImage']) && isset($_POST['bimg']) && isset($_POST['img']
 /* RECORD OPERATION */
 if (isset($_POST['saveData']) AND $can_read AND $can_write) {
     # CHECK ACCESS
-    if (!utility::haveAccess('bibliography.bibliography-add')) {
-        utility::jsToastr('Bibliography', __('You are not authorized to view this section'), 'error');
-        writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'] . ' try to access bibliography module without having access right from ' . $_SERVER['REMOTE_ADDR']);
-        exit();
+    if ($_SESSION['uid'] != 1) {
+        if (!utility::haveAccess('bibliography.bibliography-add')) {
+            utility::jsToastr('Bibliography', __('You are not authorized to view this section'), 'error');
+            writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'] . ' try to access bibliography module without having access right from ' . $_SERVER['REMOTE_ADDR']);
+            exit();
+        }
     }
-
     if (!simbio_form_maker::isTokenValid()) {
         utility::jsToastr('Bibliography', __('Invalid form submission token!'), 'error');
         writeLog('staff', $_SESSION['uid'], 'system', 'Invalid form submission token, might be a CSRF attack from ' . $_SERVER['REMOTE_ADDR']);
@@ -735,7 +742,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'history') {
 
     if (!($can_read AND $can_write)) {
 
-        die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
+        die('<div class="errorBox">' . __('_ _ _ _You are not authorized to view this section') . '</div>');
     }
     /* RECORD FORM */
     // try query
