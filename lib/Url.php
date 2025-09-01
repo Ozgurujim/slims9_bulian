@@ -142,9 +142,9 @@ class Url
 
     public static function isAdmin()
     {
-        $self = self::getSelf();
-        // return true when the first path segment is "admin" (e.g. /admin/index.php)
-        return (bool) preg_match('#^(?:/)?admin(?:/|$)#i', $self);
+        $self = self::getSelf() ?? '';
+        // return true when any path segment is "admin" (e.g. /admin/index.php, /slims/admin/, /slims/subpath/admin/)
+        return (bool) preg_match('#(?:/|^)admin(?:/|$)#i', $self);
     }
 
     public static function isOpac()
