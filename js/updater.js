@@ -119,12 +119,12 @@ jQuery.extend({
  */
 const createAjaxErrorMessage = (url, errorObject) => {
     // Get environment setting from meta tag
-    const environment = document.querySelector('meta[name="env"]')?.getAttribute('content') || 'production';
+    const environment = document.querySelector('meta[name="env"]')?.getAttribute('content') || 'prod';
     
     // Sanitize URL to prevent XSS
     const sanitizedUrl = $('<div>').text(url).html();
     
-    if (environment === 'production') {
+    if (environment === 'prod') {
         // Production error - minimal information
         return `
             <div class="w-full p-5">
