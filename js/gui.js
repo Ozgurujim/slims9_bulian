@@ -663,10 +663,10 @@ const backToList = (container = '#mainContent') => {
   const $container = $(container);
   const $form = $container.find('form[method="POST"]');
   
-  if (!$form.length) return;
+  if (!$form.length) return false;
   
   const formAction = $form.attr('action');
-  if (!formAction) return;
+  if (!formAction) return false;
   
   try {
     const [baseUrl, queryString] = formAction.split('?');
@@ -675,7 +675,7 @@ const backToList = (container = '#mainContent') => {
       if (typeof $container.simbioAJAX === 'function') {
         $container.simbioAJAX(baseUrl);
       }
-      return;
+      return false;
     }
     
     const params = new URLSearchParams(queryString);
@@ -904,7 +904,7 @@ $(() => {
     const title = $popUpButton.attr('title') || '';
     
     if ($.colorbox) {
-      $.colorbox({
+      top.jQuery.colorbox({
         iframe: isIframe,
         href: href,
         innerWidth: width,
@@ -918,7 +918,7 @@ $(() => {
   const startDictation = () => {
     if (!('webkitSpeechRecognition' in window)) {
       console.warn('Speech recognition not supported');
-      return;
+      return false;
     }
     
     try {
@@ -930,16 +930,21 @@ $(() => {
       recognition.onresult = (event) => {
         const transcript = event.results[0]?.[0]?.transcript;
         if (transcript) {
-          const $transcriptField = $('#transcript');
-          if ($transcriptField.length) {
-            $transcriptField.val(transcript);
-            $transcriptField.closest('form').submit();
+          const transcriptField = document.getElementById('transcript');
+          if (transcriptField) {
+            transcriptField.value = transcript;
+            recognition.stop();
+            const labnolForm = document.getElementById('labnol');
+            if (labnolForm) {
+              labnolForm.submit();
+            }
           }
         }
       };
       
       recognition.onerror = (event) => {
         console.warn('Speech recognition error:', event.error);
+        recognition.stop();
       };
       
       recognition.start();
@@ -968,7 +973,7 @@ $(() => {
   if ($.fn.ionRangeSlider) {
     const initializeRangeSlider = () => {
       const $inputSlider = $('.input-slider');
-      if (!$inputSlider.length) return;
+      if (!$inputSlider.length) return false;
       
       const $inputFrom = $('.js-input-from');
       const $inputTo = $('.js-input-to');
@@ -1141,7 +1146,7 @@ const IframeAutoResize = {
    * @param {HTMLIFrameElement} iframe - The iframe element
    */
   setupIframe: function(iframe) {
-    if (!iframe || iframe.tagName !== 'IFRAME') return;
+    if (!iframe || iframe.tagName !== 'IFRAME') return false;
 
     // Get custom min/max heights from style or use defaults
     const style = window.getComputedStyle(iframe);
@@ -1204,18 +1209,18 @@ const IframeAutoResize = {
   resizeIframe: function(iframe, minHeight, maxHeight) {
     try {
       const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-      if (!iframeDoc) return;
+      if (!iframeDoc) return false;
 
       // Get content height
       const body = iframeDoc.body;
       const html = iframeDoc.documentElement;
       
-      if (!body) return;
+      if (!body) return false;
 
       // Wait for content to be fully loaded
       if (iframeDoc.readyState !== 'complete') {
         setTimeout(() => this.resizeIframe(iframe, minHeight, maxHeight), 100);
-        return;
+        return false;
       }
 
       // Check if there's actual content
@@ -1229,7 +1234,7 @@ const IframeAutoResize = {
         if (currentHeight !== minHeight) {
           iframe.style.height = minHeight + 'px';
         }
-        return;
+        return false;
       }
 
       // Calculate actual content height more accurately
@@ -1298,7 +1303,7 @@ const IframeAutoResize = {
   observeContent: function(iframe, minHeight, maxHeight) {
     try {
       const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-      if (!iframeDoc || !iframeDoc.body) return;
+      if (!iframeDoc || !iframeDoc.body) return false;
 
       // Remove existing observer
       if (this.observers.has(iframe)) {

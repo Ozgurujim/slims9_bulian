@@ -40,7 +40,8 @@ const AjaxHistoryManager = {
         
         this.history.unshift({ 
             url: url, 
-            element: domElement,
+            elmt: domElement,  // Use 'elmt' for backward compatibility
+            element: domElement,  // Keep modern name as well
             timestamp: Date.now()
         });
 
@@ -60,8 +61,11 @@ const AjaxHistoryManager = {
             return;
         }
 
-        // Validate moveBack parameter
-        const validMoveBack = Math.max(1, Math.min(moveBack, this.history.length - 1));
+        // Use original logic for backward compatibility
+        let validMoveBack = moveBack;
+        if (validMoveBack >= this.history.length) {
+            validMoveBack -= 1;
+        }
         
         if (this.history.length <= 1) {
             // No previous history, redirect to current page
@@ -79,7 +83,7 @@ const AjaxHistoryManager = {
             return;
         }
 
-        const $element = $(historyItem.element);
+        const $element = $(historyItem.elmt || historyItem.element);
         if ($element.length && typeof $element.simbioAJAX === 'function') {
             $element.simbioAJAX(historyItem.url, { method: 'get' });
         } else {
@@ -118,85 +122,49 @@ jQuery.extend({
  * @returns {string} Formatted error message HTML
  */
 const createAjaxErrorMessage = (url, errorObject) => {
-    // Get environment setting from meta tag
+    // Get environment setting from meta tag - modern way
     const environment = document.querySelector('meta[name="env"]')?.getAttribute('content') || 'prod';
     
     // Sanitize URL to prevent XSS
     const sanitizedUrl = $('<div>').text(url).html();
     
     if (environment === 'prod') {
-        // Production error - minimal information
+        // Production error - match original format exactly
         return `
-            <div class="w-full p-5">
-                <div class="col-6">
-                    <div class="alert alert-danger" role="alert">
-                        <h1 class="alert-heading" style="font-size: 30pt">${errorObject.status || 'Error'}</h1>
-                        <strong style="font-size: 18pt">${errorObject.statusText || 'Unknown Error'}</strong>
-                        <p style="font-size: 14pt" class="mb-3">
-                            Please contact system admin or change <strong>system environment to development</strong> 
-                            at system module for more information about this error.
-                        </p>
-                        <hr>
-                        <div class="mb-0">
-                            <strong>URL:</strong>
-                            <span class="text-muted small">${sanitizedUrl}</span>
-                        </div>
-                        <div class="mt-2">
-                            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.reload()">
-                                <i class="fa fa-refresh"></i> Reload Page
-                            </button>
-                            <button type="button" class="btn btn-outline-primary btn-sm ml-2" onclick="history.back()">
-                                <i class="fa fa-arrow-left"></i> Go Back
-                            </button>
-                        </div>
-                    </div>
-                </div>
+    <div class="w-full p-5">
+        <div class="col-6">
+            <h1 style="font-size: 30pt">${errorObject.status}</h1>
+            <strong style="font-size: 18pt">${errorObject.statusText}</strong>
+            <p style="font-size: 14pt">Please contact system admin or change <strong>system environment to development</strong> at system module for more information about this error.</p>
+            <div>
+                <strong>URL : </strong>
+                <span class="text-muted">${sanitizedUrl}</span>
             </div>
-        `;
+        </div>
+    </div>`;
     } else {
-        // Development error - detailed information
-        const responseText = errorObject.responseText || 'No response text available';
-        const sanitizedResponse = $('<div>').text(responseText).html();
-        
-        return `
-            <div class="w-full p-5">
-                <div class="col-12">
-                    <div class="alert alert-danger" role="alert">
-                        <h1 class="alert-heading" style="font-size: 24pt">
-                            <i class="fa fa-exclamation-triangle"></i> Development Error
-                        </h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <strong>Status:</strong> ${errorObject.status || 'Unknown'}<br>
-                                <strong>Status Text:</strong> ${errorObject.statusText || 'Unknown'}<br>
-                                <strong>URL:</strong> <span class="text-muted">${sanitizedUrl}</span>
-                            </div>
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.reload()">
-                                    <i class="fa fa-refresh"></i> Reload
-                                </button>
-                                <button type="button" class="btn btn-outline-primary btn-sm ml-2" onclick="history.back()">
-                                    <i class="fa fa-arrow-left"></i> Back
-                                </button>
-                            </div>
-                        </div>
-                        <hr>
-                        <details class="mt-3">
-                            <summary class="btn btn-outline-info btn-sm">Show Error Details</summary>
-                            <div class="mt-3">
-                                <h6>Response Text:</h6>
-                                <pre class="bg-light p-3 border rounded" style="max-height: 300px; overflow-y: auto;"><code>${sanitizedResponse}</code></pre>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        `;
+        // Development error - return response text like original, but safely
+        return errorObject.responseText ?? 'Uknown error';  // Keep original typo for compatibility
     }
 };
 
-// Legacy function for backward compatibility
-const simbioAJAXError = createAjaxErrorMessage;
+// Legacy function for backward compatibility with exact same behavior
+const simbioAJAXError = (url, errorObject) => {
+    // Match original behavior exactly
+    let env = $('meta[name="env"]').attr('content');
+    return env === 'prod' ? `
+    <div class="w-full p-5">
+        <div class="col-6">
+            <h1 style="font-size: 30pt">${errorObject.status}</h1>
+            <strong style="font-size: 18pt">${errorObject.statusText}</strong>
+            <p style="font-size: 14pt">Please contact system admin or change <strong>system environment to development</strong> at system module for more information about this error.</p>
+            <div>
+                <strong>URL : </strong>
+                <span class="text-muted">${url}</span>
+            </div>
+        </div>
+    </div>` : errorObject.responseText??'Uknown error';
+};
 
 /**
  * Modern AJAX Content Loader with Enhanced Features
@@ -207,11 +175,11 @@ const simbioAJAXError = createAjaxErrorMessage;
 jQuery.fn.simbioAJAX = async function (url, params = {}) {
     // Default configuration with modern practices
     const defaultOptions = {
-        method: 'GET',
+        method: 'get',  // Use lowercase for backward compatibility
         insertMode: 'replace',
         addData: '',
         returnType: 'html',
-        loadingMessage: 'Loading content... Please wait',
+        loadingMessage: 'LOADING CONTENT... PLEASE WAIT',
         timeout: 30000, // 30 seconds timeout
         cache: false,
         showLoader: true
