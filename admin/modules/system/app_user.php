@@ -157,8 +157,8 @@ if (isset($_POST['saveData'])) { //echo '<pre>'; var_dump($_SESSION); echo '</pr
     } else if (($userName == 'admin' OR $realName == 'Administrator') AND $_SESSION['uid'] != 1) {
         toastr(__('Login username or Real Name is probihited!'))->error();
         exit();
-    } else if ($sysconf['password_policy_strong'] AND ($passwd1 AND $passwd2) AND ($passwd1 === $passwd2) AND !validatePassword($passwd2, $sysconf['password_policy_min_length'])) {
-        toastr(__('Password should at least 8 characters long, contains one capital letter, one number, and one non-alphanumeric character !'))->error();
+    } else if ($sysconf['password_policy_strong'] && ($passwd1 AND $passwd2) && ($passwd1 === $passwd2) && !simbio_security::validatePassword($passwd2, $sysconf['password_policy_min_length'])) {
+        toastr(__( sprintf('Password should at least %d characters long, contains one capital letter, one number, and one non-alphanumeric character !', $sysconf['password_policy_min_length']) ))->error();
         exit();
     } else if (($passwd1 AND $passwd2) AND ($passwd1 !== $passwd2)) {
         toastr(__('Password confirmation does not match. See if your Caps Lock key is on!'))->error();
@@ -557,37 +557,8 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     echo $form->printOut();
     echo '<form id="formVerify2fa" target="blindSubmit" method="post" action="'.$_SERVER['PHP_SELF'].'?changecurrent=true"></form>';
     if ($sysconf['password_policy_strong']) {
-        echo '<script>';
-        echo 'function validatePassword(password, min_length = 8) {
-            // Check if the password length
-            if (password.length < '.$sysconf['password_policy_min_length'].') {
-                return false;
-            }
-            // Check for at least one uppercase letter
-            if (!/[A-Z]/.test(password)) {
-                return false;
-            }
-            // Check for at least one number
-            if (!/[0-9]/.test(password)) {
-                return false;
-            }
-            // Check for at least one non-alphanumeric character
-            if (!/[^a-zA-Z0-9]/.test(password)) {
-                return false;
-            }
-            return true;
-        }';
-        echo 'jQuery(\'#mainForm\').on(\'submit\', function(event) {
-            const password1 = jQuery(\'#passwd1\').val();
-            const password2 = jQuery(\'#passwd2\').val();
-            if (password1.length > 0 && password2.length > 0) {
-                if (!validatePassword(password2)) {
-                    event.preventDefault();
-                    alert(\'Password must contain at least one uppercase letter, one number, and one special character.\');
-                }
-            }
-        });';
-        echo '</script>';
+        echo simbio_security::validatePasswordFunctionJS();
+        echo '<script type="text/javascript">comparePassword("#mainForm", "#passwd1", "#passwd2", '.$sysconf['password_policy_min_length'].');</script>';
     }
 
 } else {
