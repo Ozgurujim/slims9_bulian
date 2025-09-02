@@ -51,31 +51,6 @@ function getUserType($obj_db, $array_data, $col) {
   }
 }
 
-function validatePassword($password, $min_length = 8) {
-    // Check if the password is at least 8 characters long
-    if (strlen($password) < $min_length) {
-        return false;
-    }
-
-    // Check for at least one uppercase letter
-    if (!preg_match('/[A-Z]/', $password)) {
-        return false;
-    }
-
-    // Check for at least one number
-    if (!preg_match('/[0-9]/', $password)) {
-        return false;
-    }
-
-    // Check for at least one non-alphanumeric character
-    if (!preg_match('/[^a-zA-Z0-9]/', $password)) {
-        return false;
-    }
-
-    // If all checks pass, return true
-    return true;
-}
-
 // check if we want to change current user profile
 $changecurrent = false;
 if (isset($_GET['changecurrent'])) {
