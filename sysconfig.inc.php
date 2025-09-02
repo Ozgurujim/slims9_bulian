@@ -696,9 +696,6 @@ $sysconf['p2pserver_type'] = [
   'MARC SRU server'
 ];
 
-// load global settings again for override tinfo setting
-utility::loadSettings($dbs);
-
 /**
  * Peer to peer server config
  */
@@ -764,6 +761,9 @@ $sysconf['log']['adv']['index'] = 'slims_logs';
 // librarian / system user password policy
 $sysconf['password_policy_strong'] = true;
 $sysconf['password_policy_min_length'] = 8;
+
+// load global settings again for override tinfo setting
+utility::loadSettings($dbs);
 
 // set default timezone
 // for a list of timezone, please see PHP Manual at "List of Supported Timezones" section
