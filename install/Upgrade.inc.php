@@ -880,8 +880,8 @@ ADD INDEX (  `input_date` ,  `last_update` ,  `uid` ) ;";
      member_name=(SELECT m.member_name FROM member m WHERE m.member_id=NEW.member_id),
      member_type_name=(SELECT mmt.member_type_name FROM mst_member_type mmt LEFT JOIN member m ON m.member_type_id=mmt.member_type_id WHERE m.member_id=NEW.member_id);";
 
-    $error_trigger = $this->slims->queryTrigger($query_trigger,20);
-    $error = array_merge($error, $error_trigger);
+    // $error_trigger = $this->slims->queryTrigger($query_trigger,20);
+    $error = array_merge($error, /*$error_trigger*/);
 
     // fix mst_topic:classification
     $fix_classification = $this->slims->changeColumn('mst_topic', [
@@ -1135,7 +1135,7 @@ ADD INDEX (  `input_date` ,  `last_update` ,  `uid` ) ;";
     }
 
     /**
-     * Upgrade role to v9.x.x
+     * Upgrade role to v9.7.0
      */
     function upgrade_role_36(){
         $sql['create'][] = "CREATE TABLE `user_tokens` (
@@ -1159,5 +1159,22 @@ ADD INDEX (  `input_date` ,  `last_update` ,  `uid` ) ;";
         $sql['alter'][] = "ALTER TABLE `user` CHANGE `last_login_ip` `last_login_ip` varchar(50) COLLATE 'utf8mb3_unicode_ci' NULL AFTER `last_login`;";
         $sql['alter'][] = "ALTER IGNORE TABLE mst_voc_ctrl ADD UNIQUE idx_heading(topic_id, related_topic_id);"; 
         return $this->slims->query($sql, ['create', 'alter'],36);
+    }
+
+    /**
+     * Upgrade role to v9.7.1
+     */
+    function upgrade_role_37(){
+    }
+
+    /**
+     * Upgrade role to v9.x.x
+     */
+    function upgrade_role_38(){
+      $sql['drop'][] = "DROP TRIGGER IF EXISTS `delete_loan_history`;";
+      $sql['drop'][] = "DROP TRIGGER IF EXISTS `update_loan_history`;";
+      $sql['drop'][] = "DROP TRIGGER IF EXISTS `insert_loan_history`;";
+
+      return $this->slims->query($sql, ['drop'],38);
     }
 }
