@@ -31,3 +31,5 @@ $menu['circulation.loan-history'] = array(__('Loan History'), MWB.'reporting/cus
 $menu['circulation.due-date-warning'] = array(__('Due Date Warning'), MWB.'reporting/customs/due_date_warning.php', __('View Members That About to Have Overdues'));
 $menu['circulation.overdued-list'] = array(__('Overdued List'), MWB.'reporting/customs/overdued_list.php', __('View Members Having Overdues'));
 $menu['circulation.reserve-list'] = array(__('Reservation'), MWB.'reporting/customs/reserve_list.php', __('Reservation'));
+$menu['circulation.header-maintenance'] = array('Header', __('MAINTENANCE'));
+$menu['circulation.loan-history-maintenance'] = array(__('Loan History Maintenance'), MWB.'circulation/loan_history_maintenance.php', __('Loan History Maintenance'));
