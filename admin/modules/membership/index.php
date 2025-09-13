@@ -266,6 +266,8 @@ if (isset($_POST['saveData']) && $can_read && $can_write) {
                 }
                 // update other tables contain this member ID
                 @$dbs->query('UPDATE loan SET member_id=\''.$data['member_id'].'\' WHERE member_id=\''.$old_member_ID.'\'');
+                // update loan_history to match loan table changes (replaces update_loan_history trigger)
+                @$dbs->query('UPDATE loan_history SET member_id=\''.$data['member_id'].'\' WHERE member_id=\''.$old_member_ID.'\'');
                 @$dbs->query('UPDATE fines SET member_id=\''.$data['member_id'].'\' WHERE member_id=\''.$old_member_ID.'\'');
                 toastr(__('Member Data Successfully Updated'))->success();
                 // upload status alert
