@@ -365,7 +365,7 @@ class simbio_datagrid extends simbio_table
         // setting form target
         $_target = '_self';
         if ($this->using_AJAX) {
-            $_target = 'submitExec';
+            $_target = 'blindSubmit';
             // below is for debugging purpose only
             debugBox(content: function() {
                 debug($this->sql_str);
