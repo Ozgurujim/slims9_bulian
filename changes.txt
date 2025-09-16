@@ -46,7 +46,7 @@ THANKS TO OUR USERS AND COMMUNITIES, YOU ARE DEVELOPERS TOO!
 SLiMS 9.7.2 (Bulian D Roger)
 ========================================================================
 • Feature: Loan History Maintenance + menu integration.
-• DB/Upgrade: Removed loan-history triggers; replaced with direct updates; updated upgrade scripts.
+• Upgrade: Removed loan-history triggers; replaced with direct updates; Add submenu handling in upgrade flow.
 • UX: Clearer delete confirmations; defaulted withConfirm; switched form submit to blindSubmit; removed iframe submitExec.
 • Assets: Added missing Colorbox CSS/JS includes.
 • Reports: Improved procurement date handling (prioritize received_date) and validation.
