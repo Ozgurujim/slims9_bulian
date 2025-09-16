@@ -1168,7 +1168,7 @@ ADD INDEX (  `input_date` ,  `last_update` ,  `uid` ) ;";
     }
 
     /**
-     * Upgrade role to v9.x.x
+     * Upgrade role to v9.7.2
      */
     function upgrade_role_38(){
       $sql['drop'][] = "DROP TRIGGER IF EXISTS `delete_loan_history`;";
