@@ -6,11 +6,16 @@
 # @Last modified by:   user
 # @Last modified time: 2018-01-26T11:37:10+07:00
 
+$imagesDisk = \SLiMS\Filesystems\Storage::images();
+
 //$a = get_defined_vars();
 //$a['sysconf'] = null;
 //$a['main_content'] = null;
 //echo '<pre>'; print_r($a); echo '</pre>'; die();
 //echo '<pre>'; print_r($_SESSION); echo '</pre>'; die();
+
+// setup list view
+$_SESSION['LIST_VIEW'] = $_POST['view'] ?? $_SESSION['LIST_VIEW'] ?? 'list';
 
 // ----------------------------------------------------------------------------
 // load function library for classic template

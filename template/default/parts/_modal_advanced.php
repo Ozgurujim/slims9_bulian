@@ -5,6 +5,7 @@
  * @File name           : _modal_advanced.php
  */
 
+
 ?>
 
 <div class="modal fade" id="adv-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -53,16 +54,16 @@
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
-                            <label for="adv-coll-type"><?=__('Collection Type');?></label>
-                            <select name="colltype" class="form-control"
-                                    id="adv-coll-type"><?=$colltype_list; ?></select>
+                            <label for="adv-publishyear"><?=__('Publish Year');?></label>
+                            <input type="text" name="publishyear" class="form-control" id="adv-publishyear"
+                                   placeholder="<?=__('Enter publish year'); ?>">
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label for="adv-location"><?=__('Location');?></label>
                             <select id="adv-location" name="location"
-                                    class="form-control"> <?=$location_list; ?></select>
+                                    class="form-control"> <?= commonList('location'); ?></select>
                         </div>
                     </div>
                 </div>
@@ -70,10 +71,16 @@
                     <div class="col">
                         <div class="form-group">
                             <label for="adv-gmd"><?=__('GMD');?></label>
-                            <select id="adv-gmd" name="gmd" class="form-control"><?=$gmd_list; ?></select>
+                            <select id="adv-gmd" name="gmd" class="form-control"><?= commonList('gmd'); ?></select>
                         </div>
                     </div>
-                    <div class="col"></div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="adv-coll-type"><?=__('Collection Type');?></label>
+                            <select name="colltype" class="form-control"
+                                    id="adv-coll-type"><?= commonList('collection'); ?></select>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

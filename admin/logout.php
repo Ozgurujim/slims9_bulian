@@ -22,6 +22,7 @@
 define('INDEX_AUTH', '1');
 #use SLiMS\AdvancedLogging;
 use SLiMS\AlLibrarian;
+use SLiMS\Auth\Validator;
 
 /* Library Automation logout */
 
@@ -30,8 +31,14 @@ require '../sysconfig.inc.php';
 // start the session
 require SB.'admin/default/session.inc.php';
 
+
+if(!isset($_SESSION['uid'])) {
+    header('location: ../index.php');
+    exit;
+}
+
 // write log
-utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' Log Out from application from address '.$_SERVER['REMOTE_ADDR']);
+writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' Log Out from application from address '.ip());
 # ADV LOG SYSTEM - STIIL EXPERIMENTAL
 $log = new AlLibrarian('1003', array("username" => $_SESSION['uname'], "uid" => $_SESSION['uid'], "realname" => $_SESSION['realname']));
 
@@ -47,7 +54,10 @@ $msg .= 'Server = new FancyWebSocket("ws://'.$sysconf['chat_system']['server'].'
 $msg .= 'Server.bind("close", function( data ) { log( "Disconnected." ); });';
 $msg .= '</script>';
 
-// unset admin cookie flag
-setcookie('admin_logged_in', true, time()-86400, SWB);
+
+$validator = new Validator(config('auth.methods.' . config('auth.sections.user'), \SLiMS\Auth\Methods\Native::class));
+$validator->logout(false);
+
+
 // completely destroy session cookie
 simbio_security::destroySessionCookie($msg, COOKIES_NAME, SWB.'admin/', true);

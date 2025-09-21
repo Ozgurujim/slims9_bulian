@@ -42,8 +42,9 @@ function reverseAuthor($lastfirst) {
 	if ($lastfirst == "") {
 		return "";
 	} else {
-		list($last, $first) = explode(', ', $lastfirst);
-		if ($first <>"") {
+        $authorWords = explode(', ', $lastfirst);
+		list($last, $first) = isset($authorWords[1]) ? $authorWords : ['', $lastfirst];
+		if ($first <> "") {
 			return $first . " " . $last;
 		} else {
 			return $last;
@@ -56,6 +57,12 @@ $can_read = utility::havePrivilege('bibliography', 'r');
 
 if (!$can_read) {
     die('<div class="errorBox">'.__('You are not authorized to view this section').'</div>');
+}
+# CHECK ACCESS
+if ($_SESSION['uid'] != 1) {
+    if (!utility::haveAccess('bibliography.catalog-printing')) {
+        die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
+    }
 }
 
 $max_print = 50;
@@ -359,6 +366,8 @@ if ($sysconf['index']['type'] == 'index' || ($sysconf['index']['type'] == 'sphin
         $datagrid->setSQLColumn('biblio.biblio_id, biblio.title, COUNT(i.item_id) as '.__('Item'));
     }
 
+    $datagrid->sql_group_by = "biblio.biblio_id";
+
 //  SELECT IF(item.item_id IS NOT NULL, item.item_id, CONCAT('b', biblio.biblio_id)), biblio.title AS 'Title', IF(item.call_number<>'', item.call_number, biblio.call_number) AS 'Call Number'
 //  FROM biblio LEFT JOIN item ON biblio.biblio_id=item.biblio_id
 
@@ -383,7 +392,6 @@ if (isset($_GET['keywords']) AND $_GET['keywords']) {
 if (isset($criteria)) {
   $datagrid->setSQLcriteria('('.$criteria['sql_criteria'].')');
 }
-$datagrid->sql_group_by = "biblio.biblio_id";
 
 // set table and table header attributes
 $datagrid->table_attr = 'id="dataList" class="s-table table"';

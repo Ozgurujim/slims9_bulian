@@ -24,6 +24,7 @@
 define('INDEX_AUTH', '1');
 #use SLiMS\AdvancedLogging;
 use SLiMS\AlLibrarian;
+use SLiMS\DB;
 
 // required file
 require '../sysconfig.inc.php';
@@ -40,6 +41,22 @@ require LIB.'module.inc.php';
 // https connection (if enabled)
 if ($sysconf['https_enable']) {
     simbio_security::doCheckHttps($sysconf['https_port']);
+}
+
+/**
+ * Just info for who want to
+ * upgrade SLiMS if didn't have access
+ * to last slims source code.
+ */
+if ($_SESSION['uid'] == 1 && config('init_info') === null) {
+    DB::query('insert into `setting` set `setting_name` = ?, `setting_value` = ?', [
+        'init_info',
+        serialize([
+            'version' => SENAYAN_VERSION,
+            'tag' => SENAYAN_VERSION_TAG,
+            'admin_url' => dirname($_SERVER['PHP_SELF'])
+        ])
+    ])->run();
 }
 
 // page title
@@ -66,14 +83,25 @@ ob_start();
 // info
 $info = __('You are currently logged in as').' <strong>'.$_SESSION['realname'].'</strong>'; //mfc
 
+// get default current module menu 
+$firstMenu = $module->getFirstMenu($current_module);
 if ($current_module AND $can_read) {
-    # ADV LOG SYSTEM - STIIL EXPERIMENTAL
-    $log = new AlLibrarian('1101', array("username" => $_SESSION['uname'], "uid" => $_SESSION['uid'], "realname" => $_SESSION['realname'], "module" => $current_module));
-    // get content of module default content with AJAX
-    $sysconf['page_footer'] .= "\n"
-        .'<script type="text/javascript">'
-        .'jQuery(document).ready(function() { jQuery(\'#mainContent\').simbioAJAX(\''.MWB.$current_module.'/index.php\', {method: \'get\'}); });'
-        .'</script>';
+    if (!isset($firstMenu[1]))
+    {
+        // set unprivileged module warning
+        $module->unprivileged();
+    }
+    else
+    {
+        # ADV LOG SYSTEM - STIIL EXPERIMENTAL
+        $log = new AlLibrarian('1101', array("username" => $_SESSION['uname'], "uid" => $_SESSION['uid'], "realname" => $_SESSION['realname'], "module" => $current_module));
+        // get content of module default content with AJAX
+        $defaultUrl = $firstMenu[1];
+        $sysconf['page_footer'] .= "\n"
+            .'<script type="text/javascript">'
+            .'jQuery(document).ready(function() { jQuery(\'#mainContent\').simbioAJAX(\''.$defaultUrl.'\', {method: \'get\'}); });'
+            .'</script>';
+    }
 } else {
     include 'default/home.php';
     // for debugs purpose only

@@ -43,6 +43,12 @@ $can_read = utility::havePrivilege('bibliography', 'r');
 if (!$can_read) {
   die('<div class="errorBox">'.__('You are not authorized to view this section').'</div>');
 }
+# CHECK ACCESS
+if ($_SESSION['uid'] != 1) {
+    if (!utility::haveAccess('bibliography.item-barcodes-printing')) {
+        die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
+    }
+}
 
 $max_print = 50;
 
@@ -183,7 +189,7 @@ if (isset($_GET['action']) AND $_GET['action'] == 'print') {
       }
       $html_str .= '</div>';
       //~ $html_str .= '<img src="'.SWB.IMG.'/barcodes/'.str_replace(array(' '), '_', $barcode[1]).'.png" style="width: '.$sysconf['print']['barcode']['barcode_scale'].'%;" border="0" />';
-      $html_str .= '<img src="'.SWB.IMG.'/barcodes/'.urlencode(urlencode($barcode[1])).'.png" style="width: '.$sysconf['print']['barcode']['barcode_scale'].'%;" border="0" />';
+      $html_str .= '<img src="'.SWB.IMG.'/barcodes/'.urlencode(urlencode($barcode[1])).'.png?' . date('YmdHis') . '" style="width: '.$sysconf['print']['barcode']['barcode_scale'].'%;" border="0" />';
       $html_str .= '</div>';
       $html_str .= '</td>';
     }

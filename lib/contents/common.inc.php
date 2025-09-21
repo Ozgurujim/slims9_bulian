@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2007,2008  Arie Nugraha (dicarve@yahoo.com)
+ * Copyright (C) 2025  Ari Nugraha (dicarve@gmail.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -56,7 +56,7 @@ $gmd_list = ob_get_clean();
 
 /* Language selection list */
 ob_start();
-require_once(LANG.'localisation.php');
+// require_once(LANG.'localisation.php');
 $select_lang = isset($_COOKIE['select_lang'])?$_COOKIE['select_lang']:$sysconf['default_lang'];
 foreach ($available_languages AS $lang_index) {
     $selected = null;
@@ -69,8 +69,29 @@ foreach ($available_languages AS $lang_index) {
 }
 $language_select = ob_get_clean();
 
+/* Sort order selection list */
+ob_start();
+$sorts = [
+    ['most-relevant', __('Most relevant')],
+    ['recently-added', __('Recently Added')],
+    ['last-update', __('Last Update')],
+    ['most-loaned', __('Most Loaned')],
+    ['publish-year-newest', __('Publication Year [newest]')],
+    ['publish-year-oldest', __('Publication Year [oldest]')],
+    ['title-asc', __('Title Ascending')],
+    ['title-desc', __('Title Descending')],
+];
+foreach ($sorts as $sort) {
+    $selected = null;
+    $filterStr = \utility::filterData('filter', 'get', false, true, true);
+    $filterArr = json_decode($filterStr??'', true);
+    if ($sort[0] === ($filterArr['sort']??'')) $selected = 'selected';
+    echo '<option value="'.$sort[0].'" '.$selected.'>'.$sort[1].'</option>';
+}
+$sort_select = ob_get_clean();
+
 /* include simbio form element library */
-require SIMBIO.'simbio_GUI/form_maker/simbio_form_element.inc.php';
+require_once SIMBIO.'simbio_GUI/form_maker/simbio_form_element.inc.php';
 /* Advanced Search Author AJAX field */
 ob_start();
 // create AJAX drop down
@@ -81,7 +102,6 @@ $ajaxDD->additional_params = 'type=author';
 $ajaxDD->handler_URL = 'lib/contents/advsearch_AJAX_response.php';
 echo $ajaxDD->out();
 $advsearch_author = ob_get_clean();
-
 
 /* Advanced Search Topic/Subject AJAX field */
 ob_start();

@@ -185,6 +185,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `file_dir` text collate utf8_unicode_ci,
   `mime_type` varchar(100) collate utf8_unicode_ci default NULL,
   `file_desc` text collate utf8_unicode_ci,
+  `file_key` text collate utf8_unicode_ci,
   `uploader_id` int(11) NOT NULL,
   `input_date` datetime NOT NULL,
   `last_update` datetime NOT NULL,
@@ -314,6 +315,16 @@ CREATE TABLE IF NOT EXISTS `item` (
 --
 -- Dumping data for table `item`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item_custom`
+--
+CREATE TABLE IF NOT EXISTS `item_custom` (
+    `item_id` INT NOT NULL ,
+    PRIMARY KEY ( `item_id` )
+  ) ENGINE=MyISAM COMMENT = 'one to one relation with real item table';
 
 
 -- --------------------------------------------------------
@@ -996,6 +1007,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `realname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `passwd` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `2fa` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_type` smallint(2) DEFAULT NULL,
   `user_image` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -1452,7 +1464,7 @@ DROP TABLE IF EXISTS `files_read`;
 CREATE TABLE `files_read` (
   `filelog_id` int(11) NOT NULL AUTO_INCREMENT,
   `file_id` int(11) NOT NULL,
-  `date_read` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `date_read` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT NOW(),
   `member_id` varchar(20)  NULL,
   `user_id` int(11) DEFAULT NULL,
   `client_ip` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -1475,51 +1487,51 @@ CREATE TABLE `plugins` (
 -- create trigger `delete_loan_history`
 --
 
-DROP TRIGGER IF EXISTS `delete_loan_history`;
-CREATE TRIGGER `delete_loan_history` AFTER DELETE ON `loan`
- FOR EACH ROW DELETE FROM loan_history WHERE loan_id=OLD.loan_id;
+-- DROP TRIGGER IF EXISTS `delete_loan_history`;
+-- CREATE TRIGGER `delete_loan_history` AFTER DELETE ON `loan`
+--  FOR EACH ROW DELETE FROM loan_history WHERE loan_id=OLD.loan_id;
 
 --
 -- create trigger `update_loan_history`
 --
 
-DROP TRIGGER IF EXISTS `update_loan_history`;
-CREATE TRIGGER `update_loan_history` AFTER UPDATE ON `loan`
- FOR EACH ROW UPDATE loan_history 
-SET is_lent=NEW.is_lent,
-is_return=NEW.is_return,
-renewed=NEW.renewed,
-return_date=NEW.return_date
-WHERE loan_id=NEW.loan_id;
+-- DROP TRIGGER IF EXISTS `update_loan_history`;
+-- CREATE TRIGGER `update_loan_history` AFTER UPDATE ON `loan`
+--  FOR EACH ROW UPDATE loan_history 
+-- SET is_lent=NEW.is_lent,
+-- is_return=NEW.is_return,
+-- renewed=NEW.renewed,
+-- return_date=NEW.return_date
+-- WHERE loan_id=NEW.loan_id;
 
 --
 -- create trigger `insert_loan_history`
 --
 
-DROP TRIGGER IF EXISTS `insert_loan_history`;
-    CREATE TRIGGER `insert_loan_history` AFTER INSERT ON `loan`
-     FOR EACH ROW INSERT INTO loan_history
-     SET loan_id=NEW.loan_id,
-     item_code=NEW.item_code,
-     member_id=NEW.member_id,
-     loan_date=NEW.loan_date,
-     due_date=NEW.due_date,
-     renewed=NEW.renewed,
-     is_lent=NEW.is_lent,
-     is_return=NEW.is_return,
-     return_date=NEW.return_date,
-     input_date=NEW.input_date,
-     last_update=NEW.last_update,
-     title=(SELECT b.title FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
-     biblio_id=(SELECT b.biblio_id FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
-     call_number=(SELECT IF(i.call_number IS NULL, b.call_number,i.call_number) FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
-     classification=(SELECT b.classification FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
-     gmd_name=(SELECT g.gmd_name FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id LEFT JOIN mst_gmd g ON g.gmd_id=b.gmd_id WHERE i.item_code=NEW.item_code),
-     language_name=(SELECT l.language_name FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id LEFT JOIN mst_language l ON b.language_id=l.language_id WHERE i.item_code=NEW.item_code),
-     location_name=(SELECT ml.location_name FROM item i LEFT JOIN mst_location ml ON i.location_id=ml.location_id WHERE i.item_code=NEW.item_code),
-     collection_type_name=(SELECT mct.coll_type_name FROM mst_coll_type mct LEFT JOIN item i ON i.coll_type_id=mct.coll_type_id WHERE i.item_code=NEW.item_code),
-     member_name=(SELECT m.member_name FROM member m WHERE m.member_id=NEW.member_id),
-     member_type_name=(SELECT mmt.member_type_name FROM mst_member_type mmt LEFT JOIN member m ON m.member_type_id=mmt.member_type_id WHERE m.member_id=NEW.member_id);;
+-- DROP TRIGGER IF EXISTS `insert_loan_history`;
+--     CREATE TRIGGER `insert_loan_history` AFTER INSERT ON `loan`
+--      FOR EACH ROW INSERT INTO loan_history
+--      SET loan_id=NEW.loan_id,
+--      item_code=NEW.item_code,
+--      member_id=NEW.member_id,
+--      loan_date=NEW.loan_date,
+--      due_date=NEW.due_date,
+--      renewed=NEW.renewed,
+--      is_lent=NEW.is_lent,
+--      is_return=NEW.is_return,
+--      return_date=NEW.return_date,
+--      input_date=NEW.input_date,
+--      last_update=NEW.last_update,
+--      title=(SELECT b.title FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
+--      biblio_id=(SELECT b.biblio_id FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
+--      call_number=(SELECT IF(i.call_number IS NULL, b.call_number,i.call_number) FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
+--      classification=(SELECT b.classification FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id WHERE i.item_code=NEW.item_code),
+--      gmd_name=(SELECT g.gmd_name FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id LEFT JOIN mst_gmd g ON g.gmd_id=b.gmd_id WHERE i.item_code=NEW.item_code),
+--      language_name=(SELECT l.language_name FROM biblio b LEFT JOIN item i ON i.biblio_id=b.biblio_id LEFT JOIN mst_language l ON b.language_id=l.language_id WHERE i.item_code=NEW.item_code),
+--      location_name=(SELECT ml.location_name FROM item i LEFT JOIN mst_location ml ON i.location_id=ml.location_id WHERE i.item_code=NEW.item_code),
+--      collection_type_name=(SELECT mct.coll_type_name FROM mst_coll_type mct LEFT JOIN item i ON i.coll_type_id=mct.coll_type_id WHERE i.item_code=NEW.item_code),
+--      member_name=(SELECT m.member_name FROM member m WHERE m.member_id=NEW.member_id),
+--      member_type_name=(SELECT mmt.member_type_name FROM mst_member_type mmt LEFT JOIN member m ON m.member_type_id=mmt.member_type_id WHERE m.member_id=NEW.member_id);;
 
 --
 -- Version v9.2.0
@@ -1528,3 +1540,38 @@ DROP TRIGGER IF EXISTS `insert_loan_history`;
 ALTER TABLE `user` ADD `forgot` VARCHAR(80) COLLATE 'utf8_unicode_ci' DEFAULT NULL AFTER `groups`;
 ALTER TABLE `user` ADD `admin_template` text COLLATE 'utf8_unicode_ci' DEFAULT NULL AFTER `forgot`;
 
+-- 
+-- Index Word and Document
+-- 
+
+CREATE TABLE `index_words` (
+  `id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `word` varchar(50) COLLATE 'utf8mb4_unicode_ci' NOT NULL,
+  `num_hits` int NOT NULL,
+  `doc_hits` int NOT NULL
+) ENGINE='MyISAM' COLLATE 'utf8mb4_unicode_ci';
+
+CREATE TABLE `index_documents` (
+  `document_id` int(11) NOT NULL,
+  `word_id` bigint(20) NOT NULL,
+  `location` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hit_count` int(11) NOT NULL,
+  PRIMARY KEY (`document_id`,`word_id`,`location`),
+  KEY `document_id` (`document_id`),
+  KEY `word_id` (`word_id`),
+  KEY `location` (`location`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 
+-- Table for store user token in remember me feature
+-- 
+
+CREATE TABLE `user_tokens` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `selector` varchar(255) NOT NULL,
+  `hashed_validator` varchar(255) NOT NULL,
+  `user_id` int NOT NULL,
+  `expires_at` datetime NOT NULL,
+  `created_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

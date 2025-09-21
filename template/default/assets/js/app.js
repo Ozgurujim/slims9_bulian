@@ -174,7 +174,8 @@ Vue.component('slims-book', {
                         createElement('img', {
                             attrs: {
                                 src: this.image,
-                                class: 'img-fluid'
+                                class: 'img-fluid',
+                                loading: 'lazy'
                             }
                         })
                     ]),
@@ -239,7 +240,8 @@ Vue.component('slims-member', {
                         createElement('img', {
                             attrs: {
                                 class: 'img-fluid h-auto',
-                                src: this.image
+                                src: this.image,
+                                loading: 'lazy'
                             }
                         })
                     ]),

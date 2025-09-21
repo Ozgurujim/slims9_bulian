@@ -50,7 +50,7 @@ function biblio_list_format($dbs, $biblio_detail, $n, $settings = array(), &$ret
   $title_link = '<a href="'.$detail_url.'" class="titleField" itemprop="name" property="name" title="'.__('View record detail description for this title').'">'.$title.'</a>';
 
   // label
-  if ($settings['show_labels'] AND !empty($biblio_detail['labels'])) {
+  if (isset($settings['show_labels']) AND !empty($biblio_detail['labels'])) {
     $labels = @unserialize($biblio_detail['labels']);
     if ($labels !== false) {
       foreach ($labels as $label) {
@@ -78,7 +78,7 @@ function biblio_list_format($dbs, $biblio_detail, $n, $settings = array(), &$ret
   $xml_button = '';
   #$detail_button = '<a href="'.$detail_url.'" class="detailLink" title="'.__('View record detail description for this title').'">'.__('Record Detail').'</a>';
   $detail_button = '<div style="margin-top: 20px;"><a href="'.$detail_url.'" class="detailLink" title="'.__('View record detail description for this title').'">'.__('Record Detail').'</a>';
-  if ($settings['xml_detail']) {
+  if (isset($settings['xml_detail'])) {
     $xml_button = '<a href="'.$detail_url.'&inXML=true" class="xmlDetailLink" title="'.__('View record detail description in XML Format').'" target="_blank">'.__('XML Detail').'</a>';
   }
   
@@ -90,6 +90,9 @@ function biblio_list_format($dbs, $biblio_detail, $n, $settings = array(), &$ret
   if (!empty($biblio_detail['image']) && !defined('LIGHTWEIGHT_MODE')) {
     $biblio_detail['image'] = urlencode($biblio_detail['image']);
     $images_loc = 'images/docs/'.$biblio_detail['image'];
+    if($biblio_detail['image'] == '' || $biblio_detail['image'] == NULL){
+      $images_loc = 'images/default/image.png'; 
+    }
     if ($sysconf['tg']['type'] == 'minigalnano') {
       $thumb_url = './lib/minigalnano/createthumb.php?filename='.urlencode($images_loc).'&width=120';
       $image_cover = '<img src="'.$thumb_url.'" class="img-thumbnail" itemprop="image" alt="'.$title.'" />';
@@ -156,7 +159,7 @@ function biblio_list_format($dbs, $biblio_detail, $n, $settings = array(), &$ret
 
   // checkbox for marking collection
   $_i= rand(); // Add By Eddy Subratha
-  $_check_mark = (utility::isMemberLogin() && $settings['enable_mark'])?' <input type="checkbox" id="biblioCheck'.$_i.'" name="biblio[]" class="biblioCheck" value="'.$biblio_id.'" /> <label for="biblioCheck'.$_i.'">'.__('mark this').'</label>':'';
+  $_check_mark = (utility::isMemberLogin() && ($settings['enable_mark']??false))?' <input type="checkbox" id="biblioCheck'.$_i.'" name="biblio[]" class="biblioCheck" value="'.$biblio_id.'" /> <label for="biblioCheck'.$_i.'">'.__('mark this').'</label>':'';
   $output .= '<div class="subItem">'.$detail_button.$xml_button.$cite_button.$_check_mark.'</div>';
   
   // social buttons

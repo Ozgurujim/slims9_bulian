@@ -79,20 +79,17 @@ if (!$reportView) {
                                 ?>
                         </div>
                     </div>
-                    <div class="divRow">
-                        <div class="divRowLabel"><?php echo __('Loan Date From'); ?></div>
+                    <div class="form-group divRow">
                         <div class="divRowContent">
-                          <?php
-echo simbio_form_element::dateField('startDate', '2000-01-01','class="form-control"');
-    ?>
-                        </div>
-                    </div>
-                    <div class="divRow">
-                        <div class="divRowLabel"><?php echo __('Loan Date Until'); ?></div>
-                        <div class="divRowContent">
-                          <?php
-echo simbio_form_element::dateField('untilDate', date('Y-m-d'),'class="form-control"');
-    ?>
+                            <div>
+                                <label style="width: 195px;"><?php echo __('Loan Date From'); ?></label>
+                                <label><?php echo __('Loan Date Until'); ?></label>
+                            </div>
+                            <div id="range">
+                                <input type="text" name="startDate" value="2000-01-01">
+                                <span><?= __('to') ?></span>
+                                <input type="text" name="untilDate" value="<?= date('Y-m-d') ?>">
+                            </div>
                         </div>
                     </div>
                     <div class="divRow">
@@ -109,6 +106,15 @@ echo simbio_form_element::dateField('untilDate', date('Y-m-d'),'class="form-cont
             </form>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            const elem = document.getElementById('range');
+            const dateRangePicker = new DateRangePicker(elem, {
+                language: '<?= substr($sysconf['default_lang'], 0,2) ?>',
+                format: 'yyyy-mm-dd',
+            });
+        })
+    </script>
     <!-- filter end -->
     <div class="dataListHeader" style="padding: 3px;"><span id="pagingBox"></span></div>
     <iframe name="reportView" id="reportView" src="<?php echo $_SERVER['PHP_SELF'] . '?reportView=true'; ?>"
@@ -129,7 +135,7 @@ echo simbio_form_element::dateField('untilDate', date('Y-m-d'),'class="form-cont
     $overdue_criteria = ' (l.is_lent=1 AND l.is_return=0 AND TO_DAYS(due_date) < TO_DAYS(\'' . date('Y-m-d') . '\')) ';
     // is there any search
     if (isset($_GET['id_name']) and $_GET['id_name']) {
-        $keyword = $dbs->escape_string(trim($_GET['id_name']));
+        $keyword = $dbs->real_escape_string(trim($_GET['id_name']));
         $words = explode(' ', $keyword);
         if (count($words) > 1) {
             $concat_sql = ' (';
@@ -146,8 +152,8 @@ echo simbio_form_element::dateField('untilDate', date('Y-m-d'),'class="form-cont
     }
     // loan date
     if (isset($_GET['startDate']) and isset($_GET['untilDate'])) {
-        $date_criteria = ' AND (TO_DAYS(l.loan_date) BETWEEN TO_DAYS(\'' . $_GET['startDate'] . '\') AND
-          TO_DAYS(\'' . $_GET['untilDate'] . '\'))';
+        $date_criteria = sprintf(' AND (TO_DAYS(l.loan_date) BETWEEN TO_DAYS(\'%s\') AND
+          TO_DAYS(\'%s\'))', $dbs->real_escape_string($_GET['startDate']), $dbs->real_escape_string($_GET['untilDate']) );
         $overdue_criteria .= $date_criteria;
     }
     if (isset($_GET['recsEachPage'])) {
@@ -191,21 +197,25 @@ echo simbio_form_element::dateField('untilDate', date('Y-m-d'),'class="form-cont
           WHERE (l.is_lent=1 AND l.is_return=0 AND TO_DAYS(due_date) < TO_DAYS(\'' . date('Y-m-d') . '\')) AND l.member_id=\'' . $array_data[0] . '\'' . (!empty($date_criteria) ? $date_criteria : ''));
         $_buffer = '<div style="font-weight: bold; color: black; font-size: 10pt; margin-bottom: 3px;">' . $member_name . ' (' . $array_data[0] . ')</div>';
         $_buffer .= '<div style="color: black; font-size: 10pt; margin-bottom: 3px;">' . $member_mail_address . '</div>';
-        $_buffer .= '<div style="font-size: 10pt; margin-bottom: 3px;"><div id="' . $array_data[0] . 'emailStatus"></div>' . __('E-mail') . ': <a href="mailto:' . $member_d[1] . '">' . $member_d[1] . '</a> - <a class="usingAJAX" href="' . MWB . 'membership/overdue_mail.php' . '" postdata="memberID=' . $array_data[0] . '" loadcontainer="' . $array_data[0] . 'emailStatus">' . __('Send Notification e-mail') . '</a> - ' . __('Phone Number') . ': ' . $member_d[2] . '</div>';
+        if (!empty($member_d[1])) $_buffer .= '<div style="font-size: 10pt; margin-bottom: 3px;"><div id="' . $array_data[0] . 'emailStatus"></div>' . __('E-mail') . ' : <a href="mailto:' . $member_d[1] . '">' . $member_d[1] . '</a> - <a class="usingAJAX btn btn-sm btn-outline-primary" href="' . MWB . 'membership/overdue_mail.php' . '" postdata="memberID=' . $array_data[0] . '" loadcontainer="' . $array_data[0] . 'emailStatus"><i class="fa fa-paper-plane-o"></i>&nbsp;' . __('Send Notification e-mail') . '</a> <br/>';
+        $_buffer .= __('Phone Number') . ': ' . $member_d[2] . '</div>';
         $_buffer .= '<table width="100%" cellspacing="0">';
         while ($ovd_title_d = $ovd_title_q->fetch_assoc()) {
 
             //calculate Fines
             $overdue_days = $circulation->countOverdueValue($ovd_title_d['loan_id'], date('Y-m-d'))['days'];
-            $fines = $overdue_days * $member_d[4];
+            // because SLiMS have a grace periode feature in circulation modules,
+            // make sure $overdue_days is numeric or not, if not then set it to 0
+            // or if its bool then cast to integer
+            $overdue_days = !is_numeric($overdue_days) ? 0 : (int)$overdue_days;
+            $fines = currency($overdue_days * $member_d[4]);
             if (!is_null($ovd_title_d['fine_each_day'])) $fines = $overdue_days * $ovd_title_d['fine_each_day'];
             // format number
             $overdue_days = number_format($overdue_days, '0', ',', '.');
-            $fines = number_format($fines, '0', ',', '.');
 
             $_buffer .= '<tr>';
             $_buffer .= '<td valign="top" width="10%">' . $ovd_title_d['item_code'] . '</td>';
-            $_buffer .= '<td valign="top" width="40%">' . $ovd_title_d['title'] . '<div>' . __('Book Price') . ': ' . $ovd_title_d['price'] . ' ' . $ovd_title_d['price_currency'] . '</div></td>';
+            $_buffer .= '<td valign="top" width="40%">' . $ovd_title_d['title'] . '<div>' . __('Book Price') . ': ' . currency($ovd_title_d['price']) . '</div></td>';
             $_buffer .= '<td width="20%"><div>' . __('Overdue') . ': ' . $overdue_days . ' ' . __('day(s)') . '</div><div>'.__('Fines').': '.$fines.'</div></td>';
             $_buffer .= '<td width="30%">' . __('Loan Date') . ': ' . $ovd_title_d['loan_date'] . ' &nbsp; ' . __('Due Date') . ': ' . $ovd_title_d['due_date'] . '</td>';
             $_buffer .= '</tr>';
@@ -236,6 +246,7 @@ echo simbio_form_element::dateField('untilDate', date('Y-m-d'),'class="form-cont
                 var loadContainer = anchor.attr('loadcontainer');
                 if (loadContainer) {
                     container = jQuery('#' + loadContainer);
+                    container.html('<div class="alert alert-info"><?= __('Please wait') ?>....</div>');
                 }
                 // set ajax
                 if (postData) {

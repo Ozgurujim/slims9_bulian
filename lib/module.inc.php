@@ -1,4 +1,5 @@
 <?php
+
 /**
  * module class
  * Application modules related class
@@ -20,6 +21,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  */
+
+use SLiMS\GroupMenu;
+use SLiMS\GroupMenuOrder;
+use SLiMS\Plugins;
 
 // be sure that this file not accessed directly
 if (!defined('INDEX_AUTH')) {
@@ -97,11 +102,15 @@ class module extends simbio
             $module_list[] = array('name' => $_mods_d['module_name'], 'path' => $_mods_d['module_path'], 'desc' => $_mods_d['module_desc']);
         }
 
+        // Get module from plugin
+        Plugins::run('module_main_menu_init', [&$module_list]);
+        
         // sort modules
         if ($module_list) {
             foreach ($module_list as $_id => $_module) {
                 $_mod_dir = $_module['path'];
-                if (isset($_SESSION['priv'][$_module['path']]['r']) && $_SESSION['priv'][$_module['path']]['r'] && file_exists($this->modules_dir . $_mod_dir)) {
+                $_path_exists = file_exists($this->modules_dir . $_mod_dir) || (isset($_module['plugin_module_path']) && file_exists($_module['plugin_module_path']));
+                if (isset($_SESSION['priv'][$_module['path']]['r']) && $_SESSION['priv'][$_module['path']]['r'] && $_path_exists) {
                     $_menu[$_id] = $_module;
                     if ($also_get_childs) {
                         $_menu[$_id]['childs'] = $this->getSubMenuItems($_module['name']);
@@ -126,20 +135,19 @@ class module extends simbio
         $_submenu = '';
         $_submenu_current = 'curModuleLink';
         $i = 0;
-        $menu = $this->getSubMenuItems($str_module);
+        $menus = $this->getSubMenuItems($str_module);
         // iterate menu array
-        $header_index = 0;
-        foreach ($menu as $_list) {
-            if ($_list[0] == 'Header') {
-                $_submenu .= '<div class="subMenuHeader subMenuHeader-'.$header_index.'">' . $_list[1] . '</div>';
-                $header_index++;
-            } else {
-                if ($i > 1) $_submenu_current = '';
+        foreach ($menus as $header => $menu) {
+            $_submenu .= '<div class="subMenuHeader subMenuHeader-' . $header . '">' . strtoupper($header) . '</div>';
+
+            foreach ($menu as $item) {
+                if (!$item) continue;
+                if ($i > 0) $_submenu_current = '';
                 $_submenu .= '<a class="subMenuItem ' . $_submenu_current . '" '
-                    . ' href="' . $_list[1] . '"'
-                    . ' title="' . (isset($_list[2]) ? $_list[2] : $_list[0]) . '" href="#"><span>' . $_list[0] . '</span></a>';
+                    . ' href="' . $item[1] . '"'
+                    . ' title="' . (isset($item[2]) ? $item[2] : $item[0]) . '" href="#"><span>' . $item[0] . '</span></a>';
+                $i++;
             }
-            $i++;
         }
         $_submenu .= '&nbsp;';
         return $_submenu;
@@ -159,34 +167,134 @@ class module extends simbio
         // get menus from plugins
         $plugin_menus = \SLiMS\Plugins::getInstance()->getMenus($str_module);
 
-        if (file_exists($_submenu_file)) {
+        if (file_exists($_submenu_file) || (isset($_SESSION['priv'][$str_module]['submenu']) && file_exists($_submenu_file = $_SESSION['priv'][$str_module]['submenu']))) {
             include $_submenu_file;
-
-            $menu = array_merge($menu ?? [], $plugin_menus);
-
-            if ($_SESSION['uid'] > 1) {
-                $tmp_menu = [];
-                if (isset($menu) && count($menu) > 0) {
-                    foreach ($menu as $item) {
-                        if ($item[0] === 'Header' || in_array(md5($item[1]), $_SESSION['priv'][$str_module]['menus'])) $tmp_menu[] = $item;
-                    }
-                }
-                $menu = $tmp_menu;
-            }
-
-            // clean header, remove it if not have child
-            foreach ($menu as $index => $item)
-                if ($item[0] === 'Header' && (!isset($menu[$index + 1]) || (isset($menu[$index + 1]) && $menu[$index + 1][0] === 'Header')))
-                    unset($menu[$index]);
-
         } else {
             include 'default/submenu.php';
             foreach ($this->get_shortcuts_menu($dbs) as $key => $value) {
                 $link = explode('|', $value);
+                // Exception for shortcut menu based on registered plugin
+                if (preg_match('/plugin_container/', $link[1])) {
+                    $menu[$link[0]] = array(__($link[0]), $link[1]);
+                    continue;
+                }
                 $menu[$link[0]] = array(__($link[0]), MWB . $link[1]);
             }
         }
-        return $menu;
+
+        $menus = [];
+        foreach ($this->reorderMenus($menu, $plugin_menus) as $header => $items) {
+            foreach ($items as $id => $item) {
+                $menus[$header] = $menus[$header] ?? [];
+                $id = (is_numeric($id)) ? md5($item[1]) : $id;
+                if ($_SESSION['uid'] > 1 && !empty($str_module) && !utility::haveAccess($id)) continue;
+                $menus[$header][] = $item;
+            }
+        }
+        $menus = array_filter($menus, fn ($m) => count($m) > 0);
+        return $menus;
+    }
+
+    /**
+     * Method to order default menu and plugin menu
+     * 
+     * @param array $default 
+     * @param array $plugin 
+     * @return array 
+     */
+    function reorderMenus($default, $plugin)
+    {
+        $groups = [];
+        $orders = GroupMenuOrder::getInstance()->getOrder();
+        $group_menu = GroupMenu::getInstance()->getGroup();
+
+        // collect header from default menu
+        $header = null;
+        foreach ($default as $key => $menu) {
+            if (count($menu) === 2 && strtolower($menu[0]) === 'header') {
+                // before continue to new header
+                // check to plugin group
+                if (!is_null($header) && isset($group_menu[$header])) {
+                    foreach ($group_menu[$header] as $hash) {
+                        $groups[$header][] = $plugin[$hash];
+                    }
+                    unset($group_menu[$header]);
+                }
+
+                // reset header
+                $header = null;
+                // iterate orders
+                if (count($orders) > 0) {
+                    // get menu before
+                    foreach ($orders as $key => $value) {
+                        if (count($plugin) < 1) break;
+                        $group_menu_items = array_map(fn ($i) => $plugin[$i] ?? [], $group_menu[$key]);
+                        if (count($group_menu_items) > 0 && strtolower($menu[1]) === $value['group'] && $value['position'] === 'before')
+                            $groups[strtolower($key)] = $group_menu_items;
+                    }
+
+                    // main menu
+                    $groups[strtolower($menu[1])] = [];
+
+                    // get menu after
+                    foreach ($orders as $key => $value) {
+                        if (count($plugin) < 1) break;
+                        $group_menu_items = array_map(fn ($i) => $plugin[$i] ?? [], $group_menu[$key]);
+                        if (count($group_menu_items) > 0 && strtolower($menu[1]) === $value['group'] && $value['position'] === 'after')
+                            $groups[strtolower($key)] = $group_menu_items;
+                    }
+                } else {
+                    $groups[strtolower($menu[1])] = [];
+                }
+                $header = strtolower($menu[1]);
+                continue;
+            }
+            if (!is_null($header)) {
+                // Check if the registered plugin menu label is the same as the default
+                $override_menu = array_values(array_filter($plugin, function($itemPlugin) use($menu) {
+                    if ($itemPlugin[0] === $menu[0] && isset($itemPlugin[3])) return true;
+                }))[0]??$menu;
+
+                // if match then remove matching plugin from plugin list
+                if (isset($override_menu[3])) unset($plugin[md5(realpath($override_menu[3]??''))]);
+
+                // Register menu into group
+                $groups[strtolower($header)][$key] = $override_menu;
+            }
+        }
+
+        foreach ($group_menu as $header => $menus) {
+            $tmp_menu = [];
+            foreach ($menus as $hash) {
+                if (isset($plugin[$hash])) $tmp_menu[] = $plugin[$hash];
+            }
+
+            if(count($tmp_menu) > 0) $groups[$header] = $tmp_menu;
+        }
+
+        // ungrouped plugin group to "plugins" group
+        $ungrouped = array_filter(array_keys($plugin), fn ($p) => !in_array($p, GroupMenu::getInstance()->getPluginInGroup()));
+        $ungrouped = ['plugins' => array_map(fn ($i) => $plugin[$i], $ungrouped)];
+
+        // merge group
+        if (count($plugin) > 0)
+            $groups = array_merge($groups, $ungrouped);
+
+        return $groups;
+    }
+
+    /**
+     * Method to get a first submenu of module
+     * 
+     * @param string $str_module 
+     * @return mixed 
+     */
+    public function getFirstMenu($str_module = '')
+    {
+        $menus = $this->getSubMenuItems($str_module);
+        $key = array_keys($menus)[0] ?? false;
+        if ($key) return $menus[$key][0] ?? null;
+        return null;
     }
 
     /**
@@ -207,4 +315,12 @@ class module extends simbio
         return $shortcuts;
     }
 
+    public function unprivileged()
+    {
+        global $sysconf;
+        $alertType = 'alert-warning';
+        $alertTitle = __('Warning');
+        $alertMessage = __('You don\'t have access to interact with this module. Call system administrator to give you right to access it.');
+        include SB . 'template/alert.php';
+    }
 }

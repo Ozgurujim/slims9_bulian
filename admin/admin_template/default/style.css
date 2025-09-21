@@ -1431,3 +1431,27 @@ table {
 .alterCellPrinted {
   background: transparent;
 }
+button.view-switch {
+  background: whitesmoke;
+  border: none;
+  font-weight: bold;
+  font-size: 11pt;
+}
+button.next-btn {
+  background: whitesmoke;
+  border: none;
+  font-weight: bold;
+}
+button.prev-btn {
+  background: whitesmoke;
+  border: none;
+  font-weight: bold;
+}
+
+pre.sf-dump, pre.sf-dump .sf-dump-default {
+  z-index: 0 !important;
+}
+
+input[id*='simbio-checkbox-'], label[for*='simbio-checkbox-'] {
+  cursor: pointer !important;
+}

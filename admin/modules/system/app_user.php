@@ -64,6 +64,41 @@ if (!$changecurrent) {
     }
 }
 
+/**
+ * Verify Two-factor authentication (2FA)
+ */
+if (isset($_POST['secret_code']) && isset($_POST['verify_code'])) {
+    $secret = utility::filterData('secret_code', 'post', true, true, true);
+    $otp = OTPHP\TOTP::createFromSecret($secret);
+    $isOk = $otp->verify(trim($_POST['verify_code']));
+    if ($isOk) {
+        // save to session for next purpose
+        $_SESSION['2fa_secret'] = $secret;
+        toastr(__('Code verified!'))->success();
+    } else {
+        unset($_SESSION['2fa_secret']);
+        toastr(__('Invalid verification code!'))->error();
+    }
+    exit;
+}
+
+if (isset($_POST['updateRecordID']) && isset($_POST['disable2fa']) && isset($_GET['diable2fa'])) {
+    $uid = (int)utility::filterData('updateRecordID', 'post', true, true, true);
+    $arr = explode(':', $uid);
+    if ($_SESSION['uid'] == 1 || $uid == $_SESSION['uid']) {
+        $update = $dbs->query(sprintf("update user set 2fa = null where user_id = '%s'", $uid));
+        if ($update) {
+            echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(parent.$.ajaxHistory[0].url);</script>';
+            toastr(__('Two-factor authentication has been disabled.'))->success();
+        } else {
+            toastr(__('Upss... something wrong!'))->error();
+        }
+    } else {
+        toastr(__('You don\'t have enough privileges to view this section'))->error();
+    }
+    exit;
+}
+
 /* REMOVE IMAGE */
 if (isset($_POST['removeImage']) && isset($_POST['uimg']) && isset($_POST['img'])) {
   // validate post image
@@ -74,6 +109,8 @@ if (isset($_POST['removeImage']) && isset($_POST['uimg']) && isset($_POST['img']
   if ($query_image->num_rows > 0) {
     $_delete = $dbs->query(sprintf('UPDATE user SET user_image=NULL WHERE user_id=%d', $_POST['uimg']));
     if ($_delete) {
+      // Change upict
+      $_SESSION['upict'] = 'person.png';
       $postImage = stripslashes($_POST['img']);
       $postImage = str_replace('/', '', $postImage);
       @unlink(sprintf(IMGBS.'persons/%s', $postImage));
@@ -83,23 +120,26 @@ if (isset($_POST['removeImage']) && isset($_POST['uimg']) && isset($_POST['img']
   exit();
 }
 /* RECORD OPERATION */
-if (isset($_POST['saveData'])) {
+if (isset($_POST['saveData'])) { //echo '<pre>'; var_dump($_SESSION); echo '</pre>'; die();
     $userName = $_SESSION['uid'] > 1 ? $_SESSION['uname'] : trim(strip_tags($_POST['userName']));
     $realName = trim(strip_tags($_POST['realName']));
-    $passwd1 = trim($_POST['passwd1']);
-    $passwd2 = trim($_POST['passwd2']);
+    $passwd1 = $dbs->escape_string(trim($_POST['passwd1']));
+    $passwd2 = $dbs->escape_string(trim($_POST['passwd2']));
     // check form validity
     if (empty($userName) OR empty($realName)) {
-        utility::jsAlert(__('User Name or Real Name can\'t be empty'));
+        toastr(__('User Name or Real Name can\'t be empty'))->error();
         exit();
     } else if (($userName == 'admin' OR $realName == 'Administrator') AND $_SESSION['uid'] != 1) {
-        utility::jsAlert(__('Login username or Real Name is probihited!'));
+        toastr(__('Login username or Real Name is probihited!'))->error();
+        exit();
+    } else if ($sysconf['password_policy_strong'] && ($passwd1 AND $passwd2) && ($passwd1 === $passwd2) && !simbio_security::validatePassword($passwd2, $sysconf['password_policy_min_length'])) {
+        toastr(__( sprintf('Password should at least %d characters long, contains one capital letter, one number, and one non-alphanumeric character !', $sysconf['password_policy_min_length']) ))->error();
         exit();
     } else if (($passwd1 AND $passwd2) AND ($passwd1 !== $passwd2)) {
-        utility::jsAlert(__('Password confirmation does not match. See if your Caps Lock key is on!'));
+        toastr(__('Password confirmation does not match. See if your Caps Lock key is on!'))->error();
         exit();
     } else if (!simbio_form_maker::isTokenValid()) {
-        utility::jsAlert(__('Invalid form submission token!'));
+        toastr(__('Invalid form submission token!'))->error();
         exit();
     } else {
         $data['username'] = $dbs->escape_string(trim($userName));
@@ -127,11 +167,28 @@ if (isset($_POST['saveData'])) {
             $data['groups'] = trim($groups);
         }
         if (($passwd1 AND $passwd2) AND ($passwd1 === $passwd2)) {
-            $data['passwd'] = password_hash($passwd2, PASSWORD_BCRYPT);
-            // $data['passwd'] = 'literal{MD5(\''.$passwd2.'\')}';
+            if ( (isset($_GET['changecurrent'])) AND ($_GET['changecurrent']='true') ) {
+                $old_passwd = $dbs->escape_string(trim($_POST['old_passwd']));
+                $up_q = $dbs->query('SELECT passwd FROM user WHERE user_id='.$_SESSION['uid']);
+                $up_d = $up_q->fetch_row();
+                if (password_verify($old_passwd, $up_d[0])) {
+                    $data['passwd'] = password_hash($passwd2, PASSWORD_BCRYPT);
+                } else {
+                    toastr(__('Password change failed. Make sure you input the old password.'))->error();
+                    exit();
+                }
+            } else {
+                $data['passwd'] = password_hash($passwd2, PASSWORD_BCRYPT);
+            }
         }
         $data['input_date'] = date('Y-m-d');
         $data['last_update'] = date('Y-m-d');
+
+        // save 2fa secret to database
+        if (isset($_SESSION['2fa_secret'])) {
+            $data['2fa'] = $_SESSION['2fa_secret'];
+            unset($_SESSION['2fa_secret']);
+        }
 
         // create upload object
         $upload = new simbio_file_upload();
@@ -172,45 +229,49 @@ if (isset($_POST['saveData'])) {
             $update = $sql_op->update('user', $data, 'user_id='.$updateRecordID);
             if ($update) {
                 // write log
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' update user data ('.$data['realname'].') with username ('.$data['username'].')', 'User', 'Update');
-                utility::jsAlert(__('User Data Successfully Updated'));
+                writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' update user data ('.$data['realname'].') with username ('.$data['username'].')', 'User', 'Update');
+                toastr(__('User Data Successfully Updated'))->success();
                 // upload status alert
                 if (isset($upload_status)) {
                     if ($upload_status == UPLOAD_SUCCESS) {
+                        // Change upict
+                        $_SESSION['upict'] = $data['user_image'];
                         // write log
-                        utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system/user', $_SESSION['realname'].' upload image file '.$upload->new_filename, 'User image', 'Upload');
-                        utility::jsAlert(__('Image Uploaded Successfully'));
+                        writeLog('staff', $_SESSION['uid'], 'system/user', $_SESSION['realname'].' upload image file '.$upload->new_filename, 'User image', 'Upload');
+                        toastr(__('Image Uploaded Successfully'))->success();
                     } else {
                         // write log
-                        utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system/user', 'ERROR : '.$_SESSION['realname'].' FAILED TO upload image file '.$upload->new_filename.', with error ('.$upload->error.')', 'User image', 'Fail');
-                        utility::jsAlert(__('Image FAILED to upload'));
+                        writeLog('staff', $_SESSION['uid'], 'system/user', 'ERROR : '.$_SESSION['realname'].' FAILED TO upload image file '.$upload->new_filename.', with error ('.$upload->error.')', 'User image', 'Fail');
+                        toastr(__('Image FAILED to upload'))->error();
                     }
                 }
                 // echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(parent.$.ajaxHistory[0].url);</script>';
                 echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'\');</script>';
-            } else { utility::jsAlert(__('User Data FAILED to Updated. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error); }
+            } else { toastr(__('User Data FAILED to Updated. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error)->error(); }
             exit();
         } else {
             /* INSERT RECORD MODE */
             // insert the data
             if ($sql_op->insert('user', $data)) {
                 // write log
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' add new user ('.$data['realname'].') with username ('.$data['username'].')', 'User', 'Add');
-                utility::jsAlert(__('New User Data Successfully Saved'));
+                writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' add new user ('.$data['realname'].') with username ('.$data['username'].')', 'User', 'Add');
+                toastr(__('New User Data Successfully Saved'))->success();
                 // upload status alert
                 if (isset($upload_status)) {
                     if ($upload_status == UPLOAD_SUCCESS) {
+                        // Change upict
+                        $_SESSION['upict'] = $data['user_image'];
                         // write log
-                        utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system/user', $_SESSION['realname'].' upload image file '.$upload->new_filename, 'User image', 'Upload');
-                        utility::jsAlert(__('Image Uploaded Successfully'));
+                        writeLog('staff', $_SESSION['uid'], 'system/user', $_SESSION['realname'].' upload image file '.$upload->new_filename, 'User image', 'Upload');
+                        toastr(__('Image Uploaded Successfully'))->success();
                     } else {
                         // write log
-                        utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system/user', 'ERROR : '.$_SESSION['realname'].' FAILED TO upload image file '.$upload->new_filename.', with error ('.$upload->error.')', 'User image', 'Fail');
-                        utility::jsAlert(__('Image FAILED to upload'));
+                        writeLog('staff', $_SESSION['uid'], 'system/user', 'ERROR : '.$_SESSION['realname'].' FAILED TO upload image file '.$upload->new_filename.', with error ('.$upload->error.')', 'User image', 'Fail');
+                        toastr(__('Image FAILED to upload'))->error();
                     }
                 }
                 echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'\');</script>';
-            } else { utility::jsAlert(__('User Data FAILED to Save. Please Contact System Administrator')."\n".$sql_op->error); }
+            } else { toastr(__('User Data FAILED to Save. Please Contact System Administrator')."\n".$sql_op->error)->error(); }
             exit();
         }
     }
@@ -237,16 +298,16 @@ if (isset($_POST['saveData'])) {
             $error_num++;
         } else {
             // write log
-            utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' DELETE user ('.$user_d[1].') with username ('.$user_d[0].')', 'User', 'Delete');
+            writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' DELETE user ('.$user_d[1].') with username ('.$user_d[0].')', 'User', 'Delete');
         }
     }
 
     // error alerting
     if ($error_num == 0) {
-        utility::jsAlert(__('All Data Successfully Deleted'));
+        toastr(__('All Data Successfully Deleted'))->success();
         echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
     } else {
-        utility::jsAlert(__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'));
+        toastr(__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'))->error();
         echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
     }
     exit();
@@ -288,8 +349,8 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     if ($changecurrent) {
         $itemID = (integer)$_SESSION['uid'];
     }
-    $rec_q = $dbs->query('SELECT * FROM user WHERE user_id='.$itemID);
-    $rec_d = $rec_q->fetch_assoc();
+    $rec_q = \SLiMS\DB::query('SELECT * FROM user WHERE user_id=?', [$itemID]);
+    $rec_d = $rec_q->first();
 
     // create new instance
     $form = new simbio_form_table_AJAX('mainForm', $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'], 'post');
@@ -301,7 +362,7 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     $form->table_content_attr = 'class="alterCell2"';
 
     // edit mode flag set
-    if ($rec_q->num_rows > 0) {
+    if ($rec_q->count() > 0) {
         $form->edit_mode = true;
         // record ID for delete process
         if (!$changecurrent) {
@@ -352,14 +413,14 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     if (isset($rec_d['user_image'])) {
       $str_input = '<div id="imageFilename"><a href="'.SWB.'images/persons/'.$rec_d['user_image'].'" class="openPopUp notAJAX"><strong>'.$rec_d['user_image'].'</strong></a> <a href="'.MWB.'system/app_user.php" postdata="removeImage=true&uimg='.$itemID.'&img='.$rec_d['user_image'].'" loadcontainer="imageFilename" class="makeHidden removeImage">'.__('REMOVE IMAGE').'</a></div>';
     }
-    $str_input .= simbio_form_element::textField('file', 'image');
+    $str_input .= simbio_form_element::textField('file', 'image',' class="custom-file-input" accept="'.implode(',', $sysconf['allowed_images']).'"');
     $str_input .= ' '.__('Maximum').' '.$sysconf['max_image_upload'].' KB';
     if ($sysconf['webcam'] !== false) {
         $str_input .= '<textarea id="base64picstring" name="base64picstring" style="display: none;"></textarea>';
         $str_input .= '<p>'.__('or take a photo').'</p>';
         $str_input .= '<div class="form-inline">';
         $str_input .= '<div class="form-group pr-2">';
-        $str_input .= '<button id="btn_load" class="btn btn-primary" onclick="loadcam(this)">'.__('Load Camera').'</button>';
+        $str_input .= '<button type="button" id="btn_load" class="btn btn-primary" onclick="loadcam(this)">'.__('Load Camera').'</button>';
         $str_input .= '</div>';
         $str_input .= '<div class="form-group pr-2">';
         $str_input .= '<select class="form-control" onchange="aspect(this)"><option value="1">1x1</option><option value="2" selected>2x3</option><option value="3">3x4</option></select>';
@@ -400,9 +461,60 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
         $form->addCheckBox('groups', __('Group(s)'), $group_options, unserialize($rec_d['groups']??''));
     }
     // user password
+    if ( (isset($_GET['changecurrent'])) AND ($_GET['changecurrent']='true') ) {
+        $form->addTextField('password', 'old_passwd', __('Old Password').'*', '', 'style="width: 50%;" class="form-control"');
+    }
     $form->addTextField('password', 'passwd1', __('New Password').'*', '', 'style="width: 50%;" class="form-control"');
     // user password confirm
     $form->addTextField('password', 'passwd2', __('Confirm New Password').'*', '', 'style="width: 50%;" class="form-control"');
+
+    // Two Factor Authentication
+    if (!empty($rec_d) && $rec_d['user_id'] === $_SESSION['uid'] && extension_loaded('iconv')) {
+        $otp = OTPHP\TOTP::generate();
+        $otp->setLabel(config('library_name'));
+        $secret = $otp->getSecret();
+        // generate qrcode
+        $render = new BaconQrCode\Renderer\ImageRenderer(
+            new BaconQrCode\Renderer\RendererStyle\RendererStyle(150),
+            new BaconQrCode\Renderer\Image\SvgImageBackEnd()
+        );
+        $writer = new BaconQrCode\Writer($render);
+        $qrcode = $writer->writeString($otp->getProvisioningUri());
+        $otp_html = '';
+        if (($rec_d['2fa'] ?? false)) {
+            $otp_html .= '<div class="alert alert-success d-flex justify-content-between"><span>🔐 ' . __('Two Factor Authentication enabled.') . '</span><div><button formaction="'.$_SERVER['PHP_SELF'].'?diable2fa=1&changecurrent=1" type="submit" name="disable2fa" value="1" class="btn btn-danger btn-sm">' . __('Disable It') . '</button></div></div>';
+        }
+        list($otp_app, $verification_code, $verify) = [
+            str_replace('{link}', '<a href="https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp" target="_blank">FreeOTP</a>', __('Scan this QRcode with your authenticator (e.g. Google Authenticator or {link}) <br> and enter verification code below to enable Two Factor Authentication.')),
+            __('Verification code'),
+            __('Verify')
+        ];
+        $otp_html .= <<<HTML
+        <div style="display:flex; align-items:center">
+            <div>{$qrcode}</div>
+            <div>
+                <div class="my-3">
+                    {$otp_app}
+                </div>
+                <input form="formVerify2fa" type="hidden" name="secret_code" value="{$secret}">
+                <div class="text-muted">{$verification_code}</div>
+                <div class="input-group mb-3">
+                    <input form="formVerify2fa" type="text" name="verify_code" class="form-control mr-0" placeholder="Enter code from authenticator" aria-label="Enter code from authenticator" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button form="formVerify2fa" class="btn btn-outline-secondary" type="submit" id="button-addon2">{$verify}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        HTML;
+        $form->addAnything(__('Enable Two Factor Authentication'), $otp_html);
+    }
+
+    // ability to disable Two Factor Authentication for administrator
+    if ($_SESSION['uid'] == 1 && ($rec_d['2fa'] ?? false)) {
+        $otp_html = '<button formaction="'.$_SERVER['PHP_SELF'].'?diable2fa=1" type="submit" name="disable2fa" value="1" class="btn btn-danger">'.__('Disable Two Factor Authentication').'</button>';
+        $form->addAnything(__('Disable Two Factor Authentication'), $otp_html);
+    }
 
     // edit mode messagge
     if ($form->edit_mode) {
@@ -418,6 +530,12 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
     }
     // print out the form object
     echo $form->printOut();
+    echo '<form id="formVerify2fa" target="blindSubmit" method="post" action="'.$_SERVER['PHP_SELF'].'?changecurrent=true"></form>';
+    if ($sysconf['password_policy_strong']) {
+        echo simbio_security::validatePasswordFunctionJS();
+        echo '<script type="text/javascript">comparePassword("#mainForm", "#passwd1", "#passwd2", '.$sysconf['password_policy_min_length'].');</script>';
+    }
+
 } else {
     // only administrator have privileges to view user list
     if (!($can_read AND $can_write) OR $_SESSION['uid'] != 1) {

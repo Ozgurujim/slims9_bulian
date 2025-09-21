@@ -18,6 +18,9 @@
  *
  */
 
+use SLiMS\Json;
+use SLiMS\Http\Client;
+
 /* Image Processing */
 
 // key to authenticate
@@ -34,20 +37,58 @@ $can_read = utility::havePrivilege('bibliography', 'r');
 $can_write = utility::havePrivilege('bibliography', 'w');
 
 // sent HTTP header
-header('Content-type: text/json');
-
 if (!($can_read && $can_write)) {
-    die(json_encode(array('status' => 'UNAUTHORIZED', 'message' => 'Unauthorized Access!')));
+    $response = Json::stringify(['status' => 'UNAUTHORIZED', 'message' => 'Unauthorized Access!'])->withHeader();
+    exit($response);
 }
 
-if (isset($_POST['imageURL']) && !empty($_POST['imageURL'])) {
+try {
+    // field check
+    if (!isset($_POST['imageURL']) && empty($_POST['imageURL'])) throw new Exception(__('URL can\'t empty!'));
+    // make sure it is http request only
+    $parsed_url = parse_url($_POST['imageURL']);
+    if (!isset($parsed_url['scheme']) || !in_array(strtolower($parsed_url['scheme']), ['http','https'], true)) {
+        throw new Exception(__('Must be http/https URL!'));
+    }
+
+    // imageURL must be a valid URL format
     $url = $_POST['imageURL'];
-    $img = file_get_contents($url);
-    $url_info = pathinfo($url);
-    $src = 'data:image/jpg;base64,'. base64_encode($img);
-    $image = base64_encode($img).'#image/type#jpg';
-    echo json_encode(array('status' => 'VALID', 'message' => $src, 'image' => $image));
-}
- else {
-    echo json_encode(array('status' => 'NOT_VALID', 'message' => __('URL not valid!')));
+    if (!filter_var($url, FILTER_VALIDATE_URL)) throw new Exception(__('URL not valid!'));
+
+    // no private ip addresses
+    $ip = gethostbyname($parsed_url['host']);
+    if (!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {
+        throw new Exception('Access to addresses is not allowed');
+    }
+
+
+    // Get image from another service
+    $stream = Client::get($url, [
+        'headers' => [
+            'User-Agent' => $_SERVER['HTTP_USER_AGENT']],
+            'timeout' => 10,
+            'max_redirects' => 0,
+    ]);
+
+    // Get image info from string
+    $imageInfo = getimagesizefromstring($image = $stream->getContent());
+
+    if (!$imageInfo) throw new Exception(__('Image is not valid!'));
+    
+    if (strlen($image) > 1 * 512 * 512) { // 512kb limit
+        throw new Exception('Image larger than expected');
+    }
+
+    if (!$imageInfo || strpos($imageInfo['mime'], 'image/') !== 0) {
+        throw new Exception('Invalid image');
+    }
+
+    $src = 'data:' . $imageInfo['mime'] . ';base64,'. ($encodedImage = base64_encode($image));
+    $type = str_replace('image/', '',$imageInfo['mime']);
+    $result = $encodedImage. '#image/type#' . $type;
+    exit(Json::stringify(['status' => 'VALID', 'message' => $src, 'image' => $result])->withHeader());
+
+} catch (Exception $e) {
+    $response = Json::stringify(['status' => 'INVALID', 'message' => $e->getMessage()])->withHeader();
+    exit($response);
 }

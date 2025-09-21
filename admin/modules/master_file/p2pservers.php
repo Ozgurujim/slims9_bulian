@@ -9,6 +9,8 @@
 
 /* P2P/Copy Cataloging Server Management section */
 
+use SLiMS\Url;
+
 // key to authenticate
 define('INDEX_AUTH', '1');
 // key to get full database access
@@ -41,18 +43,21 @@ if (!$can_read) {
     die('<div class="errorBox">'.__('You don\'t have enough privileges to view this section').'</div>');
 }
 
-$serverType = array(array(1,'P2P Server'), array(2,'z3950 server'), array(3,'z3950 SRU server'), array(4,'MARC SRU server'));
-$lookupType = array(1=>'P2P Server', 2=>'z3950 server', 3=>'z3950 SRU server', 4=>'MARC SRU server');
+$serverType = array_map(function($index) {
+    global $sysconf;
+    return [$index, $sysconf['p2pserver_type'][$index]];
+}, array_keys($sysconf['p2pserver_type']));
 
 if (isset($_POST['saveData']) AND $can_read AND $can_write) {
   $server_name = trim(strip_tags($_POST['serverName']));
   $server_uri = trim(strip_tags($_POST['serverUri']));
   // check form validity
     if (empty($server_name) OR empty($server_uri)) {
-      utility::jsAlert(__('Server Name And URI can\'t be empty'));
+      toastr(__('Server Name And URI can\'t be empty'))->error();
       exit();
     } else {
       $data['name'] = $dbs->escape_string($server_name);
+      if (!Url::isValid($server_uri)) exit(toastr(__('URI isn\'t valid, start witch prefix like e.g: http://, https:// etc.'))->error());
       $data['uri'] = $dbs->escape_string($server_uri);
       $data['server_type'] = $dbs->escape_string($_POST['serverType']);
       $data['input_date'] = date('Y-m-d H:i:s');
@@ -68,16 +73,16 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
         // update the data
         $update = $sql_op->update('mst_servers', $data, 'server_id='.$updateRecordID);
         if ($update) {
-            utility::jsAlert(__('Server Data Successfully Updated'));
+            toastr(__('Server Data Successfully Updated'))->success();
             echo '<script type="text/javascript">parent.jQuery(\'#mainContent\').simbioAJAX(parent.jQuery.ajaxHistory[0].url);</script>';
-        } else { utility::jsAlert(__('Server Data FAILED to Updated. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error); }
+        } else { toastr(__('Server Data FAILED to Updated. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error); }
         exit();
       } else {
         // insert the data
         if ($sql_op->insert('mst_servers', $data)) {
-            utility::jsAlert(__('New Server Data Successfully Saved'));
+            toastr(__('New Server Data Successfully Saved'))->success();
             echo '<script type="text/javascript">parent.jQuery(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'\');</script>';
-        } else { utility::jsAlert(__('Server Data FAILED to Save. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error); }
+        } else { toastr(__('Server Data FAILED to Save. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error)->error(); }
         exit();
       }
     }
@@ -104,10 +109,10 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
 
   // error alerting
   if ($error_num == 0) {
-      utility::jsAlert(__('All Data Successfully Deleted'));
+      toastr(__('All Data Successfully Deleted'))->success();
       echo '<script type="text/javascript">parent.jQuery(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
   } else {
-      utility::jsAlert(__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'));
+      toastr(__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'))->warning();
       echo '<script type="text/javascript">parent.jQuery(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
   }
   exit();
@@ -212,8 +217,8 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
   // callback function to change value of authority type
   function callbackServerType($obj_db, $rec_d)
   {
-      global $sysconf, $lookupType;
-	  return $lookupType[$rec_d[3]];
+      global $sysconf;
+	  return $sysconf['p2pserver_type'][$rec_d[3]];
   }
   // modify column content
   $datagrid->modifyColumnContent(3, 'callback{callbackServerType}');

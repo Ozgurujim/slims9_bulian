@@ -83,7 +83,7 @@ class utility
       // replace newline with javascripts newline
       $str_message = str_replace("\n", '\n', addslashes($str_message));
       echo '<script type="text/javascript">'."\n";
-      echo 'parent.toastr.'.$type.'("'.$str_message.'", "'.$title.'", '.json_encode($options).')'."\n";
+      echo 'top.toastr.'.$type.'("'.$str_message.'", "'.$title.'", '.json_encode($options).')'."\n";
       echo '</script>'."\n";
     }
 
@@ -106,6 +106,22 @@ class utility
       return $_random;
     }
 
+    /**
+     * Static Method to safe unserialize a string
+     *
+     * @param   string  $str
+     * @return  mixed
+     */
+    public static function unserialize($str) {
+        $str = preg_replace_callback(
+            '!s:(\d+):"(.*?)";!s',
+            function($m) {
+                return 's:'.strlen($m[2]).':"'.$m[2].'";';
+            },
+            $str
+        );
+        return unserialize($str);
+    }
 
     /**
      * Static Method to load application settings from database
@@ -119,17 +135,20 @@ class utility
         $_setting_query = $obj_db->query('SELECT * FROM setting');
         if (!$obj_db->errno) {
             while ($_setting_data = $_setting_query->fetch_assoc()) {
-                $_value = @unserialize($_setting_data['setting_value']);
+                $_value = static::unserialize($_setting_data['setting_value']);
                 if (is_array($_value)) {
-                    foreach ($_value as $_idx=>$_curr_value) {
-                        if (is_array($_curr_value)) {
-                            $sysconf[$_setting_data['setting_name']][$_idx] = $_curr_value;
-                        } else {
-                            $sysconf[$_setting_data['setting_name']][$_idx] = stripslashes($_curr_value);
-                        }
+                    // make sure setting is available before
+                    if (!isset($sysconf[$_setting_data['setting_name']]))
+                        $sysconf[$_setting_data['setting_name']] = [];
+
+                    foreach ($_value as $_idx => $_curr_value) {
+                        // convert default setting value into array
+                        if (!is_array($sysconf[$_setting_data['setting_name']]))
+                            $sysconf[$_setting_data['setting_name']] = [$sysconf[$_setting_data['setting_name']]];
+                        $sysconf[$_setting_data['setting_name']][$_idx] = $_curr_value;
                     }
                 } else {
-                    $sysconf[$_setting_data['setting_name']] = stripslashes($_value);
+                    $sysconf[$_setting_data['setting_name']] = stripcslashes($_value??'');
                 }
             }
         }
@@ -147,15 +166,15 @@ class utility
     {
         global $sysconf;
         // checking checksum
-        if ($sysconf['load_balanced_env']) {
-            $server_addr = $_SERVER['REMOTE_ADDR'];
+        if (config('loadbalanced.env')) {
+            $server_addr = ip()->getProxyIp();
         } else {
             $server_addr = isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : (isset($_SERVER['LOCAL_ADDR']) ? $_SERVER['LOCAL_ADDR'] : gethostbyname($_SERVER['SERVER_NAME']));
         }
 
 
         $_checksum = defined('UCS_BASE_DIR')?md5($server_addr.UCS_BASE_DIR.'admin'):md5($server_addr.SB.'admin');
-        if ($_SESSION['checksum'] != $_checksum) {
+        if (!isset($_SESSION['checksum']) || $_SESSION['checksum'] != $_checksum) {
             return false;
         }
         // check privilege type
@@ -166,6 +185,13 @@ class utility
             return true;
         }
         return false;
+    }
+
+    public static function haveAccess($id)
+    {
+        $module = explode('.', $id)[0];
+        // check if user has permission for the current url
+        return in_array($id, $_SESSION['priv'][$module]['menus'] ?? []);
     }
 
 
@@ -179,7 +205,7 @@ class utility
      * @param   string  $str_log_msg
      * @return  void
      */
-    public static function writeLogs($obj_db, $str_log_type, $str_value_id, $str_location, $str_log_msg, $str_log_submod=NULL, $str_log_action=NULL)
+    public static function writeLogs($obj_db, $str_log_type, $str_value_id, $str_location, $str_log_msg, $str_log_submod='', $str_log_action='')
     {
         if (!$obj_db->error) {
             // log table
@@ -264,7 +290,7 @@ class utility
             palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|symbian|
             treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|
             xda|xiino/i',
-        @$_SERVER['HTTP_USER_AGENT'])
+        ($_SERVER['HTTP_USER_AGENT'] ?? ''))
         || preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|
             a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|
             amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|
@@ -294,7 +320,7 @@ class utility
             vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|
             vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|
             wi(g |nc|nw)|wmlb|wonu|x700|xda(\-|2|g)|yas\-|your|zeto|zte\-/i',
-        substr(@$_SERVER['HTTP_USER_AGENT'],0,4)))
+        substr(($_SERVER['HTTP_USER_AGENT'] ?? ''),0,4)))
             $_is_mobile_browser = true;
 
         return $_is_mobile_browser;
@@ -335,27 +361,33 @@ class utility
                 $mix_input = filter_input(INPUT_COOKIE, $mix_input);
             } else if ($str_input_type == 'session') {
                 $mix_input = filter_input(INPUT_SESSION, $mix_input);
+            } else if ($str_input_type == 'server') {
+                $mix_input = $_SERVER[$mix_input]??null;
             } else {
                 $mix_input = filter_input(INPUT_GET, $mix_input);
             }
         } else {
             if ($str_input_type == 'get') {
-                $mix_input = $_GET[$mix_input];
+                $mix_input = $_GET[$mix_input]??null;
             } else if ($str_input_type == 'post') {
-                $mix_input = $_POST[$mix_input];
+                $mix_input = $_POST[$mix_input]??null;
             } else if ($str_input_type == 'cookie') {
-                $mix_input = $_COOKIE[$mix_input];
+                $mix_input = $_COOKIE[$mix_input]??null;
             } else if ($str_input_type == 'session') {
-                $mix_input = $_SESSION[$mix_input];
-            }
+                $mix_input = $_SESSION[$mix_input]??null;
+            } else if ($str_input_type == 'server') {
+                $mix_input = $_SERVER[$mix_input]??null;
+            } 
         }
 
-        // trim whitespace on string
-        if ($bool_trim) { $mix_input = trim($mix_input); }
-        // strip html
-        if ($bool_strip_html) { $mix_input = strip_tags($mix_input); }
-        // escape SQL string
-        if ($bool_escape_sql) { $mix_input = $dbs->escape_string($mix_input); }
+        if (!is_null($mix_input)) {
+            // trim whitespace on string
+            if ($bool_trim) { $mix_input = trim($mix_input); }
+            // strip html
+            if ($bool_strip_html) { $mix_input = strip_tags($mix_input); }
+            // escape SQL string
+            if ($bool_escape_sql) { $mix_input = $dbs->escape_string($mix_input); }
+        }
 
         return $mix_input;
     }
@@ -659,9 +691,8 @@ class utility
             $str_value_id = $obj_db->escape_string(trim($str_member_id));
             $str_user_id = $obj_db->escape_string(trim($str_user_id));
             // insert log data to database
-            @$obj_db->query('INSERT INTO '.$_log_table.'
-            VALUES (NULL, \''.$str_file_id.'\', \''.$_log_date.'\', \''.$str_value_id.'\', \''.$str_user_id.'\', \''.$_SERVER[
-			'REMOTE_ADDR'].'\')');
+            @$obj_db->query('INSERT INTO `'.$_log_table.'` (`filelog_id`,`file_id`,`date_read`,`member_id`,`user_id`,`client_ip`) 
+            VALUES (NULL, \''.$str_file_id.'\', \''.$_log_date.'\', \''.$str_value_id.'\', \''.$str_user_id.'\', \''.ip().'\')');
         }
     }
 }

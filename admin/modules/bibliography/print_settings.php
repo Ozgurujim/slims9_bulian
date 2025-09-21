@@ -50,7 +50,7 @@ if (isset($_POST['updateSettings'])) {
     $dbs->query(sprintf("REPLACE INTO setting (setting_name, setting_value) VALUES ('%s', '%s')",
       $setting_name, $dbs->escape_string(serialize($_POST[$setting_type]))));
     // write log
-    utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' change '.$setting_type.' print settings', 'Print Setting', 'Change');
+    writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' change '.$setting_type.' print settings', 'Print Setting', 'Change');
     utility::jsAlert(__('Settings saved'));
     echo '<script type="text/javascript"></script>';
 }
@@ -98,7 +98,7 @@ $measure['print']['label']['items_per_row']       = __('(default is 3)');
 $measure['print']['label']['items_margin']        = __('(cm)');
 $measure['print']['label']['box_width']           = __('(cm)');
 $measure['print']['label']['box_height']          = __('(cm)');
-$measure['print']['label']['include_header_text'] = ['0' => 'No', '1' => 'Yes'];
+$measure['print']['label']['include_header_text'] = [[0, 'No'], [1, 'Yes']];
 $measure['print']['label']['header_text']         = __('(empty if you want to use Library Name)');
 $measure['print']['label']['fonts']               = __('(name of the font used)');
 $measure['print']['label']['font_size']           = __('(pt)');

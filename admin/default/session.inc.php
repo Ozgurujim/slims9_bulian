@@ -21,20 +21,25 @@
  *
  */
 
+use SLiMS\Plugins;
+use SLiMS\Session\Factory as SessionFactory;
+use SLiMS\Session\Driver\Files;
+
 // be sure that this file not accessed directly
 if (INDEX_AUTH != 1) { 
     die("can not access this file directly");
 }
 
-// always use session cookies
-@ini_set('session.use_cookies', true);
-// use more secure session ids
-@ini_set('session.hash_function', 1);
-// no cache
-@session_cache_limiter('nocache');
-// set session name and start the session
-@session_name(COOKIES_NAME);
-// set session cookies params
-@session_set_cookie_params(86400, SWB.'admin/');
-// start session
-session_start();
+// Cleanup SQL Injection and Common XSS
+$sanitizer->cleanUp(
+    filter: [false, true, true] /* escape_sql, trim, strip_tag */, 
+    exception: ['contentDesc','comment','classic_footer_about_us','classic_map_desc']
+);
+
+// use session factory to handle session based on default SLiMS or user handler
+SessionFactory::use(config('customSession', Files::class))->start('admin');
+
+if (!ob_get_level()) ob_start();
+
+// hooking after session started
+Plugins::run(Plugins::ADMIN_SESSION_AFTER_START);

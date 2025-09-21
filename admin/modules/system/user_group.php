@@ -19,6 +19,8 @@
  *
  */
 
+use SLiMS\DB;
+
 /* User Group Management section */
 
 // key to authenticate
@@ -69,9 +71,10 @@ if (isset($_POST['saveData'])) {
             // update the data
             $update = $sql_op->update('user_group', $data, 'group_id='.$updateRecordID);
             if ($update) {
-                $dbs->query('DELETE FROM group_access WHERE group_id='.$updateRecordID);
+                DB::getInstance()->prepare("DELETE FROM group_access WHERE group_id=?")->execute([$updateRecordID]);
                 // set group privileges
                 if (isset($_POST['read'])) {
+                    $group_access = DB::getInstance()->prepare("INSERT INTO group_access VALUES (?,?,?,?,?)");
                     foreach ($_POST['read'] as $module) {
                         // check write privileges
                         $is_write = 0;
@@ -88,11 +91,11 @@ if (isset($_POST['saveData'])) {
                         if (isset($_POST['menus']))
                             if (isset($_POST['menus'][(int)$module])) $menus = json_encode($_POST['menus'][(int)$module]);
 
-                        $dbs->query(sprintf("INSERT INTO group_access VALUES ($updateRecordID, $module, '%s', 1, $is_write)", $dbs->escape_string($menus)));
+                        $group_access->execute([$updateRecordID, $module, $menus, 1, $is_write]);
                     }
                 }
                 // write log
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' update group data ('.$groupName.')', 'User group', 'Update');
+                writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' update group data ('.$groupName.')', 'User group', 'Update');
                 utility::jsToastr(__('User Group'), __('Group Data Successfully Updated'), 'success');
 
                 echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(parent.$.ajaxHistory[0].url);</script>';
@@ -106,6 +109,7 @@ if (isset($_POST['saveData'])) {
                 $group_id = $dbs->insert_id;
                 // set group privileges
                 if (isset($_POST['read'])) {
+                    $group_access = DB::getInstance()->prepare("INSERT INTO group_access VALUES (?,?,?,?,?)");
                     foreach ($_POST['read'] as $module) {
 
                         // check write privileges
@@ -123,12 +127,13 @@ if (isset($_POST['saveData'])) {
                         if (isset($_POST['menus']))
                             if (isset($_POST['menus'][(int)$module])) $menus = json_encode($_POST['menus'][(int)$module]);
 
-                        $dbs->query(sprintf("INSERT INTO group_access VALUES ($group_id, $module, '%s', 1, $is_write)", $dbs->escape_string($menus)));
+                        
+                        $group_access->execute([$group_id, $module, $menus, 1, $is_write]);
                     }
                 }
 
                 // write log
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' add new group ('.$groupName.')', 'User group', 'Add');
+                writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' add new group ('.$groupName.')', 'User group', 'Add');
                 utility::jsToastr(__('User Group'), __('New Group Data Successfully Saved'), 'success');
                 echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'\');</script>';
             } else { utility::jsToastr(__('User Group'), __('Group Data FAILED to Save. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error, 'error');}
@@ -158,7 +163,7 @@ if (isset($_POST['saveData'])) {
             // delete group privileges
             $dbs->query('DELETE FROM group_access WHERE group_id='.$itemID);
             // write log
-            utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' DELETE group ('.$group_d[0].')', 'User group', 'Delete');
+            writeLog('staff', $_SESSION['uid'], 'system', $_SESSION['realname'].' DELETE group ('.$group_d[0].')', 'User group', 'Delete');
         }
     }
 
@@ -232,7 +237,7 @@ if (isset($_POST['detail']) OR (isset($_GET['action']) AND $_GET['action'] == 'd
         while ($access_data = $rec_q->fetch_assoc()) {
             $priv_data[$access_data['module_id']]['r'] = $access_data['r'];
             $priv_data[$access_data['module_id']]['w'] = $access_data['w'];
-            $priv_data[$access_data['module_id']]['menus'] = json_decode($access_data['menus']);
+            $priv_data[$access_data['module_id']]['menus'] = json_decode($access_data['menus'] ?? '{}', true);
         }
     $priv_table = '';
     include 'module_priv_form_adv.inc.php';

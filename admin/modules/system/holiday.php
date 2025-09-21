@@ -55,12 +55,12 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
     // check form validity
     $holDesc = trim($dbs->escape_string(strip_tags($_POST['holDesc'])));
     if (empty($holDesc)) {
-        utility::jsAlert(__('Holiday description can\'t be empty!'));
+        utility::jsToastr(__('Holiday Settings'),__('Holiday description can\'t be empty!'),'warning');
         exit();
     } else {
         $data['holiday_date'] = trim($_POST['holDate']); // remove extra whitespace
         if(!preg_match('@^[0-9]{4}-[0-9]{2}-[0-9]{2}$@', $data['holiday_date'])) {
-            utility::jsAlert(__('Holiday Date Start must have the format YYYY-MM-DD!'));
+            utility::jsToastr(__('Holiday Settings'),__('Holiday Date Start must have the format YYYY-MM-DD!'),'warning');
             exit();
         }
         $holiday_start_date = $data['holiday_date'];
@@ -74,29 +74,29 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
             // filter update record ID
             $updateRecordID = (integer)$_POST['updateRecordID'];
             if ($sql_op->update('holiday', $data, 'holiday_id='.$updateRecordID)) {
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' update holiday date for '.$data['description'], 'Holiday', 'Update');
-                utility::jsAlert(__('Holiday Data Successfully updated'));
+                writeLog('staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' update holiday date for '.$data['description'], 'Holiday', 'Update');
+                utility::jsToastr(__('Holiday Settings'),__('Holiday Data Successfully updated'),'success');
                 // update holiday_dayname session
                 $_SESSION['holiday_date'][$data['holiday_date']] = $data['holiday_date'];
                 echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(parent.$.ajaxHistory[0].url);</script>';
                 exit();
             } else {
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' failed update holiday data for '.$data['description'], 'Holiday', 'Fail');
-                utility::jsAlert(__('Holiday FAILED to update. Please Contact System Administrator')."\n".$sql_op->error);
+                writeLog('staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' failed update holiday data for '.$data['description'], 'Holiday', 'Fail');
+                utility::jsToastr(__('Holiday Settings'),__('Holiday FAILED to update. Please Contact System Administrator')."\n".$sql_op->error,'error');
             }
         } else {
             /* INSERT RECORD MODE */
             // insert the data
             if ($sql_op->insert('holiday', $data)) {
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' add holiday date for '.$data['description'], 'Holiday', 'Add');
-                utility::jsAlert(__('New Holiday Successfully Saved'));
+                writeLog('staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' add holiday date for '.$data['description'], 'Holiday', 'Add');
+                utility::jsToastr(__('Holiday Settings'),__('New Holiday Successfully Saved'),'success');
                 // update holiday_dayname session
                 $_SESSION['holiday_date'][$data['holiday_date']] = $data['holiday_date'];
                 // date range insert
                 if (!empty($_POST['holDateEnd'])) {
                     $holiday_end_date = trim($_POST['holDateEnd']); // remove extra whitespace
                     if(!preg_match('@^[0-9]{4}-[0-9]{2}-[0-9]{2}$@', $holiday_end_date)) {
-                        utility::jsAlert(__('Holiday Date End must have the format YYYY-MM-DD if it is not empty!'));
+                        utility::jsToastr(__('Holiday Settings'),__('Holiday Date End must have the format YYYY-MM-DD if it is not empty!'),'warning');
                         exit();
                     }
                     // check if holiday end date is more than holiday start date
@@ -120,8 +120,8 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
                 echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?mode=special\');</script>';
                 exit();
             } else {
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' failed to add holiday data for '.$data['description'], 'Holiday', 'Fail');
-                utility::jsAlert(__('Holiday FAILED to Save. Please Contact System Administrator')."\n".$sql_op->error);
+                writeLog('staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' failed to add holiday data for '.$data['description'], 'Holiday', 'Fail');
+                utility::jsToastr(__('Holiday Settings'),__('Holiday FAILED to Save. Please Contact System Administrator')."\n".$sql_op->error,'error');
             }
         }
     }
@@ -139,6 +139,7 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
         $_POST['itemID'] = array((integer)$_POST['itemID']);
     }
     // loop array
+    $_log = '';
     foreach ($_POST['itemID'] as $itemID) {
         $itemID = (integer)$itemID;
         // get info about this holiday
@@ -156,11 +157,11 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
 
     // error alerting
     if ($error_num == 0) {
-        utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' remove holiday date with id '.$_log, 'Holiday', 'Delete');
-        utility::jsAlert(__('All Data Successfully Deleted'));
+        writeLog('staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' remove holiday date with id '.$_log, 'Holiday', 'Delete');
+        utility::jsToastr(__('Holiday Settings'),__('All Data Successfully Deleted'),'success');
         echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
     } else {
-        utility::jsAlert(__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'));
+        utility::jsToastr(__('Holiday Settings'),__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'),'warning');
         echo '<script type="text/javascript">parent.$(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
     }
     exit();
@@ -170,16 +171,15 @@ if (isset($_POST['saveData']) AND $can_read AND $can_write) {
 ?>
 <div class="menuBox">
 <div class="menuBoxInner calendarIcon">
-	<div class="per_title">
-	    <h2><?php echo __('Holiday Settings'); ?></h2>
+    <div class="per_title">
+        <h2><?php echo __('Holiday Settings'); ?></h2>
   </div>
-	<div class="sub_section">
-    .
-	  <div class="btn-group">
+    <div class="sub_section">
+      <div class="btn-group">
       <a href="<?php echo MWB; ?>system/holiday.php" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i>&nbsp;<?php echo __('Holiday Setting'); ?></a>
       <a href="<?php echo MWB; ?>system/holiday.php?mode=special" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i>&nbsp;<?php echo __('Special holiday'); ?></a>
       <a href="<?php echo MWB; ?>system/holiday.php?mode=special&action=detail" class="btn btn-default"><?php echo __('Add Special holiday'); ?></a>
-	  </div>
+      </div>
   </div>
 </div>
 </div>
@@ -254,6 +254,36 @@ if (isset($_GET['mode'])) {
             $datagrid->setSQLCriteria('holiday_date IS NOT NULL');
         }
 
+        $datagrid->modifyColumnContent(1, 'callback{replaceDayname}');
+
+        function replaceDayname($obj_db, $array_data){
+            switch ($array_data[1]) {
+                case 'Sun':
+                    $dayname = __('Sunday');
+                    break;
+                case 'Mon':
+                    $dayname = __('Monday');
+                    break;
+                case 'Tue':
+                    $dayname = __('Tuesday');
+                    break;
+                case 'Wed':
+                    $dayname = __('Wednesday');
+                    break;
+                case 'Thu':
+                    $dayname = __('Thursday');
+                    break;
+                case 'Fri':
+                    $dayname = __('Friday');
+                    break;
+                case 'Sat':
+                    $dayname = __('Saturday');
+                    break;
+                default:
+                    $dayname = $array_data[1];
+                }
+            return $dayname;
+        }
         // set table and table header attributes
         $datagrid->icon_edit = SWB.'admin/'.$sysconf['admin_template']['dir'].'/'.$sysconf['admin_template']['theme'].'/edit.gif';
         $datagrid->table_attr = 'id="dataList" class="s-table table"';
@@ -288,11 +318,15 @@ if (isset($_GET['mode'])) {
                     $_SESSION['holiday_dayname'][] = $dayname;
                 }
                 // information box
-                utility::writeLogs($dbs, 'staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' update holiday settings for '.implode(', ', $_SESSION['holiday_dayname']), 'Holiday', 'Set');
+                writeLog('staff', $_SESSION['uid'], 'System', $_SESSION['realname'].' update holiday settings for '.implode(', ', $_SESSION['holiday_dayname']), 'Holiday', 'Set');
                 echo '<div class="infoBox">'.__('Holiday settings saved').'</div>';
             }
         }
-    }
+    // remove all the holiday from holiday setting and emptying session    
+} else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $_SESSION['holiday_dayname'] = array();
+    $dbs->query('DELETE FROM holiday WHERE holiday_date IS NULL'); 
+}
 
     // get holiday data from database
     $rec_q = $dbs->query('SELECT DISTINCT holiday_dayname FROM holiday WHERE holiday_date IS NULL');

@@ -19,6 +19,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  */
+use SLiMS\Extension;
 
 // key to authenticate
 define('INDEX_AUTH', '1');
@@ -42,15 +43,19 @@ $can_write = utility::havePrivilege('bibliography', 'w');
 if (!$can_read) {
     die('<div class="errorBox">'.__('You don\'t have enough privileges to access this area!').'</div>');
 }
+# CHECK ACCESS
+if ($_SESSION['uid'] != 1) {
+    if (!utility::haveAccess('bibliography.marc-export')) {
+        die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
+    }
+}
 
 // check if PEAR is installed
-ob_start();
-include 'File/MARC.php';
-ob_end_clean();
-if (!class_exists('File_MARC')) {
+$marcExtRequirement = [];
+if (!Extension::forFeature('MARC')->isFulfilled($marcExtRequirement)) {
   die('<div class="errorBox">'.__('<a href="http://pear.php.net/index.php">PEAR</a>, <a href="http://pear.php.net/package/File_MARC">File_MARC</a>
-    packages need to be installed in order to export MARC record').'</div>');
-  }
+  packages need to be installed in order to export MARC record').'</div>');
+}
 
 // clean print queue
 if (isset($_GET['action']) AND $_GET['action'] == 'clear') {
@@ -216,14 +221,14 @@ if (isset($_GET['action']) && $_GET['action'] == 'batch') {
 	require LIB.'biblio_list_index.inc.php';
       }
       // table spec
-      $table_spec = 'search_biblio';
+      $table_spec = 'search_biblio AS `index`';
       $datagrid->setSQLColumn('biblio_id',
 	'title AS \''.__('Title').'\'',
 	'author AS \''.__('Author').'\'');
     } else {
       require LIB.'biblio_list.inc.php';
       // table spec
-      $table_spec = 'search_biblio';
+      $table_spec = 'search_biblio AS `index`';
       $datagrid->setSQLColumn('biblio_id',
 	'title AS \''.__('Title').'\'',
 	'author AS \''.__('Author').'\'');

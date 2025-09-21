@@ -40,6 +40,8 @@
  * The rest of settings will not normally need to be adjusted. Read source code for details.
 */
 
+use SLiMS\Url;
+
 /**
  * Whether to show error message for dubug.
  * For installation, testing and debuging set SHOW_QUERY_ERROR to TRUE
@@ -74,24 +76,23 @@ define('CONTENT_TYPE', 'Content-Type: text/xml');
 $identifyResponse = array();
 
 // MUST (only one)
-// please adjust
-$identifyResponse["repositoryName"] = $_SERVER['SERVER_NAME'];
+$identifyResponse["repositoryName"] = config('library_name');
 
 // For ANDS to harvest of RIF-CS, originatingSource is plantaccelerator.org.au
 // $dataSource = "plantaccelerator.org.au";
-define('DATASOURCE',$_SERVER['SERVER_NAME']);
+define('DATASOURCE', Url::getScheme() . Url::getDomain());
 
 // do not change
-define('MY_URI','http://'.$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME']);
+define('MY_URI', Url::slimsBaseUri() . trim(Url::getSelf(), '/'));
 // You can use a static URI as well.
 // $baseURL 			= "http://my.server.org/oai/oai2.php";
 $identifyResponse["baseURL"] = MY_URI;
 
 // By default SLIMS_SERVER_NAME is taken from the $_SERVER array. If it is different than your
 // expected name, please change its value to your actual server name such as: my.server.name.com
-define('SLIMS_SERVER_NAME', $_SERVER['SERVER_NAME']);
+define('SLIMS_SERVER_NAME', Url::getDomain());
 
-define('SLIMS_BASE_URL', 'http://'.SLIMS_SERVER_NAME.dirname($_SERVER['SCRIPT_NAME']));
+define('SLIMS_BASE_URL', Url::slimsBaseUri());
 
 // do not change
 $identifyResponse["protocolVersion"] = '2.0';
@@ -132,7 +133,7 @@ if (strcmp($identifyResponse["granularity"],'YYYY-MM-DDThh:mm:ssZ')==0) {
 
 // MUST (multiple)
 // please adjust
-$adminEmail			= array('some.one@contact.com'); 
+$adminEmail			= config('mail.oai_admin', ['some.one@contact.com']); 
 
 /** Compression methods supported. Optional (multiple). Default: null.
 * 
@@ -149,7 +150,7 @@ $compression = null;
 // see: http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm
 // Basically use domainname
 // please adjust
-$repositoryIdentifier = $_SERVER['SERVER_NAME']; 
+$repositoryIdentifier = Url::getDomain();
 
 // For RIF-CS, especially with ANDS, each registryObject much has a group for the ownership of data.
 // For detail please see ANDS guide on its web site. Each data provider should have only one REG_OBJ_GROUP
@@ -161,7 +162,7 @@ define('REG_OBJ_GROUP','Something agreed on');
 // data-providers).
 // Please check identify.php for other possible containers 
 // in the Identify response
-$show_identifier = false;
+$show_identifier = true;
 // MUST (only one)
 // should not be changed. Only useful when NODE description is included in the response to Identifier
 $delimiter	= ':';
@@ -183,7 +184,7 @@ define('MAXIDS',100);
 
 /** After 24 hours resumptionTokens become invalid. Unit is second. */
 define('TOKEN_VALID',24*3600);
-$expirationdatetime = gmstrftime('%Y-%m-%dT%TZ', time()+TOKEN_VALID); 
+$expirationdatetime = date("Y-m-d\TH:i:s\Z", time()+TOKEN_VALID); 
 /** Where token is saved and path is included */
 define('TOKEN_PREFIX','/tmp/ANDS_DBPD-');
 
@@ -236,16 +237,17 @@ define('XMLSCHEMA', 'http://www.w3.org/2001/XMLSchema-instance');
 //
 
 // change according to your local DB setup.
-$DB_HOST   = DB_HOST;
-$DB_USER   = DB_USERNAME;
-$DB_PASSWD = DB_PASSWORD;
-$DB_NAME   = DB_NAME;												           
+// $DB_HOST   = DB_HOST;
+// $DB_PORT   = DB_PORT;
+// $DB_USER   = DB_USERNAME;
+// $DB_PASSWD = DB_PASSWORD;
+// $DB_NAME   = DB_NAME;												           
 
 // Data Source Name: This is the universal connection string
 // if you use something other than mysql edit accordingly.
 // Example for MySQL
 //$DSN = "mysql://$DB_USER:$DB_PASSWD@$DB_HOST/$DB_NAME";
-$DSN = "mysql:host=$DB_HOST;dbname=$DB_NAME";
+// $DSN = "mysql:host=$DB_HOST;port=$DB_PORT;dbname=$DB_NAME";
 // Example for Oracle
 // $DSN = "oci8://$DB_USER:$DB_PASSWD@$DB_NAME";
 
@@ -288,7 +290,7 @@ $oaiprefix = "oai".$delimiter.$repositoryIdentifier.$delimiter.$idPrefix;
 //$oaiprefix = "";
 
 // adjust anIdentifier with sample contents an identifier
-// $sampleIdentifier     = $oaiprefix.'anIdentifier';
+$sampleIdentifier = $oaiprefix.'-1';
 
 // the name of the column where you store your datestamps
 $SQL['datestamp'] = 'input_date';

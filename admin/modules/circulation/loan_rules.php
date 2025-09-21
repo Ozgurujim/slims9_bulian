@@ -53,14 +53,14 @@ if (!$can_read) {
 
 /* RECORD OPERATION */
 if (isset($_POST['saveData'])) {
-    $data['member_type_id'] = $_POST['memberTypeID'];
-    $data['coll_type_id'] = $_POST['collTypeID'];
-    $data['gmd_id'] = $_POST['gmdID'];
-    $data['loan_limit'] = trim($_POST['loanLimit']);
-    $data['loan_periode'] = trim($_POST['loanPeriode']);
-    $data['reborrow_limit'] = trim($_POST['reborrowLimit']);
-    $data['fine_each_day'] = trim($_POST['fineEachDay']);
-    $data['grace_periode'] = trim($_POST['gracePeriode']);
+    $data['member_type_id'] = $dbs->escape_string($_POST['memberTypeID']);
+    $data['coll_type_id'] = $dbs->escape_string($_POST['collTypeID']);
+    $data['gmd_id'] = $dbs->escape_string($_POST['gmdID']);
+    $data['loan_limit'] = $dbs->escape_string(trim($_POST['loanLimit']));
+    $data['loan_periode'] = $dbs->escape_string(trim($_POST['loanPeriode']));
+    $data['reborrow_limit'] = $dbs->escape_string(trim($_POST['reborrowLimit']));
+    $data['fine_each_day'] = $dbs->escape_string(trim($_POST['fineEachDay']));
+    $data['grace_periode'] = $dbs->escape_string(trim($_POST['gracePeriode']));
     $data['input_date'] = date('Y-m-d');
     $data['last_update'] = date('Y-m-d');
     // create sql op object
@@ -74,17 +74,17 @@ if (isset($_POST['saveData'])) {
         // update the data
         $update = $sql_op->update('mst_loan_rules', $data, 'loan_rules_id='.$updateRecordID);
         if ($update) {
-            utility::jsAlert(__('Loan Rules Successfully Updated'));
+            toastr(__('Loan Rules Successfully Updated'))->success();
             echo '<script language="Javascript">parent.jQuery(\'#mainContent\').simbioAJAX(parent.jQuery.ajaxHistory[0].url);</script>';
-        } else { utility::jsAlert(__('Loan Rules FAILED to Updated. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error); }
+        } else { toastr(__('Loan Rules FAILED to Updated. Please Contact System Administrator')."\nDEBUG : ".$sql_op->error)->error(); }
         exit();
     } else {
         /* INSERT RECORD MODE */
         $insert = $sql_op->insert('mst_loan_rules', $data);
         if ($insert) {
-            utility::jsAlert(__('New Loan Rules Successfully Saved'));
+            toastr(__('New Loan Rules Successfully Saved'))->success();
             echo '<script language="Javascript">parent.jQuery(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'\');</script>';
-        } else { utility::jsAlert(__('Loan Rules FAILED to Save. Please Contact System Administrator')."\n".$sql_op->error); }
+        } else { toastr(__('Loan Rules FAILED to Save. Please Contact System Administrator')."\n".$sql_op->error)->error(); }
         exit();
     }
     exit();
@@ -114,14 +114,14 @@ if (isset($_POST['saveData'])) {
     // error alerting
     if ($error_num == 0) {
         if (!$lrStatus) {
-            utility::jsAlert(__('All Data Successfully Deleted'));
+            toastr(__('All Data Successfully Deleted'))->success();
             echo '<script language="Javascript">parent.jQuery(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
         } else {
-            utility::jsAlert(__('Sorry. There is active loan transaction(s) using this loan rules.'));
+            toastr(__('Sorry. There is active loan transaction(s) using this loan rules.'))->info();
             echo '<script language="Javascript">parent.jQuery(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'\');</script>';
         }
     } else {
-        utility::jsAlert(__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'));
+        toastr(__('Some or All Data NOT deleted successfully!\nPlease contact system administrator'))->success();
         echo '<script language="Javascript">parent.jQuery(\'#mainContent\').simbioAJAX(\''.$_SERVER['PHP_SELF'].'?'.$_POST['lastQueryStr'].'\');</script>';
     }
     exit();

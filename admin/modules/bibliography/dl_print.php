@@ -42,8 +42,16 @@ $can_read = utility::havePrivilege('bibliography', 'r');
 if (!$can_read) {
     die('<div class="errorBox">'.__('You are not authorized to view this section').'</div>');
 }
+# CHECK ACCESS
+if ($_SESSION['uid'] != 1) {
+    if (!utility::haveAccess('bibliography.labels-printing')) {
+        die('<div class="errorBox">' . __('You are not authorized to view this section') . '</div>');
+    }
+}
 
 $max_print = 50;
+$print_count_item = 0;
+$print_count_biblio = 0;
 
 /* RECORD OPERATION */
 if (isset($_POST['itemID']) AND !empty($_POST['itemID']) AND isset($_POST['itemAction'])) {
@@ -187,10 +195,15 @@ if (isset($_GET['action']) AND $_GET['action'] == 'print') {
             $html_str .= '<div class="labelStyle" valign="top">';
             if ($sysconf['print']['label']['include_header_text']) { $html_str .= '<div class="labelHeaderStyle">'.($sysconf['print']['label']['header_text']?$sysconf['print']['label']['header_text']:$sysconf['library_name']).'</div>'; }
             // explode label data by space except callnumber
-            $sliced_label = preg_split("/((?<=\w)\s+(?=\D))|((?<=\D)\s+(?=\d))/m",$label);
+            #$sliced_label = preg_split("/((?<=\w)\s+(?=\D))|((?<=\D)\s+(?=\d))/m",$label);
+            $label = preg_replace('!\s+!', ' ', $label);
+            $label = trim($label);
+            $sliced_label = explode(" ", $label);
             foreach ($sliced_label as $slice_label_item) {
                 $html_str .= $slice_label_item.'<br />';
             }
+
+
             $html_str .= '</div>';
             $html_str .= '</td>';
         }
@@ -234,7 +247,7 @@ if (isset($_GET['action']) AND $_GET['action'] == 'print') {
         <?php
         echo __('Maximum').' <strong class="text-danger">'.$max_print.'</strong> '.__('records can be printed at once. Currently there is').' ';
         if (isset($_SESSION['labels'])) {
-            echo '<strong id="queueCount" class="text-danger">'.@( count($_SESSION['labels']['item'])+count($_SESSION['labels']['biblio']) ).'</strong>';
+            echo '<strong id="queueCount" class="text-danger">'.@( count($_SESSION['labels']['item']??[]) + count($_SESSION['labels']['biblio']??[]) ).'</strong>';
         } else { echo '<strong id="queueCount" class="text-danger">0</strong>'; }
         echo ' '.__('in queue waiting to be printed.');
         ?>

@@ -41,6 +41,7 @@ class detail
     private $error = false;
     private $output_format = 'html';
     private $template = 'html';
+    private $total_item_available = 0;
     protected $detail_prefix = '';
     protected $detail_suffix = '';
     public $record_title;
@@ -66,12 +67,12 @@ class detail
         $this->detail_id = $int_detail_id;
         $this->biblio = new Biblio($this->db, $int_detail_id);
         $this->record_detail = $this->biblio->detail();
-        $this->error = $this->biblio->getError();
+        $biblioError = $this->biblio->getError();
         if (isset($this->record_detail['title'])) {
           $this->record_title = $this->record_detail['title'];
           $this->notes = $this->record_detail['notes'];
           $this->subjects = $this->record_detail['subjects'];
-        } else if (!$this->error) {
+        } else if (!$biblioError) {
           $this->error = 'Data not found!';
         }
     }
@@ -92,7 +93,17 @@ class detail
     {
         global $sysconf;
         if ($this->error) {
-            return '<div class="error alert alert-error">Error Fetching data for record detail. Server return error message: '.$this->error.'</div>';
+            http_response_code(404);
+             $error = ucwords(__($this->error));
+             $detail = __('Maybe the data is temporary unvailable');
+             return <<<HTML
+             <div class="w-100 d-flex justify-content-center align-items-center" style="height: 50vh">
+                <h3>{$error}</h3>
+                <strong class="mx-3">|</strong>
+                <p>{$detail}</p>
+             </div>
+             HTML;
+            // return '<div class="error alert alert-error"> Server return error message: '.$this->error.'</div>';
         } else {
             if ($this->output_format == 'html') {
                 ob_start();
@@ -131,11 +142,18 @@ class detail
           return false;
         }
         foreach ($this->record_detail['attachments'] as $attachment_d) {
-
-            if (!is_null($attachment_d['access_limit']) && !utility::isMemberLogin()) {
-                $_output .= '<li class="attachment-locked" style="list-style-image: url(images/labels/locked.png)"><a class="font-italic" href="index.php?p=member&destination='.urlencode($_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']).'">'.__('Please login to see this attachment').'</a></li>';
+          // Restricted attachment check
+          if (!is_null($attachment_d['access_limit'])) {
+              // need member login access
+              if (!utility::isMemberLogin()) {
+                $_output .= '<li class="attachment-locked" style="list-style-image: url(images/labels/locked.png)"><a class="font-italic" href="index.php?p=member&destination=' . (\SLiMS\Url::getSlimsFullUri('#attachment')->encode()) . '">'.__('Please login to see this attachment').'</a></li>';
                 continue;
-            }
+              // member type access check 
+              } else if (utility::isMemberLogin() && !in_array($_SESSION['m_member_type_id'], unserialize($attachment_d['access_limit']))) {
+                $_output .= '<li class="attachment-locked cursor-pointer" style="list-style-image: url(images/labels/locked.png)">'. __('You have no authorization to download this file.') . '</li>';
+                continue;
+              }
+          }
 
           if ($attachment_d['mime_type'] == 'application/pdf') {
             $_output .= '<li class="attachment-pdf" style="list-style-image: url(images/labels/ebooks.png)" itemscope itemtype="http://schema.org/MediaObject"><a itemprop="name" property="name" '.(utility::isMobileBrowser() ? 'target="_blank"' : 'class="openPopUp"').' title="'.$attachment_d['file_title'].'" href="./index.php?p=fstream&fid='.$attachment_d['file_id'].'&bid='.$attachment_d['biblio_id'].'" width="780" height="520">'.$attachment_d['file_title'].'</a>';
@@ -224,34 +242,52 @@ HTML;
       if (!$copies) {
         return false;
       }
-      $_output = '<table class="table table-bordered table-small itemList">';
+      $_output = '<div class="flex flex-col">';
       foreach ($copies as $copy_d) {
         // check if this collection is on loan
         $loan_stat_q = $this->db->query('SELECT due_date FROM loan AS l
             LEFT JOIN item AS i ON l.item_code=i.item_code
             WHERE l.item_code=\''.$copy_d['item_code'].'\' AND is_lent=1 AND is_return=0');
-        $_output .= '<tr>';
-        $_output .= '<td class="biblio-item-code">'.$copy_d['item_code'].'</td>';
-        $_output .= '<td class="biblio-call-number">'.$copy_d['call_number'].'</td>';
-        $_output .= '<td class="biblio-location">'.$copy_d['location_name'];
-        if (trim($copy_d['site']) != "") {
-            $_output .= ' ('.$copy_d['site'].')';
-        }
-        $_output .= '</td>';
-        $_output .= '<td width="30%">';
+
         if ($loan_stat_q->num_rows > 0) {
             $loan_stat_d = $loan_stat_q->fetch_row();
-            $_output .= '<b style="background-color: #f00; color: white; padding: 3px;">'.__('Currently On Loan (Due on').date($sysconf['date_format'], strtotime($loan_stat_d[0])).')</b>'; //mfc
+            list($avail_class, $avail_status) = ['item-onloan', __('Currently On Loan (Due on ').date($sysconf['date_format'], strtotime($loan_stat_d[0])).')'];
         } else if ($copy_d['no_loan']) {
-            $_output .= '<b style="background-color: #f00; color: white; padding: 3px;">'.__('Available but not for loan').' - '.$copy_d['item_status_name'].'</b>';
+            list($avail_class, $avail_status) = ['item-notforloan', __('Available but not for loan').' - '.$copy_d['item_status_name']];
         } else {
-            $_output .= '<b style="background-color: #5bc0de; color: white; padding: 3px;">'.__('Available').(trim($copy_d['item_status_name'])?' - '.$copy_d['item_status_name']:'').'</b>';
+            $this->total_item_available++;
+            list($avail_class, $avail_status) = ['item-available', __('Available').(trim($copy_d['item_status_name']??'')?' - '.$copy_d['item_status_name']:'')];
         }
+
+        extract($copy_d);
+        $location_name = empty($location_name) ? __('Location name is not set') : $location_name;
+
+        if (trim($copy_d['site']) != "") {
+          $location_name .= ' ('.$copy_d['site'].')';
+        }
+
+        $call_number = empty($call_number) ? __('Location name is not set') : $call_number;
+        $_output .= <<<HTML
+            <div class="w-100 flex flex-row w-full">
+                <div class="col-7 flex flex-row border border-gray-300 p-3">
+                    <div>#</div>
+                    <div class="mx-2">
+                      <span class="block mx-auto">{$location_name}</span>
+                      <small class="text-sm text-muted">{$call_number}</small>
+                    </div>
+                </div>
+                <div class="col-2 border border-gray-300 p-3">
+                    {$item_code}
+                </div>
+                <div class="col-3 border border-gray-300 p-3">
+                  <b class="text-sm availability-item {$avail_class}">{$avail_status}</b>
+                </div>
+            </div>
+        HTML;
+
         $loan_stat_q->free_result();
-        $_output .= '</td>';
-        $_output .= '</tr>';
       }
-      $_output .= '</table>';
+      $_output .= '</div>';
       return $_output;
     }
 
@@ -336,7 +372,7 @@ HTML;
           foreach ($biblio_custom_fields as $custom_field) {
             if (isset($custom_field['is_public']) && $custom_field['is_public'] == '1' && isset($data[$custom_field['dbfield']])) {
 
-              $data_field = unserialize($custom_field['data']);
+              $data_field = unserialize($custom_field['data']??'');
               $data_record  = $data[$custom_field['dbfield']];
 
               switch ($custom_field['type']) {
@@ -385,7 +421,7 @@ HTML;
 
         foreach ($this->record_detail as $idx => $data) {
           if ($idx == 'notes') {
-            $data = nl2br($data);
+            $data = nl2br($data??'');
           } else {
             if (is_string($data)) {
               $data = trim(strip_tags($data));
@@ -412,20 +448,6 @@ HTML;
         $this->metadata .= '<meta name="Series Title" content="'.$this->record_detail['series_title'].'" />';
         $this->metadata .= '<meta name="Edition" content="'.$this->record_detail['edition'].'" />';
         $this->metadata .= '<meta name="Call Number" content="'.$this->record_detail['call_number'].'" />';
-
-        // check image
-        if (!empty($this->record_detail['image'])) {
-          if ($sysconf['tg']['type'] == 'minigalnano') {
-            $this->record_detail['image_src'] = 'lib/minigalnano/createthumb.php?filename=images/docs/'.urlencode($this->record_detail['image']).'&amp;width=200';
-            $this->record_detail['image'] = '<img itemprop="image" alt="'.sprintf('Image of %s', $this->record_title).'" src="./'.$this->record_detail['image_src'].'" border="0" alt="'.$this->record_detail['title'].'" />';
-          }
-        } else {
-          $this->record_detail['image_src'] = "images/default/image.png";
-          $this->record_detail['image'] = '<img src="./'.$this->record_detail['image_src'].'" alt="No image available for this title" border="0" alt="'.$this->record_detail['title'].'" />';
-        }
-
-        // get image source
-        $this->image_src = $this->record_detail['image_src'];
 
         // get the authors data
         $authors = '';
@@ -454,6 +476,21 @@ HTML;
         $this->record_detail['file_att'] = $this->getAttachments();
         $this->record_detail['related'] = $this->getRelatedBiblio();
         $this->record_detail['biblio_custom'] = $this->getBiblioCustom();
+
+        // check image
+        if (!empty($this->record_detail['image'])) {
+          if ($sysconf['tg']['type'] == 'minigalnano') {
+            $isItemAvailable = $this->total_item_available > 0;
+            $this->record_detail['image_src'] = 'lib/minigalnano/createthumb.php?filename=images/docs/'.urlencode($this->record_detail['image']).'&amp;width=200';
+            $this->record_detail['image'] = '<img class="' . ($isItemAvailable ? 'available' : 'not-available') . '" title="' . ($isItemAvailable ? $this->record_title : __('Items is not available')) . '" loading="lazy" itemprop="image" alt="'.sprintf('Image of %s', $this->record_title).'" src="./'.$this->record_detail['image_src'].'" border="0" alt="'.$this->record_detail['title'].'" />';
+          }
+        } else {
+          $this->record_detail['image_src'] = "images/default/image.png";
+          $this->record_detail['image'] = '<img src="./'.$this->record_detail['image_src'].'" alt="No image available for this title" border="0" alt="'.$this->record_detail['title'].'" />';
+        }
+
+        // get image source
+        $this->image_src = $this->record_detail['image_src'];
 
         if ($sysconf['social_shares']) {
         // share buttons
@@ -536,7 +573,7 @@ HTML;
               */
 
             // $xml->startElement('name'); $xml->writeAttribute('type', $sysconf['authority_type'][$_auth_d['authority_type']]); $xml->writeAttribute('authority', $_auth_d['auth_list']);
-            $xml->startElement('name'); $xml->writeAttribute('type', $_auth_d['authority_type']); $xml->writeAttribute('authority', $_auth_d['auth_list']);
+            $xml->startElement('name'); $xml->writeAttribute('type', $_auth_d['authority_type']); $xml->writeAttribute('authority', $_auth_d['auth_list']??'');
             $xml->startElement('namePart'); $this->xmlWrite($xml, $_auth_d['author_name']); $xml->endElement();
             $xml->startElement('role');
                 $xml->startElement('roleTerm'); $xml->writeAttribute('type', 'text');
@@ -631,7 +668,7 @@ HTML;
             $_xml_output .= '<'.$_subject_type.'><![CDATA['.$_topic_d['topic'].']]></'.$_subject_type.'>';
             $_xml_output .= '</subject>'."\n";
             */
-            $xml->startElement('subject'); $xml->writeAttribute('authority', $_topic_d['auth_list']);
+            $xml->startElement('subject'); $xml->writeAttribute('authority', $_topic_d['auth_list']??'');
             $xml->startElement($_subject_type); $this->xmlWrite($xml, $_topic_d['topic']); $xml->endElement();
             $xml->endElement();
         }
@@ -1038,11 +1075,16 @@ HTML;
         return $this->detail_suffix;
     }
 
+    public function getError()
+    {
+        return $this->error;
+    }
+
     private function xmlWrite(&$xmlwriter, $data, $mode = 'Text') {
         if ($mode == 'CData') {
             $xmlwriter->writeCData($data);
         } else {
-            $xmlwriter->text($data);
+            $xmlwriter->text($data??'');
         }
     }
 }

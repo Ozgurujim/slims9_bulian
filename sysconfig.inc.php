@@ -27,46 +27,51 @@ if (!defined('INDEX_AUTH')) {
     die("can not access this file directly");
 }
 
+define('SLiMS_START', microtime(true));
+
+// Environment config
+$envExists = file_exists($envFile = __DIR__ .  '/config/env.php');
+if ($envExists) require $envFile;
+
 /*
  * Set to development or production
  *
  * In production mode, the system error message will be disabled
  */
-define('ENVIRONMENT', 'production');
+define('ENVIRONMENT', $env??'unavailable');
 
-switch (ENVIRONMENT) {
-  case 'development':
-    @error_reporting(-1);
-    @ini_set('display_errors', true);
-    break;
-  case 'production':
-    @ini_set('display_errors', false);
-    @error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
-    break;
-  default:
-    header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-    echo 'The application environment is not set correctly.';
-    exit(1); // EXIT_ERROR
+if (ENVIRONMENT === 'unavailable' && file_exists(__DIR__ . '/config/database.php') && php_sapi_name() !== 'cli') {
+  header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+  include __DIR__ . DIRECTORY_SEPARATOR . 'template' . DIRECTORY_SEPARATOR . 'serviceunavailable.php';
+  exit(1); // EXIT_ERROR
 }
 
+// set security header preventing clickjacking
+header('X-Frame-Options: SAMEORIGIN');
+
 // require composer library
-if (file_exists(realpath(dirname(__FILE__)) . '/vendor/autoload.php')) require 'vendor/autoload.php';
-require 'lib/autoload.php';
+if (file_exists(__DIR__ . '/vendor/autoload.php')) require __DIR__ . '/vendor/autoload.php';
+
+// SLiMS Autoload
+require __DIR__ . '/lib/autoload.php';
+
+// Error handler
+require __DIR__ . '/lib/errorHandler.inc.php';
+registerSlimsHandler();
 
 // use httpOnly for cookie
 @ini_set( 'session.cookie_httponly', true );
+@ini_set( 'session.use_only_cookies', true );
+@ini_set( 'session.cookie_secure', false );
+
 // check if safe mode is on
 if ((bool) ini_get('safe_mode')) {
     define('SENAYAN_IN_SAFE_MODE', 1);
 }
 
-// set default timezone
-// for a list of timezone, please see PHP Manual at "List of Supported Timezones" section
-@date_default_timezone_set('Asia/Jakarta');
-
 // senayan version
-define('SENAYAN_VERSION', 'SLiMS 9 (Bulian)');
-define('SENAYAN_VERSION_TAG', 'v9.4.2');
+define('SENAYAN_VERSION', 'SLiMS 9 (Bulian D Roger)');
+define('SENAYAN_VERSION_TAG', 'v9.7.2');
 
 // senayan session cookies name
 define('COOKIES_NAME', 'SenayanAdmin');
@@ -120,12 +125,23 @@ define('LANG', LIB.'lang'.DS);
 //help base dir
 define('HELP', SB.'help'.DS);
 
+// item status rules
+define('NO_LOAN_TRANSACTION', 1);
+define('SKIP_STOCK_TAKE', 2);
+
+// command execution status
+define('BINARY_NOT_FOUND', 127);
+define('BINARY_FOUND', 1);
+define('COMMAND_SUCCESS', 0);
+define('COMMAND_FAILED', 2);
 
 // senayan web doc root dir
 /* Custom base URL */
-$sysconf['baseurl'] = '';
+$sysconf['baseurl'] = \SLiMS\Config::getInstance()->get('url.base', '');
+$_SERVER['PHP_SELF'] = strip_tags(str_replace(['"','\''], '', $_SERVER['PHP_SELF']));
 $temp_senayan_web_root_dir = preg_replace('@admin.*@i', '', str_replace('\\', '/', dirname(@$_SERVER['PHP_SELF'])));
 define('SWB', $sysconf['baseurl'].$temp_senayan_web_root_dir.(preg_match('@\/$@i', $temp_senayan_web_root_dir)?'':'/'));
+$_SERVER['PHP_SELF'] = $sysconf['baseurl'] . $_SERVER['PHP_SELF'];
 
 // admin section web root dir
 define('AWB', SWB.'admin/');
@@ -139,15 +155,28 @@ define('MWB', SWB.'admin/'.MDL.'/');
 // repository web base dir
 define('REPO_WBS', SWB.REPO.'/');
 
-// item status rules
-define('NO_LOAN_TRANSACTION', 1);
-define('SKIP_STOCK_TAKE', 2);
+// Check database config
+if (!file_exists(SB.'config'.DS.'database.php')) {
+  // backward compatibility if upgrade process from `git pull`
+  if (file_exists(SB.'config'.DS.'sysconfig.local.inc.php')) {
+    \SLiMS\Config::create('database', function($filename){
+      // get last database connection
+      include SB.'config'.DS.'sysconfig.local.inc.php';
+      $source = file_get_contents(SB.'config'.DS.'database.sample.php');
+      $params = [['_DB_HOST_','_DB_NAME_','_DB_PORT_','_DB_USER_','_DB_PASSWORD_'],[DB_HOST,DB_NAME,DB_PORT,DB_USERNAME,DB_PASSWORD], $source];
+      return str_replace(...$params);
+    });
+  } else {
+    // Redirect to installer
+    header('location: ' . SWB . 'install/index.php');
+    exit;
+  }
+}
 
-// command execution status
-define('BINARY_NOT_FOUND', 127);
-define('BINARY_FOUND', 1);
-define('COMMAND_SUCCESS', 0);
-define('COMMAND_FAILED', 2);
+
+
+// Extension check
+\SLiMS\Extension::throwIfNotFulfilled();
 
 // simbio main class inclusion
 require SIMBIO.'simbio.inc.php';
@@ -202,7 +231,7 @@ $sysconf['promote_first_emphasized'] = true;
 
 /* Dynamic Content */
 $sysconf['content']['allowable_tags'] = '<p><a><cite><code><em><strong><cite><blockquote><fieldset><legend>'
-    .'<h3><hr><br><table><tr><td><th><thead><tbody><tfoot><div><span><img><object><param><ul><ol><li>';
+    .'<h3><hr><br><table><tr><td><th><thead><tbody><tfoot><div><span><img><object><param><ul><ol><li><i>';
 
 /* allow logged in members to mark bibliography titles, show the title basket in the member details and send a mail to reserve these titles */
 $sysconf['enable_mark'] = true;
@@ -214,23 +243,6 @@ $sysconf['enable_xml_result'] = true;
 /* JSON LD */
 $sysconf['jsonld_result'] = true;
 $sysconf['jsonld_detail'] = true;
-
-/* DATABASE BACKUP config */
-// specify the full path of mysqldump binary
-// Added by Drajat Hasan
-// For Windows platform with XAMPP
-if (preg_match("/(Windows)/i", php_uname('a'))) {
-   if (preg_match("/(xampp)/i", __DIR__)) {
-      $rempath = substr(__DIR__, 0, strpos(__DIR__, "htdocs"));
-      $sysconf['mysqldump'] = $rempath."mysql\bin\mysqldump.exe";
-    } else {
-      // not use XAMPP? change this value with full path of mysqldump.exe
-      $sysconf['mysqldump'] = 'C:\...\mysqldump.exe';
-    }
-} else {
-   // For Linux Platform
-   $sysconf['mysqldump'] = '/usr/bin/mysqldump';
-}
 
 // backup location (make sure it is accessible and rewritable to webserver!)
 $sysconf['temp_dir'] = '/tmp';
@@ -303,7 +315,7 @@ $sysconf['allowed_images'] = array('.jpeg', '.jpg', '.gif', '.png', '.JPEG', '.J
 // allowed file attachment to upload
 $sysconf['allowed_file_att'] = array('.pdf', '.rtf', '.txt',
     '.odt', '.odp', '.ods', '.doc', '.xls', '.ppt',
-    '.avi', '.mpeg', '.mp4', '.flv', '.mvk',
+    '.avi', '.mpeg', '.mp4', '.flv', '.mkv',
     '.jpg', '.jpeg', '.png', '.gif',
     '.docx', '.pptx', '.xlsx',
     '.ogg', '.mp3', '.xml', '.mrc');
@@ -404,51 +416,7 @@ $sysconf['z3950_SRU_source'][1] = array('uri' => 'http://z3950.loc.gov:7090/voya
 /**
  * MARC copy cataloguing sources
  */
-$sysconf['marc_SRU_source'][1] = array('uri' => 'http://opac.perpusnas.go.id/sru.aspx', 'name' => 'Perpustakaan Nasional RI');
-
-
-/**
- * Peer to peer server config
- */
-$sysconf['p2pserver'][1] = array('uri' => 'http://127.0.0.1/slims9_bulian', 'name' => 'SLiMS Library');
-
-/**
- * User and member login method
- */
-$sysconf['auth']['user']['method'] = 'native'; // method can be 'native' or 'LDAP'
-$sysconf['auth']['member']['method'] = 'native'; // for library member, method can be 'native' or 'LDAP'
-/**
- * LDAP Specific setting for User
- */
-if (($sysconf['auth']['user']['method'] === 'LDAP') OR ($sysconf['auth']['member']['method'] === 'LDAP')) {
-  $sysconf['auth']['user']['ldap_server'] = '127.0.0.1'; // LDAP server
-  $sysconf['auth']['user']['ldap_base_dn'] = 'ou=slims,dc=diknas,dc=go,dc=id'; // LDAP base DN
-  $sysconf['auth']['user']['ldap_suffix'] = ''; // LDAP user suffix
-  $sysconf['auth']['user']['ldap_bind_dn'] = 'uid=#loginUserName,'.$sysconf['auth']['user']['ldap_base_dn']; // Binding DN
-  $sysconf['auth']['user']['ldap_port'] = null; // optional LDAP server connection port, use null or false for default
-  $sysconf['auth']['user']['ldap_options'] = array(
-      array(LDAP_OPT_PROTOCOL_VERSION, 3),
-      array(LDAP_OPT_REFERRALS, 0)
-      ); // optional LDAP server options
-  $sysconf['auth']['user']['ldap_search_filter'] = '(|(uid=#loginUserName)(cn=#loginUserName*))'; // LDAP search filter, #loginUserName will be replaced by the real login name
-  $sysconf['auth']['user']['userid_field'] = 'uid'; // LDAP field for username
-  $sysconf['auth']['user']['fullname_field'] = 'cn'; // LDAP field for full name
-  $sysconf['auth']['user']['mail_field'] = 'mail'; // LDAP field for e-mail
-  /**
-   * LDAP Specific setting for member
-   * By default same as User
-   */
-  $sysconf['auth']['member']['ldap_server'] = &$sysconf['auth']['user']['ldap_server']; // LDAP server
-  $sysconf['auth']['member']['ldap_base_dn'] = &$sysconf['auth']['user']['ldap_base_dn']; // LDAP base DN
-  $sysconf['auth']['member']['ldap_suffix'] = &$sysconf['auth']['user']['ldap_suffix']; // LDAP user suffix
-  $sysconf['auth']['member']['ldap_bind_dn'] = &$sysconf['auth']['user']['ldap_bind_dn']; // Binding DN
-  $sysconf['auth']['member']['ldap_port'] = &$sysconf['auth']['user']['ldap_port']; // optional LDAP server connection port, use null or false for default
-  $sysconf['auth']['member']['ldap_options'] = &$sysconf['auth']['user']['ldap_options']; // optional LDAP server options
-  $sysconf['auth']['member']['ldap_search_filter'] = &$sysconf['auth']['user']['ldap_search_filter']; // LDAP search filter, #loginUserName will be replaced by the real login name
-  $sysconf['auth']['member']['userid_field'] = &$sysconf['auth']['user']['userid_field']; // LDAP field for username
-  $sysconf['auth']['member']['fullname_field'] = &$sysconf['auth']['user']['fullname_field']; // LDAP field for full name
-  $sysconf['auth']['member']['mail_field'] = &$sysconf['auth']['user']['mail_field']; // LDAP field for e-mail
-}
+$sysconf['marc_SRU_source'][1] = array('uri' => 'https://opac.perpusnas.go.id/sru.aspx', 'name' => 'Perpustakaan Nasional RI');
 
 /**
  * BIBLIO INDEXING
@@ -478,46 +446,7 @@ $sysconf['index']['engine']['es_opts'] = array(
   'index' => 'slims' // name of index in ElasticSearch
 );
 
-
-/**
- * Captcha Settings
- */
-// Captcha settings for Senayan Management Console (aka Librarian Login)
-$sysconf['captcha']['smc']['enable'] = false; // value can be 'true' or 'false'
-$sysconf['captcha']['smc']['type'] = 'recaptcha'; // value can be 'recaptcha' (at this time)
-if ($sysconf['captcha']['smc']['enable']) {
-    include_once LIB.$sysconf['captcha']['smc']['type'].DS.'smc_settings.inc.php';
-}
-
-// Captcha settings for Member Login
-$sysconf['captcha']['member']['enable'] = false; // value can be 'true' or 'false'
-$sysconf['captcha']['member']['type'] = 'recaptcha'; // value can be 'recaptcha' (at this time)
-if ($sysconf['captcha']['member']['enable']) {
-    include_once LIB.$sysconf['captcha']['member']['type'].DS.'member_settings.inc.php';
-}
-
-// Captcha settings for Forgot Password
-$sysconf['captcha']['forgot']['enable'] = true; // value can be 'true' or 'false'
-$sysconf['captcha']['forgot']['type'] = 'recaptcha'; // value can be 'recaptcha' (at this time)
-if ($sysconf['captcha']['forgot']['enable']) {
-    include_once LIB.$sysconf['captcha']['forgot']['type'].DS.'forgot_settings.inc.php';
-}
-
-/**
- * Mailing Settings
- */
-$sysconf['mail']['SMTPSecure'] = 'ssl'; // ssl or tls
-$sysconf['mail']['enable'] = true;
-$sysconf['mail']['server'] = 'ssl://smtp.gmail.com:465'; // SMTP server
-$sysconf['mail']['server_port'] = 465; // the SMTP port
-$sysconf['mail']['auth_enable'] = true; // enable SMTP authentication
-$sysconf['mail']['auth_username'] = 'admin'; // SMTP account username
-$sysconf['mail']['auth_password'] = 'admin'; // SMTP account password
-$sysconf['mail']['from'] = 'admin@localhost';
-$sysconf['mail']['from_name'] = 'SLiMS Administrator';
-$sysconf['mail']['reply_to'] = &$sysconf['mail']['from'];
-$sysconf['mail']['reply_to_name'] = &$sysconf['mail']['from_name'];
-
+$sysconf['index']['word'] = true;
 /**
  * Maximum biblio mark for member
  */
@@ -545,7 +474,7 @@ $sysconf['ipaccess']['smc-serialcontrol'] = 'all';
 // OAI-PMH settings
 $sysconf['OAI']['enable'] = true;
 $sysconf['OAI']['identifierPrefix'] = 'oai:slims/';
-$sysconf['OAI']['Identify']['baseURL'] = 'http://'.@$_SERVER['SERVER_NAME'].':'.@$_SERVER['SERVER_PORT'].SWB.'oai.php';
+$sysconf['OAI']['Identify']['baseURL'] = 'http://'.($_SERVER['SERVER_NAME']??'').':'.($_SERVER['SERVER_PORT']??'').SWB.'oai.php';
 $sysconf['OAI']['Identify']['repositoryName'] = 'SLiMS Senayan Library Management System Repository';
 $sysconf['OAI']['Identify']['adminEmail'] = 'admin@slims.web.id';
 $sysconf['OAI']['Identify']['granularity'] = 'YYYY-MM-DDThh:mm:ssZ';
@@ -600,43 +529,17 @@ $sysconf['admin_home']['mode'] = 'dashboard'; // set as 'default' or 'dashboard'
 if ($is_auto = @ini_get('session.auto_start')) { define('SESSION_AUTO_STARTED', $is_auto); }
 if (defined('SESSION_AUTO_STARTED')) { @session_destroy(); }
 
-// check for local sysconfig For Admin (fa) file
-if (defined('DB_ACCESS') && DB_ACCESS == 'fa' && file_exists(SB.'config'.DS.'sysconfig.local.fa.inc.php')) {
-  include SB.'sysconfig.local.fa.inc.php';
-} else {
-  // check for local sysconfig file
-  if (file_exists(SB.'config'.DS.'sysconfig.local.inc.php')) {
-    include SB.'config'.DS.'sysconfig.local.inc.php';
-  } else {
-    header("location: install/index.php");
-    exit;
-  }
-}
-
 /* DATABASE RELATED */
-if (!defined('DB_HOST')) { define('DB_HOST', 'localhost'); }
-if (!defined('DB_PORT')) { define('DB_PORT', '3306'); }
-if (!defined('DB_NAME')) { define('DB_NAME', 'senayandb'); }
-if (!defined('DB_USERNAME')) { define('DB_USERNAME', 'senayanuser'); }
-if (!defined('DB_PASSWORD')) { define('DB_PASSWORD', 'password_senayanuser'); }
-// database connection
-// we prefer to use mysqli extensions if its available
-if (extension_loaded('mysqli')) {
-    /* MYSQLI */
-    $dbs = @new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT);
-    if (mysqli_connect_error()) {
-        die("Error Connecting to Database with message: ".mysqli_connect_error().". Please check your configuration!\n");
-    }
-} else {
-    /* MYSQL */
-    // require the simbio mysql class
-    include SIMBIO.'simbio_DB/mysql/simbio_mysql.inc.php';
-    // make a new connection object that will be used by all applications
-    $dbs = @new simbio_mysql(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT);
-}
+$dbs = \SLiMS\DB::getInstance('mysqli');
 
 /* Force UTF-8 for MySQL connection */
 $dbs->query('SET NAMES \'utf8\'');
+
+// Apply language settings
+$localisation = \SLiMS\Polyglot\Memory::getInstance();
+
+// plugin locale
+$localisation->registerLanguageFromPlugin();
 
 // load global settings from database. Uncomment below lines if you dont want to load it
 utility::loadSettings($dbs);
@@ -652,10 +555,6 @@ if (stripos($_SERVER['PHP_SELF'], '/admin') === false) {
         // create language cookie
         @setcookie('select_lang', $select_lang, time()+14400, SWB);
         $sysconf['default_lang'] = $select_lang;
-
-        //reload page on change language
-        header("location:index.php");
-        
     } else if (isset($_COOKIE['select_lang'])) {
         $sysconf['default_lang'] = trim(strip_tags($_COOKIE['select_lang']));
     }
@@ -665,8 +564,51 @@ if (stripos($_SERVER['PHP_SELF'], '/admin') === false) {
     }
 }
 
-// Apply language settings
-require LANG.'localisation.php';
+// load localisation
+$localisation->load(function($memory) use($dbs, &$sysconf) {
+    // For Admin Area
+    if (\SLiMS\Url::isAdmin()) {
+        if (isset($_POST['select_lang'])) {
+            $_SESSION['lang'] = $_POST['select_lang'];
+        }
+        
+        if (empty($_SESSION['lang'])) {
+            $lang_dbs = $dbs->query("SELECT setting_value FROM setting WHERE setting_name = 'default_lang'");
+            $lang_dbs_res = $lang_dbs->fetch_assoc();
+            if ($lang_dbs_res && ($lang_val = unserialize($lang_dbs_res['setting_value']))) {
+                $_SESSION['lang'] = $lang_val;
+            } else {
+                $_SESSION['lang'] = 'en_US'; // Fallback to English
+            }
+        }
+        $memory->setLocale($_SESSION['lang']);
+        $sysconf['default_lang'] = $_SESSION['lang']; // Update sysconf as well
+        return;
+    }
+
+    // For OPAC Area - use the language set by cookie logic above
+    $memory->setLocale($sysconf['default_lang']);
+});
+
+// load helper
+require_once LIB . "helper.inc.php";
+
+$localisation->registerLanguages([
+    ['ar_SA', __('Arabic'), 'Arabic'],
+    ['bn_BD', __('Bengali'), 'Bengali'],
+    ['pt_BR', __('Brazilian Portuguese'), 'Brazilian Portuguese'],
+    ['en_US', __('English'), 'English'],
+    ['es_ES', __('Espanol'), 'Espanol'],
+    ['de_DE', __('German'), 'Deutsch'],
+    ['id_ID', __('Indonesian'), 'Indonesia'],
+    ['ja_JP', __('Japanese'), 'Japanese'],
+    ['ms_MY', __('Malay'), 'Malay'],
+    ['fa_IR', __('Persian'), 'Persian'],
+    ['ru_RU', __('Russian'), 'Russian'],
+    ['th_TH', __('Thai'), 'Thai'],
+    ['tr_TR', __('Turkish'), 'Turkish'],
+    ['ur_PK', __('Urdu'), 'Urdu']
+]);
 
 // template info config
 if (!file_exists($sysconf['template']['dir'].'/'.$sysconf['template']['theme'].'/tinfo.inc.php')) {
@@ -680,8 +622,84 @@ if (file_exists($sysconf['admin_template']['dir'].'/'.$sysconf['admin_template']
   require $sysconf['admin_template']['dir'].'/'.$sysconf['admin_template']['theme'].'/tinfo.inc.php';
 }
 
-// load global settings again for override tinfo setting
-utility::loadSettings($dbs);
+// visitor limitation
+$sysconf['enable_counter_by_ip'] = true;
+$sysconf['allowed_counter_ip'] = ['127.0.0.1'];
+$sysconf['enable_visitor_limitation']     = false; // "true" or "false"
+$sysconf['time_visitor_limitation']       = 60; // in minute
+
+/* maximum insert batch */
+$sysconf['max_insert_batch'] = 100;
+
+/* Random static file version for production mode */
+$sysconf['static_file_version'] = 444981076;
+
+// Http Option
+$sysconf['http'] = [
+  // SLiMS by default use Guzzle as Http client. You
+  // can provide your config.
+  'client' => [
+    // verify ssl
+    'verify' => true,
+    // in seconds
+    'timeout' => 60 
+  ],
+  'cache' => [
+    'lifetime' => 300 // in seconds
+  ]
+];
+
+// Database backup
+$sysconf['database_backup'] = [
+  // show reminder message at admin
+  // dashboard
+  'reminder' => true,
+
+  // backup data automatically when
+  // super admin first login in to SLiMS
+  'auto' => false,
+
+  // Backup options
+  // SLiMS use Ifsnop\Mysqldump library.
+  'options' => [
+      'compress' => \Ifsnop\Mysqldump\Mysqldump::NONE,
+      'no-data' => false,
+      'add-drop-table' => true,
+      'single-transaction' => true,
+      'lock-tables' => true,
+      'add-locks' => false,
+      'extended-insert' => false,
+      'disable-keys' => true,
+      'skip-triggers' => false,
+      'add-drop-trigger' => true,
+      'routines' => true,
+      'databases' => false,
+      'add-drop-database' => false,
+      'hex-blob' => true,
+      'no-create-info' => false,
+      'where' => '',
+      /**
+       * an option for definer state in trigger query. 
+       * For some case, user had bad experience 
+       * when they move their SLiMS database to other database 
+       * machine without same privileged user as trigger definer.
+       */
+      'skip-definer' => true
+  ]
+];
+
+// P2P server type list
+$sysconf['p2pserver_type'] = [
+  1 => 'P2P Server',
+  'z3950 server',
+  'z3950 SRU server',
+  'MARC SRU server'
+];
+
+/**
+ * Peer to peer server config
+ */
+$sysconf['p2pserver'][1] = array('uri' => \SLiMS\Url::getSlimsBaseUri(), 'name' => $sysconf['library_name']);
 
 /* AUTHORITY TYPE */
 $sysconf['authority_type']['p'] = __('Personal Name');
@@ -714,18 +732,12 @@ $sysconf['system_user_type'][2] = __('Senior Librarian');
 $sysconf['system_user_type'][3] = __('Library Staff');
 
 // redirect to mobile template on mobile mode
-if (defined('LIGHTWEIGHT_MODE') AND !isset($_COOKIE['FULLSITE_MODE']) AND isset($sysconf['template']['responsive']) && $sysconf['template']['responsive'] === false) {
+if (defined('LIGHTWEIGHT_MODE') AND !isset($_COOKIE['FULLSITE_MODE']) AND isset($sysconf['template']['responsive']) && (bool)$sysconf['template']['responsive'] === false) {
   $sysconf['template']['theme'] = 'lightweight';
   $sysconf['template']['css'] = $sysconf['template']['dir'].'/'.$sysconf['template']['theme'].'/style.css';
   $sysconf['enable_xml_detail'] = false;
   $sysconf['enable_xml_result'] = false;
 }
-
-// visitor limitation
-$sysconf['enable_counter_by_ip'] = true;
-$sysconf['allowed_counter_ip'] = ['127.0.0.1'];
-$sysconf['enable_visitor_limitation']     = false; // "true" or "false"
-$sysconf['time_visitor_limitation']       = 60; // in minute
 
 /* new log system */
 $sysconf['log']['biblio'] = TRUE;
@@ -740,20 +752,43 @@ $sysconf['always_user_login'] = true;
 /* new advanced system log - still experimental */
 $sysconf['log']['adv']['enabled'] = FALSE;
 $sysconf['log']['adv']['handler'] = 'fs'; # 'fs' for filesystem, 'es' for elasticsearch
-# for filesystem
+// for filesystem
 $sysconf['log']['adv']['path'] = '/var/www/logs';
-# for elasticsearch
+// for elasticsearch
 $sysconf['log']['adv']['host'] = 'localhost:9200';
 $sysconf['log']['adv']['index'] = 'slims_logs';
 
-/* maximum insert batch */
-$sysconf['max_insert_batch'] = 100;
+// librarian / system user password policy
+$sysconf['password_policy_strong'] = true;
+$sysconf['password_policy_min_length'] = 8;
 
-/* Load balancing environment */
-$sysconf['load_balanced_env'] = false;
+// load global settings again for override tinfo setting
+utility::loadSettings($dbs);
 
-// load helper
-require_once "lib/helper.inc.php";
+// set default timezone
+// for a list of timezone, please see PHP Manual at "List of Supported Timezones" section
+// https://www.php.net/manual/en/timezones.php
+@date_default_timezone_set(config('timezone', 'Asia/Jakarta'));
+
+// set real client ip address if SLiMS behind a reverse proxy
+$load_balanced = config('loadbalanced');
+if ($load_balanced && (bool)$load_balanced['env']) ip()->setSourceRemoteIp($load_balanced['options']['source_ip']);
 
 // load all Plugins
+$sysconf['max_plugin_upload'] = 5000;
 \SLiMS\Plugins::getInstance()->loadPlugins();
+
+// Captcha factory
+\SLiMS\Captcha\Factory::operate();
+
+// Sanitize incoming data
+$sanitizer = \SLiMS\Sanitizer::fromGlobal(config('custom_sanitizer_options', [
+  'get' => $_GET,
+  'server' => $_SERVER,
+  'post' => $_POST
+]));
+
+// create dynamic config file from sample
+\SLiMS\Config::createFromSampleIfNotExists([
+  'csp','auth'
+]);

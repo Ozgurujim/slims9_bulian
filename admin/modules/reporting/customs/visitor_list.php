@@ -90,12 +90,29 @@ if (!$reportView) {
                     <?php echo simbio_form_element::textField('text', 'institution', '', 'class="form-control col-3"'); ?>
                 </div>
                 <div class="form-group divRow">
-                    <label><?php echo __('Visit Date From'); ?></label>
-                    <?php echo simbio_form_element::dateField('startDate', '2000-01-01','class="form-control"'); ?>
+                    <label><?php echo __('Room'); ?></label>
+                    <?php
+                    $room_q = $dbs->query('SELECT unique_code, name FROM mst_visitor_room');
+                    $room_options = [];
+                    $room_options[] = ['0', __('ALL')];
+                    while ($room_d = $room_q->fetch_row()) {
+                        $room_options[] = [$room_d[0], $room_d[1]];
+                    }
+                    echo simbio_form_element::selectList('room_code', $room_options,'','class="form-control col-3"');
+                    ?>
                 </div>
                 <div class="form-group divRow">
-                    <label><?php echo __('Visit Date Until'); ?></label>
-                    <?php echo simbio_form_element::dateField('untilDate', date('Y-m-d'),'class="form-control"'); ?>
+                    <div class="divRowContent">
+                        <div>
+                            <label style="width: 195px;"><?php echo __('Visit Date From'); ?></label>
+                            <label><?php echo __('Visit Date Until'); ?></label>
+                        </div>
+                        <div id="range">
+                            <input type="text" name="startDate" value="2000-01-01">
+                            <span><?= __('to') ?></span>
+                            <input type="text" name="untilDate" value="<?= date('Y-m-d') ?>">
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group divRow">
                     <label><?php echo __('Record each page'); ?></label>
@@ -108,6 +125,15 @@ if (!$reportView) {
             <input type="hidden" name="reportView" value="true" />
         </form>
 	</div>
+    <script>
+        $(document).ready(function(){
+            const elem = document.getElementById('range');
+            const dateRangePicker = new DateRangePicker(elem, {
+                language: '<?= substr($sysconf['default_lang'], 0,2) ?>',
+                format: 'yyyy-mm-dd',
+            });
+        })
+    </script>
     <!-- filter end -->
     <div class="paging-area"><div class="pt-3 pr-3" id="pagingBox"></div></div>
     <iframe name="reportView" id="reportView" src="<?php echo $_SERVER['PHP_SELF'].'?reportView=true'; ?>" frameborder="0" style="width: 100%; height: 500px;"></iframe>
@@ -116,6 +142,7 @@ if (!$reportView) {
     ob_start();
     // table spec
     $table_spec = 'visitor_count AS vc
+        LEFT JOIN mst_visitor_room AS mr ON mr.unique_code = vc.room_code
         LEFT JOIN (member AS m LEFT JOIN mst_member_type AS mt ON m.member_type_id=mt.member_type_id)
         ON vc.member_id=m.member_id';
 
@@ -125,6 +152,7 @@ if (!$reportView) {
     $reportgrid->setSQLColumn('IF(vc.member_id IS NOT NULL, vc.member_id, \'NON-MEMBER\')  AS \''.__('Member ID').'\'',
         'vc.member_name AS \''.__('Visitor Name').'\'',
         'IF(mt.member_type_name IS NOT NULL, mt.member_type_name, \'NON-MEMBER\') AS \''.__('Membership Type').'\'',
+        'mr.name AS \'' . __('Room Name') . '\'',
         'vc.institution AS \''.__('Institution').'\'',
         'vc.checkin_date AS \''.__('Visit Date').'\'');
     $reportgrid->setSQLorder('vc.member_id ASC');
@@ -132,7 +160,7 @@ if (!$reportView) {
     // is there any search
     $criteria = 'vc.visitor_id IS NOT NULL ';
     if (isset($_GET['member_type']) AND !empty($_GET['member_type'])) {
-        $mtype = $_GET['member_type'];
+        $mtype = sprintf( '%d', $dbs->real_escape_string($_GET['member_type']) );
         if (intval($mtype) < 0) {
             $criteria .= ' AND (vc.member_id IS NULL OR vc.member_id=\'\')';
         } else if (intval($mtype) > 0) {
@@ -140,17 +168,21 @@ if (!$reportView) {
         }
     }
     if (isset($_GET['id_name']) AND !empty($_GET['id_name'])) {
-        $id_name = $dbs->escape_string($_GET['id_name']);
+        $id_name = $dbs->real_escape_string($_GET['id_name']);
         $criteria .= ' AND (vc.member_id LIKE \'%'.$id_name.'%\' OR vc.member_name LIKE \'%'.$id_name.'%\')';
     }
     if (isset($_GET['institution']) AND !empty($_GET['institution'])) {
-        $institution = $dbs->escape_string(trim($_GET['institution']));
+        $institution = $dbs->real_escape_string(trim($_GET['institution']));
         $criteria .= ' AND vc.institution LIKE \'%'.$institution.'%\'';
+    }
+    if (isset($_GET['room_code']) AND !empty($_GET['room_code'])) {
+        $roomcode = $dbs->real_escape_string(trim($_GET['room_code']));
+        $criteria .= ' AND vc.room_code = \''.$roomcode.'\'';
     }
     // register date
     if (isset($_GET['startDate']) AND isset($_GET['untilDate'])) {
-        $criteria .= ' AND (TO_DAYS(vc.checkin_date) BETWEEN TO_DAYS(\''.$_GET['startDate'].'\') AND
-            TO_DAYS(\''.$_GET['untilDate'].'\'))';
+        $criteria .= sprintf( ' AND (TO_DAYS(vc.checkin_date) BETWEEN TO_DAYS(\'%s\') AND
+            TO_DAYS(\'%s\'))', $dbs->real_escape_string(trim($_GET['startDate'])), $dbs->real_escape_string(trim($_GET['untilDate'])) );
     }
     if (isset($_GET['recsEachPage'])) {
         $recsEachPage = (integer)$_GET['recsEachPage'];
@@ -171,6 +203,7 @@ if (!$reportView) {
         ', vc.member_name AS \''.__('Visitor Name').'\''.
         ', IF(mt.member_type_name IS NOT NULL, mt.member_type_name, \'NON-MEMBER\') AS \''.__('Membership Type').'\''.
         ', vc.institution AS \''.__('Institution').'\''.
+        ', mr.name AS \''.__('Room Name').'\''.
         ', vc.checkin_date AS \''.__('Visit Date').'\''.
 		' FROM '.$table_spec.' WHERE '.$criteria. ' ORDER BY vc.member_id ASC';
 

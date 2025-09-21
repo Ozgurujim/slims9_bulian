@@ -93,9 +93,11 @@ if (!$reportView) {
         <div class="form-group divRow">
             <div class="divRowLabel"><?php echo __('Fines Date'); ?></div>
             <div class="divRowContent">
-            <?php
-            echo simbio_form_element::dateField('finesDate', date('Y-m-d'),' class="form-control"');
-            ?>
+                <div id="range">
+                    <input type="text" name="finesDateStart">
+                    <span><?= __('to') ?></span>
+                    <input type="text" name="finesDateEnd">
+                </div>
             </div>
         </div>
         <div class="form-group form-group divRow">
@@ -109,6 +111,15 @@ if (!$reportView) {
     <input type="hidden" name="reportView" value="true" />
     </form>
     </div>
+    <script>
+        $(document).ready(function(){
+            const elem = document.getElementById('range');
+            const dateRangePicker = new DateRangePicker(elem, {
+                language: '<?= substr($sysconf['default_lang'], 0,2) ?>',
+                format: 'yyyy-mm-dd',
+            });
+        })
+    </script>
     <!-- filter end -->
     <div class="paging-area"><div class="pt-3 pr-3" id="pagingBox"></div></div>
     <iframe name="reportView" id="reportView" src="<?php echo $_SERVER['PHP_SELF'].'?reportView=true'; ?>" frameborder="0" style="width: 100%; height: 500px;"></iframe>
@@ -143,13 +154,18 @@ if (!$reportView) {
         }
     }
     // fines date
-    if (isset($_GET['finesDate'])) {
-        $date_criteria = ' AND fines_date=\''.$_GET['finesDate'].'\' ';
+    if (isset($_GET['finesDateStart']) && !empty($_GET['finesDateStart']) && isset($_GET['finesDateEnd']) && !empty($_GET['finesDateEnd'])) 
+    {
+        $date_criteria = ' AND (fines_date >=\''.$dbs->escape_string($_GET['finesDateStart']).'\' AND fines_date <=\''.$dbs->escape_string($_GET['finesDateEnd']).'\') ';
+        $dateInput = '?finesDateStart='.$_GET['finesDateStart'].'&finesDateEnd='.$_GET['finesDateEnd'];
         $fines_criteria .= $date_criteria;
     }
-    elseif(!isset($_GET['finesDate'])){
-        $date_criteria = ' AND fines_date=\''.date('Y-m-d').'\' ';
-        $fines_criteria .= $date_criteria;       
+    else
+    {
+        $date_input = isset($_GET['singleDate']) ? $_GET['finesDate'] : date('Y-m-d');
+        $date_criteria = ' AND fines_date=\''.$date_input.'\' ';
+        $dateInput = '?finesDateStart='.$date_input;
+        $fines_criteria .= $date_criteria;   
     }
 
     if ((isset($_GET['membershipType'])) AND ($_GET['membershipType'] != '0')) {
@@ -162,11 +178,14 @@ if (!$reportView) {
         $num_recs_show = ($recsEachPage >= 5 && $recsEachPage <= 200)?$recsEachPage:$num_recs_show;
     }
     $reportgrid->setSQLCriteria($fines_criteria);
+    // dd($fines_criteria);
 
     // set table and table header attributes
     $reportgrid->table_attr = 'align="center" class="dataListPrinted" cellpadding="5" cellspacing="0"';
     $reportgrid->table_header_attr = 'class="dataListHeaderPrinted"';
     $reportgrid->column_width = array('1' => '80%');
+    $reportgrid->show_spreadsheet_export = true;
+    $reportgrid->spreadsheet_export_btn = '<a href="' . AWB . 'modules/reporting/customs/member_fines_list.csv.php'.simbio_security::xssFree($dateInput).'" class="s-btn btn btn-default">'.__('Export to spreadsheet format').'</a>';
 
     // callback function to show fines list
     function showFinesList($obj_db, $array_data)
@@ -178,16 +197,20 @@ if (!$reportView) {
         $member_name = $member_d[0];
         unset($member_q);
 
+        if (!isset($_SESSION['csvData'])) $_SESSION['csvData'] = [];
+
         $fines_q = $obj_db->query('SELECT f.debet,f.credit, f.description, f.fines_date
             FROM fines AS f WHERE f.member_id=\''.$array_data[0].'\''.( !empty($date_criteria)?$date_criteria:'' ));
         $_buffer = '<div style="font-weight: bold; color: black; font-size: 10pt; margin-bottom: 3px; border-bottom:solid 5px #eaeaea;">'.$member_name.' ('.$array_data[0].')</div>';
+
+        $_SESSION['csvData'][$array_data[0]] = ['data' => $member_d, 'dateCriteria' => ( !empty($date_criteria)?$date_criteria:'' )];
 
         $_buffer .= '<table width="100%" cellspacing="0">';
         $debet  = 0;
         $credit = 0;
         $_buffer .= '<tr><td>'.__('Fines Date').'</td><td width="30%"><b>'.__('Description').'</b></td><td>'.__('Debit').'</td><td>'.__('Credit').'</td></tr>';
         while ($fines_d = $fines_q->fetch_assoc()) {
-            $_buffer .= '<tr style = "background-color:#adadad4d;"><td>'.$fines_d['fines_date'].'</td><td valign="top" width="40%">'.$fines_d['description'].'</td><td >Rp '.number_format($fines_d['debet'], 2, ',', '.').' </td><td>Rp '.number_format($fines_d['credit'], 2, ',', '.').'</td></tr>';
+            $_buffer .= '<tr style = "background-color:#adadad4d;"><td>'.$fines_d['fines_date'].'</td><td valign="top" width="40%">'.$fines_d['description'].'</td><td >'.currency($fines_d['debet']).' </td><td>'.currency($fines_d['credit']).'</td></tr>';
             $debet  = $debet + $fines_d['debet'];
             $credit = $credit + $fines_d['credit'];
         }
@@ -195,7 +218,7 @@ if (!$reportView) {
         if($debet > $credit){
             $clr = '#f9b8b8';
         }
-        $_buffer .= '<tr style = "border-top:solid 5px #eaeaea; font-weight:bold;background-color:'.$clr.';"><i><td colspan="2">Total</td><td>Rp '.number_format($debet, 2, ',', '.').'</td><td>Rp '.number_format($credit, 2, ',', '.').'</td></i></tr>';
+        $_buffer .= '<tr style = "border-top:solid 5px #eaeaea; font-weight:bold;background-color:'.$clr.';"><i><td colspan="2">Total</td><td>'.currency($debet).'</td><td>'.currency($credit).'</td></i></tr>';
         $_buffer .= '</table>';
         return $_buffer;
     }
@@ -206,7 +229,7 @@ if (!$reportView) {
     echo $reportgrid->createDataGrid($dbs, $table_spec, $num_recs_show);
 
     echo '<script type="text/javascript">'."\n";
-    echo 'parent.$(\'#pagingBox\').html(\''.str_replace(array("\n", "\r", "\t"), '', $reportgrid->paging_set).'\');'."\n";
+    echo 'parent.$(\'#pagingBox\').html(\''.str_replace(array("\n", "\r", "\t"), '', $reportgrid->paging_set??'').'\');'."\n";
     echo '</script>';
 
     $content = ob_get_clean();

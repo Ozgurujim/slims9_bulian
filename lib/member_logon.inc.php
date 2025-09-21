@@ -62,7 +62,7 @@ class member_logon
      * @return  boolean
      */
     protected function ldapLogin() {
-        global $ldap_configs;
+        $ldap_configs = config('auth.member');
         if (!function_exists('ldap_connect')) {
             $this->errors = 'LDAP library is not installed yet!';
             return false;
@@ -189,7 +189,7 @@ class member_logon
         // get user info
         $this->user_info = $_member_q->fetch_assoc();
         // verify password hash
-        $verified = password_verify($this->password, $this->user_info['mpasswd']);
+        $verified = password_verify($this->password, $this->user_info['mpasswd']??'');
         if (!$verified) {
             //check if md5
             if($this->user_info['mpasswd'] == md5($this->password)){
@@ -243,6 +243,18 @@ class member_logon
         $_SESSION['m_can_reserve'] = $this->user_info['enable_reserve'];
         $_SESSION['m_reserve_limit'] = $this->user_info['reserve_limit'];
         $_SESSION['m_image'] = $this->user_info['member_image'];
+
+        // set bookmark
+        $bookmarkStatement = $obj_db->query('SELECT `biblio_id` FROM `biblio_mark` WHERE `member_id` = \'' . $obj_db->escape_string($this->user_info['member_id']) . '\'');
+
+        if ($bookmarkStatement)
+        {
+            $_SESSION['bookmark'] = [];
+            while ($bookmark = $bookmarkStatement->fetch_row()) {
+                $_SESSION['bookmark'][$bookmark[0]] = $bookmark[0];
+            }
+        }
+
         // check member expiry date
         require_once SIMBIO.'simbio_UTILS/simbio_date.inc.php';
         $_curr_date = date('Y-m-d');
@@ -252,7 +264,7 @@ class member_logon
 
         // update the last login time
         $obj_db->query("UPDATE member SET last_login='".date("Y-m-d H:i:s")."',
-            last_login_ip='".$_SERVER['REMOTE_ADDR']."'
+            last_login_ip='".ip()."'
             WHERE member_id='".$obj_db->escape_string($this->user_info['member_id'])."'");
 
         return true;

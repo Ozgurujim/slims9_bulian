@@ -132,6 +132,11 @@ class circapi
       $_renewed = $_renewed + 1;
       $_sql_doextend = 'UPDATE loan SET due_date=\''.$_new_dd.'\', renewed=\''.$_renewed.'\' WHERE loan_id='.$loan_id;
       $_stmt_doextend = $obj_db->query($_sql_doextend);
+      
+      // Update loan history (replaces update_loan_history trigger)
+      $_sql_update_history = 'UPDATE loan_history SET due_date=\''.$_new_dd.'\', renewed=\''.$_renewed.'\' WHERE loan_id='.$loan_id;
+      $obj_db->query($_sql_update_history);
+      
       if ($_today > $_old_dd) {
         $_uts_duedate = DateTime::createFromFormat('Y-m-d', $_old_dd);
         $uts_duedate = (int) $_uts_duedate->format('U');
@@ -188,6 +193,36 @@ class circapi
     } else {
       return FALSE;
     }
+  }
+
+  public static function loan_load_by_id($obj_db, $loan_id)
+  {
+    $s_loa = 'SELECT * ';
+    $s_loa .= 'FROM loan AS l ';
+    $s_loa .= 'WHERE l.loan_id=\''.$loan_id.'\'';
+    $q_loa = $obj_db->query($s_loa);
+    $_return = NULL;
+    if (!$obj_db->errno) {
+      $i = 0;
+      while ($r_loa = $q_loa->fetch_assoc()) {
+        $_return['loan_id'] = $r_loa['loan_id'];
+        $_return['item_code'] = $r_loa['item_code'];
+        $_return['member_id'] = $r_loa['member_id'];
+        $_return['loan_date'] = $r_loa['loan_date'];
+        $_return['due_date'] = $r_loa['due_date'];
+        $_return['renewed'] = $r_loa['renewed'];
+        $_return['loan_rules_id'] = $r_loa['loan_rules_id'];
+        $_return['actual'] = $r_loa['actual'];
+        $_return['is_lent'] = $r_loa['is_lent'];
+        $_return['is_return'] = $r_loa['is_return'];
+        $_return['return_date'] = $r_loa['return_date'];
+        $_return['input_date'] = $r_loa['input_date'];
+        $_return['last_update'] = $r_loa['last_update'];
+        $_return['uid'] = $r_loa['uid'];
+        $i++;
+      }
+    }
+    return api::to_object($_return);
   }
 
 }

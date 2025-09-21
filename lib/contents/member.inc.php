@@ -22,6 +22,13 @@
  *
  */
 
+use SLiMS\Url;
+use SLiMS\DB;
+use SLiMS\Json;
+use SLiMS\Auth\Validator;
+use SLiMS\Captcha\Factory as Captcha;
+use Volnix\CSRF\CSRF;
+
 // be sure that this file not accessed directly
 if (!defined('INDEX_AUTH')) {
     die("can not access this file directly");
@@ -40,7 +47,19 @@ do_checkIP('opac-member');
 
 // Required flie
 require SIMBIO . 'simbio_DB/simbio_dbop.inc.php';
-require LIB . 'member_logon.inc.php';
+
+// create logon class instance
+$logon = Validator::use(
+    config(
+    'auth.methods.' . config('auth.sections.member'),
+    \SLiMS\Auth\Methods\Native::class
+    )
+);
+
+$logon->getHook();
+
+// Captcha initialize
+$captcha = Captcha::section('memberarea');
 
 // check if member already logged in
 $is_member_login = utility::isMemberLogin();
@@ -60,78 +79,57 @@ define('CANT_UPDATE_PASSWD', -3);
 // if member is logged out
 if (isset($_GET['logout']) && $_GET['logout'] == '1') {
     // write log
-    utility::writeLogs($dbs, 'member', $_SESSION['email'], 'Login', $_SESSION['member_name'] . ' Log Out from address ' . $_SERVER['REMOTE_ADDR']);
+    writeLog('member', $_SESSION['m_email'], 'Login', $_SESSION['m_name'] . ' Log Out from address ' . ip());
     // completely destroy session cookie
     simbio_security::destroySessionCookie(null, MEMBER_COOKIES_NAME, SWB, false);
-    header('Location: index.php?p=member');
-    header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
-    header('Expires: Sat, 26 Jul 1997 05:00:00 GMT');
-    header('Pragma: no-cache');
-    exit();
+    redirect()->withHeader([
+        ['Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0'],
+        ['Expires', 'Sat, 26 Jul 1997 05:00:00 GMT'],
+        ['Pragma', 'no-cache']
+    ])->to('?p=member');
 }
 
 // if there is member login action
 if (isset($_POST['logMeIn']) && !$is_member_login) {
-    if (!\Volnix\CSRF\CSRF::validate($_POST)) {
+    if (!CSRF::validate($_POST)) {
         session_unset();
-        echo '<script type="text/javascript">';
-        echo 'alert("Invalid login form!");';
-        echo 'location.href = \'index.php?p=member\';';
-        echo '</script>';
-        exit();
+        redirect()->withMessage('csrf_failed', __('Invalid login form!'))->back();
     }
     $username = trim(strip_tags($_POST['memberID']));
     $password = trim(strip_tags($_POST['memberPassWord']));
+    
     // check if username or password is empty
-    if (!$username OR !$password) {
-        echo '<div class="errorBox">' . __('Please fill your Username and Password to Login!') . '</div>';
-    } else {
-        # <!-- Captcha form processing - start -->
-        if ($sysconf['captcha']['member']['enable']) {
-            if ($sysconf['captcha']['member']['type'] == 'recaptcha') {
-                require_once LIB . $sysconf['captcha']['member']['folder'] . '/' . $sysconf['captcha']['member']['incfile'];
-                $privatekey = $sysconf['captcha']['member']['privatekey'];
-                $resp = recaptcha_check_answer($privatekey,
-                    $_SERVER["REMOTE_ADDR"],
-                    $_POST["g-recaptcha-response"]);
+    if (!$username OR !$password) redirect()->withMessage('empty_field', __('Please fill your Username and Password to Login!'))->back();
+    
+    # <!-- Captcha form processing - start -->
+    if ($captcha->isSectionActive() && $captcha->isValid() === false) {
+        // set error message
+        $message = isDev() ? $captcha->getError() : __('Wrong Captcha Code entered, Please write the right code!'); 
+        // What happens when the CAPTCHA was entered incorrectly
+        session_unset();
+        redirect()->withMessage('captchaInvalid', $message)->back();
+    }
+    # <!-- Captcha form processing - end -->
 
-                if (!$resp->is_valid) {
-                    // What happens when the CAPTCHA was entered incorrectly
-                    session_unset();
-                    header("location:index.php?p=member&captchaInvalid=true");
-                    die();
-                }
-            } else if ($sysconf['captcha']['member']['type'] == 'others') {
-                # other captchas here
-            }
-        }
-        # <!-- Captcha form processing - end -->
+    // regenerate session ID to prevent session hijacking
+    session_regenerate_id(true);
 
-        // regenerate session ID to prevent session hijacking
-        session_regenerate_id(true);
-
-        // create logon class instance
-        $logon = new member_logon($username, $password, $sysconf['auth']['member']['method']);
-        if ($sysconf['auth']['member']['method'] === 'LDAP') {
-            $ldap_configs = $sysconf['auth']['member'];
-        }
-
-        if ($logon->valid($dbs)) {
-            // write log
-            utility::writeLogs($dbs, 'member', $username, 'Login', sprintf(__('Login success for member %s from address %s'),$username,$_SERVER['REMOTE_ADDR']));
-            if (isset($_GET['destination'])) {
-                header("location:" . $_GET['destination']);
-            } else {
-                header('Location: index.php?p=member');
-            }
-            exit();
+    if ($logon->process('member')) {
+        // write log
+        writeLog('member', $username, 'Login', sprintf(__('Login success for member %s from address %s'),$username,ip()));
+        if (isset($_GET['destination']) && Url::isValid($_GET['destination']) && Url::isSelf($_GET['destination'])) {
+            redirect($_GET['destination']);
         } else {
-            // write log
-            utility::writeLogs($dbs, 'member', $username, 'Login', sprintf(__('Login FAILED for member %s from address %s'),$username,$_SERVER['REMOTE_ADDR']));
-            // message
-            $msg = '<div class="errorBox">' . __('Login FAILED! Wrong username or password!') . '</div>';
-            simbio_security::destroySessionCookie($msg, MEMBER_COOKIES_NAME, SWB, false);
+            redirect()->toPath('member');
         }
+        exit();
+    } else {
+        // write log
+        writeLog('member', $username, 'Login', sprintf(__('Login FAILED for member %s from address %s'),$username,ip()));
+        // message
+        //simbio_security::destroySessionCookie($msg, MEMBER_COOKIES_NAME, SWB, false);
+        CSRF::generateToken();
+        redirect()->withMessage('wrong_password', $logon->getError())->to('?p=member');
     }
 }
 
@@ -163,22 +161,46 @@ if ($is_member_login) {
                 'message' => $message,
                 'count' => count($_SESSION['m_mark_biblio'])
             ];
-            header('Content-type: application/json');
-            echo json_encode($res);
-            exit();
+            exit(Json::stringify($res)->withHeader());
         }
+    }
+    if (isset($_POST['bookmark_id']))
+    {
+        try {
+            // switch to delete process
+            if (isset($_POST['delete_bookmark']))
+            {
+
+                DB::getInstance()
+                    ->prepare('DELETE FROM `biblio_mark` WHERE `biblio_id` = ? AND `member_id` = ?')
+                    ->execute([$_POST['bookmark_id'], $_SESSION['mid']]);
+                unset($_SESSION['bookmark'][$_POST['bookmark_id']]);
+                exit(Json::stringify(['status' => true, 'message' => __('Data has been deleted')])->withHeader());    
+            }
+
+            // input biblio data to database
+            DB::getInstance()
+                ->prepare('INSERT IGNORE INTO `biblio_mark` SET `biblio_id` = ?, `member_id` = ?, `id` = ?')
+                ->execute([$_POST['bookmark_id'], $_SESSION['mid'], md5($_POST['bookmark_id'] . $_SESSION['mid'])]);
+
+            $_SESSION['bookmark'][$_POST['bookmark_id']] = $_POST['bookmark_id'];
+
+            exit(Json::stringify(['status' => true, 'message' => __('Data has been saved'), 'label' => __('Bookmarked')])->withHeader());
+        } catch (PDOException $e) {
+            exit(Json::stringify(['status' => false, 'message' => isDev() ? $e->getMessage() : __('Data failed saved')])->withHeader());   
+        } catch (Exception $e) {
+            exit(Json::stringify(['status' => false, 'message' => isDev() ? $e->getMessage() : __('Data failed saved')])->withHeader());   
+        } 
     }
 } else {
     if (isset($_POST['callback']) && $_POST['callback'] === 'json') {
         $res = [
             'status' => false,
-            'message' => 'Please, login first!',
+            'message' => __('Please, login first!'),
             'count' => 0
         ];
-        header('Content-type: application/json');
         http_response_code(401);
-        echo json_encode($res);
-        exit();
+        exit(Json::stringify($res)->withHeader());
     }
 }
 
@@ -209,7 +231,12 @@ if (isset($_POST['clear_biblio'])) {
 
 if ($is_member_login) :
 
-    $member_image = $_SESSION['m_image'] && file_exists(IMGBS . 'persons/' . $_SESSION['m_image']) ? $_SESSION['m_image'] : 'person.png';
+    if (filter_var($_SESSION['m_image'], FILTER_VALIDATE_URL)) {
+        $member_image_url = $_SESSION['m_image'];
+    } else {
+        $member_image = $_SESSION['m_image'] && file_exists(IMGBS . 'persons/' . $_SESSION['m_image']) ? $_SESSION['m_image'] : 'person.png';
+        $member_image_url = './images/persons/' . $member_image;
+    }
 
     // require file
     require SIMBIO . 'simbio_GUI/table/simbio_table.inc.php';
@@ -268,6 +295,7 @@ if ($is_member_login) :
        */
     function changePassword()
     {
+        global $sysconf;
         // show the member information
         $_form = '<form id="memberChangePassword" method="post" action="index.php?p=member&sec=my_account">' . "\n";
         $_form .= '<table class="memberDetail table table-striped" cellpadding="5" cellspacing="0">' . "\n";
@@ -288,6 +316,10 @@ if ($is_member_login) :
         $_form .= '</tr>' . "\n";
         $_form .= '</table>' . "\n";
         $_form .= '</form>' . "\n";
+        if ($sysconf['password_policy_strong']) {
+            $_form .= simbio_security::validatePasswordFunctionJS();
+            $_form .= '<script type="text/javascript">comparePassword("#memberChangePassword", "input[name=newPass]", "input[name=newPass2]", '.$sysconf['password_policy_min_length'].');</script>';
+        }    
 
         return $_form;
     }
@@ -302,7 +334,12 @@ if ($is_member_login) :
        */
     function procChangePassword($str_curr_pass, $str_new_pass, $str_conf_new_pass)
     {
-        global $dbs;
+        global $dbs, $sysconf;
+        if ($sysconf['password_policy_strong'] && ($str_new_pass AND $str_conf_new_pass) 
+            && ($str_new_pass === $str_conf_new_pass) 
+            && !simbio_security::validatePassword($str_conf_new_pass, $sysconf['password_policy_min_length'])) {
+            return CANT_UPDATE_PASSWD;
+        } 
         // get hash from db
         $_str_pass_sql = sprintf('SELECT mpasswd FROM member
             WHERE member_id=\'%s\'', $dbs->escape_string(trim($_SESSION['mid'])));
@@ -372,8 +409,70 @@ if ($is_member_login) :
         $_loan_list->using_AJAX = false;
         // return the result
         $_result = $_loan_list->createDataGrid($dbs, $_table_spec, $num_recs_show);
-        $_result = '<div class="memberLoanListInfo">' . $_loan_list->num_rows . ' ' . __('item(s) currently on loan') . ' | <a href="?p=download_current_loan">' . __('Download All Current Loan') . '</a></div>' . "\n" . $_result;
+        $_result = '<div class="memberLoanListInfo my-3">' . $_loan_list->num_rows . ' ' . __('item(s) currently on loan') . ' | <a href="?p=download_current_loan" class="btn btn-sm btn-outline-primary"><i class="fa fa-download"></i>&nbsp;&nbsp;' . __('Download All Current Loan') . '</a> <a href="?p=download_member_loan_report" class="btn btn-sm btn-outline-primary"><i class="fa fa-download"></i>&nbsp;&nbsp;' . __('Download All Loan Report') . '</a></div>' . "\n" . $_result;
         return $_result;
+    }
+
+    function showBookmarkList($num_recs_show = 20)
+    {
+        global $dbs;
+
+        // table spec
+        $_table_spec = 'biblio_mark AS bm
+            INNER JOIN biblio AS b ON b.biblio_id=bm.biblio_id';
+        // create datagrid
+        $_mark_list = new simbio_datagrid();
+        $_mark_list->disable_paging = false;
+        $_mark_list->table_ID = 'loanlist';
+        $_mark_list->setSQLColumn('b.title AS \'' . __('Title') . '\'', 'bm.created_at AS \'' . __('Marked At') . '\'','bm.biblio_id AS \'' . __('Action') . '\'');
+        $_mark_list->setSQLorder('bm.created_at DESC');
+        // $_mark_list->invisible_fields = [2];
+        $_criteria = sprintf('bm.member_id=\'%s\'', $_SESSION['mid']);
+        $_mark_list->setSQLCriteria($_criteria);
+
+
+        // modify column value
+        $_mark_list->modifyColumnContent(0, 'callback{showBookCover}');
+        $_mark_list->modifyColumnContent(1, 'callback{showDetailDate}');
+        $_mark_list->modifyColumnContent(2, 'callback{showMarkDetail}');
+        // set table and table header attributes
+        $_mark_list->table_attr = 'align="center" class="memberBookmarkList table table-striped" cellpadding="5" cellspacing="0"';
+        $_mark_list->table_header_attr = 'class="dataListHeader" style="font-weight: bold;"';
+        $_mark_list->using_AJAX = false;
+        // return the result
+        $_result = $_mark_list->createDataGrid($dbs, $_table_spec, $num_recs_show);
+        $_result = '<div class="memberLoanListInfo my-3">' . $_mark_list->num_rows . ' ' . __('title currently on list') . ' </div>' . "\n" . $_result;
+        return $_result;
+    }
+
+    function showDetailDate($obj_db, $data)
+    {
+        global $sysconf;
+        if (isset($_COOKIE['select_lang'])) $sysconf['default_lang'] = trim(strip_tags($_COOKIE['select_lang']));
+        return \Carbon\Carbon::parse($data[1])->locale($sysconf['default_lang'])->isoFormat('dddd, LL');
+    }
+
+    function showBookCover($obj_db, $data)
+    {
+        $author = $obj_db->query('select ma.author_name from biblio_author as ba 
+        inner join mst_author as ma on ba.author_id = ma.author_id where ba.biblio_id = ' . $obj_db->escape_string($data[2]));
+        $list = [];
+
+        if ($author->num_rows > 0)
+        {
+            while ($result = $author->fetch_row()) {
+                $list[] = $result[0];
+            }
+        }
+
+        return '<strong><a title="'.__('Click to view detail').'" href="'.Url::getSlimsBaseUri('?p=show_detail&id=' . $data[2]).'">'.$data[0].'</a></strong>
+                <br>
+                <div class="d-flex flex-row"><span class="text-muted text-sm">'.implode('</span>,<span class="text-muted text-sm">', $list).'</span></div>';
+    }
+
+    function showMarkDetail($obj_db, $data)
+    {
+        return '<button class="btn btn-danger btn-sm deleteBookmark" data-id="' . $data[2] . '"><i class="fa fa-trash"></i></button>';
     }
 
     /* callback function to show overdue */
@@ -418,7 +517,7 @@ if ($is_member_login) :
         $_loan_hist->using_AJAX = false;
         // return the result
         $_result = $_loan_hist->createDataGrid($dbs, $_table_spec, $num_recs_show);
-        $_result = '<div class="memberLoanHistInfo"> &nbsp;' . $_loan_hist->num_rows . ' ' . __('item(s) loan history') . ' | <a href="?p=download_loan_history">' . __('Download All Loan History') . '</a></div>' . "\n" . $_result;
+        $_result = '<div class="memberLoanHistInfo my-3"> &nbsp;' . $_loan_hist->num_rows . ' ' . __('item(s) loan history') . ' | <a href="?p=download_loan_history" class="btn btn-sm btn-outline-primary"><i class="fa fa-download"></i>&nbsp;&nbsp;' . __('Download All Loan History') . '</a></div>' . "\n" . $_result;
         return $_result;
     }
 
@@ -452,9 +551,11 @@ if ($is_member_login) :
         $_loan_list->setSQLCriteria($_criteria);
         $_loan_list->column_width[0] = '5%';
         $_loan_list->modifyColumnContent(1, 'callback{titleLink}');
-        function titleLink($db, $data)
-        {
-            return '<a target="_blank" href="index.php?p=show_detail&id=' . $data[0] . '">' . $data[1] . '</a>';
+        if (!function_exists('titleLink')) {
+            function titleLink($db, $data)
+            {
+                return '<a target="_blank" href="index.php?p=show_detail&id=' . $data[0] . '">' . $data[1] . '</a>';
+            }
         }
         $_loan_list->modifyColumnContent(0, '<input type="checkbox" name="basket[]" class="basketItem" value="{column_value}" />');
 
@@ -465,10 +566,10 @@ if ($is_member_login) :
         // return the result
         $_result = '<form name="memberBasketListForm" id="memberBasketListForm" action="index.php?p=member" method="post">' . "\n";
         $_datagrid = $_loan_list->createDataGrid($dbs, $_table_spec, $num_recs_show);
-        $_actions = '<div class="memberBasketAction">';
-        $_actions .= '<a href="index.php?p=member&sec=title_basket" class="btn btn-link basket reserve">' . __('Reserve title(s) on Basket') . '</a> ';
-        $_actions .= '<a href="index.php?p=member&sec=title_basket" class="btn btn-link basket clearAll" postdata="clear_biblio=1">' . __('Clear Basket') . '</a> ';
-        $_actions .= '<a href="index.php?p=member&sec=title_basket" class="btn btn-link basket clearOne">' . __('Remove selected title(s) from Basket') . '</a> ';
+        $_actions = '<div class="memberBasketAction my-3">';
+        $_actions .= '<a href="index.php?p=member&sec=title_basket" class="btn btn-sm btn-primary basket reserve"><i class="fa fa-save"></i>&nbsp;&nbsp;' . __('Reserve title(s) on Basket') . '</a> ';
+        $_actions .= '<a href="index.php?p=member&sec=title_basket" class="btn btn-sm btn-secondary basket clearAll" postdata="clear_biblio=1"><i class="fa fa-eraser"></i>&nbsp;&nbsp;' . __('Clear Basket') . '</a> ';
+        $_actions .= '<a href="index.php?p=member&sec=title_basket" class="btn btn-sm btn-secondary basket clearOne"><i class="fa fa-trash"></i>&nbsp;&nbsp;' . __('Remove selected title(s) from Basket') . '</a> ';
         $_actions .= '</div>';
         $_result .= '<div class="memberBasketInfo">' . $_loan_list->num_rows . ' ' . __('title(s) on basket') . $_actions . '</div>' . "\n" . $_datagrid;
         $_result .= "\n</form>";
@@ -483,83 +584,41 @@ if ($is_member_login) :
        */
     function sendReserveMail()
     {
-        global $dbs, $sysconf;
+        global $dbs;
 
-        if (count($_SESSION['m_mark_biblio']) > 0) {
-            $_ids = '(';
-            foreach ($_SESSION['m_mark_biblio'] as $_biblio) {
-                $_ids .= (integer)$_biblio . ',';
-            }
-            $_ids = substr_replace($_ids, '', -1);
-            $_ids .= ')';
-        } else {
-            return array('status' => 'ERROR', 'message' => 'No Titles to reserve');
-        }
+        if (count($_SESSION['m_mark_biblio']) === 0) return ['status' => 'ERROR', 'message' => 'No Titles to reserve'];
+        
+        $mail = \SLiMS\Mail::to(config('mail.from'), config('mail.from_name'));
 
-        $mail = new PHPMailer\PHPMailer\PHPMailer(true);
         try {
-            //Server settings
-            $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-            $mail->isSMTP();                                                                // Send using SMTP
-            $mail->Host = $sysconf['mail']['server'];                                       // Set the SMTP server to send through
-            $mail->SMTPAuth = $sysconf['mail']['auth_enable'];                              // Enable SMTP authentication
-            $mail->Username = $sysconf['mail']['auth_username'];                            // SMTP username
-            $mail->Password = $sysconf['mail']['auth_password'];                            // SMTP password
-            if ($sysconf['mail']['SMTPSecure'] === 'tls') {                                 // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-                $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
-            } else if ($sysconf['mail']['SMTPSecure'] === 'ssl') {
-                $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
-            }
-            $mail->Port = $sysconf['mail']['server_port'];                                  // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-
-            //Recipients
-            $mail->setFrom($sysconf['mail']['from'], $sysconf['mail']['from_name']);
-            $mail->addReplyTo($sysconf['mail']['reply_to'], $sysconf['mail']['reply_to_name']);
-            $mail->addAddress($sysconf['mail']['from'], $sysconf['mail']['from_name']);
             // additional recipient
-            if (isset($sysconf['mail']['add_recipients'])) {
-                foreach ($sysconf['mail']['add_recipients'] as $_recps) {
-                    $mail->AddAddress($_recps['from'], $_recps['from_name']);
+            if (is_array(config('mail.add_recipients'))) {
+                foreach (config('mail.add_recipients') as $recipients) {
+                    \SLiMS\Mail::to($recipients['from'], $recipients['from_name']);
                 }
             }
+
+            // Template
+            include SB . 'template/reserveMail.php';
+            $reserveTemplate = new reserveMail;
+            $reserveTemplate->setMinify(true);
+
+            // CC
             $mail->addCC($_SESSION['m_email'], $_SESSION['m_name']);
+            $mail->subject('Reservation request from Member ' . $_SESSION['m_name'] . ' (' . $_SESSION['m_email'] . ')')
+                 ->loadTemplate($reserveTemplate)
+                 ->send();
 
-            // Content
-            // get message template
-            $_msg_tpl = @file_get_contents(SB . 'template/reserve-mail-tpl.html');
+            // write to system log
+            writeLog('member', isset($_SESSION['mid']) ? $_SESSION['mid'] : '0', 'membership', 'Reservation notification e-mail sent to ' . $_SESSION['m_email'], 'Reservation', 'Add');
 
-            // date
-            $_curr_date = date('Y-m-d H:i:s');
-
-            // query
-            $_biblio_q = $dbs->query("SELECT biblio_id, title FROM biblio WHERE biblio_id IN $_ids");
-
-            // compile reservation data
-            $_data = '<table width="100%" border="1">' . "\n";
-            $_data .= '<tr><th>Titles to reserve</th></tr>' . "\n";
-            while ($_title_d = $_biblio_q->fetch_assoc()) {
-                $_data .= '<tr>';
-                $_data .= '<td>' . $_title_d['title'] . '</td>' . "\n";
-                $_data .= '</tr>';
-            }
-            $_data .= '</table>';
-
-            // message
-            $_message = str_ireplace(array('<!--MEMBER_ID-->', '<!--MEMBER_NAME-->', '<!--DATA-->', '<!--DATE-->'),
-                array($_SESSION['mid'], $_SESSION['m_name'], $_data, $_curr_date), $_msg_tpl);
-
-            // Set email format to HTML
-            $mail->Subject = 'Reservation request from Member ' . $_SESSION['m_name'] . ' (' . $_SESSION['m_email'] . ')';
-            $mail->msgHTML($_message);
-            $mail->AltBody = strip_tags($_message);
-
-            $mail->send();
-
-            utility::writeLogs($dbs, 'member', isset($_SESSION['mid']) ? $_SESSION['mid'] : '0', 'membership', 'Reservation notification e-mail sent to ' . $_SESSION['m_email'], 'Reservation', 'Add');
-            return array('status' => 'SENT', 'message' => 'Reservation notification e-mail sent to ' . $_SESSION['m_email']);
+            // sent response
+            return ['status' => 'SENT', 'message' => 'Reservation notification e-mail sent to ' . $_SESSION['m_email']];
         } catch (Exception $exception) {
-            utility::writeLogs($dbs, 'member', isset($_SESSION['mid']) ? $_SESSION['mid'] : '0', 'membership', 'FAILED to send reservation e-mail to ' . $_SESSION['m_email'] . ' (' . $mail->ErrorInfo . ')');
-            return array('status' => 'ERROR', 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
+            // write to system log
+            writeLog('member', isset($_SESSION['mid']) ? $_SESSION['mid'] : '0', 'membership', 'FAILED to send reservation e-mail to ' . $_SESSION['m_email'] . ' (' . $mail->ErrorInfo . ')');
+
+            return ['status' => 'ERROR', 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"];
         }
     }
 
@@ -591,7 +650,7 @@ if ($is_member_login) :
                     
                     if($sysconf['reserve_on_loan_only']) {
                         // ambil secara random dari koleksi yang dipinjam
-                        $item_code = _getItemReserveFromLoan($dbs);
+                        $item_code = _getItemReserveFromLoan($dbs, $id);
                     } else {
                         // Semua item bisa direservasi
                         $item_code = _getItemReserve($dbs, $id);
@@ -648,9 +707,10 @@ if ($is_member_login) :
         return $data[0] ?? null;
     }
 
-    function _getItemReserveFromLoan($dbs)
+    function _getItemReserveFromLoan($dbs, $biblio_id)
     {
-        $sql = "SELECT item_code, due_date FROM loan WHERE is_lent=1 AND is_return=0 ORDER BY RAND() ASC LIMIT 1";
+        $biblio_id = (int)$biblio_id;
+        $sql = "SELECT l.item_code, l.due_date FROM loan AS l WHERE l.is_lent=1 AND l.is_return=0 AND l.item_code IN (SELECT i.item_code FROM item AS i WHERE i.biblio_id = $biblio_id) ORDER BY RAND() ASC LIMIT 1";
         $query = $dbs->query($sql);
         $data = $query->fetch_row();
         return $data[0] ?? null;
@@ -664,7 +724,7 @@ if ($is_member_login) :
     }
 
     // if there is change password request
-    if (isset($_POST['changePass']) && $sysconf['auth']['member']['method'] == 'native') {
+    if (isset($_POST['changePass']) && config('auth.sections.member') == 'native') {
         $change_pass = procChangePassword($_POST['currPass'], $_POST['newPass'], $_POST['newPass2']);
         if ($change_pass === true) {
             $info = '<span style="font-size: 120%; font-weight: bold; color: #28a745;">' . __('Your password have been changed successfully.') . '</span>';
@@ -682,15 +742,18 @@ if ($is_member_login) :
 
     // send reserve e-mail
     if (isset($_POST['sendReserve']) && $_POST['sendReserve'] == 1) {
-
+        // Make a notification for librarian or member
+        \SLiMS\Plugins::getInstance()->execute('custom_reserve_notification');
+        // save reservation to database
         if ($sysconf['reserve_direct_database'] ?? false) {
             header('content-type: application/json');
             echo json_encode(saveReserve($dbs, $sysconf));
             exit;
         } else {
+            // by email
             $mail = sendReserveMail();
             if ($mail['status'] != 'ERROR') {
-                $_SESSION['info']['data'] = __('Reservation e-mail sent successfully!');
+                $_SESSION['info']['data'] = __('Reservation e-mail sent successfully!. please contact librarians for further info.');
                 $_SESSION['info']['status'] = 'success';
             } else {
                 $_SESSION['info']['data'] = '<span style="font-size: 120%; font-weight: bold; color: red;">'.__(sprintf('Reservation e-mail FAILED to sent with error: %s Please contact administrator!', $mail['message'])).'</span>';
@@ -701,15 +764,38 @@ if ($is_member_login) :
 
     }
 
+    $section = isset($_GET['sec']) ? trim($_GET['sec']) : 'current_loan';
+
+    // print digital member card
+    if ($section === 'membercard') :
+        include SB.'admin'.DS.'admin_template'.DS.'printed_settings.inc.php';
+        // check for custom template settings
+        $custom_settings = SB.'admin'.DS.$sysconf['admin_template']['dir'].DS.$sysconf['template']['theme'].DS.'printed_settings.inc.php';
+        if (file_exists($custom_settings)) {
+            include $custom_settings;
+        }
+        loadPrintSettings($dbs, 'membercard');
+
+        $card_conf = $sysconf['print']['membercard'];
+        $card_template = $card_conf['template'];
+        $card_path = SWB.FLS.DS.'membercard'.DS.$card_template.DS;
+        $card_logo = $card_path.IMG.DS.$card_conf['logo'];
+        $card_stamp = $card_path.IMG.DS.$card_conf['stamp_file'];
+        $card_signature = $card_path.IMG.DS.$card_conf['signature_file'];
+        $size = 2;
+
+        include UPLOAD . DS . 'membercard' . DS . 'individual-membercard.php';
+        exit();
+    endif;
     ?>
 
     <div class="d-flex">
         <div style="width: 16rem;" class="bg-grey-light p-4" id="member_sidebar">
             <div class="p-4">
-                <img src="./images/persons/<?php echo $member_image; ?>" alt="member photo" class="rounded shadow">
+                <img src="<?= $member_image_url ?>" alt="member photo" class="rounded shadow">
             </div>
-            <a href="index.php?p=member&logout=1" class="btn btn-danger btn-block"><i
-                        class="fas fa-sign-out-alt mr-2"></i><?php echo __('LOGOUT'); ?></a>
+            <a href="index.php?p=member&sec=membercard" class="btn btn-primary btn-block" target="_blank"><i class="fas fa-address-card mr-2"></i><?php echo __('View Library Card'); ?></a>
+            <a href="index.php?p=member&logout=1" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt mr-2"></i><?php echo __('LOGOUT'); ?></a>
         </div>
         <div class="flex-grow-1 p-4" id="member_content">
             <div class="text-sm text-grey-dark">
@@ -727,8 +813,8 @@ if ($is_member_login) :
                     <i class="far fa-user mr-2 text-green"></i><?php echo $_SESSION['m_member_type']; ?>
                 <?php endif; ?>
             </div>
-            <h1 class="mb-2">Hi, <?php echo $_SESSION['m_name']; ?></h1>
-            <p class="w-75 mb-4">
+            <h1 class="mb-2">Hi, <?php echo $_SESSION['m_name']; ?> <a href="index.php?p=member&sec=membercard" title="View Library Card" class="btn btn-primary" target="_blank"><i class="fas fa-address-card"></i></a></h1>
+            <p id="info" class="w-75 mb-4">
                 <?php echo $info; ?>
             </p>
             <div class="row"></div>
@@ -739,6 +825,10 @@ if ($is_member_login) :
                         'current_loan' => [
                             'text' => __('Current Loan'),
                             'link' => 'index.php?p=member'
+                        ],
+                        'bookmark' => [
+                            'text' => __('Title Bookmark'),
+                            'link' => 'index.php?p=member&sec=bookmark'
                         ],
                         'title_basket' => [
                             'text' => __('Title Basket'),
@@ -753,7 +843,7 @@ if ($is_member_login) :
                             'link' => 'index.php?p=member&sec=my_account'
                         ]
                     ];
-                    $section = isset($_GET['sec']) ? trim($_GET['sec']) : 'current_loan';
+                    
                     foreach ($tabs_menus as $km => $kv) {
                         $active = $section === $km ? 'active' : '';
                         $m = '<li class="nav-item">';
@@ -771,6 +861,12 @@ if ($is_member_login) :
                             echo '<div class="memberInfoHead">' . __('My Current Loan') . '</div>' . "\n";
                             echo '</div>';
                             echo showLoanList();
+                            break;
+                        case 'bookmark':
+                            echo '<div class="tagline">';
+                            echo '<div class="memberInfoHead">' . __('My Title Bookmark') . '</div>' . "\n";
+                            echo '</div>';
+                            echo showBookmarkList();
                             break;
                         case 'title_basket':
                             echo '<div class="tagline">';
@@ -790,7 +886,7 @@ if ($is_member_login) :
                             echo '</div>';
                             echo showMemberDetail();
                             // change password only form NATIVE authentication, not for others such as LDAP
-                            if ($sysconf['auth']['member']['method'] == 'native') {
+                            if (config('auth.sections.member') == 'native') {
                                 echo '<div class="tagline">';
                                 echo '<div class="memberInfoHead mt-8">' . __('Change Password') . '</div>' . "\n";
                                 echo '</div>';
@@ -849,6 +945,8 @@ if ($is_member_login) :
                     var anchor = $(this);
                     // get anchor href
                     var aHREF = anchor.attr('href');
+                    // set alert to wait
+                    $('#info').html('<div class="alert alert-info"><?= __('Please wait. your reservation is being sent') ?>...</div>');
                     // send ajax
                     $.ajax({
                         type: 'POST',
@@ -862,47 +960,78 @@ if ($is_member_login) :
 
                                     for (let i = 0; i < ajaxRespond.length; i++) {
                                         const element = ajaxRespond[i];
-                                        let message = element.message ?? 'Reservation request sent';
+                                        let message = element.message ?? '<?= __('Reservation request sent') ?>';
                                         if(element.status == 'ERROR') {
                                             toastr.error(message)
                                         } else {
                                             toastr.success(message)
+                                            setTimeout(() => window.location.href = '?p=member&sec=title_basket', 2500);
                                         }
                                     }
 
                                 } else {
-                                    let message = ajaxRespond.message ?? 'Reservation request sent';
+                                    let message = ajaxRespond.message ?? '<?= __('Reservation request sent') ?>';
                                     if(ajaxRespond.status == 'ERROR') {
                                         toastr.error(message)
                                     } else {
                                         toastr.success(message)
+                                        setTimeout(() => window.location.href = '?p=member&sec=title_basket', 2500);
                                     }
                                 }
 
                             <?php else: ?>
-
-                                alert('Reservation e-mail sent');
-                                window.location.href = aHREF;
+                                toastr.success('<?= __('Reservation e-mail sent') ?>');
+                                setTimeout(() => {
+                                    window.location.href = aHREF; 
+                                }, 5000);
                                 
                             <?php endif ?>
                         }
                     });
                 });
+                
+                $('.deleteBookmark').click(function(e){
+                    e.preventDefault();
+                    let id = $(this).data('id')
+                    $.post('index.php?p=member', {bookmark_id:id,delete_bookmark: true}, function(res,state) {
+                        if (!res.status)
+                        {
+                            toastr.error(res.message)    
+                        }
+                        else
+                        {
+                            toastr.success(res.message, '',{
+                                timeOut: 2000,
+                                onHidden: function() {
+                                    window.location.replace('index.php?p=member&sec=bookmark')
+                                }
+                            })
+                        }
+                    }).fail(function(state){
+                        console.log(state)
+                        toastr.error('<?= __('Unexcpected error. Please tell it to the librarian') ?>')
+                    })
+                })
             }
         );
     </script>
 <?php else: ?>
     <div>
         <div class="tagline"><?php echo __('Library Member Login'); ?></div>
-        <?php
-        // captcha invalid warning
-        if (isset($_GET['captchaInvalid']) && $_GET['captchaInvalid'] === 'true') {
-            echo '<div class="errorBox alert alert-danger">' . __('Wrong Captcha Code entered, Please write the right code!') . '</div>';
-        }
-        ?>
-        <div class="loginInfo"><?php echo __('Please insert your member ID and password given by library system administrator. If you are library\'s member and don\'t have a password yet, please contact library staff.'); ?></div>
         <div class="loginInfo">
-            <form action="index.php?p=member&destination=<?= urlencode($_GET['destination']) ?>" method="post">
+            <?php 
+            if (flash()->isEmpty())
+            {
+                echo __('Please insert your member ID and password given by library system administrator. If you are library\'s member and don\'t have a password yet, please contact library staff.'); 
+            }
+            elseif ($key = flash()->includes('wrong_password','csrf_failed','empty_field','captchaInvalid'))
+            {
+                flash()->danger($key);
+            }
+            ?>
+        </div>
+        <div class="loginInfo">
+            <form action="index.php?p=member&destination=<?= urlencode(simbio_security::xssFree($_GET['destination'] ?? '')) ?>" method="post">
                 <div class="fieldLabel"><?php echo __('Member ID'); ?></div>
                 <div class="login_input"><input class="form-control" type="text" name="memberID"
                                                 placeholder="Enter member ID" required/></div>
@@ -910,25 +1039,17 @@ if ($is_member_login) :
                 <div class="login_input"><input class="form-control" type="password" name="memberPassWord"
                                                 placeholder="Enter password" required autocomplete="off"/></div>
                 <?= \Volnix\CSRF\CSRF::getHiddenInputString() ?>
+                <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']??'' ?>">
                 <!-- Captcha in form - start -->
                 <div>
-                    <?php if ($sysconf['captcha']['member']['enable']) { ?>
-                        <?php if ($sysconf['captcha']['member']['type'] == "recaptcha") { ?>
-                            <div class="captchaMember">
-                                <?php
-                                require_once LIB . $sysconf['captcha']['member']['folder'] . '/' . $sysconf['captcha']['member']['incfile'];
-                                $publickey = $sysconf['captcha']['member']['publickey'];
-                                echo recaptcha_get_html($publickey);
-                                ?>
-                            </div>
-                            <!-- <div><input type="text" name="captcha_code" id="captcha-form" style="width: 80%;" /></div> -->
-                            <?php
-                        } elseif ($sysconf['captcha']['member']['type'] == "others") {
-                            #code here
-                        }
-                        #debugging
-                        #echo SWB.'lib/'.$sysconf['captcha']['folder'].'/'.$sysconf['captcha']['webfile'];
-                    } ?>
+                    <?php 
+                    if ($captcha->isSectionActive()) { ?>
+                        <div class="captchaMember">
+                            <?= $captcha->getCaptcha() ?>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
                 <!-- Captcha in form - end -->
                 <input type="submit" name="logMeIn" value="<?php echo __('Login'); ?>" class="memberButton"/>

@@ -103,6 +103,16 @@ if (!$reportView) {
                 ?>
             </div>
             <div class="form-group divRow">
+                <label><?php echo __('Input Date'); ?></label>
+                <div class="divRowContent">
+                    <div id="range">
+                        <input type="text" name="inputDateStart">
+                        <span><?= __('to') ?></span>
+                        <input type="text" name="inputDateEnd">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group divRow">
                 <label><?php echo __('Publish year'); ?></label>
                 <?php echo simbio_form_element::textField('text', 'publishYear', '', 'class="form-control col-4"'); ?>
             </div>
@@ -116,6 +126,15 @@ if (!$reportView) {
         <input type="hidden" name="reportView" value="true" />
     </form>
 </div>
+<script>
+    $(document).ready(function(){
+        const elem = document.getElementById('range');
+        const dateRangePicker = new DateRangePicker(elem, {
+            language: '<?= substr($sysconf['default_lang'], 0,2) ?>',
+            format: 'yyyy-mm-dd',
+        });
+    })
+</script>
 <!-- filter end -->
 <div class="paging-area"><div class="pt-3 pr-3" id="pagingBox"></div></div>
 <iframe name="reportView" id="reportView" src="<?php echo $_SERVER['PHP_SELF'].'?reportView=true'; ?>" frameborder="0" style="width: 100%; height: 500px;"></iframe>
@@ -137,7 +156,7 @@ if (!$reportView) {
     $criteria = 'bsub.biblio_id IS NOT NULL ';
     $outer_criteria = 'b.biblio_id > 0 ';
     if (isset($_GET['title']) AND !empty($_GET['title'])) {
-        $keyword = $dbs->escape_string(trim($_GET['title']));
+        $keyword = $dbs->real_escape_string(trim($_GET['title']));
         $words = explode(' ', $keyword);
         if (count($words) > 1) {
             $concat_sql = ' AND (';
@@ -153,17 +172,17 @@ if (!$reportView) {
         }
     }
     if (isset($_GET['author']) AND !empty($_GET['author'])) {
-        $author = $dbs->escape_string($_GET['author']);
+        $author = $dbs->real_escape_string($_GET['author']);
         $criteria .= ' AND ma.author_name LIKE \'%'.$author.'%\'';
     }
     if (isset($_GET['class']) AND !empty($_GET['class'])) {
-        $class = $dbs->escape_string($_GET['class']);
+        $class = $dbs->real_escape_string($_GET['class']);
         $criteria .= ' AND bsub.classification LIKE \''.$class.'%\'';
     }
     if (isset($_GET['gmd']) AND !empty($_GET['gmd'])) {
         $gmd_IDs = '';
         foreach ($_GET['gmd'] as $id) {
-            $id = (integer)$id;
+            $id = sprintf( '%d', $dbs->real_escape_string($id) );
             if ($id) {
                 $gmd_IDs .= "$id,";
             }
@@ -176,7 +195,7 @@ if (!$reportView) {
     if (isset($_GET['collType'])) {
         $coll_type_IDs = '';
         foreach ($_GET['collType'] as $id) {
-            $id = (integer)$id;
+            $id = sprintf( '%d', $dbs->real_escape_string($id) );
             if ($id) {
                 $coll_type_IDs .= "$id,";
             }
@@ -187,16 +206,21 @@ if (!$reportView) {
         }
     }
     if (isset($_GET['language']) AND !empty($_GET['language'])) {
-        $language = $dbs->escape_string(trim($_GET['language']));
+        $language = $dbs->real_escape_string(trim($_GET['language']));
         $criteria .= ' AND bsub.language_id=\''.$language.'\'';
     }
     if (isset($_GET['location']) AND !empty($_GET['location'])) {
-        $location = $dbs->escape_string(trim($_GET['location']));
+        $location = $dbs->real_escape_string(trim($_GET['location']));
         $outer_criteria .= ' AND i.location_id=\''.$location.'\'';
     }
     if (isset($_GET['publishYear']) AND !empty($_GET['publishYear'])) {
-        $publish_year = $dbs->escape_string(trim($_GET['publishYear']));
+        $publish_year = $dbs->real_escape_string(trim($_GET['publishYear']));
         $criteria .= ' AND bsub.publish_year LIKE \'%'.$publish_year.'%\'';
+    }
+    if (isset($_GET['inputDateStart']) AND !empty($_GET['inputDateStart']) && isset($_GET['inputDateEnd']) AND !empty($_GET['inputDateEnd'])) {
+        $inputDateStart = $dbs->real_escape_string(trim($_GET['inputDateStart']));
+        $inputDateEnd = $dbs->real_escape_string(trim($_GET['inputDateEnd']));
+        $criteria .= ' AND (bsub.input_date >= \'' . $inputDateStart . '\' AND bsub.input_date <= \'' . $inputDateEnd . '\')';
     }
     if (isset($_GET['recsEachPage'])) {
         $recsEachPage = (integer)$_GET['recsEachPage'];

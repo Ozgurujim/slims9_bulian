@@ -21,100 +21,84 @@
  *
  */
 
+use SLiMS\{Opac,Plugins};
+
 // key to authenticate
 define('INDEX_AUTH', '1');
 
 // required file
 require 'sysconfig.inc.php';
+
+// Cleanup SQL Injection and Common XSS
+$sanitizer->cleanUp(exception: ['contentDesc','fieldEnc']);
+
 // IP based access limitation
 require LIB.'ip_based_access.inc.php';
 do_checkIP('opac');
+
 // member session params
 require LIB.'member_session.inc.php';
-// start session
-session_start();
 if ($sysconf['template']['base'] == 'html') {
   require SIMBIO.'simbio_GUI/template_parser/simbio_template_parser.inc.php';
 }
 
-// page title
-$page_title = $sysconf['library_subname'].' | '.$sysconf['library_name'];
+// default opac variable
+$opacVariable = [
+    // default library info
+    'page_title' => $sysconf['library_subname'].' | '.$sysconf['library_name'],
 
-// default library info
-$info = __('Web Online Public Access Catalog - Use the search options to find documents quickly');
-// total opac result page
-$total_pages = 1;
-// default header info
-$header_info = '';
-// HTML metadata
-$metadata = '';
-// searched words for javascript highlight
-$searched_words_js_array = '';
+    // total opac result page
+    'info' => __('Web Online Public Access Catalog - Use the search options to find documents quickly'),
 
-// member login information
-if (utility::isMemberLogin()) {
-  $header_info .= '<div class="alert alert-info alert-member-login" id="memberLoginInfo">'.__('You are currently Logged on as member').': <strong>'.$_SESSION['m_name'].' (<em>'.$_SESSION['m_email'].'</em>)</strong> <a id="memberLogout" href="index.php?p=member&logout=1">'.__('LOGOUT').'</a></div>';
+    // total opac result page
+    'total_pages' => 1,
+
+    // default header info
+    'header_info' => (utility::isMemberLogin() ? '<div class="alert alert-info alert-member-login" id="memberLoginInfo">'.__('You are currently Logged on as member').': <strong>'.$_SESSION['m_name'].' (<em>'.$_SESSION['m_email'].'</em>)</strong> <a id="memberLogout" href="index.php?p=member&logout=1">'.__('LOGOUT').'</a></div>' : ''),
+
+    // HTML metadata
+    'metadata' => '',
+
+    // JS
+    'js' => '',
+
+    // searched words for javascript highlight
+    'searched_words_js_array' => '',
+    'available_languages' => $localisation->getLanguages(),
+
+    // Sanitizer
+    'sanitizer' => $sanitizer,
+];
+
+// OPAC Instance
+$opacClass = config('custom_opac', $slimsOpac = Opac::class);
+$opac = new $opacClass($opacVariable, $sysconf, $dbs);
+
+if (!$opac instanceof Opac) {
+  throw new Exception("{$opacClass} is not instance of {$slimsOpac}");
 }
 
-// start the output buffering for main content
-ob_start();
-require LIB.'contents/common.inc.php';
-if (isset($_GET['p'])) {
-    $path = utility::filterData('p', 'get', false, true, true);
-    // some extra checking
-    $path = preg_replace('@^(http|https|ftp|sftp|file|smb):@i', '', $path);
-    $path = preg_replace('@\/@i','',$path);
-    // check if the file exists
-    if (file_exists(LIB.'contents/'.$path.'.inc.php')) {
-        if ($path != 'show_detail') {
-          $metadata = '<meta name="robots" content="noindex, follow">';
-        }
-        include LIB.'contents/'.$path.'.inc.php';
-    }
-    // check path from plugins
-    elseif (isset(($menu = \SLiMS\Plugins::getInstance()->getMenus('opac'))[$path])) {
-        if (file_exists($menu[$path][3])) {
-            $page_title = $menu[$path][0];
-            include $menu[$path][3];
-        } else {
-            // not found
-            http_response_code(404);
-        }
-    } else {
-        // get content data from database
-        $metadata = '<meta name="robots" content="index, follow">';
-        include LIB.'content.inc.php';
-        $content = new Content();
-        $content_data = $content->get($dbs, $path);
-        if ($content_data) {
-          $page_title = $content_data['Title'];
-          echo $content_data['Content'];
-          unset($content_data);
-        } else {
-          // header ("location:index.php");
-          // check in api router
-          require 'api/v'.$sysconf['api']['version'].'/routes.php';
-        }
-    }
-} else {
-    $metadata = '<meta name="robots" content="index, follow">';
-    // homepage header info
-    if (!isset($_GET['p'])) {
-        if ((!isset($_GET['keywords'])) AND (!isset($_GET['page'])) AND (!isset($_GET['title'])) AND (!isset($_GET['author'])) AND (!isset($_GET['subject'])) AND (!isset($_GET['location']))) {
-            // get content data from database
-            include LIB.'content.inc.php';
-            $content = new Content();
-            $content_data = $content->get($dbs, 'headerinfo');
-            if ($content_data) {
-                //$header_info .= '<div id="headerInfo">'.$content_data['Content'].'</div>';
-                unset($content_data);
-            }
-        }
-    }
-    include LIB.'contents/default.inc.php';
-}
-// main content grab
-$main_content = ob_get_clean();
+// running hook to override process/variable before
+// content load
+$opac->hookBeforeContent(function($opac){
+  // Set header for CSP
+  $opac->setCsp();
+  $opac->setHeader('X-Content-Type-Options', 'nonsniff');
+  
+  // running plugin based on hook
+  Plugins::getInstance()->execute(Plugins::CONTENT_BEFORE_LOAD, [$opac]);
+});
 
-// template output
-require $sysconf['template']['dir'].'/'.$sysconf['template']['theme'].'/index_template.inc.php';
+// Path process or show welcome page
+$opac->onWeb(function($opac){
+  $opac->handle('p')->orWelcome();
+})->onCli();
+
+// running hook to override process/variable after
+// content load
+$opac->hookAfterContent(function($opac){
+  Plugins::getInstance()->execute(Plugins::CONTENT_AFTER_LOAD, [$opac]);
+});
+
+// templating
+$opac->parseToTemplate();

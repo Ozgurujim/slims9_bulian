@@ -68,7 +68,16 @@ if(isset($_GET['action']) && isset($_GET['id']) && $_GET['action'] == 'download'
     header("Content-Length: " .(string)(filesize($path)) );
     header('Content-Disposition: attachment; filename="'.basename($path).'"');
     header("Content-Transfer-Encoding: binary\n");
-    echo file_get_contents($path);
+    $fo = fopen($path, 'rb');
+
+    while (!feof($fo)) {
+      echo fread($fo, 8192);
+
+      ob_flush();
+      flush();
+    }
+
+    fclose($fo);
     exit();
   }
 }
@@ -84,7 +93,7 @@ if (isset($_POST['itemID']) AND !empty($_POST['itemID']) AND isset($_POST['itemA
       $_POST['itemID'] = array($_POST['itemID']);
     }
 
-    $error_num == 0;
+    $error_num = 0;
     foreach ($_POST['itemID'] as $itemID) {
       //delete file
       $_q = $dbs->query("SELECT backup_file FROM backup_log WHERE backup_log_id=".$itemID);
@@ -122,20 +131,59 @@ if (isset($_POST['itemID']) AND !empty($_POST['itemID']) AND isset($_POST['itemA
  // }
   ?>
 	<div class="sub_section">
-	  <div class="btn-group">
-      <button onclick="$('#createBackup').submit()" class="notAJAX btn btn-success"><?php echo __('Start New Backup'); ?></button>
+	  <div class="btn-group d-flex flex-column">
+      <div class="d-flex">
+        <button id="startBackup" class="notAJAX btn btn-success d-block mb-1"><?php echo __('Start New Backup'); ?></button>
+        <?php if ($_SESSION['uid'] == 1): ?>
+        <a href="<?= MWB ?>system/backup_config.php" title="<?= __('Database Backup Configuration') ?>" class="notAJAX openPopUp btn btn-secondary d-block mb-1"><?php echo __('Backup Configuration'); ?></a>
+        <?php endif; ?>
+      </div>
+      <div>
+        <input type="checkbox" value="yes" id="activateVerbose"/> <label><?= __('Verbose process')?></label>
+      </div>
 	  </div>
-    <form name="search" action="<?php echo MWB; ?>system/backup_proc.php" id="search" method="get" class="form-inline"><?php echo __('Search'); ?> 
-    <input type="text" name="keywords" class="form-control col-md-3" />
-    <input type="submit" id="doSearch" value="<?php echo __('Search'); ?>" class="btn btn-default" />
+    <form name="search" action="<?php echo MWB; ?>system/backup.php" id="search" method="get" class="form-inline"><?php echo __('Search'); ?> 
+      <input type="text" name="keywords" class="form-control col-md-3" />
+      <input type="submit" id="doSearch" value="<?php echo __('Search'); ?>" class="btn btn-default" />
     </form>
-    <form name="createBackup" id="createBackup" target="blindSubmit" action="<?php echo MWB; ?>system/backup_proc.php" method="post" style="display: inline; visibility: hidden;">
-    <input type="hidden" name="start" value="true" />
-    <input type="hidden" name="tkn" value="<?php echo $_SESSION['token']; ?>" />
+    <form name="createBackup" id="createBackup" target="backupVerbose" action="<?php echo MWB; ?>system/backup_proc.php" method="post" style="display: inline; visibility: hidden;">
+      <input type="hidden" name="verbose" value="no"/>  
+      <input type="hidden" name="start" value="true"/>
+      <input type="hidden" name="tkn" value="<?php echo $_SESSION['token']; ?>" />
     </form>
+    <iframe name="backupVerbose" class="d-none w-100 my-2 rounded-lg" style="height: 150px; background: black;color: white"></iframe>
   </div>
 </div>
 </div>
+<script>
+  $('#startBackup').click(function(){
+    let input = $('#activateVerbose');
+
+    // Change ui
+    input.attr('disabled', '');
+    $(this).removeClass('btn-success').addClass('btn-secondary');
+    $(this).text('<?= __('Processing') ?>');
+    $('#createBackup').submit()
+  });
+
+  $('#activateVerbose').click(function(){
+    let input = $('input[name="verbose"]');
+    let iframe = $('iframe[name="backupVerbose"]');
+    let button = $('#startBackup');
+
+    if ($(this).is(':checked'))
+    {
+      input.val('yes');
+      button.trigger('click');
+      iframe.removeClass('d-none');
+    }
+    else
+    {
+      iframe.addClass('d-none');
+      input.val('false');
+    }
+  });
+</script>
 <?php
 
 /* BACKUP LOG LIST */
@@ -143,23 +191,15 @@ if (isset($_POST['itemID']) AND !empty($_POST['itemID']) AND isset($_POST['itemA
 $table_spec = 'backup_log AS bl LEFT JOIN user AS u ON bl.user_id=u.user_id';
 // create datagrid
 $datagrid = new simbio_datagrid();
-if ($can_read AND $can_write) {
-  $datagrid->setSQLColumn('bl.backup_log_id',
-  	'u.realname AS  \''.__('Backup Executor').'\'', 
-  	'bl.backup_time AS \''.__('Backup Time').'\'',
-  	'bl.backup_file AS \''.__('Backup File Location').'\'',
-    'bl.backup_file AS \''.__('File Size').'\'');
-  $datagrid->setSQLorder('backup_time DESC');
-  $datagrid->modifyColumnContent(4, 'callback{showFileSize}'); 
-}else{
-  $datagrid->setSQLColumn(
-    'u.realname AS  \''.__('Backup Executor').'\'', 
+$datagrid->setSQLColumn('bl.backup_log_id',
+    'u.realname AS  \''.__('Backup Executor').'\'',
     'bl.backup_time AS \''.__('Backup Time').'\'',
     'bl.backup_file AS \''.__('Backup File Location').'\'',
-    'bl.backup_file AS \''.__('File Size').'\''); 
-  $datagrid->setSQLorder('backup_time DESC');
-  $datagrid->modifyColumnContent(3, 'callback{showFileSize}'); 
-}
+    'bl.backup_file AS \''.__('File Size').'\'');
+$datagrid->setSQLorder('backup_time DESC');
+$datagrid->modifyColumnContent(4, 'callback{showFileSize}');
+if (!$can_write) $datagrid->invisible_fields = [0];
+
 // is there any search
 if (isset($_GET['keywords']) AND $_GET['keywords']) {
    $keywords = $dbs->escape_string($_GET['keywords']);
@@ -180,7 +220,7 @@ function showFilesize($obj_db,$array_data) {
       $factor = floor((strlen($file) - 1) / 3);
       if ($factor > 0) 
         $sz = 'KMGT';
-        $str  = sprintf("%.{$decimal}f ", $file / pow(1024, $factor)) . @$sz[$factor - 1] . 'B';
+        $str  = sprintf("%.{$decimal}f ", $file / pow(1024, $factor)) . $sz[((int)$factor - 1)] . 'B';
         $str .= '&nbsp;<a class="btn btn-sm btn-info pull-right" href="'.MWB.'system/backup.php?action=download&id='.$array_data[0].'" target="_SELF">'.__('Download').'</a>';
     }
   return $str;
