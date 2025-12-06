@@ -61,6 +61,8 @@ extract($biblio_detail);
 //   } else {
     include_once SB.'template'.DS.$sysconf['template']['theme'].DS.'citation'.DS.'apa_style_template.php'; 
     include_once SB.'template'.DS.$sysconf['template']['theme'].DS.'citation'.DS.'mla_style_template.php'; 
+// gurujim added this AustralianGovernmentPublishingService style 6/12/2025
+    include_once SB.'template'.DS.$sysconf['template']['theme'].DS.'citation'.DS.'agps_style_template.php'; 
 //   }
 // }
 
