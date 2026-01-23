@@ -1,5 +1,11 @@
 SLiMS 9 Bulian
 ===============
+SLiMS 9 Bulian - Australian and Myanmar enhancements. Details regarding the base software are below. 
+This fork aims to provide additional translations of the admin interface and the OPAC, and enhanced Help files. 
+As of 23/01/2026 the focus of this project is on providing increased language choice while maintaining compatibility with the official SLiMS9 development branch. 
+Platform support for translation is being provided by Poeditor.com under their Open Source support license tier. 
+Jim Richardson.
+***************
 SENAYAN Library Management System (SLiMS) version 9 Codename Bulian
 
 SLiMS is free open source software for library resources management
