@@ -15,7 +15,7 @@ msgstr ""
 #. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 06/10/2025
 #: chat.php:81
 msgid "Logout"
-msgstr "ထွက်ရန်"
+msgstr "စနစ်မှထွက်ရန်"
 
 #: template/default/parts/_navbar.php:23
 msgid "Help"
@@ -124,7 +124,7 @@ msgstr "ပူးတွဲဖိုင်"
 
 #: template/default/biblio_list_template.php:223
 msgid "Comment"
-msgstr "မှတ်ချက်များ"
+msgstr "မှတ်ချက်"
 
 #: template/default/detail_template.php:86 template/lightweight/detail_template.php:101
 msgid "Content Type"
@@ -384,7 +384,7 @@ msgstr "စုစည်းမှုများအားလုံးကို �
 
 #: template/lightweight/login_template.inc.php:84
 msgid "Back To Home"
-msgstr "နောက်ကျောမူလစာမျက်နှာရန်"
+msgstr "မူလစာမျက်နှာသို့ပြန်သွားရန်"
 
 #: template/default/news_template.php:18 template/lightweight/news_template.php:10
 msgid "Read More"
@@ -509,7 +509,7 @@ msgstr "စာအုပ်အမည်ကို ထည့်သွင်းပ�
 
 #: template/default/parts/_modal_advanced.php:34
 msgid "Enter author(s) name"
-msgstr "စာရေးဆရာ(များ)၏ အမည်ထည့်ပါ"
+msgstr "စာရေးသူ(များ)၏ အမည်ထည့်ပါ"
 
 #: template/default/parts/_modal_advanced.php:43
 msgid "Enter subject"
@@ -613,7 +613,7 @@ msgstr "စာတိုပေးပို့ရန်"
 
 #: template/default/tinfo.inc.php:39
 msgid "Enable this theme for mobile?"
-msgstr "မိုဘိုင်းအတွက် ဒီအပြင်အဆင်ကို ဖွင့်လိုပါသလား။"
+msgstr "မိုဘိုင်းအတွက် ဒီပုံစံ/အပြင်အဆင် (Theme )ကို ဖွင့်လိုပါသလား။"
 
 #: template/default/tinfo.inc.php:43
 msgid "Yes, please!"
@@ -621,7 +621,7 @@ msgstr "ဟုတ်ကဲ့၊ ကျေးဇူးပြုပြီး!"
 
 #: template/default/tinfo.inc.php:44
 msgid "No, I want use lighweight theme"
-msgstr "မဟုတ်ပါ။ ပေါ့ပါးတဲ့ အပြင်အဆင်ကို သုံးချင်ပါတယ်။"
+msgstr "မဟုတ်ပါ။ ပေါ့ပါးတဲ့ ပုံစံ/အပြင်အဆင် (Theme ) ကို သုံးချင်ပါတယ်။"
 
 #: template/default/tinfo.inc.php:49
 msgid "Library Sub Name"
@@ -1097,7 +1097,7 @@ msgstr "စကားဝှက်"
 
 #: login.inc.php:229
 msgid "Remember me"
-msgstr "ကျွန်တော့်ကိုမှတ်မိပါ။"
+msgstr "ကျွန်ုပ်ကိုမှတ်မိပါ။"
 
 #: login.inc.php:233 member.inc.php:1055
 msgid "Login"
@@ -1169,7 +1169,7 @@ msgstr "%s ကို ကြိုတင်မှာယူထားပြီး �
 
 #: member.inc.php:660
 msgid "Item for %s is available for loan"
-msgstr "စာကြည့်တိုက်ပစ္စည်း %s ကိုငှားနိုင်ပါသည်။"
+msgstr "စာပေပစ္စည်း %s ကိုငှားနိုင်ပါသည်။"
 
 #: member.inc.php:666
 msgid "%s reserved successfully"
@@ -1225,7 +1225,7 @@ msgstr "စာကြည့်တိုက်ကတ်ကိုကြည့်ပ
 
 #: member.inc.php:798
 msgid "LOGOUT"
-msgstr "ထွက်ရန်"
+msgstr "စနစ်မှထွက်ရန်"
 
 #: member.inc.php:826
 msgid "Current Loan"
@@ -1249,7 +1249,7 @@ msgstr "ကြှနျုပျအကောငျ့"
 
 #: member.inc.php:861
 msgid "My Current Loan"
-msgstr "ကျွန်ုပ်ရဲ့ လက်ရှိစာငှား"
+msgstr "ကျွန်ုပ်၏လက်ရှိစာငှား"
 
 #: member.inc.php:867
 msgid "My Title Bookmark"
@@ -1470,12 +1470,12 @@ msgstr "သော့ချက်များ"
 
 #: admin/admin_template/default/tinfo.inc.php:6
 msgid "Color Theme.<br><small>( Default : #004db6 )</small>"
-msgstr ""
+msgstr "ပုံစံ/အပြင်အဆင် (Theme ) အရောင် .<br><small>( Default : #004db6 )</small>"
 
 #: admin/admin_template/default/tinfo.inc.php:13
 #, fuzzy
 msgid "Always Show Tracks"
-msgstr "လမ်းကြောင်းကို အမြဲပြပါ"
+msgstr "လမ်းကြောင်းကို အမြဲပြပါ။"
 
 #: admin/admin_template/default/tinfo.inc.php:17 admin/modules/bibliography/export.php:217 admin/modules/bibliography/import.php:376 admin/modules/bibliography/item_export.php:194
 #: admin/modules/bibliography/item_import.php:399 admin/modules/membership/export.php:168 admin/modules/membership/import.php:383 admin/modules/membership/import.php:385 admin/modules/membership/index.php:570
@@ -1489,7 +1489,7 @@ msgid "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>&nbsp;\n"
 "         This is notification e-mail to inform you that you have <strong>DUE DATE</strong> library loan,\n"
 "        the overdued collection(s) are:"
 msgstr "သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
-"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါတယ်။"
+"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါသည်။"
 
 #: admin/admin_template/duedateMail.php:55
 msgid "Please return all collections immediately to library at or before due date. If you have\n"
@@ -1516,7 +1516,7 @@ msgid "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
 "This is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\n"
 "the overdued collection(s) are:"
 msgstr "သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
-"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါတယ်။"
+"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါသည်။"
 
 #: admin/admin_template/overdue-mail-tpl.php:10
 msgid "Please return all overdued collections immediately to library. If you have\n"
@@ -1539,7 +1539,7 @@ msgid "To <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
 "         This is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\n"
 "        the overdued collection(s) are:"
 msgstr "သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
-"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါတယ်။"
+"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါသည်။"
 
 #: admin/admin_template/overdueMail.php:62
 msgid "Please return all overdued collections immediately to library. If you have\n"
@@ -1569,7 +1569,7 @@ msgstr "<strong>Freetype</strong> အထောက်အကူကို PHP GD ex
 
 #: admin/default/home.php:71
 msgid "There are currently <strong>{num_overdue}</strong> library members having overdue. Please check at <b>Circulation</b> module at <b>Overdues</b> section for more detail"
-msgstr "ယခု <strong>{num_overdue}</strong> စာကြည့်တိုက်အဖွဲ့ဝင်များသည် စာအုပ်ပြန်အပ်ရန် ရက်ကျော်နေပြီဖြစ်ပါသည်။ ပိုပြီးအသေးစိတ်များအတွက်<b> စာဌား </b> module <b>Overdues</b> section မှာစစ်ဆေးပါ။"
+msgstr "ယခု <strong>{num_overdue}</strong> စာကြည့်တိုက်အသင်းဝင်များသည် စာအုပ်ပြန်အပ်ရန် ရက်ကျော်နေပြီဖြစ်ပါသည်။ အသေးစိတ်ကိုသိရန်အတွက်<b> စာငှား</b> ဌာန <b>ရက်လွန်စာရင်း</b> မှာစစ်ဆေးပါ။"
 
 #: admin/default/home.php:76
 msgid "<strong>Images</strong> directory and directories under it is not writable. Make sure it is writable by changing its permission or you won't be able to upload any images and create barcodes"
@@ -1592,9 +1592,8 @@ msgid "<strong><i>You are logged in as Super User. With great power comes great 
 msgstr "<strong><i>သင်သည်အမြင့်ဆုံးအသုံးပြုသူအဖြစ် ဝင်ရောက်နေပါသည်။ ဤစနစ်ကို ပြင်ဆင်နိုင်၍ တာဝန်အပြည့်ရှိပါသည်။</i></strong>"
 
 #: admin/default/home.php:120
-#, fuzzy
 msgid "Table"
-msgstr "လုပ်နိုင်ရန် ဖွင့်ပေးသည်။"
+msgstr "ဇယား"
 
 #: admin/default/home.php:120
 msgid "might need to be repaired."
@@ -1667,9 +1666,8 @@ msgid "Overdue"
 msgstr "ပြန်လည်အပ်နှံရန် ရက်လွန်ခြင်း"
 
 #: admin/default/home.php:421 admin/modules/reporting/customs/due_date_warning.php:186 admin/modules/reporting/customs/overdued_list.php:249 admin/modules/stock_take/init.php:94 admin/modules/system/envsetting.php:130
-#, fuzzy
 msgid "Please wait"
-msgstr "ထပ်ကြိုးစားပါ"
+msgstr "ကျေးဇူးပြုပြီးခဏစောင့်ပါ။"
 
 #: admin/default/session_check.inc.php:34 admin/default/session_check.inc.php:53 admin/modules/bibliography/barcode_reader.php:46 admin/modules/bibliography/checkout_item.php:44
 #: admin/modules/bibliography/checkout_item.php:49 admin/modules/bibliography/dl_print.php:43 admin/modules/bibliography/dl_print.php:48 admin/modules/bibliography/export.php:45 admin/modules/bibliography/export.php:50
@@ -1710,15 +1708,15 @@ msgstr "ယခုအသုံးပြုသူ၏ ကိုယ်ရေးမ�
 
 #: admin/default/submenu.php:23 admin/modules/system/submenu.php:55
 msgid "Shortcut Setting"
-msgstr "ဖြတ်လမ်းတို Setting"
+msgstr "ဖြတ်လမ်းတို သတ်မှတ်ချက်"
 
 #: admin/default/submenu.php:24 admin/modules/system/submenu.php:35
 msgid "Theme"
-msgstr "အဓိကအကြောင်းအရာ"
+msgstr "ပုံစံ/အပြင်အဆင် (Theme )"
 
 #: admin/default/submenu.php:24 admin/modules/system/submenu.php:35
 msgid "Configure theme Preferences"
-msgstr "အဓိကအကြောင်းအရာဦးစားပေးများကိုရွေးချယ်ရန်"
+msgstr "ပုံစံ/အပြင်အဆင် (Theme ) ဦးစားပေးများကိုရွေးချယ်ရန်"
 
 #: admin/help.php:43
 msgid "Sorry, help content is not available yet."
@@ -1787,16 +1785,16 @@ msgstr "ပုံနှိပ်ရန် တန်းစီထားသည်�
 #: admin/modules/bibliography/dl_print.php:122 admin/modules/bibliography/item_barcode_generator.php:123 admin/modules/bibliography/item_barcode_generator.php:127 admin/modules/bibliography/printed_card.php:120
 #: admin/modules/membership/member_card_generator.php:112 admin/modules/membership/member_card_generator.php:116 plugins/label_barcode/index.php:121
 msgid "There is no data to print!"
-msgstr "ပုံနှိပ်ရန်အချက်အလက်မရှိပါ"
+msgstr "ပုံနှိပ်ရန်အချက်အလက်မရှိပါ။"
 
 #: admin/modules/bibliography/dl_print.php:188 admin/modules/bibliography/item_barcode_generator.php:174 admin/modules/bibliography/printed_card.php:286 files/membercard/classic/membercard.php:248
 #: files/membercard/old/membercard.php:270 plugins/label_barcode/index.php:249
 msgid "Print Again"
-msgstr "ထပ်မံပုံနှိပ်ပါ"
+msgstr "ထပ်မံပုံနှိပ်ရန်"
 
 #: admin/modules/bibliography/dl_print.php:223 admin/modules/bibliography/dl_print.php:233 admin/modules/bibliography/submenu.php:39 plugins/label_barcode/index.php:269
 msgid "Labels Printing"
-msgstr "လေဘ်များ ပုံနှိပ်ခြင်း"
+msgstr "လေဘယ်များ ပုံနှိပ်ခြင်း"
 
 #: admin/modules/bibliography/dl_print.php:224 plugins/label_barcode/index.php:271
 msgid "ERROR! Label failed to generate, possibly because {directory} directory is not writable"
@@ -1805,11 +1803,11 @@ msgstr "လေဘယ်ကိုထုတ်ရန် မအောင်မြ�
 #: admin/modules/bibliography/dl_print.php:237 admin/modules/bibliography/item_barcode_generator.php:223 admin/modules/bibliography/printed_card.php:315 admin/modules/membership/member_card_generator.php:196
 #: plugins/label_barcode/index.php:286
 msgid "Clear Print Queue"
-msgstr "ပုံနှိပ်ရန်တန်းစီတန်းထားခြင်းကို ပယ်ဖျက်ပါ။"
+msgstr "ပုံနှိပ်ရန်တန်းစီတန်းထားခြင်းကို ပယ်ဖျက်ရန်"
 
 #: admin/modules/bibliography/dl_print.php:238 plugins/label_barcode/index.php:288
 msgid "Print Labels for Selected Data"
-msgstr "ရွေးချယ်ထားသော အချက်အလက်အတွက် အမှတ်အသားတံဆိပ်များ ပုံနှိပ်ပါ။"
+msgstr "ရွေးချယ်ထားသော အချက်အလက်အတွက် လေဘယ်များ ပုံနှိပ်ရန်"
 
 #: admin/modules/bibliography/dl_print.php:239
 msgid "Change print label settings"
@@ -1834,12 +1832,12 @@ msgstr "ပုံနှိပ်ရန်စောင့်ဆိုင်းန
 #: admin/modules/membership/member_card_generator.php:251 plugins/label_barcode/index.php:371 plugins/read_counter/index.php:87 template/akasia-dz/visitor_template.php:60 template/akasia/visitor_template.php:60
 #: template/lightweight/visitor_template.php:60
 msgid "Add"
-msgstr "ထပ်ထည့်ပါ။"
+msgstr "ထပ်ထည့်ပါရန်"
 
 #: admin/modules/bibliography/dl_print.php:314 admin/modules/bibliography/item_barcode_generator.php:298 admin/modules/bibliography/printed_card.php:402 admin/modules/membership/member_card_generator.php:252
 #: plugins/label_barcode/index.php:372
 msgid "Add To Print Queue"
-msgstr "ပုံနှိပ်တန်းစီရန် ထပ်ထည့်ပါ။"
+msgstr "ပုံနှိပ်တန်းစီရန် ထပ်ထည့်ရန်"
 
 #: admin/modules/bibliography/dl_print.php:315 admin/modules/bibliography/item_barcode_generator.php:299 admin/modules/bibliography/printed_card.php:403 admin/modules/membership/member_card_generator.php:253
 #: plugins/label_barcode/index.php:373
@@ -1917,7 +1915,7 @@ msgstr "ပူးတွဲဖိုင် {filename} အောင်မြင်
 #: admin/modules/bibliography/iframe_attach.php:128 admin/modules/bibliography/iframe_author.php:116 admin/modules/bibliography/iframe_biblio_rel.php:108 admin/modules/bibliography/iframe_item_list.php:124
 #: admin/modules/bibliography/iframe_topic.php:113 admin/modules/master_file/detail_comment.php:108
 msgid "Delete"
-msgstr "ဖျက်ပါ"
+msgstr "ဖျက်ရန်"
 
 #: admin/modules/bibliography/iframe_attach.php:131 admin/modules/bibliography/index.php:1091
 msgid "File Attachments"
@@ -1927,11 +1925,11 @@ msgstr "ပူးတွဲဖိုင်များ"
 #: admin/modules/master_file/iframe_vocabolary_control.php:75 admin/modules/master_file/item_code_pattern.php:125 admin/modules/system/index.php:96 simbio2/simbio_GUI/form_maker/simbio_form_table.inc.php:110
 #: simbio2/simbio_GUI/form_maker/simbio_form_table_AJAX.inc.php:133
 msgid "Edit"
-msgstr "တည်းဖြတ်သည်။"
+msgstr "တည်းဖြတ်ရန်"
 
 #: admin/modules/bibliography/iframe_author.php:65
 msgid "Are you sure to remove selected author?"
-msgstr "ရွေးချယ်ထားသော စာရေးဆရာကို ဖယ်ရှားပစ်ရန်သေချာပါသလား"
+msgstr "ရွေးချယ်ထားသော စာရေးသူကို ဖယ်ရှားပစ်ရန်သေချာပါသလား"
 
 #: admin/modules/bibliography/iframe_author.php:65 admin/modules/bibliography/iframe_biblio_rel.php:60 admin/modules/bibliography/iframe_item_list.php:61 admin/modules/bibliography/iframe_topic.php:63
 #: admin/modules/master_file/iframe_vocabolary_control.php:27 admin/modules/serial_control/serial_base_lib.inc.php:136 simbio2/simbio_GUI/form_maker/simbio_form_table.inc.php:117
@@ -2011,26 +2009,23 @@ msgstr "ဖိုင်တင်ခြင်း မအောင်မြင်�
 #: admin/modules/bibliography/import.php:247
 #, fuzzy
 msgid "Success importing bibliographic data : {title}"
-msgstr "CSV ဖိုင်သို့ စာအုပ်ဆိုင်ရာအချက်အလက်များပို့ဆောင်ပါ။"
+msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်များ တင်သွင်းမှု အောင်မြင်သည် - {title}။"
 
 #: admin/modules/bibliography/import.php:320 admin/modules/bibliography/item_import.php:345 admin/modules/membership/import.php:321
-#, fuzzy
 msgid "Success imported <strong>{row_count}</strong> title in <strong>{time_to_finish}</strong> second"
 msgstr "ခေါင်းစဉ် <strong>{row_count}</strong> ခုကို <strong>{time_to_finish}</strong> စက္ကန့်အတွင်း အောင်မြင်စွာ တင်သွင်းပြီးပါပြီ။"
 
 #: admin/modules/bibliography/import.php:336
-#, fuzzy
 msgid "Import for bibliographics data from CSV file. For guide on CSV fields order and format please refer to documentation or visit <a href=\"http://slims.web.id\" target=\"_blank\">Official Website</a>"
-msgstr "CSV ဖိုင်မှတစ်ဆင့် စာအုပ်မှတ်တမ်းများ ထည့်သွင်းခြင်း။ CSV Format နှင့် အချက်အလက် အစဉ်လိုက်များကို သိရှိနိုင်ရန် အသုံးပြုပုံလမ်းညွှန် သို့မဟုတ် တရားဝင်ဝဘ်ဆိုက်တွင် ကြည့်ရှုနိုင်ပါသည်။"
+msgstr "CSV ဖိုင်မှတစ်ဆင့် စာအုပ်မှတ်တမ်းများ ထည့်သွင်းခြင်း။ CSV Format နှင့် အချက်အလက် အစဉ်လိုက်များကို သိရှိနိုင်ရန် အသုံးပြုပုံလမ်းညွှန် သို့မဟုတ် <a href=\"http//slims.web.id\" target=\"_blank\">တရားဝင်ဝဘ်ဆိုက်</a>တွင် ကြည့်ရှုနိုင်ပါသည်။"
 
 #: admin/modules/bibliography/import.php:337 admin/modules/bibliography/item_import.php:362 admin/modules/membership/import.php:344
 msgid "Download Sample"
 msgstr "နမူနာကို ဆွဲချကူးယူပါ။"
 
 #: admin/modules/bibliography/import.php:346 admin/modules/bibliography/item_import.php:370 admin/modules/membership/import.php:353
-#, fuzzy
 msgid "Process"
-msgstr "ဝင်ရောက်ခွင့်"
+msgstr "လုပ်ငန်းစဉ်"
 
 #: admin/modules/bibliography/import.php:366 admin/modules/bibliography/item_import.php:389 admin/modules/bibliography/marcimport.php:425 admin/modules/membership/import.php:373
 msgid "File To Import"
@@ -2045,16 +2040,14 @@ msgid "The first row is the columns names"
 msgstr "ပထမတန်းသည် ကော်လံအမည်ပါ။"
 
 #: admin/modules/bibliography/import_preview.php:63
-#, fuzzy
 msgid "Preview Import"
-msgstr "ကြိုတင်ကြည့်ရှုခြင်း"
+msgstr "အကြိုကြည့်ရှုခြင်း တင်သွင်းခြင်း"
 
 #: admin/modules/bibliography/import_preview.php:66
 msgid "Preview your data before import to SLiMS"
 msgstr "SLiMS သို့ မတင်သွင်းမီ သင့်ဒေတာကို အကြိုကြည့်ရှုပါ။"
 
 #: admin/modules/bibliography/import_preview.php:71
-#, fuzzy
 msgid "Importing data to SLiMS"
 msgstr "အချက်အလက်များ SLiMS သို့ ပို့ဆောင်ခြင်း"
 
@@ -2237,7 +2230,6 @@ msgid "Additional Information"
 msgstr "နောက်ထပ်အချက်အလက်များ"
 
 #: admin/modules/bibliography/index.php:724
-#, fuzzy
 msgid "Biblio Log"
 msgstr "စာအုပ်မှတ်တမ်းစာရင်း"
 
@@ -2255,7 +2247,7 @@ msgstr "သိမ်းဆည်းရန်"
 #: admin/modules/bibliography/index.php:767
 #, fuzzy
 msgid "Log"
-msgstr "ဝင်ရောက်ရန်"
+msgstr "မှတ်တမ်း"
 
 #: admin/modules/bibliography/index.php:808
 msgid "Main title of collection. Separate child title with colon and pararel title with equal (=) sign."
@@ -2291,9 +2283,8 @@ msgid "Total item(s)"
 msgstr "စာအုပ်အမျိုးအစား စုစုပေါင်း"
 
 #: admin/modules/bibliography/index.php:851 admin/modules/reporting/customs/procurement_report.php:67
-#, fuzzy
 msgid "Options"
-msgstr "အလုပ်အကိုင်"
+msgstr "ရွေးချယ်စရာများ"
 
 #: admin/modules/bibliography/index.php:852 admin/modules/master_file/item_code_pattern.php:87
 msgid "Add new pattern"
@@ -2443,9 +2434,8 @@ msgid "Click to enlarge preview"
 msgstr "အကြိုကြည့်ရှုမှုကို ချဲ့ကြည့်ရန် နှိပ်ပါ။"
 
 #: admin/modules/bibliography/index.php:1036 admin/modules/membership/index.php:581 admin/modules/system/index.php:348 admin/modules/system/index.php:361
-#, fuzzy
 msgid "Remove Image"
-msgstr "ဖယ်ထုတ်ပါ။"
+msgstr "ရုပ်ပုံဖယ်ထုတ်ပါ။"
 
 #: admin/modules/bibliography/index.php:1044 admin/modules/stock_take/st_upload.php:142 admin/modules/system/index.php:352 admin/modules/system/index.php:365
 msgid "Choose file"
@@ -2458,7 +2448,7 @@ msgstr "သို့မဟုတ် URL မှ ဒေါင်းလုဒ်လ
 #: admin/modules/bibliography/index.php:1050 admin/modules/system/backup.php:224
 #, fuzzy
 msgid "Download"
-msgstr "အစီရင်ခံစာကို ဆွဲချကူးယူပါ။"
+msgstr "ဒေါင်းလုဒ်လုပ်ပါ"
 
 #: admin/modules/bibliography/index.php:1051
 msgid "Trying search in DuckduckGo"
@@ -2733,7 +2723,7 @@ msgstr "MARC စံနစ်သို့ ကက်တလောက်များ
 
 #: admin/modules/bibliography/marcexport.php:166
 msgid "Clear selected catalog"
-msgstr "ရွေးချယ်ထားသည့် ကက်တလောက်ကို ရှင်းလင်းပါ"
+msgstr "ရွေးချယ်ထားသည့် ကက်တလောက်ကို ရှင်းလင်းပါ။"
 
 #: admin/modules/bibliography/marcexport.php:167
 msgid "Export now"
@@ -2812,7 +2802,6 @@ msgid "No Keywords Supplied!"
 msgstr "မည်သည့် အဓိကစကားလုံးမှ မရရှိပါ။"
 
 #: admin/modules/bibliography/marcsru.php:355
-#, fuzzy
 msgid "Found {hits} records from Marc SRU Server."
 msgstr "Marc SRU Server မှ {hits} မှတ်တမ်းများကို တွေ့ရှိသည်။"
 
@@ -2832,7 +2821,7 @@ msgstr "ဒေတာဘေ့စ်သို့ Marc မှတ်တမ်းမ
 
 #: admin/modules/bibliography/marcsru.php:363 admin/modules/bibliography/p2p.php:376 admin/modules/bibliography/z3950sru.php:231 admin/modules/master_file/item_code_pattern.php:118 admin/modules/system/shortcut.php:111
 msgid "Select"
-msgstr "ရွေးချယ်ပါ။"
+msgstr "ရွေးချယ်ရန်"
 
 #: admin/modules/bibliography/marcsru.php:415 admin/modules/bibliography/z3950.php:274 admin/modules/bibliography/z3950sru.php:284
 msgid "No Results Found!"
@@ -2847,9 +2836,8 @@ msgid "All fields"
 msgstr "နယ်ပယ်များအားလုံး"
 
 #: admin/modules/bibliography/marcsru.php:466
-#, fuzzy
 msgid "SRU Server: "
-msgstr "SRU ကွန်ပျူတာနှင့် ယင်းကို အသုံးပြုသူများကိုသော်လည်းကောင်း၊ အခြားကွန်ပျူတာများနှင့်သော်လည်းကောင်း ပံ့ပိုးပေးသော အစီအစဉ်"
+msgstr "SRU ဆာဗာ-"
 
 #: admin/modules/bibliography/marcsru.php:473 admin/modules/bibliography/p2p.php:331 admin/modules/bibliography/z3950.php:298 admin/modules/bibliography/z3950sru.php:349
 msgid "* Please make sure you have a working Internet connection."
@@ -2890,7 +2878,7 @@ msgstr "Server"
 #: admin/modules/bibliography/p2p.php:367
 #, fuzzy
 msgid "Found %s records from <strong>%s</strong> Server"
-msgstr "Z3950 SRU ဆာဗာမှ {hits} မှတ်တမ်းများကို တွေ့ရှိသည်။"
+msgstr "Z3950 SRU Server မှ {hits} မှတ်တမ်းများကို တွေ့ရှိသည်။"
 
 #: admin/modules/bibliography/p2p.php:374
 msgid "Save P2P Records to Database"
@@ -2899,7 +2887,7 @@ msgstr "P2P မှတ်တမ်းများကို ဒေတာဘေ့�
 #: admin/modules/bibliography/p2p.php:376
 #, fuzzy
 msgid "Digital Files"
-msgstr "စုစုပေါင်းခေါင်းစည်းများ"
+msgstr "ဒစ်ဂျစ်တယ်ဖိုင်များ"
 
 #: admin/modules/bibliography/p2p.php:376 admin/modules/bibliography/p2p.php:429 admin/modules/reporting/customs/dl_counter.php:195
 msgid "Detail"
@@ -2908,7 +2896,7 @@ msgstr "အသေးစိတ်"
 #: admin/modules/bibliography/p2p.php:478
 #, fuzzy
 msgid "No data selected!"
-msgstr "မဂ္ဂဇင်းအချက်အလက်များကိုပယ်ဖျက်ပြီး။"
+msgstr "ဒေတာ ရွေးချယ်ထားခြင်း မရှိပါ။"
 
 #: admin/modules/bibliography/p2p.php:495
 msgid "Sorry, no result found from %s OR maybe XML result and detail disabled."
@@ -3045,7 +3033,7 @@ msgstr "လုပ်ပိုင်ခွင့်အဆင့်အချက်
 
 #: admin/modules/bibliography/pop_author_edit.php:93 admin/modules/master_file/author.php:270 admin/modules/master_file/author.php:300 admin/modules/master_file/author.php:306
 msgid "Authority Type"
-msgstr "စာရေးသူ အမျိုးအစား"
+msgstr "တာဝန်ရှိသူအမျိုးအစား"
 
 #: admin/modules/bibliography/pop_biblio_rel.php:62
 msgid "Biblio relation succesfully updated!"
@@ -3069,7 +3057,7 @@ msgstr "ရှိပြီးသား အချက်အလက်များ�
 
 #: admin/modules/bibliography/pop_p2p.php:55
 msgid "P2P Server URL is not exists!"
-msgstr "P2P ဆာဗာ URL မရှိပါ။"
+msgstr "P2P Server URL မရှိပါ။"
 
 #: admin/modules/bibliography/pop_p2p.php:78 admin/modules/circulation/circulation_action.php:577 admin/modules/membership/index.php:558
 msgid "Notes"
@@ -3077,7 +3065,7 @@ msgstr "မှတ်စုများ"
 
 #: admin/modules/bibliography/pop_pattern.php:45
 msgid "Please, fill length serial number more than 2"
-msgstr ""
+msgstr "ကျေးဇူးပြု၍ စီရီယယ်နံပါတ် (Serial Number) အရှည်ကို ၂ လုံးထက်ပို၍ ရိုက်ထည့်ပါ။"
 
 #: admin/modules/bibliography/pop_pattern.php:110
 msgid "Prefix"
@@ -3170,7 +3158,7 @@ msgstr "(pt)"
 
 #: admin/modules/bibliography/print_settings.php:117
 msgid "(0 if you prefer without title)"
-msgstr ""
+msgstr "(ခေါင်းစဉ် မပါရှိစေလိုပါက 0 ကို ရိုက်ထည့်ပါ)"
 
 #: admin/modules/bibliography/print_settings.php:121
 msgid "(percent relative to box width and height)"
@@ -3220,8 +3208,9 @@ msgstr "(ဖိုင်အမည်)"
 #: admin/modules/bibliography/print_settings.php:188 admin/modules/bibliography/print_settings.php:190 admin/modules/bibliography/print_settings.php:192 admin/modules/bibliography/print_settings.php:194
 #: admin/modules/bibliography/print_settings.php:204 admin/modules/bibliography/print_settings.php:205 admin/modules/bibliography/print_settings.php:206 admin/modules/bibliography/print_settings.php:207
 #: admin/modules/bibliography/print_settings.php:233
+#, fuzzy
 msgid "(text - add <br> tag for line break)"
-msgstr "(text - add <br> tag for line break)"
+msgstr "(စာသား – လိုင်းခွဲရန် <br> tag ကို ထည့်ပါ)"
 
 #: admin/modules/bibliography/print_settings.php:196
 msgid "(hexa color)"
@@ -3263,7 +3252,7 @@ msgstr "အမှား! {directory} လမ်းညွှန်ချက်က�
 
 #: admin/modules/bibliography/printed_card.php:316
 msgid "Print Catalog for Selected Data"
-msgstr "ရွှေးချယ်ထားသော အချက်အလက်များအတွက် ကက်တလောက်ကိုပုံနှိပ်ရန်"
+msgstr "ရွေးချယ်ထားသော အချက်အလက်များအတွက် ကက်တလောက်ကိုပုံနှိပ်ရန်"
 
 #: admin/modules/bibliography/printed_card.php:317
 msgid "Change print catalog settings"
@@ -3283,7 +3272,7 @@ msgstr "URL ကိုဗလာထား၍ မရပါ"
 
 #: admin/modules/bibliography/scrape_image.php:51
 msgid "Must be http/https URL!"
-msgstr ""
+msgstr "http/https URL ဖြစ်ရမည်။"
 
 #: admin/modules/bibliography/scrape_image.php:56
 msgid "URL not valid!"
@@ -3294,8 +3283,9 @@ msgid "Image is not valid!"
 msgstr "ရုပ်ပုံမမှန်ပါ။"
 
 #: admin/modules/bibliography/submenu.php:27
+#, fuzzy
 msgid "BIBLIOGRAPHIC"
-msgstr ""
+msgstr "စာပေပစ္စည်းဆိုင်ရာအချက်အလက်"
 
 #: admin/modules/bibliography/submenu.php:28
 msgid "Show Existing Bibliographic Data"
@@ -3306,8 +3296,9 @@ msgid "Add New Bibliographic Data/Catalog"
 msgstr "စာအုပ်ဆိုင်ရာ အချက်အလက်အသစ်များ/ကက်တလောက် ထပ်ဖြည့်ပါ။"
 
 #: admin/modules/bibliography/submenu.php:30
+#, fuzzy
 msgid "ITEMS"
-msgstr ""
+msgstr "အုပ်ရေ/ပစ္စည်းများ"
 
 #: admin/modules/bibliography/submenu.php:31
 msgid "Item List"
@@ -3323,7 +3314,7 @@ msgstr "ငှားရမ်းသည့် စာအုပ်များစ�
 
 #: admin/modules/bibliography/submenu.php:33
 msgid "COPY CATALOGUING"
-msgstr ""
+msgstr "မိတ္တူကူးကတ်တလောက်"
 
 #: admin/modules/bibliography/submenu.php:34
 msgid "MARC SRU"
@@ -3352,7 +3343,7 @@ msgstr "ကိရိယာများ"
 
 #: admin/modules/bibliography/submenu.php:39
 msgid "Print Document Labels"
-msgstr "စာရွက်စာတမ်းများ၏ အမှတ်အသားတံဆိပ်များ ပုံနှိပ်ခြင်း"
+msgstr "စာရွက်စာတမ်းများ၏ လေဘယ်များ ပုံနှိပ်ခြင်း"
 
 #: admin/modules/bibliography/submenu.php:40
 msgid "Print Item Barcodes"
@@ -3380,7 +3371,7 @@ msgstr "ကက်တလောက်ကဒ်ကို ပုံနှိပ်�
 
 #: admin/modules/bibliography/submenu.php:44
 msgid "Biblio Data Export"
-msgstr "မှတ်တမ်းအချက်အလက်များ ပြင်ပသို့ ပို့ ခြင်း"
+msgstr "စာအုပ်အချက်အလက်များ ပြင်ပသို့ ပို့ ခြင်း"
 
 #: admin/modules/bibliography/submenu.php:44
 msgid "Export Bibliographic Data To CSV format"
@@ -3389,8 +3380,7 @@ msgstr "CSV ပုံစံသို့ စာအုပ်ဆိုင်ရာ 
 #: admin/modules/bibliography/submenu.php:45
 #, fuzzy
 msgid "Biblio Data Import"
-msgstr "\n"
-"မှတ်တမ်းအချက်အလက်များ ရယူခြင်း"
+msgstr "စာအုပ်အချက်အလက်များ တင်သွင်းခြင်း"
 
 #: admin/modules/bibliography/submenu.php:45
 msgid "Import Data to Bibliographic Database from CSV file"
@@ -3428,7 +3418,7 @@ msgstr "{recordCount} ဒေတာဗေ့စ်ထဲသို့ ထည့်
 
 #: admin/modules/bibliography/z3950.php:243
 msgid "Found {hits} records from Z3950 Server, {maxHits} listed."
-msgstr "စာရင်းသွင်းထားသော Z3950 ဆာဗာမှ {hits} မှတ်တမ်းများ၊ {maxHits} တွေ့ရှိသောစာရင်း။"
+msgstr "စာရင်းသွင်းထားသော Z3950 Server မှ {hits}  မှတ်တမ်းများ၊ {maxHits} တွေ့ရှိသောစာရင်း။"
 
 #: admin/modules/bibliography/z3950.php:252 admin/modules/bibliography/z3950sru.php:229
 msgid "Save Z3950 Records to Database"
@@ -3440,16 +3430,17 @@ msgstr "Z3950"
 
 #: admin/modules/bibliography/z3950sru.php:182
 msgid "%s insert bibliographic data from Z3950 service (server : %s) with title (%s) and biblio_id (%s)"
-msgstr ""
+msgstr "%s သည် Z39.50 ဝန်ဆောင်မှုမှ (Server : %s) \n"
+"စာအုပ်ခေါင်းစဉ် (%s) နှင့် biblio_id (%s) ပါဝင်သော Bibliographic အချက်အလက်များကို ထည့်သွင်းခဲ့ပါသည်။"
 
 #: admin/modules/bibliography/z3950sru.php:196
 #, fuzzy
 msgid "Current z3950 SRU address is not register in database!"
-msgstr "ဤစာအုပ်ကို အချက်အလက်များဘဏ်တွင် မှတ်ပုံတင်ထားခြင်း မရှိပါ။"
+msgstr "လက်ရှိ z3950 SRU လိပ်စာသည် ဒေတာဘေ့စ်တွင် မှတ်ပုံတင်မထားပါ။"
 
 #: admin/modules/bibliography/z3950sru.php:223
 msgid "Found {hits} records from Z3950 SRU Server."
-msgstr "Z3950 SRU ဆာဗာမှ {hits} မှတ်တမ်းများကို တွေ့ရှိသည်။"
+msgstr "Z3950 SRU Server မှ {hits} မှတ်တမ်းများကို တွေ့ရှိသည်။"
 
 #: admin/modules/bibliography/z3950sru.php:328
 msgid "Z3950 Search/Retrieve via URL (SRU)"
@@ -3578,7 +3569,8 @@ msgstr "စာငှားလုပ်ငန်း"
 
 #: admin/modules/circulation/circulation_action.php:529
 msgid "<strong>Remember</strong> to click <strong>Finish Transaction</strong> once all loans/returns are complete. Unsaved data will not be saved if the session ends."
-msgstr ""
+msgstr "စာအုပ်ငှားရမ်း/ပြန်အပ်လုပ်ငန်းများအားလုံး ပြီးဆုံးပြီးပါက <strong>ပြီးဆုံးကြောင်း</strong> ကို နှိပ်ရန် <strong>မမေ့ပါနှင့်</strong>။\n"
+"Session ပြီးဆုံးသွားပါက မသိမ်းဆည်းရသေးသောဒေတာများကို သိမ်းဆည်းမည်မဟုတ်ပါ။"
 
 #: admin/modules/circulation/circulation_action.php:538
 msgid "Are you sure want to finish current transaction?"
@@ -3606,11 +3598,11 @@ msgstr "သီးသန့်လျာထားသည်။"
 
 #: admin/modules/circulation/circulation_action.php:622 admin/modules/circulation/circulation_action.php:624 admin/modules/reporting/customs/overdued_list.php:219
 msgid "Fines"
-msgstr "ဒဏ်ငွေ"
+msgstr "ရက်လွန်ကြေးငွေ"
 
 #: admin/modules/circulation/circulation_base_lib.inc.php:265
 msgid "Overdue fines for item {item_code}"
-msgstr "စာအုပ် {item_code} များအတွက် ရက်လွန်ဒဏ်ငွေ"
+msgstr "စာအုပ် {item_code} များအတွက် ရက်လွန်ကြေးငွေ"
 
 #: admin/modules/circulation/fines_list.php:67
 msgid "Fines Description and Debet value can't be empty"
@@ -3716,7 +3708,7 @@ msgstr "စာအုပ်သင်္ကေတနံပါတ်/ဘားက�
 #: admin/modules/circulation/loan.php:204
 #, fuzzy
 msgid "Remove this item"
-msgstr "ဤစာအုပ်ကို ပြန်လည်အပ်နှံပါ။"
+msgstr "ဤအရာကို ဖယ်ရှားပါ"
 
 #: admin/modules/circulation/loan.php:208
 msgid "Click To Change Loan Date"
@@ -3736,8 +3728,9 @@ msgid "You are not authorized to perform this action"
 msgstr "သင့်မှာ ဤအပိုင်းကို ဝင်ရောက်ကြည့်ရှုခွင့် မရှိပါ။"
 
 #: admin/modules/circulation/loan_history_maintenance.php:139
+#, fuzzy
 msgid "Truncating loan_history ..."
-msgstr ""
+msgstr "စာအုပ်ငှားရမ်းမှုမှတ်တမ်းဟောင်းများကို ဖယ်ရှား၍ အသစ်ပြန်တည်ဆောက်ရန် ပြင်ဆင်နေပါသည်…"
 
 #: admin/modules/circulation/loan_history_maintenance.php:143
 msgid "OK"
@@ -3749,7 +3742,7 @@ msgstr "မအောင်မြင်ပါ။"
 
 #: admin/modules/circulation/loan_history_maintenance.php:156
 msgid "Generating missing loan_history rows ..."
-msgstr "ပျောက်နေသော loan_history အတန်းများကို ဖန်တီးနေပါသည်…"
+msgstr "ပျောက်နေသောစာငှားမှတ်တမ်း အတန်းများကို ဖန်တီးနေပါသည်…"
 
 #: admin/modules/circulation/loan_history_maintenance.php:164
 msgid "Inserted %d rows"
@@ -3757,12 +3750,12 @@ msgstr "အတန်း %d ခုကို ထည့်သွင်းပြီ�
 
 #: admin/modules/circulation/loan_history_maintenance.php:174
 msgid "Rebuilding all loan_history entries ..."
-msgstr "loan_history မှတ်တမ်းများအားလုံးကို ပြန်လည်တည်ဆောက်နေပါသည်…"
+msgstr "စာငှားမှတ်တမ်းများအားလုံးကို ပြန်လည်တည်ဆောက်နေပါသည်…"
 
 #: admin/modules/circulation/loan_history_maintenance.php:178
 #, fuzzy
 msgid "Failed to truncate"
-msgstr "အချက်အလက်များကို သိမ်းဆည်းမှု မအောင်မြင်ပါ။"
+msgstr "ဖြတ်တောက်၍မရပါ"
 
 #: admin/modules/circulation/loan_history_maintenance.php:184
 msgid "Rebuild failed"
@@ -3783,11 +3776,11 @@ msgstr "%.2f စက္ကန့်အတွင်း ပြီးဆုံးခ
 #: admin/modules/circulation/loan_history_maintenance.php:223
 #, fuzzy
 msgid "Generate Missing"
-msgstr "ရှာမတွေ့ပါ။"
+msgstr "ပျောက်ဆုံးနေသောပစ္စည်းများကိုဖန်တီးပါ။"
 
 #: admin/modules/circulation/loan_history_maintenance.php:224
 msgid "This will rebuild all loan history. Continue?"
-msgstr "ဤလုပ်ဆောင်ချက်သည် loan history ကိုပြန်လည်ဖန်တီးခြင်းဖြစ်စေပါမည်။ ဆက်လက်လုပ်ဆောင်လိုပါသလား? "
+msgstr "ဤလုပ်ဆောင်ချက်သည် စာငှားမှတ်တမ်း  ကိုပြန်လည်ဖန်တီးခြင်းဖြစ်စေပါမည်။ ဆက်လက်လုပ်ဆောင်လိုပါသလား? "
 
 #: admin/modules/circulation/loan_history_maintenance.php:224
 msgid "Rebuild All"
@@ -3795,12 +3788,12 @@ msgstr "အားလုံးကို ပြန်လည်တည်ဆော�
 
 #: admin/modules/circulation/loan_history_maintenance.php:225
 msgid "This will empty loan history table. Continue?"
-msgstr "ဤလုပ်ဆောင်ချက်သည် loan history ဇယားကို အလွတ်ဖြစ်စေပါမည်။ ဆက်လက်လုပ်ဆောင်လိုပါသလား?"
+msgstr "ဤလုပ်ဆောင်ချက်သည် စာငှားမှတ်တမ်း ဇယားကို အလွတ်ဖြစ်စေပါမည်။ ဆက်လက်လုပ်ဆောင်လိုပါသလား?"
 
 #: admin/modules/circulation/loan_history_maintenance.php:225
 #, fuzzy
 msgid "Empty History"
-msgstr "စာငှားမှတ်တမ်း"
+msgstr "ငွေပေးငွေယူမှတ်တမ်းကို ရှင်းလင်းပါ"
 
 #: admin/modules/circulation/loan_history_maintenance.php:226
 msgid "Refresh Stats"
@@ -3808,12 +3801,11 @@ msgstr "စာရင်းအင်းများကို ပြန်လည�
 
 #: admin/modules/circulation/loan_history_maintenance.php:230
 msgid "Re-indexes and/or regenerates loan history data by rebuilding history records from current loan entries"
-msgstr "လက်ရှိ ငှားရမ်းမှုမှတ်တမ်းများကို အခြေခံပြီး loan history ဒေတာများကို ပြန်လည်အညွှန်းသွင်းခြင်း သို့မဟုတ် ပြန်လည်ဖန်တီးခြင်း ပြုလုပ်ပါသည်။"
+msgstr "လက်ရှိ ငှားရမ်းမှုမှတ်တမ်းများကို အခြေခံပြီးစာငှားမှတ်တမ်း  ဒေတာများကို ပြန်လည်အညွှန်းသွင်းခြင်း သို့မဟုတ် ပြန်လည်ဖန်တီးခြင်း ပြုလုပ်ပါသည်။"
 
 #: admin/modules/circulation/loan_history_maintenance.php:232
-#, fuzzy
 msgid "Current Stats"
-msgstr "လက်ရှိစာငှားများ"
+msgstr "လက်ရှိစာရင်းအင်းများ"
 
 #: admin/modules/circulation/loan_history_maintenance.php:235 admin/modules/stock_take/current.php:153
 msgid "Missing"
@@ -3858,7 +3850,7 @@ msgstr "ရက်လွန်အရေအတွက်နှင့် ဒဏ်�
 #: admin/modules/circulation/loan_list.php:180
 #, fuzzy
 msgid "Total amount of fine is"
-msgstr "မပေးဆောင်ရသေးသော ဒဏ်ကြေးငွေစုစုပေါင်း"
+msgstr "ဒဏ်ငွေစုစုပေါင်းတန်ဖိုး -"
 
 #: admin/modules/circulation/loan_list.php:181
 msgid "Send overdues notice e-mail"
@@ -3882,7 +3874,7 @@ msgstr "စာငှားစည်းမျဉ်းစည်းကမ်းသ
 
 #: admin/modules/circulation/loan_rules.php:120
 msgid "Sorry. There is active loan transaction(s) using this loan rules."
-msgstr "ဝမ်းနည်းပါတယ် ချေးငွေစည်းမျဉ်းစည်းကမ်းများကိုအသုံးပြု၍ ချေးငွေ ငွေပေးငွေယူ(များ)ရှိပါသည်"
+msgstr "ဝမ်းနည်းပါတယ်။ စာငှားစည်းမျဉ်းစည်းကမ်းများကိုအသုံးပြု၍ စာငှားခြင်း(များ)ရှိပါသည်။"
 
 #: admin/modules/circulation/loan_rules.php:136 admin/modules/circulation/submenu.php:29
 msgid "Loan Rules"
@@ -3964,7 +3956,7 @@ msgstr "သီးသန့်လျာထားသည့်နေ့စွဲ"
 #: admin/modules/circulation/reserve_list.php:105
 #, fuzzy
 msgid "Remove Reservation"
-msgstr "ငှားရမ်းခွင့် ကြိုတင် ရယူထားခြင်း"
+msgstr "ကြိုတင်မှာယူမှုကို ဖယ်ရှားပါ"
 
 #: admin/modules/circulation/reserve_list.php:114
 msgid "ALREADY EXPIRED"
@@ -3997,7 +3989,7 @@ msgstr "ပြန်လည်အပ်နှံရမည့်နေ့စွဲ
 #: admin/modules/circulation/submenu.php:31
 #, fuzzy
 msgid "View Members That About to Have Overdues"
-msgstr "ရက်လွန် အသင်းဝင်များကို ကြည့်ရှုခြင်း"
+msgstr "မကြာမီ နောက်ကျနေသော ပစ္စည်းများ ရှိမည့် အဖွဲ့ဝင်များကို ကြည့်ရှုပါ"
 
 #: admin/modules/circulation/submenu.php:32 admin/modules/reporting/customs/customs_report_list.inc.php:37 admin/modules/reporting/customs/overdued_list.php:66
 msgid "Overdued List"
@@ -4021,7 +4013,7 @@ msgstr "စာရေးသူအမည်ကို ဗလာထား၍ မရ�
 
 #: admin/modules/master_file/author.php:98
 msgid "Author Data Successfully Updated"
-msgstr "စာရေးသူ အချက်အလက် အောင်မြင်စွာ ထပ်ဖြည့်ပြီး"
+msgstr "စာရေးသူအချက်အလက် အောင်မြင်စွာ ထပ်ဖြည့်ပြီး"
 
 #: admin/modules/master_file/author.php:106
 msgid "Author Data FAILED to Updated. Please Contact System Administrator"
@@ -4083,7 +4075,7 @@ msgstr "စာစုအမျိုးအစားအချက်အလက်အ
 #: admin/modules/master_file/coll_type.php:115
 #, fuzzy
 msgid "Collection type %s still used by %s items"
-msgstr "တည်နေရာ({item_name}) အသုံးပြုဆဲ {number_items} အမှတ်စဉ်များ"
+msgstr "%s ပစ္စည်းများမှ စုစည်းမှုအမျိုးအစား %s ကို အသုံးပြုနေဆဲဖြစ်သည်။"
 
 #: admin/modules/master_file/coll_type.php:149
 msgid "Collection Type List"
@@ -4151,22 +4143,22 @@ msgstr "မှတ်ချက်စီမံခန့်ခွဲမှု"
 
 #: admin/modules/master_file/detail_comment.php:63
 msgid "3rd party comment management has been activated, all comment will handled by it . This page is not use more."
-msgstr ""
+msgstr "Third-party မှတ်ချက် စီမံခန့်ခွဲမှုကို ဖွင့်ထားပြီးဖြစ်ပါသည်။ မှတ်ချက်အားလုံးကို ထိုစနစ်မှ စီမံခန့်ခွဲမည်ဖြစ်သဖြင့် ဤစာမျက်နှာကို နောက်ထပ် အသုံးမပြုတော့ပါ။"
 
 #: admin/modules/master_file/detail_comment.php:68
 #, fuzzy
 msgid "Comment List"
-msgstr "ဖေါ်ပြပါရှိသော အချက်အလက်များစာရင်း"
+msgstr "မှတ်ချက်များစာရင်း"
 
 #: admin/modules/master_file/detail_comment.php:85
 #, fuzzy
 msgid "Comment By"
-msgstr "မှတ်ချက်များ"
+msgstr "မှတ်ချက်ပေးသူ"
 
 #: admin/modules/master_file/detail_comment.php:85
 #, fuzzy
 msgid "Comment At"
-msgstr "မှတ်ချက်များ"
+msgstr "မှတ်ချက်ပေးသည့်ရက်စွဲ"
 
 #: admin/modules/master_file/doc_language.php:56 admin/modules/master_file/doc_language.php:75 admin/modules/master_file/doc_language.php:79 admin/modules/master_file/doc_language.php:86
 #: admin/modules/master_file/doc_language.php:88 admin/modules/master_file/doc_language.php:133 admin/modules/master_file/doc_language.php:141 admin/modules/master_file/doc_language.php:145
@@ -4195,8 +4187,9 @@ msgid "Language Data FAILED to Save. Please Contact System Administrator"
 msgstr "ဘာသာစကားအချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/master_file/doc_language.php:123 admin/modules/master_file/publisher.php:134
+#, fuzzy
 msgid "%s still in use %d biblio"
-msgstr ""
+msgstr "%s ကို bibliographic မှတ်တမ်း %d ခုတွင် ဆက်လက် အသုံးပြုနေပါသည်။"
 
 #: admin/modules/master_file/doc_language.php:162
 msgid "Language List"
@@ -4232,7 +4225,7 @@ msgstr "အကြိမ်အချက်အလက် သိမ်းဆည်�
 
 #: admin/modules/master_file/frequency.php:117
 msgid "Frequency %s still in use %d biblio(s)"
-msgstr ""
+msgstr "အကြိမ်ပေါင်း %s ကို Bibliographic မှတ်တမ်း %d ခုတွင် အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
 
 #: admin/modules/master_file/frequency.php:153
 msgid "Frequency Available"
@@ -4305,8 +4298,9 @@ msgid "GMD Data FAILED to Save. Please Contact System Administrator"
 msgstr "GMD အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/master_file/index.php:128
+#, fuzzy
 msgid "%s still in use %d biblio "
-msgstr ""
+msgstr "%s ကို bibliographic မှတ်တမ်း %d ခုတွင် ဆက်လက် အသုံးပြုနေပါသည်။"
 
 #: admin/modules/master_file/index.php:166
 msgid "GMD List"
@@ -4338,7 +4332,7 @@ msgstr "ထုတ်ဝေသည့်ပုံစံစာရင်း"
 
 #: admin/modules/master_file/item_code_pattern.php:114 simbio2/simbio_DB/datagrid/simbio_dbgrid.inc.php:398
 msgid "Delete Selected Data"
-msgstr "ရွေးချယ်ထားသော အချက်အလက်များကို ဖျက်ပြစ်ပါ"
+msgstr "ရွေးချယ်ထားသော အချက်အလက်များကို ဖျက်ပြစ်ရန်"
 
 #: admin/modules/master_file/item_status.php:52
 msgid "No Loan Transaction"
@@ -4370,8 +4364,9 @@ msgid "Item Status Data FAILED to Save. Please Contact System Administrator"
 msgstr "စာအုပ်အချက်အလက်အခြေအနေ သိမ်ဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/master_file/item_status.php:145
+#, fuzzy
 msgid "%s still in use %d item "
-msgstr ""
+msgstr "%s ကို Item %d ခုတွင် အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
 
 #: admin/modules/master_file/item_status.php:182
 msgid "Add New Item Status"
@@ -4397,7 +4392,7 @@ msgstr "သင်သည် စာအုပ်အခြေအနေအချက�
 #: admin/modules/master_file/label.php:108 admin/modules/master_file/label.php:152 admin/modules/master_file/label.php:159 admin/modules/master_file/label.php:162 admin/modules/master_file/label.php:174
 #: admin/modules/master_file/submenu.php:41 admin/modules/system/custom_field.php:271 admin/modules/system/custom_field.php:321
 msgid "Label"
-msgstr "အမှတ်အသားတံဆိပ်"
+msgstr "လေဘယ်"
 
 #: admin/modules/master_file/label.php:58
 msgid "Label Name OR Label Description must be filled!"
@@ -4414,47 +4409,48 @@ msgstr "လေဘယ် ရုပ်ပုံဖိုင် အောင်မ�
 #: admin/modules/master_file/label.php:83
 #, fuzzy
 msgid "Label need image uploaded"
-msgstr "လေဘယ် ရုပ်ပုံဖိုင် အောင်မြင်စွာရယူပြီး။"
+msgstr "အညွှန်းတွင် ပုံတစ်ပုံ အပ်လုဒ်လုပ်ရန် လိုအပ်သည်။"
 
 #: admin/modules/master_file/label.php:100
 msgid "Label Data Successfully Updated"
-msgstr "အမှတ်အသားတံဆိပ် အချက်အလက်အောင်မြင်စွာ ဖြည့်ထည့်ပြီး"
+msgstr "လေဘယ်အချက်အလက်အောင်မြင်စွာ ဖြည့်ထည့်ပြီး"
 
 #: admin/modules/master_file/label.php:102
 msgid "Label Data FAILED to Updated. Please Contact System Administrator"
-msgstr "အမှတ်အသားတံဆိပ် အချက်အလက်ဖြည့်ထည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "လေယ်အချက်အလက်ဖြည့်ထည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
 
 #: admin/modules/master_file/label.php:108
 msgid "New Label Data Successfully Saved"
-msgstr "အမှတ်အသားတံဆိပ် အချက်အလက် အသစ်အောင်မြင်စွာ သိမ်းဆည်းပြီး"
+msgstr "လေဘယ်အချက်အလက်အသစ်အောင်မြင်စွာ သိမ်းဆည်းပြီး"
 
 #: admin/modules/master_file/label.php:110
 msgid "Label Data FAILED to Save. Please Contact System Administrator"
-msgstr "အမှတ်အသားတံဆိပ် အချက်အလက်အသစ် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "လေဘယ်အချက်အလက်အသစ် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/master_file/label.php:142
+#, fuzzy
 msgid "Label %s still in use %d biblio(s)"
-msgstr ""
+msgstr "လေဘယ် %s ကို Bibliographic မှတ်တမ်း %d ခုတွင် အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
 
 #: admin/modules/master_file/label.php:178
 msgid "Label List"
-msgstr "အမှတ်အသားတံဆိပ်အချက်အလက် စာရင်း"
+msgstr "လေဘယ် အချက်အလက် စာရင်း"
 
 #: admin/modules/master_file/label.php:179
 msgid "Add New Label"
-msgstr "အမှတ်အသားတံဆိပ်အသစ်များထပ်ထည့်ရန်"
+msgstr "လေဘယ်အသစ်များထပ်ထည့်ရန်"
 
 #: admin/modules/master_file/label.php:222 admin/modules/master_file/label.php:253 admin/modules/master_file/label.php:257
 msgid "Label Name"
-msgstr "အမှတ်အသားတံဆိပ်အချက်အလက် အမည်"
+msgstr "လေဘယ်အချက်အလက်အမည်"
 
 #: admin/modules/master_file/label.php:235 admin/modules/master_file/label.php:252 admin/modules/master_file/label.php:256
 msgid "Label Description"
-msgstr "အမှတ်အသားတံဆိပ်အချက်အလက် အကြောင်းအရာ"
+msgstr "လေဘယ်အချက်အလက် အကြောင်းအရာ"
 
 #: admin/modules/master_file/label.php:239
 msgid "You are going to edit Label data"
-msgstr "သင်သည် အမှတ်အသားတံဆိပ်အချက်အလက်များကို တည်းဖြတ်တော့မည်။"
+msgstr "သင်သည်လေဘယ် အချက်အလက်များကို တည်းဖြတ်တော့မည်။"
 
 #: admin/modules/master_file/location.php:57
 msgid "Location ID and Name can't be empty"
@@ -4479,7 +4475,7 @@ msgstr "တည်နေရာအချက်အလက်သိမ်းဆည်
 #: admin/modules/master_file/location.php:119
 #, fuzzy
 msgid "Location %s still in use %s item(s)"
-msgstr "တည်နေရာ({item_name}) အသုံးပြုဆဲ {number_items} အမှတ်စဉ်များ"
+msgstr "%s ပစ္စည်းမှ %s တည်နေရာကို အသုံးပြုနေဆဲဖြစ်သည်"
 
 #: admin/modules/master_file/location.php:153
 msgid "Location List"
@@ -4507,7 +4503,8 @@ msgstr "Server အမည်နှင့် URI ဗလာမထားရပါ။
 
 #: admin/modules/master_file/p2pservers.php:60
 msgid "URI isn't valid, start witch prefix like e.g: http://, https:// etc."
-msgstr ""
+msgstr "URI သည် မှန်ကန်မှု မရှိပါ။\n"
+"http:// သို့မဟုတ် https:// ကဲ့သို့သော Prefix ဖြင့် စတင်ရပါမည်။"
 
 #: admin/modules/master_file/p2pservers.php:76
 msgid "Server Data Successfully Updated"
@@ -4584,8 +4581,9 @@ msgid "Place Data FAILED to Save. Please Contact System Administrator"
 msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ အချက်အလက်အောင်မြင်စွာ မသိမ်းဆည်းပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/master_file/place.php:138
+#, fuzzy
 msgid "%s still in use %d biblio <br/>"
-msgstr ""
+msgstr "%s ကို bibliographic မှတ်တမ်း %d ခုတွင် ဆက်လက် အသုံးပြုနေပါသည်။<br/>"
 
 #: admin/modules/master_file/place.php:169 admin/modules/master_file/submenu.php:51
 msgid "Orphaned Place"
@@ -4625,7 +4623,7 @@ msgstr "နယ်ပယ်"
 
 #: admin/modules/master_file/pop_scope_vocabolary.php:125
 msgid "Delete this scope"
-msgstr "နယ်ပယ်ကို ပယ်ဖျက်ပါ။"
+msgstr "နယ်ပယ်ကို ပယ်ဖျက်ရန်"
 
 #: admin/modules/master_file/pop_vocabolary_control.php:55 admin/modules/master_file/topic.php:266 admin/modules/master_file/topic.php:270
 msgid "Vocabulary Control"
@@ -4785,7 +4783,7 @@ msgstr "စာအုပ်တည်နေရာ"
 
 #: admin/modules/master_file/submenu.php:36
 msgid "LOOKUP FILES"
-msgstr ""
+msgstr "ရှာဖွေဖိုင်များ"
 
 #: admin/modules/master_file/submenu.php:40
 msgid "Document Content Language"
@@ -4793,16 +4791,16 @@ msgstr "စာရွက်စာတမ်း ပါဝင်ရေးသား�
 
 #: admin/modules/master_file/submenu.php:41
 msgid "Special Labels for Titles to Show Up On Homepage"
-msgstr "မူလကနဦးစာမျက်နှာတွင် တင်ရန် အထူးခေါင်းစည်းများ"
+msgstr "မူလကနဦးစာမျက်နှာတွင် တင်ရန် စာအုပ်ခေါင်းစဥ်အတွက်အထူးလေဘယ် များ"
 
 #: admin/modules/master_file/submenu.php:44 admin/modules/master_file/visitor_room.php:140
 #, fuzzy
 msgid "Visitor Room"
-msgstr "လာရောက်သူ အစီရင်ခံစာ"
+msgstr "ဧည့်သည်အခန်း"
 
 #: admin/modules/master_file/submenu.php:44 admin/modules/master_file/submenu.php:45
 msgid "List of members comment about biblio"
-msgstr ""
+msgstr "Bibliographic မှတ်တမ်းအပေါ်အသင်းဝင်များ၏ မှတ်ချက်များ စာရင်း"
 
 #: admin/modules/master_file/submenu.php:46
 msgid "Cataloging Servers"
@@ -4846,7 +4844,7 @@ msgstr "ဖြန့်ဝေသူအချက်အလက် သိမ်း�
 
 #: admin/modules/master_file/supplier.php:124
 msgid "Supplier %s still used by %s item(s)"
-msgstr ""
+msgstr "ဖြန့်ဝေသူ %s ကို Item %s ခုတွင် အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
 
 #: admin/modules/master_file/supplier.php:159
 msgid "Supplier List"
@@ -4912,8 +4910,9 @@ msgid "Subject Data FAILED to Save. Please Contact System Administrator"
 msgstr "ပညာရပ်အချက်အလက် သိမ်ဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
 
 #: admin/modules/master_file/topic.php:164
+#, fuzzy
 msgid "%s ... still used biblio %s"
-msgstr ""
+msgstr "%s သည် စာပေပစ္စည်းမှတ်တမ်း (Biblio) %s ကို အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
 
 #: admin/modules/master_file/topic.php:201
 msgid "Add New Subject"
@@ -4942,40 +4941,41 @@ msgstr "မျိုးတူစုသင်္ကေတ"
 #: admin/modules/master_file/visitor_room.php:144
 #, fuzzy
 msgid "Room List"
-msgstr "စာအုပ်စာရင်း"
+msgstr "အခန်းစာရင်း"
 
 #: admin/modules/master_file/visitor_room.php:145
 #, fuzzy
 msgid "Add New Room"
-msgstr "အသစ်ထပ်ထည့်ရန် "
+msgstr "အခန်းအသစ်ထည့်ပါ"
 
 #: admin/modules/master_file/visitor_room.php:188 admin/modules/master_file/visitor_room.php:207 admin/modules/reporting/customs/visitor_list.php:155 admin/modules/reporting/customs/visitor_list.php:206
 #, fuzzy
 msgid "Room Name"
-msgstr "အမည်အမှန်"
+msgstr "အခန်းအမည်"
 
 #: admin/modules/master_file/visitor_room.php:190 admin/modules/master_file/visitor_room.php:208
 #, fuzzy
 msgid "Room Code"
-msgstr "စာအုပ်သင်္ကေတနံပါတ်"
+msgstr "အခန်းကုဒ်"
 
 #: admin/modules/master_file/visitor_room.php:194
 #, fuzzy
 msgid "You are going to edit visitor room data"
-msgstr "သင်သည် စာအုပ်ဆိုင်ရာ အချက်အလက်များကို တည်းဖြတ်တော့မည်။"
+msgstr "ဧည့်သည်အခန်းဒေတာကို သင်တည်းဖြတ်တော့ပါမည်"
 
 #: admin/modules/master_file/visitor_room.php:209 admin/modules/master_file/visitor_room.php:213
 #, fuzzy
 msgid "Updated At"
-msgstr "အချက်အလက်များဖြည့်စွက်ရန်"
+msgstr "အပ်ဒိတ်လုပ်ထားသော အချိန်တွင်"
 
 #: admin/modules/master_file/visitor_room.php:219
+#, fuzzy
 msgid "Copy this room link"
-msgstr ""
+msgstr "ဒီလင့်ခ်ကို ကူးယူပါ။"
 
 #: admin/modules/master_file/visitor_room.php:254
 msgid "Success copied visitor room link"
-msgstr ""
+msgstr "ဧည့်သည်အခန်း လင့်ခ်ကို အောင်မြင်စွာ မိတ္တူကူးယူပြီးပါပြီ။"
 
 #: admin/modules/membership/duedate_mail.php:28 admin/modules/membership/overdue_mail.php:39
 msgid "E-Mail configuration is not ready!"
@@ -4984,15 +4984,15 @@ msgstr "အီးမေးလ်သတ်မှတ်ခြင်းသည်အ
 #: admin/modules/membership/duedate_mail.php:62
 #, fuzzy
 msgid "Due Date Warning for Member {member_name} ({member_email})"
-msgstr "အသင်းဝင် {member_name} ({member_email}) များအတွက် ရက်လွန်အကြောင်းကြားစာ"
+msgstr "အဖွဲ့ဝင် {member_name} ({member_email}) အတွက် နောက်ဆုံးရက် သတိပေးချက်"
 
 #: admin/modules/membership/duedate_mail.php:66
 msgid "Due date notification E-Mail have been sent to "
-msgstr ""
+msgstr "ပြန်အပ်ရမည့်ရက်စွဲ အသိပေး အီးမေးလ် ကို ပို့ပြီးပါပြီ −"
 
 #: admin/modules/membership/duedate_mail.php:68 admin/modules/membership/member_base_lib.inc.php:187
 msgid "Message could not be sent. Mailer Error: "
-msgstr ""
+msgstr "အီးမေး ပို့မရပါ။ စာပို့စနစ် အမှား −"
 
 #: admin/modules/membership/export.php:125
 msgid "There is no record in membership database yet, Export FAILED!"
@@ -5028,7 +5028,7 @@ msgstr "ပထမတန်းက ကော်လံအမည်တွေပါ�
 
 #: admin/modules/membership/import.php:385
 msgid "The last column is password"
-msgstr ""
+msgstr "နောက်ဆုံးကော်လံသည် စကားဝှက်ဖြစ်သည်။"
 
 #: admin/modules/membership/index.php:109
 msgid "Member ID, Name and Birthday cannot be empty"
@@ -5091,7 +5091,7 @@ msgstr "အလိုအလျှောက် အစုအဝေး"
 #: admin/modules/reporting/customs/member_fines_list.php:81 admin/modules/reporting/customs/member_list.php:72 admin/modules/reporting/customs/member_list.php:148 admin/modules/reporting/customs/member_list.php:191
 #: admin/modules/reporting/customs/member_loan_list.php:76 admin/modules/reporting/customs/visitor_list.php:72 admin/modules/reporting/customs/visitor_list.php:154 admin/modules/reporting/customs/visitor_list.php:204
 msgid "Membership Type"
-msgstr "အသင်းဝင် အမျိုးအစား"
+msgstr "စာကြည့်တိုက်အသင်းဝင် အမျိုးအစား"
 
 #: admin/modules/membership/index.php:542 admin/modules/reporting/customs/member_list.php:91
 msgid "Male"
@@ -5148,7 +5148,7 @@ msgstr "စကားဝှက်ထည့်သည့်အကွက်အား
 
 #: admin/modules/membership/index.php:762
 msgid "Extend Selected Member(s)"
-msgstr "ရွေးချယ်ထားသောအသင်းဝင်ကို အသင်းဝင်သက်တမ်း တိုးပါ။"
+msgstr "ရွေးချယ်ထားသောအသင်းဝင်ကို အသင်းဝင်သက်တမ်း တိုးရန်"
 
 #: admin/modules/membership/index.php:762
 msgid "Are you sure to EXTEND membership for selected members?"
@@ -5172,7 +5172,7 @@ msgstr "အသင်းဝင် {member_name} ({member_email}) များအ�
 
 #: admin/modules/membership/member_base_lib.inc.php:185
 msgid "Overdue notification E-Mail have been sent to "
-msgstr ""
+msgstr "ရက်ကျော်လွန်အသိပေး အီးမေး ကို ပို့ပြီးပါပြီ −"
 
 #: admin/modules/membership/member_card_generator.php:183 admin/modules/membership/member_card_generator.php:192 admin/modules/membership/submenu.php:31
 msgid "Member Card Printing"
@@ -5208,11 +5208,11 @@ msgstr "အသင်းဝင်အမျိုးအစားအသစ် အ�
 
 #: admin/modules/membership/member_type.php:200
 msgid "Member Type %s still in use %d member(s)"
-msgstr ""
+msgstr "အသင်းဝင်အမျိုးအစား %s ကို အသင်းဝင် %d ဦးတွင် အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
 
 #: admin/modules/membership/member_type.php:224
 msgid "Sorry. There is active loan transaction(s) using this membership type."
-msgstr "တောင်းပန်ပါတယ်။ ဤအသင်း၀င်အမျိုးအစားတွင် စာဌားခြင်းကိစ္စများ ရှိနေပါသည်။"
+msgstr "တောင်းပန်ပါတယ်။ ဤအသင်းဝင်အမျိုးအစားတွင် စာဌားခြင်းကိစ္စများ ရှိနေပါသည်။"
 
 #: admin/modules/membership/member_type.php:245
 msgid "Member Type List"
@@ -5255,13 +5255,12 @@ msgid "Fine Each Day"
 msgstr "တစ်ရက်အတွက် ဒဏ်ငွေ"
 
 #: admin/modules/membership/member_type.php:307
-#, fuzzy
 msgid "Overdue Grace Period"
-msgstr "ပြန်လည်အပ်နှံရန် ခွင့်ပြုရက်မှ အသာတကြည်ကျော်လွန်ခွင့်"
+msgstr "ပြန်ပို့ရန် နောက်ဆုံးရက်ထက် ကျော်လွန်ခွင့်ရှိသော ရက်များ"
 
 #: admin/modules/membership/submenu.php:26
 msgid "MEMBERSHIP"
-msgstr ""
+msgstr "အသင်းဝင်ခြင်း"
 
 #: admin/modules/membership/submenu.php:27
 msgid "View Member List"
@@ -5269,11 +5268,11 @@ msgstr "အသင်းဝင်များစာရင်း ကြည့်�
 
 #: admin/modules/membership/submenu.php:27
 msgid "View Library Member List"
-msgstr "အသင်းဝင် စာကြည့်တိုက်များစာရင်း ကြည့်ရန်"
+msgstr "စာကြည့်တိုက်အသင်းဝင်များစာရင်း ကြည့်ရန်"
 
 #: admin/modules/membership/submenu.php:28
 msgid "Add New Library Member Data"
-msgstr "အသင်းဝင်အသစ်များ၏ အချက်အလက်များ ထပ်ထည့်ပါ"
+msgstr "စာကြည့်တိုက်အသင်းဝင်အသစ်များ၏ အချက်အလက်များ ထပ်ထည့်ပါ"
 
 #: admin/modules/membership/submenu.php:29
 msgid "View and modify member type"
@@ -5397,7 +5396,7 @@ msgstr "မျိုးတူစုအလိုက်စာငှားစာရ
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:33
 msgid "List of library member/patron"
-msgstr "စာကြည့်တိုက် အသင်းဝင်/ထောက်ခံသူစာရင်း"
+msgstr "စာကြည့်တိုက်အသင်းဝင်/ထောက်ခံသူစာရင်း"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:34 admin/modules/reporting/customs/member_loan_list.php:62
 msgid "Loan List by Member"
@@ -5438,12 +5437,12 @@ msgstr "ဒဏ်ငွေအစီရင်ခံစာ"
 #: admin/modules/reporting/customs/customs_report_list.inc.php:43 admin/modules/reporting/customs/fines_report.php:150
 #, fuzzy
 msgid "Member Fines List"
-msgstr "အသင်းဝင်အမျိုးအစားစာရင်း"
+msgstr "ဒဏ်ငွေချမှတ်ခံရသော အဖွဲ့ဝင်များစာရင်း"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:44 admin/modules/reporting/customs/procurement_report.php:39
 #, fuzzy
 msgid "Procurement Report"
-msgstr "စာငှားအစီရင်ခံစာ"
+msgstr "ဝယ်ယူရေးအစီရင်ခံစာ"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:45
 #, fuzzy
@@ -5458,7 +5457,7 @@ msgstr "အစီရင်ခံစာကို ဆွဲချကူးယူ�
 #: admin/modules/reporting/customs/dl_counter.php:62
 #, fuzzy
 msgid "Attachment Report"
-msgstr "ပူးတွဲဖိုင်ကို ဖယ်ရှားပြီး"
+msgstr "ပူးတွဲပါဖိုင်အစီရင်ခံစာ"
 
 #: admin/modules/reporting/customs/dl_counter.php:71 admin/modules/reporting/customs/dl_detail.php:77 admin/modules/reporting/customs/item_titles_list.php:71 admin/modules/reporting/customs/item_usage.php:69
 #: admin/modules/reporting/customs/reserve_list.php:73 admin/modules/reporting/customs/titles_list.php:71 admin/modules/stock_take/lost_item_list.php:62
@@ -5471,11 +5470,11 @@ msgstr "ထုတ်ဝေသည့်နှစ်"
 
 #: admin/modules/reporting/customs/dl_counter.php:85 admin/modules/reporting/customs/dl_detail.php:89
 msgid "Access Date after"
-msgstr ""
+msgstr "ဝင်ရောက်အသုံးပြုသည့် ရက်စွဲ (နောက်ပိုင်း)"
 
 #: admin/modules/reporting/customs/dl_counter.php:86 admin/modules/reporting/customs/dl_detail.php:95
 msgid "Access Date before"
-msgstr ""
+msgstr "ဝင်ရောက်အသုံးပြုသည့် ရက်စွဲ (အရင်ပိုင်း)"
 
 #: admin/modules/reporting/customs/dl_counter.php:90 admin/modules/reporting/customs/item_titles_list.php:134 admin/modules/reporting/customs/loan_history.php:104 admin/modules/reporting/customs/member_fines_list.php:98
 #: admin/modules/reporting/customs/member_list.php:108 admin/modules/reporting/customs/member_loan_list.php:95 admin/modules/reporting/customs/overdued_list.php:90 admin/modules/reporting/customs/staff_act.php:75
@@ -5506,22 +5505,22 @@ msgstr "စစ်ထုတ်နည်းများ ဖေါ်ပြပါ�
 #: admin/modules/reporting/customs/dl_counter.php:123 admin/modules/reporting/customs/dl_counter.php:210 admin/modules/reporting/customs/dl_detail.php:120 admin/modules/reporting/customs/dl_detail.php:182
 #, fuzzy
 msgid "File title"
-msgstr "ပူးတွဲဖိုင်"
+msgstr "ဖိုင်နာမည်"
 
 #: admin/modules/reporting/customs/dl_counter.php:123 admin/modules/reporting/customs/dl_counter.php:210 admin/modules/reporting/customs/dl_detail.php:120 admin/modules/reporting/customs/dl_detail.php:182
 #: admin/modules/system/custom_field.php:322
 #, fuzzy
 msgid "Type"
-msgstr "စာစုအမျိုးအစား"
+msgstr "အမျိုးအစား"
 
 #: admin/modules/reporting/customs/dl_detail.php:68
 #, fuzzy
 msgid "Attachment Report (Detail)"
-msgstr "ပူးတွဲဖိုင်ကို ဖယ်ရှားပြီး"
+msgstr "ပူးတွဲပါဖိုင်များဆိုင်ရာ အစီရင်ခံစာ (အသေးစိတ်)"
 
 #: admin/modules/reporting/customs/dl_detail.php:120
 msgid "UnKnown"
-msgstr ""
+msgstr "မသိရှိပါ။"
 
 #: admin/modules/reporting/customs/due_date_warning.php:65
 msgid "This report loan items which will due in 3 to 0 days"
@@ -5529,7 +5528,7 @@ msgstr "ပြန်လည်အပ်နှံရန် (၃)ရက်အတွ
 
 #: admin/modules/reporting/customs/due_date_warning.php:152 admin/modules/reporting/customs/overdued_list.php:200
 msgid "Send Notification e-mail"
-msgstr "E-mail အကြောင်းကြားစာ"
+msgstr "အီးမေး အကြောင်းကြားစာ"
 
 #: admin/modules/reporting/customs/fines_report.php:48 admin/modules/reporting/customs/item_usage.php:109 admin/modules/reporting/customs/item_usage.php:177 admin/modules/reporting/customs/loan_by_class.php:132
 #: admin/modules/reporting/customs/loan_by_class.php:152 admin/modules/reporting/customs/visitor_report.php:84 admin/modules/reporting/customs/visitor_report_day.php:48
@@ -5594,7 +5593,7 @@ msgstr "ဒီဇင်ဘာ"
 #: admin/modules/reporting/customs/fines_report.php:157
 #, fuzzy
 msgid "Fines count report for"
-msgstr "ဒဏ်ငွေအစီရင်ခံစာ"
+msgstr "ဒဏ်ကြေးနံပါတ်အစီရင်ခံစာ"
 
 #: admin/modules/reporting/customs/item_titles_list.php:91 admin/modules/reporting/customs/titles_list.php:91
 msgid "Press Ctrl and click to select multiple entries"
@@ -5607,7 +5606,7 @@ msgstr "ပြန်လည်အပ်နှံရမည့်နေ့စွဲ
 
 #: admin/modules/reporting/customs/loan_by_class.php:70
 msgid "0 Classes"
-msgstr "မျိုးတူစုအမှတ် 0"
+msgstr "မျိုးတူစုအမှတ် ၀"
 
 #: admin/modules/reporting/customs/loan_by_class.php:71
 msgid "1 Classes"
@@ -5687,8 +5686,9 @@ msgid "Returned"
 msgstr "ပြန်လည်အပ်နှံခဲ့သည်"
 
 #: admin/modules/reporting/customs/member_fines_list.csv.php:46
+#, fuzzy
 msgid "Debet"
-msgstr ""
+msgstr "အသုံးစရိတ်"
 
 #: admin/modules/reporting/customs/member_fines_list.php:63
 #, fuzzy
@@ -5713,7 +5713,7 @@ msgstr "ရက်ပေါင်း"
 
 #: admin/modules/reporting/customs/pop_procurement_list.php:43
 msgid "Procurement List in Year : "
-msgstr ""
+msgstr "နှစ်အလိုက် ဝယ်ယူမှု စာရင်း −"
 
 #: admin/modules/reporting/customs/pop_procurement_list.php:152 admin/modules/reporting/customs/pop_procurement_list.php:219
 msgid "Received Date"
@@ -5725,16 +5725,15 @@ msgstr "စင်တည်ရှိရာနေရာ"
 
 #: admin/modules/reporting/customs/procurement_report.php:41
 msgid "Displays a collection procurement report"
-msgstr ""
+msgstr "စာကြည့်တိုက် စုဆောင်းမှု ဝယ်ယူရေး အစီရင်ခံစာကို ပြသပါသည်။"
 
 #: admin/modules/reporting/customs/procurement_report.php:57 admin/modules/reporting/customs/procurement_report.php:184
-#, fuzzy
 msgid "t"
-msgstr "pt"
+msgstr "t"
 
 #: admin/modules/reporting/customs/procurement_report.php:57 admin/modules/reporting/customs/procurement_report.php:184
 msgid "i"
-msgstr ""
+msgstr "i"
 
 #: admin/modules/reporting/customs/procurement_report.php:60
 msgid "Receiving Year"
@@ -5747,11 +5746,12 @@ msgstr "စာရွက်စာတမ်းများ၏ အမှတ်အ�
 
 #: admin/modules/reporting/customs/procurement_report.php:177
 msgid "Procurement Bar Chart"
-msgstr ""
+msgstr "စာအုပ်ဝယ်ယူရေး ဘားဂရပ်"
 
 #: admin/modules/reporting/customs/procurement_report.php:189
+#, fuzzy
 msgid "Procurement Report Year : "
-msgstr ""
+msgstr "နှစ်အလိုက် ဝယ်ယူမှု စာရင်းအစီရင်ခံစာ −"
 
 #: admin/modules/reporting/customs/reserve_list.php:81
 msgid "Reserve Date From"
@@ -5811,7 +5811,7 @@ msgstr "စာကြည့်တိုက်သို့ လာရောက်�
 
 #: admin/modules/reporting/customs/visitor_list.php:93
 msgid "Room"
-msgstr ""
+msgstr "အခန်း"
 
 #: admin/modules/reporting/customs/visitor_list.php:107
 msgid "Visit Date From"
@@ -5855,8 +5855,9 @@ msgid "Total Titles"
 msgstr "စုစုပေါင်းခေါင်းစည်းများ"
 
 #: admin/modules/reporting/index.php:60
+#, fuzzy
 msgid " (including titles that still don't have items yet)"
-msgstr ""
+msgstr " (အုပ်ရေ/ပစ္စည်းစာရင်း မသွင်းရသေးသော ခေါင်းစဉ်များ အပါအဝင်)"
 
 #: admin/modules/reporting/index.php:65
 msgid "Total Titles with items"
@@ -5865,17 +5866,17 @@ msgstr "စာအုပ်ခေါင်းစည်းအမည်နှင့
 #: admin/modules/reporting/index.php:65
 #, fuzzy
 msgid " (only titles that have items)"
-msgstr "စာအုပ်ခေါင်းစည်းအမည်နှင့် အုပ်ရေစုစုပေါင်း"
+msgstr " (မိတ္တူများပါသော စာအုပ်ခေါင်းစဉ်များသာ)"
 
 #: admin/modules/reporting/index.php:66
 #, fuzzy
 msgid "Total Titles without items"
-msgstr "စာအုပ်ခေါင်းစည်းအမည်နှင့် အုပ်ရေစုစုပေါင်း"
+msgstr "မိတ္တူမရှိသော စာအုပ်အမည်စုစုပေါင်း"
 
 #: admin/modules/reporting/index.php:66
 #, fuzzy
 msgid " (only titles that haven't items)"
-msgstr "စာအုပ်ခေါင်းစည်းအမည်နှင့် အုပ်ရေစုစုပေါင်း"
+msgstr " (မိတ္တူမရှိသော စာအုပ်အမည်များသာ)"
 
 #: admin/modules/reporting/index.php:71 admin/modules/reporting/index.php:80
 msgid "Total Items/Copies"
@@ -5951,7 +5952,7 @@ msgstr "စာငှားအစီရင်ခံစာ"
 
 #: admin/modules/reporting/loan_report.php:153
 msgid "ERROR! Loan Report failed to generate, possibly because {directory} directory is not writable"
-msgstr "အမှား! စာဌားစာရင်းကိုထုတ်ရန် မအောင်မြင်ပါ။  {directory} directory ကို မရေးနိုင်၍ဖြစ်နိုင်ပါသည်။"
+msgstr "အမှား! စာငှားစာရင်းကိုထုတ်ရန် မအောင်မြင်ပါ။  {directory} directory ကို မရေးနိုင်၍ဖြစ်နိုင်ပါသည်။"
 
 #: admin/modules/reporting/member_report.php:61
 msgid "Total Registered Members"
@@ -5967,7 +5968,7 @@ msgstr "စာကြည့်တိုက်ကို အသုံးမပြ�
 
 #: admin/modules/reporting/member_report.php:117
 msgid "There are no active members in this period"
-msgstr ""
+msgstr "ဤကာလအတွင်း တက်ကြွသောအဖွဲ့ဝင်များ မရှိပါ။"
 
 #: admin/modules/reporting/member_report.php:119
 msgid "10 most active members"
@@ -6003,7 +6004,7 @@ msgstr "စာကြည့်တိုက်စာစုများစာရင
 
 #: admin/modules/reporting/submenu.php:29
 msgid "View Library Loan Report"
-msgstr "စာကြည့်တိုက်စာဌားအစီရင်ခံစာကို လေ့လာကြည့်ရှု့ခြင်း။"
+msgstr "စာကြည့်တိုက်စာငှားအစီရင်ခံစာကို လေ့လာကြည့်ရှု့ခြင်း။"
 
 #: admin/modules/reporting/submenu.php:30
 msgid "View Membership Report"
@@ -6172,7 +6173,7 @@ msgstr "လက်ရှိ"
 #: admin/modules/stock_take/finish.php:49
 #, fuzzy
 msgid "You must be an admin to run the completion process!"
-msgstr "သင်သည် ဤလုပ်ငန်းစဉ်ကိုစတင်ရန် admin account ရှိသူတစ်ယောက်ဖြစ်ရမည်!"
+msgstr "ဤလုပ်ငန်းစဉ်ကို အပြီးသတ်ရန် သင်သည် အက်ဒမင်အကောင့်ပိုင်ရှင်တစ်ဦး ဖြစ်ရမည်။"
 
 #: admin/modules/stock_take/finish.php:54
 msgid "NO stock taking proccess running!"
@@ -6277,7 +6278,7 @@ msgstr "ကြည့်ရန်"
 #: admin/modules/stock_take/index.php:172
 #, fuzzy
 msgid "Stock take report : <title>"
-msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း အစီရင်ခံစာ"
+msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း အစီရင်ခံစာ - <title>"
 
 #: admin/modules/stock_take/init.php:51
 msgid "You must be an admin to run initialization process!"
@@ -6289,15 +6290,16 @@ msgstr "စာကြည့်တိုက်စာရင်း ကောက်�
 
 #: admin/modules/stock_take/init.php:68
 msgid "No item available. Stock take process is need item data"
-msgstr ""
+msgstr "Item မရှိပါ။ Stock Take (စာရင်းစစ်ဆေးမှု) လုပ်ရန် Item အချက်အလက်များ လိုအပ်ပါသည်။"
 
 #: admin/modules/stock_take/init.php:81
 msgid "Before stock taking, it is recommended to backup your database first."
 msgstr "စာရင်းကောက်ယူခြင်း (Stock Taking) မလုပ်မီ ဒေတာဘေ့စ်ကို အရင်ဆုံး အရန်သိမ်းဆည်းထားရန် အကြံပြုပါသည်။"
 
 #: admin/modules/stock_take/init.php:82
+#, fuzzy
 msgid "Looks like you have not backed up before."
-msgstr ""
+msgstr "ယခင်က အရန်သိမ်းဆည်းခြင်း မယူထားသေးသကဲ့သို့ ထင်ရပါသည်။"
 
 #: admin/modules/stock_take/init.php:84
 msgid "Skip backup at your own risk!"
@@ -6363,7 +6365,7 @@ msgstr "စစ်ဆေးထားသော/စကင်နာဖြင့် �
 #: admin/modules/stock_take/st_report.php:106
 #, fuzzy
 msgid "Stock take report detail for %s"
-msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း အစီရင်ခံစာ"
+msgstr "%s အတွက် စာကြည့်တိုက်စာရင်း အစီရင်ခံစာ အသေးစိတ်"
 
 #: admin/modules/stock_take/st_report.php:106
 msgid "items already checked"
@@ -6391,7 +6393,7 @@ msgstr "အမှား! စာရင်းကောက်ယူခြင်း�
 
 #: admin/modules/stock_take/st_report_detail.php:51
 msgid "Sorry, data not available!"
-msgstr ""
+msgstr "တောင်းပန်ပါတယ်၊ ဒေတာ မရနိုင်ပါ။"
 
 #: admin/modules/stock_take/st_report_detail.php:88 admin/modules/stock_take/st_report_detail.php:105
 #, fuzzy
@@ -6403,6 +6405,7 @@ msgid "Succesfully upload stock take file"
 msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း ဖိုင်အောင်မြင်စွာတင်ပြီး။"
 
 #: admin/modules/stock_take/st_upload.php:115
+#, fuzzy
 msgid " item codes scanned!"
 msgstr " စာအုပ်အမှတ်အသားများ scan ဖတ်ပြီး"
 
@@ -6425,36 +6428,41 @@ msgstr "ကျေးဇူးပြု၍ မှန်ကန်သော ပစ�
 #: admin/modules/stock_take/stock_take_action.php:66
 #, fuzzy
 msgid "Item %s (%s) is currently ON LOAN"
-msgstr "လက်ရှိငှါးရမ်းထားသောစာအုပ်(များ)"
+msgstr "လက်ရှိငှားရမ်းထားသောစာအုပ်(များ)"
 
 #: admin/modules/stock_take/stock_take_action.php:68
 #, fuzzy
 msgid "Item %s is currently ON LOAN"
-msgstr "လက်ရှိငှါးရမ်းထားသောစာအုပ်(များ)"
+msgstr "လက်ရှိငှားရမ်းထားသောစာအုပ်(များ)"
 
 #: admin/modules/stock_take/stock_take_action.php:74
+#, fuzzy
 msgid "Item %s is already SCANNED!"
-msgstr ""
+msgstr "Item %s ကို scanလုပ်ပြီးသား ဖြစ်ပါသည်။"
 
 #: admin/modules/stock_take/stock_take_action.php:116
+#, fuzzy
 msgid "Item Code (%s) have rule to skipped by stock take"
-msgstr ""
+msgstr "Item ကုဒ် (%s) ကို လုပ်ရာတွင် ကျော်လွှားရန် စည်းမျဉ်း သတ်မှတ်ထားပါသည်။"
 
 #: admin/modules/stock_take/stock_take_action.php:117
+#, fuzzy
 msgid "Item Code %s have rule to skipped by stock take"
-msgstr ""
+msgstr "Item ကုဒ် %s ကို လုပ်ရာတွင် ကျော်လွှားရန် စည်းမျဉ်း သတ်မှတ်ထားပါသည်။"
 
 #: admin/modules/stock_take/stock_take_action.php:119
 msgid "Item Code (%s) doesnt exists in stock take data. Invalid Item Code OR Maybe out of Stock Take range"
-msgstr ""
+msgstr "Item ကုဒ် (%s) သည် စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း ဒေတာတွင်မရှိပါ။ Item ကုဒ် မမှန်ခြင်း သို့မဟုတ် စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း အကန့်အသတ် ပြင်ပ ဖြစ်နိုင်ပါသည်။"
 
 #: admin/modules/stock_take/stock_take_action.php:120
+#, fuzzy
 msgid "Item Code %s doesnt exists in stock take data.\\nInvalid Item Code OR Maybe out of Stock Take range"
-msgstr ""
+msgstr "Item ကုဒ် (%s) သည် စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း ဒေတာတွင်မရှိပါ။ \n"
+"Item ကုဒ် မမှန်ခြင်း သို့မဟုတ် စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း အကန့်အသတ် ပြင်ပ ဖြစ်နိုင်ပါသည်။"
 
 #: admin/modules/stock_take/submenu.php:28
 msgid "STOCK TAKE"
-msgstr ""
+msgstr "စာရင်းကောက်ယူခြင်း"
 
 #: admin/modules/stock_take/submenu.php:29
 msgid "Stock Take History"
@@ -6513,21 +6521,23 @@ msgid "Finish Current Stock Take Proccess"
 msgstr "လက်ရှိစာရင်းကောက်ယူခြင်း လုပ်ငန်းအပြီးသတ်ပါ။"
 
 #: admin/modules/system/app_user.php:77
+#, fuzzy
 msgid "Code verified!"
-msgstr ""
+msgstr "ကုဒ်စစ်ဆေးအတည်ပြုခြင်း"
 
 #: admin/modules/system/app_user.php:80
-#, fuzzy
 msgid "Invalid verification code!"
-msgstr "မျိုးတူစုသင်္ကေတ"
+msgstr "အတည်ပြုကုဒ် မမှန်ကန်ပါ။"
 
 #: admin/modules/system/app_user.php:92
+#, fuzzy
 msgid "Two-factor authentication has been disabled."
-msgstr ""
+msgstr "အဆင့်နှစ်ဆင့်ဖြင့် အတည်ပြုခြင်းစနစ်ကို ပိတ်ထားပြီး ဖြစ်သည်။\n"
+""
 
 #: admin/modules/system/app_user.php:94
 msgid "Upss... something wrong!"
-msgstr ""
+msgstr "အိုး… တစ်ခုခု မှားယွင်းနေပါသည်!"
 
 #: admin/modules/system/app_user.php:130
 msgid "User Name or Real Name can't be empty"
@@ -6539,7 +6549,7 @@ msgstr "ဝင်ရောက်ရန်အသုံးပြုသည့်အ
 
 #: admin/modules/system/app_user.php:177
 msgid "Password change failed. Make sure you input the old password."
-msgstr ""
+msgstr "စကားဝှက် ပြောင်းလဲမှု မအောင်မြင်ပါ။ ယခင် စကားဝှက်ကို မှန်ကန်စွာ ထည့်ထားကြောင်း သေချာစစ်ဆေးပါ။"
 
 #: admin/modules/system/app_user.php:233
 msgid "User Data Successfully Updated"
@@ -6594,33 +6604,36 @@ msgid "Old Password"
 msgstr "စကားဝှက်အဟောင်း"
 
 #: admin/modules/system/app_user.php:485
+#, fuzzy
 msgid "Two Factor Authentication enabled."
-msgstr ""
+msgstr "အဆင့်နှစ်ဆင့်ဖြင့် အတည်ပြုခြင်းစနစ်ကို ဖွင့်ထားပြီး ဖြစ်သည်။"
 
 #: admin/modules/system/app_user.php:485
 msgid "Disable It"
 msgstr "မလုပ်နိုင်ရန် ပိတ်လိုက်သည်။"
 
 #: admin/modules/system/app_user.php:488
+#, fuzzy
 msgid "Scan this QRcode with your authenticator (e.g. Google Authenticator or {link}) <br> and enter verification code below to enable Two Factor Authentication."
-msgstr ""
+msgstr "Two-Factor Authentication ကို ဖွင့်ရန် သင့် authenticator (ဥပမာ Google Authenticator သို့မဟုတ် {link}) ဖြင့် ဤ QR code ကို scan လုပ်ပြီး အောက်တွင် အတည်ပြုကုဒ်ကို ထည့်သွင်းပါ။"
 
 #: admin/modules/system/app_user.php:489
 #, fuzzy
 msgid "Verification code"
-msgstr "မျိုးတူစုသင်္ကေတ"
+msgstr "အတည်ပြုရန်ကုတ်"
 
 #: admin/modules/system/app_user.php:490
+#, fuzzy
 msgid "Verify"
-msgstr ""
+msgstr "စစ်ဆေးအတည်ပြုခြင်း"
 
 #: admin/modules/system/app_user.php:510
 msgid "Enable Two Factor Authentication"
-msgstr ""
+msgstr "အဆင့်နှစ်ဆင့်ဖြင့် အတည်ပြုခြင်းစနစ်ကိုဖွင့်ရန်။"
 
 #: admin/modules/system/app_user.php:515 admin/modules/system/app_user.php:516
 msgid "Disable Two Factor Authentication"
-msgstr ""
+msgstr "အဆင့်နှစ်ဆင့်ဖြင့် အတည်ပြုခြင်းစနစ်ကို ပိတ်ရန်။"
 
 #: admin/modules/system/app_user.php:522
 msgid "You are going to edit user profile"
@@ -6641,7 +6654,7 @@ msgstr "အသစ်တဖန် ပံ့ပိုးသိမ်းဆည်�
 #: admin/modules/system/backup.php:138
 #, fuzzy
 msgid "Database Backup Configuration"
-msgstr "အချက်အလက်စုဘဏ်ကို ထပ်မံသိမ်းဆည်းပါ"
+msgstr "ဒေတာဘေ့စ် အရန်ကူးယူခြင်း ပုံစံပြင်ဆင်ခြင်း"
 
 #: admin/modules/system/backup.php:138
 #, fuzzy
@@ -6654,21 +6667,21 @@ msgstr "လုပ်ငန်းစဉ် အသေးစိတ်ပြရန�
 
 #: admin/modules/system/backup.php:165
 msgid "Processing"
-msgstr ""
+msgstr "လုပ်ဆောင်နေသည်။"
 
 #: admin/modules/system/backup.php:195
 msgid "Backup Executor"
-msgstr ""
+msgstr "အရန်သိမ်းဆည်းခြင်း လုပ်ဆောင်သူ"
 
 #: admin/modules/system/backup.php:196
 #, fuzzy
 msgid "Backup Time"
-msgstr "မူလစာမျက်နှာကိုပြန်သွားရန်"
+msgstr "အရန်သိမ်းချိန်"
 
 #: admin/modules/system/backup.php:197
 #, fuzzy
 msgid "Backup File Location"
-msgstr "နေရာအသစ် ထပ်မံဖြည့်ပါ"
+msgstr "အရန်ဖိုင်တည်နေရာ"
 
 #: admin/modules/system/backup.php:198
 msgid "File Size"
@@ -6689,32 +6702,31 @@ msgstr "ပထမဆုံး စနစ်ဝင်ရောက်ချိန�
 
 #: admin/modules/system/backup_proc.php:86
 msgid "Starting..."
-msgstr ""
+msgstr "စတင်နေသည်..."
 
 #: admin/modules/system/backup_proc.php:108
 msgid "Backup SUCCESSFUL, backup files saved to %s !"
-msgstr ""
+msgstr "အရန်သိမ်းဆည်းမှု အောင်မြင်ပါသည်။ အရန်ဖိုင်များကို %s တွင် သိမ်းဆည်းပြီးပါပြီ။"
 
 #: admin/modules/system/backup_proc.php:117
 msgid "Compressing..."
-msgstr ""
+msgstr "ချုံ့နေသည်..."
 
 #: admin/modules/system/backup_proc.php:123
 msgid "File is compressed using tar gz archive format"
-msgstr ""
+msgstr "ဖိုင်ကို tar gz ချုံ့ဖိုင်ပုံစံ (Archive format) ဖြင့် ချုံ့ထားပါသည်။"
 
 #: admin/modules/system/backup_proc.php:125
 msgid "Compressing Success"
-msgstr ""
+msgstr "ဖိုင်ချုံ့ခြင်း အောင်မြင်ပါသည်။"
 
 #: admin/modules/system/backup_proc.php:137
-#, fuzzy
 msgid "Backup FAILED!,\\n%s"
-msgstr "Backup မအောင်မြင်ပါ။,\\n%s"
+msgstr "အရန်သိမ်းဆည်းခြင်းမအောင်မြင်ပါ။,\\n%s"
 
 #: admin/modules/system/backup_proc.php:142
 msgid "Backup FAILED! The Backup directory is not exists or not writeable"
-msgstr ""
+msgstr "အရန်ကူးယူခြင်း မအောင်မြင်ပါ။ အရန်ကူးယူထားသောဖိုင်တွဲ မရှိပါ သို့မဟုတ် ရေးသား၍မရပါ။ "
 
 #: admin/modules/system/backup_proc.php:143
 msgid "Contact System Administrator for the right path of backup directory"
@@ -6766,7 +6778,7 @@ msgstr "ဘားကုဒ်များထုတ်လုပ်ရန်"
 
 #: admin/modules/system/biblio_indexes.php:50
 msgid "PHP Mongodb extension library is not installed yet!"
-msgstr ""
+msgstr "PHP MongoDB Extension Library ကို မထည့်သွင်းထားသေးပါ။"
 
 #: admin/modules/system/biblio_indexes.php:71
 msgid "Index table truncated!"
@@ -6810,27 +6822,29 @@ msgstr "အညွှန်းဖြည့်စွက်ရန်"
 
 #: admin/modules/system/biblio_indexes.php:155
 msgid "Bibliographic indexing will speed up on cataloging search"
-msgstr ""
+msgstr "bibliographic Indexing ပြုလုပ်ပါက ကကိတလောက်ရှာဖွေမှု ကို ပိုမိုမြန်ဆန်စေပါမည်။"
 
 #: admin/modules/system/biblio_indexes.php:177
+#, fuzzy
 msgid "Total data on biblio: "
-msgstr ""
+msgstr "ကျမ်းကိုးစာရင်းရှိပစ္စည်းစာရင်းစုစုပေါင်း အရေအတွက် -"
 
 #: admin/modules/system/biblio_indexes.php:177 admin/modules/system/biblio_indexes.php:178 admin/modules/system/biblio_indexes.php:179
 msgid " records."
-msgstr ""
+msgstr " မှတ်တမ်းများ"
 
 #: admin/modules/system/biblio_indexes.php:178
 msgid "Total indexed data: "
-msgstr ""
+msgstr "အညွှန်းပြုပြီးအချက်အလက် စုစုပေါင်း -"
 
 #: admin/modules/system/biblio_indexes.php:179
 msgid "Unidexed data: "
-msgstr ""
+msgstr "အညွှန်းမပြုရသေးသောအချက်အလက် စုစုပေါင်း -"
 
 #: admin/modules/system/biblio_indexes_es.php:137
+#, fuzzy
 msgid "Biblio from "
-msgstr ""
+msgstr "ကျမ်းကိုးစာရင်း ရယူသည့်နေရာ (သို့မဟုတ်) အရင်းအမြစ်"
 
 #: admin/modules/system/biblio_indexes_es.php:146
 msgid "Bibliographic Index (ElasticSearch)"
@@ -6842,12 +6856,13 @@ msgid "Captcha Configuration"
 msgstr "Captcha ဆက်တင်"
 
 #: admin/modules/system/captchasetting.php:69
+#, fuzzy
 msgid "Default captcha provider"
-msgstr ""
+msgstr "မူရင်း Captcha ဝန်ဆောင်မှုပေးသူ"
 
 #: admin/modules/system/captchasetting.php:78
 msgid "Enable for section"
-msgstr ""
+msgstr "ဤကဏ္ဍအတွက် အသုံးပြုခွင့်ပေးရန်။"
 
 #: admin/modules/system/content.php:89
 msgid "Title or Path can't be empty!"
@@ -6905,11 +6920,11 @@ msgstr "လမ်းကြောင်းအညွှန်း (တစ်ခု�
 
 #: admin/modules/system/content.php:242
 msgid "Max 20 character"
-msgstr ""
+msgstr "အများဆုံး စာလုံး အရည်အတွက်၂၀"
 
 #: admin/modules/system/content.php:243
 msgid "Draft?"
-msgstr ""
+msgstr "စာကြမ်း?"
 
 #: admin/modules/system/currencysetting.php:72
 msgid "Successfully save currency configuration"
@@ -6922,23 +6937,23 @@ msgstr "ငွေကြေးအမျိုးအစားသတ်မှတ်
 
 #: admin/modules/system/currencysetting.php:91
 msgid "Extension Intl must be enable first."
-msgstr ""
+msgstr "Intl Extension ကို အရင်ဆုံး Enable လုပ်ရပါမည်။"
 
 #: admin/modules/system/currencysetting.php:114
 msgid "Enable system currency?"
-msgstr ""
+msgstr "စနစ်သုံး ငွေကြေး (Currency) ကို ဖွင့်မလား။"
 
 #: admin/modules/system/currencysetting.php:117
 msgid "Region"
-msgstr ""
+msgstr "ဒေသ"
 
 #: admin/modules/system/currencysetting.php:117
 msgid "By default region value same as default language"
-msgstr ""
+msgstr "မူလသတ်မှတ်ထားသောဒေသတန်ဖိုးသည် မူလသတ်မှတ်ထားသော ဘာသာစကားနှင့် တူညီပါသည်။"
 
 #: admin/modules/system/currencysetting.php:121
 msgid "Number of decimal position"
-msgstr ""
+msgstr "ဒဿမနေရာအရေအတွက်"
 
 #: admin/modules/system/custom_field.php:73
 #, fuzzy
@@ -6955,21 +6970,21 @@ msgstr "စိတ်ကြိုက်ကွက်လပ်"
 #: admin/modules/system/custom_field.php:81
 #, fuzzy
 msgid "Field or Label can't be empty"
-msgstr "ခေါင်းစည်းအမည် သို့မဟုတ် လမ်းကြောင်းအညွှန်းကို ဗလာထား၍မရ"
+msgstr "လေဘယ်အမည် သို့မဟုတ် လမ်းကြောင်းအညွှန်းကို ဗလာထား၍မရ"
 
 #: admin/modules/system/custom_field.php:96 admin/modules/system/custom_field.php:103
 #, fuzzy
 msgid "Data List can't be empty"
-msgstr "အမည်ကိုဗလာထား၍ မရပါ"
+msgstr "ဒေတာစာရင်းကို ဗလာထား၍မရပါ။"
 
 #: admin/modules/system/custom_field.php:124
 msgid "You can not change primary table if the field already has data, "
-msgstr ""
+msgstr "အကွက်တွင် ဒေတာရှိပြီးသားဖြစ်ပါက မူလဇယားကို ပြောင်းလဲ၍မရပါ။"
 
 #: admin/modules/system/custom_field.php:140
 #, fuzzy
 msgid "New Custom Field Successfully Updated"
-msgstr "စာရေးသူ အချက်အလက် အောင်မြင်စွာ ထပ်ဖြည့်ပြီး"
+msgstr "စိတ်ကြိုက်အကွက်အသစ်ကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ပြီးပါပြီ။"
 
 #: admin/modules/system/custom_field.php:144
 msgid "Custom Field Data FAILED to Updated. Please Contact System Administrator"
@@ -6978,31 +6993,31 @@ msgstr "စိတ်ကြိုက်အချက်အလက်များ �
 #: admin/modules/system/custom_field.php:163
 #, fuzzy
 msgid "New Custom Field Successfully Saved"
-msgstr "အားလပ်ရက် အသစ် အောင်မြင်စွာ သိမ်းဆည်းပြီး"
+msgstr "စိတ်ကြိုက်အကွက်အသစ်ကို အောင်မြင်စွာ သိမ်းဆည်းပြီးပါပြီ"
 
 #: admin/modules/system/custom_field.php:167
 #, fuzzy
 msgid "Custom Field Data Data FAILED to Save. Please Contact System Administrator"
-msgstr "ဒဏ်ငွေအချက်အလက် သိမ်းဆည်းခြင်းမအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စိတ်ကြိုက်အကွက်အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ။ စနစ်စီမံခန့်ခွဲသူကို ဆက်သွယ်ပါ။"
 
 #: admin/modules/system/custom_field.php:219
 msgid "Custom Field Editor"
-msgstr ""
+msgstr "စိတ်ကြိုက်နယ်ပယ် တည်းဖြတ်ကိရိယာ"
 
 #: admin/modules/system/custom_field.php:223
 #, fuzzy
 msgid "Field List"
-msgstr "ဒဏ်ငွေ စာရင်းဇယား"
+msgstr "လယ်ကွင်းစာရင်း"
 
 #: admin/modules/system/custom_field.php:224
 #, fuzzy
 msgid "Add New Field"
-msgstr "ဒဏ်ငွေအသစ် ဖြည့်စွက်ပါ။"
+msgstr "အကွက်အသစ်ထည့်မည်"
 
 #: admin/modules/system/custom_field.php:269 admin/modules/system/custom_field.php:320
 #, fuzzy
 msgid "Primary Menu"
-msgstr "အဓိက"
+msgstr "အဓိက မီနူး"
 
 #: admin/modules/system/custom_field.php:273
 msgid "Text"
@@ -7011,7 +7026,7 @@ msgstr "စာသား"
 #: admin/modules/system/custom_field.php:274
 #, fuzzy
 msgid "Text Area"
-msgstr "အသင်းဝင်များအတွက်သာ"
+msgstr "စာသားဧရိယာ"
 
 #: admin/modules/system/custom_field.php:275
 msgid "Numeric"
@@ -7019,32 +7034,31 @@ msgstr "နံပတ်"
 
 #: admin/modules/system/custom_field.php:276
 msgid "Drop Down"
-msgstr ""
+msgstr "ရွေးချယ်စရာ စာရင်း (Drop-down စာရင်း)"
 
 #: admin/modules/system/custom_field.php:277
 #, fuzzy
 msgid "Check List"
-msgstr "ပညာရပ် စာရင်း"
+msgstr "စစ်ဆေးရန်စာရင်း"
 
 #: admin/modules/system/custom_field.php:278
 #, fuzzy
 msgid "Choice"
-msgstr "ငွေတောင်းခံလွှာ"
+msgstr "ရွေးချယ်မှု"
 
 #: admin/modules/system/custom_field.php:280
 #, fuzzy
 msgid "Input Type"
-msgstr "ပြင်ပသို့ပို့ရန် အမျိုးအစား"
+msgstr "ထည့်သွင်းမှု အမျိုးအစား"
 
 #: admin/modules/system/custom_field.php:284
 #, fuzzy
 msgid "Is Public"
-msgstr "အများနှင့်သက်ဆိုင်သော"
+msgstr "မြင်နိုင်မှု အခြေအနေ"
 
 #: admin/modules/system/custom_field.php:286
-#, fuzzy
 msgid "Custom Style"
-msgstr "စိတ်ကြိုက်ပြုလုပ်ပါ"
+msgstr "စိတ်ကြိုက်စတိုင်"
 
 #: admin/modules/system/custom_field.php:288
 msgid "Add Item"
@@ -7058,20 +7072,21 @@ msgstr "အချက်အလက်စာရင်း"
 #: admin/modules/system/custom_field.php:306
 #, fuzzy
 msgid "You are going to edit %s custom field"
-msgstr "သင်သည် စာကြည့်တိုက်အသုံးပြုသူ၏ ကိုယ်ရေးကိုယ်တာဖေါ်ပြချက်များကို တည်းဖြတ်တော့မည်။"
+msgstr "သင်သည် %s စိတ်ကြိုက်အကွက်ကို တည်းဖြတ်တော့မည်ဖြစ်သည်။"
 
 #: admin/modules/system/custom_field.php:307
 msgid "<strong>Warning</strong> : Update data list or primary table will be delete this table content"
-msgstr ""
+msgstr "<strong>သတိပေးချက်</strong> \n"
+"အချက်အလက်စာရင်း သို့မဟုတ် အခြေခံဇယားကို Update လုပ်ပါက\n"
+"ဤ အခြေခံဇယားအတွင်းရှိ အချက်အလက်များကို ဖျက်ပစ်ပါမည်။"
 
 #: admin/modules/system/envinfo.php:50 lib/Cli/Commands/SlimsStatus.php:42
 msgid "SLiMS Environment Mode"
 msgstr "SLiMS စနစ်ဝန်းကျင်"
 
 #: admin/modules/system/envinfo.php:51 admin/modules/system/index.php:334 lib/Cli/Commands/SlimsStatus.php:43
-#, fuzzy
 msgid "SLiMS Version"
-msgstr "MySQL Client version"
+msgstr "SLiMS ဗားရှင်း"
 
 #: admin/modules/system/envinfo.php:52 lib/Cli/Commands/SlimsStatus.php:44
 msgid "Operating System"
@@ -7123,7 +7138,7 @@ msgstr "SLiMS စနစ်ဆိုင်ရာအချက်အလက်။ �
 
 #: admin/modules/system/envsetting.php:45
 msgid "env.sample.php file is not exists!"
-msgstr ""
+msgstr "env.sample.php ဖိုင် မရှိပါ။"
 
 #: admin/modules/system/envsetting.php:68
 msgid "Configuration has been saved!"
@@ -7135,16 +7150,17 @@ msgstr "ကွန်ပျူတာစနစ်ဝန်းကျင်သတ်
 
 #: admin/modules/system/envsetting.php:84
 msgid "SLiMS Environment preferences."
-msgstr ""
+msgstr "SLiMS စနစ် ပတ်ဝန်းကျင်ဆိုင်ရာ စိတ်ကြိုက်ပြင်ဆင်မှုများ။"
 
 #: admin/modules/system/envsetting.php:114 lib/Mail.php:170
 #, fuzzy
 msgid "Production"
-msgstr "ထုတ်လုပ်သူ"
+msgstr "အသက်ဝင်"
 
 #: admin/modules/system/envsetting.php:115 lib/Mail.php:171
+#, fuzzy
 msgid "Development"
-msgstr ""
+msgstr "စနစ်ထုတ်လုပ်မှု"
 
 #: admin/modules/system/envsetting.php:117
 msgid "System Environment Mode"
@@ -7152,15 +7168,17 @@ msgstr "ကွန်ပျူတာစနစ်ဝန်းကျင်အဆင
 
 #: admin/modules/system/envsetting.php:123
 msgid "Environment for some IP?"
-msgstr ""
+msgstr "အချို့သော IP လိပ်စာများအတွက် သီးသန့်ပတ်ဝန်းကျင် (Environment) သတ်မှတ်မလား?"
 
 #: admin/modules/system/envsetting.php:124
 msgid "Range Ip wil be impacted with Environment. Example : 10.120.33.40;20.100.34.10. "
-msgstr ""
+msgstr "Environment သတ်မှတ်မှုသည် သတ်မှတ်ထားသော IP Range များအပေါ် သက်ရောက်ပါမည်။\n"
+"ဥပမာ − 10.120.33.40;20.100.34.10"
 
 #: admin/modules/system/envsetting.php:124
 msgid "Leave it empty, if you want to set environment to impact for all IP"
-msgstr ""
+msgstr "IP အားလုံးအပေါ် သက်ရောက်စေရန်\n"
+"ဤနေရာကို အလွတ်ထားနိုင်ပါသည်။"
 
 #: admin/modules/system/holiday.php:58 admin/modules/system/holiday.php:63 admin/modules/system/holiday.php:78 admin/modules/system/holiday.php:85 admin/modules/system/holiday.php:92 admin/modules/system/holiday.php:99
 #: admin/modules/system/holiday.php:124 admin/modules/system/holiday.php:161 admin/modules/system/holiday.php:164 admin/modules/system/holiday.php:175
@@ -7269,17 +7287,17 @@ msgstr "ကွန်ပျုတာစနစ်သတ်မှတ်ခြင်
 
 #: admin/modules/system/index.php:90
 msgid "Your site is not register"
-msgstr ""
+msgstr "သင့် Website ကို Register မလုပ်ရသေးပါ။"
 
 #: admin/modules/system/index.php:91
 #, fuzzy
 msgid "Register"
-msgstr "မှတ်ပုံတင်သည့် နေ့စွဲ"
+msgstr "မှတ်ပုံတင်"
 
 #: admin/modules/system/index.php:95
 #, fuzzy
 msgid "Your site is already registered"
-msgstr "စစ်ဆေးပြီးစီးသောစာအုပ်များ"
+msgstr "အရင်က ပြီးအောင်လုပ်ခဲ့တယ်။"
 
 #: admin/modules/system/index.php:100
 msgid "Modify global application preferences"
@@ -7288,7 +7306,7 @@ msgstr "ကမ္ဘာလုံးဆိုင်ရာ application ၏ ဦး�
 #: admin/modules/system/index.php:122
 #, fuzzy
 msgid "Logo Image removed. Refreshing page"
-msgstr "တည်ဆောက်ထားသော အခြေအနေများကို သိမ်းဆည်ပြီး စာမျက်နှာကို အသစ်တဖန် ဆန်းသစ်စေသည်"
+msgstr "လိုဂိုပုံကို ဖယ်ရှားလိုက်ပါပြီ။ စာမျက်နှာကို ပြန်လည်ဆန်းသစ်နေပါသည်။"
 
 #: admin/modules/system/index.php:314
 msgid "Settings saved. Refreshing page"
@@ -7304,11 +7322,11 @@ msgstr "စာကြည့်တိုက် အမည်(sub)"
 
 #: admin/modules/system/index.php:344
 msgid "Main Logo"
-msgstr ""
+msgstr "အဓိက Logo"
 
 #: admin/modules/system/index.php:357
 msgid "Favicon"
-msgstr ""
+msgstr "ဝဘ်ဆိုက်သင်္ကေတ (Favicon)"
 
 #: admin/modules/system/index.php:378
 msgid "Logo Image"
@@ -7320,12 +7338,12 @@ msgstr "မူလသတ်မှတ်ထားသော လုပ်ငန်�
 
 #: admin/modules/system/index.php:412
 msgid "List of timezones supported by PHP"
-msgstr ""
+msgstr "PHP မှ လက်ခံနိုင်သော စံတော်ချိန် (Timezone) စာရင်း။"
 
 #: admin/modules/system/index.php:413
 #, fuzzy
 msgid "Default App. Timezone"
-msgstr "မူလသတ်မှတ်ထားသော လုပ်ငန်းသုံးဘာသာစကား"
+msgstr "မူလအချိန်ဇုန်"
 
 #: admin/modules/system/index.php:417
 msgid "Search Engine"
@@ -7389,7 +7407,7 @@ msgstr "သတ်မှတ်ထားသည့် ဝင်ရောက်ရ�
 
 #: admin/modules/system/index.php:488
 msgid "Remember Me Timeout (in day)"
-msgstr ""
+msgstr "\"ကျွန်ုပ်ကို မှတ်ထားပါ\" သတ်မှတ်ချက် သက်တမ်းကုန်ဆုံးမည့်ရက် (ရက်အရေအတွက်ဖြင့်)။"
 
 #: admin/modules/system/index.php:491
 msgid "Barcode Encoding"
@@ -7401,16 +7419,16 @@ msgstr "IP လိပ်စာအလိုက် ဝဘ်ဆိုဒ်သိ�
 
 #: admin/modules/system/index.php:498
 msgid "Allowed Counter IP"
-msgstr ""
+msgstr "ဝင်ရောက်ခွင့်ပြုထားသော Counter IP လိပ်စာများ။"
 
 #: admin/modules/system/index.php:498
 msgid "Separate ip with ;"
-msgstr ""
+msgstr "IP တစ်ခုနှင့်တစ်ခုကို ( ; ) ဖြင့် ခြား၍ ရေးပါ။"
 
 #: admin/modules/system/index.php:500
 #, fuzzy
 msgid "Visitor Limitation by Time"
-msgstr "ဧည့်သည်ကန့်သတ်ချက်များ"
+msgstr "အချိန်အလိုက် ဧည့်သည်ကန့်သတ်ချက်များ"
 
 #: admin/modules/system/index.php:503
 msgid "Time visitor limitation (in minute)"
@@ -7423,7 +7441,7 @@ msgstr "ဒေတာဘေ့စ်"
 #: admin/modules/system/index.php:508
 #, fuzzy
 msgid "Reserve methode"
-msgstr "သီးသန့်လျာထားသည့်နေ့စွဲ"
+msgstr "ကြိုတင်မှာယူမှုနည်းလမ်း"
 
 #: admin/modules/system/index.php:513
 msgid "Reserve for item on loan only"
@@ -7431,39 +7449,42 @@ msgstr "လက်ရှိ ငှားရမ်းထားသော စာပ�
 
 #: admin/modules/system/index.php:518
 msgid "Activate Confirm Alert?"
-msgstr ""
+msgstr "အတည်ပြုချက် သတိပေးချက်ကို အသုံးပြုမည်လား?"
 
 #: admin/modules/system/index.php:523
 msgid "Ignore SSL verification"
-msgstr ""
+msgstr "SSL Validation ကိုလျစ်လျူရှုပါ။"
 
 #: admin/modules/system/index.php:523
 msgid "SLiMS will ignore all error about SSL validation while download contents from other resource"
-msgstr ""
+msgstr "အခြားရင်းမြစ်များမှ အကြောင်းအရာများကို Download လုပ်ရာတွင်\n"
+"SSL Validation ဆိုင်ရာ အမှားများကို SLiMS မှ လျစ်လျူရှုပါမည်။"
 
 #: admin/modules/system/index.php:528
+#, fuzzy
 msgid "Simplified the simple search. narrowing search aspects"
-msgstr ""
+msgstr "ရိုးရှင်းသောရှာဖွေမှုကိုကို ပိုမိုရိုးရှင်းစေရန်\n"
+"ရှာဖွေမှုရှုထောင့်များကို ကျဉ်းမြောင်းထားပါသည်။"
 
 #: admin/modules/system/index.php:533
 msgid "Strong Password Policy"
-msgstr ""
+msgstr "ခိုင်မာသော စကားဝှက်မူဝါဒ"
 
 #: admin/modules/system/index.php:535
 msgid "Password Minimum Characters (If Strong Password Policy is Yes)"
-msgstr ""
+msgstr "စကားဝှက်အနည်းဆုံးစာလုံးများ (ခိုင်မာသော စကားဝှက်မူဝါဒသည် ဟုတ်ကဲ့ဖြစ်ပါက)"
 
 #: admin/modules/system/mailsetting.php:57
 msgid "NB : Password is hidden for security reason"
-msgstr ""
+msgstr "မှတ်ချက်။ ။ လုံခြုံရေးအရ လျှို့ဝှက်နံပါတ်ကို ဖုံးကွယ်ထားပါသည်။"
 
 #: admin/modules/system/mailsetting.php:58
 msgid "Example"
-msgstr ""
+msgstr "ဥပမာ"
 
 #: admin/modules/system/mailsetting.php:68 admin/modules/system/mailsetting.php:141
 msgid "Directory config is not writeable."
-msgstr ""
+msgstr "Directory ဖွဲ့စည်းပုံကို ရေးသား၍မရပါ။"
 
 #: admin/modules/system/mailsetting.php:97
 msgid "Settings inserted."
@@ -7483,7 +7504,7 @@ msgstr "အီးမေးဦးစားပေးများကိုပြ
 
 #: admin/modules/system/mailsetting.php:142
 msgid "Make the following files and directories (and their contents) writeable (i.e., by changing the owner or permissions with chown or chmod)"
-msgstr ""
+msgstr "အောက်ပါ ဖိုင်များနှင့် folder များ (အတွင်းရှိ အချက်အလက်များအပါအဝင်) ကို ဒေတာအသစ် ရေးသားခွင့် ပြုပေးပါ။ (ဆိုလိုသည်မှာ chown သို့မဟုတ် chmod ကို အသုံးပြု၍ ပိုင်ဆိုင်ခွင့် သို့မဟုတ် ခွင့်ပြုချက်များကို ပြောင်းလဲပေးရန် ဖြစ်ပါသည်။)"
 
 #: admin/modules/system/mailsetting.php:157
 msgid "Environment"
@@ -7491,74 +7512,72 @@ msgstr "ကွန်ပျူတာစနစ်ဝန်းကျင်"
 
 #: admin/modules/system/mailsetting.php:160
 msgid "SMTP Encryption"
-msgstr ""
+msgstr "SMTP ကုဒ်ဝှက်ခြင်း"
 
 #: admin/modules/system/mailsetting.php:163
 #, fuzzy
 msgid "SMTP Server address"
-msgstr "Server လိပ်စာ"
+msgstr "SMTP ဆာဗာလိပ်စာ"
 
 #: admin/modules/system/mailsetting.php:166
 msgid "SMTP Port"
-msgstr ""
+msgstr "SMTP Port"
 
 #: admin/modules/system/mailsetting.php:169
 msgid "Authentication Username"
-msgstr ""
+msgstr "အတည်ပြုရန် အသုံးပြုသူအမည်။"
 
 #: admin/modules/system/mailsetting.php:172
 #, fuzzy
 msgid "Authentication Password"
-msgstr "လက်ရှိစကားဝှက်"
+msgstr "အထောက်အထားစိစစ်ခြင်း စကားဝှက်"
 
 #: admin/modules/system/mailsetting.php:172
 msgid "Password does not appearance for security reason. If you want to look it, open sysconfig.mail.inc.php file."
-msgstr ""
+msgstr "လုံခြုံရေးအရ လျှို့ဝှက်နံပါတ်ကို ဖော်ပြမထားပါ။ အကယ်၍ ကြည့်ရှုလိုပါက sysconfig.mail.inc.php ဖိုင်ကို ဖွင့်၍ ကြည့်ရှုနိုင်ပါသည်။"
 
 #: admin/modules/system/mailsetting.php:175
-#, fuzzy
 msgid "Email Sender Address"
-msgstr "စာပေးပို့ရန်လိပ်စာ"
+msgstr "အီးမေးလ်ပို့သူ၏ လိပ်စာ"
 
 #: admin/modules/system/mailsetting.php:178
 msgid "Email Sender Label"
-msgstr ""
+msgstr "အီးမေးလ်ပို့သူ၏ လေဘယ်"
 
 #: admin/modules/system/mailsetting.php:185
-#, fuzzy
 msgid "Email Address for Reply"
-msgstr "စာပေးပို့ရန်လိပ်စာ"
+msgstr "အီးမေးလ်စာပြန်ပေးပို့ရန်လိပ်စာ"
 
 #: admin/modules/system/mailsetting.php:187
 msgid "Email Address for Reply Name"
-msgstr ""
+msgstr "အကြောင်းပြန်ရမည့် အမည်အတွက် အီးမေးလ်လိပ်စာ"
 
 #: admin/modules/system/mailsetting.php:190
 msgid "\"Reply to\" same as Email Sender"
-msgstr ""
+msgstr "“Reply-To” ကို အီးမေးလ် ပို့သူ၏ လိပ်စာနှင့် တူညီအောင် သတ်မှတ်ထားပါသည်။"
 
 #: admin/modules/system/mailsetting.php:195
 msgid "Do Test"
-msgstr ""
+msgstr "စမ်းသပ်မှု ပြုလုပ်ရန်"
 
 #: admin/modules/system/mailsetting.php:214
 msgid "Send Mail"
-msgstr ""
+msgstr "အီးမေးပို့ရန်"
 
 #: admin/modules/system/mailsetting.php:215
 #, fuzzy
 msgid "Receiver Name"
-msgstr "Server အမည်"
+msgstr "လက်ခံသူအမည်"
 
 #: admin/modules/system/mailsetting.php:216
 #, fuzzy
 msgid "Receiver Address"
-msgstr "Server လိပ်စာ"
+msgstr "လက်ခံသူ၏လိပ်စာ"
 
 #: admin/modules/system/mailsetting.php:217
 #, fuzzy
 msgid "Dummy Content"
-msgstr "ဖေါ်ပြပါရှိသော အချက်အလက်များ"
+msgstr "အတုအယောင်အကြောင်းအရာ"
 
 #: admin/modules/system/membercard_theme.php:81 admin/modules/system/theme.php:105
 msgid "Error saving custom data!"
@@ -7567,20 +7586,20 @@ msgstr "စာကြည့်တိုက်အသုံးပြုသူ၏ �
 #: admin/modules/system/membercard_theme.php:83
 #, fuzzy
 msgid "Custom data saved!"
-msgstr "စာကြည့်တိုက်အသုံးပြုသူ၏ အချက်အလက်ကိုသိမ်းဆည်းပြီး"
+msgstr "စိတ်ကြိုက်ဒေတာကို သိမ်းဆည်းထားသည်။"
 
 #: admin/modules/system/membercard_theme.php:146 admin/modules/system/membercard_theme.php:149 admin/modules/system/theme.php:181 admin/modules/system/theme.php:184
 msgid "This theme not customizable"
-msgstr "ဤအဓိကအကြောင်းအရာသည်စိတ်ကြိုက်လုပ်ဆောင်ခြင်းမပြုနိုင်ပါ"
+msgstr "ဤပုံစံ/အပြင်အဆင် (Theme ) သည်စိတ်ကြိုက်လုပ်ဆောင်ခြင်းမပြုနိုင်ပါ"
 
 #: admin/modules/system/membercard_theme.php:171 admin/modules/system/membercard_theme.php:200 admin/modules/system/membercard_theme.php:233
 #, fuzzy
 msgid "Membercard Configuration"
-msgstr "အသင်းဝင်ကတ်သတ်မှတ်ခြင်း"
+msgstr "အသင်းဝင်ကတ်ဆက်တင်များ"
 
 #: admin/modules/system/membercard_theme.php:174 admin/modules/system/theme.php:207
 msgid "Customize theme preferences"
-msgstr "အဓိကအကြောင်းအရာဦးစားပေးများကိုစိတ်ကြိုက်ပြုလုပ်ပါ"
+msgstr "ပုံစံ/အပြင်အဆင် (Theme ) ဦးစားပေးများကိုစိတ်ကြိုက်ပြုလုပ်ပါ"
 
 #: admin/modules/system/membercard_theme.php:198 admin/modules/system/membercard_theme.php:232 admin/modules/system/theme.php:229 admin/modules/system/theme.php:262 admin/modules/system/theme.php:294
 #: admin/modules/system/theme.php:308
@@ -7654,61 +7673,60 @@ msgstr "ရေးသည်"
 
 #: admin/modules/system/module_priv_form_adv.inc.php:64
 msgid "Enable or disable submenu"
-msgstr ""
+msgstr "Submenu ကို အသုံးပြုမည် သို့မဟုတ် ပိတ်ထားမည်။"
 
 #: admin/modules/system/module_priv_form_adv.inc.php:67 lib/lang/string.php:28
 msgid "Select All"
-msgstr "အားလုံးကိုရွေးချယ်ပါ။"
+msgstr "အားလုံးကိုရွေးချယ်ရန်"
 
 #: admin/modules/system/module_priv_form_adv.inc.php:68 lib/lang/string.php:29
 msgid "Unselect All"
-msgstr "အားလုံးကို မှတ်ယူခြင်းမှ ပယ်ဖျက်ပါ"
+msgstr "အားလုံးကို မှတ်ယူခြင်းမှ ပယ်ဖျက်ရန်"
 
 #: admin/modules/system/module_priv_form_adv.inc.php:69 lib/lang/string.php:30
 #, fuzzy
 msgid "Select Invert"
-msgstr "ဘာသာစကားရွေးရန်"
+msgstr "ပြောင်းပြန်လှန်ရန် ရွေးချယ်ပါ"
 
 #: admin/modules/system/plugin_action.php:33 lib/Cli/Commands/ActivePlugin.php:56 lib/Cli/Commands/DeactivePlugin.php:54
-#, fuzzy
 msgid "Plugin not found"
-msgstr "ဖိုင်ရှာမတွေ့ပါ"
+msgstr "Plugin ရှာမတွေ့ပါ။"
 
 #: admin/modules/system/plugin_action.php:60 lib/Cli/Commands/ActivePlugin.php:80
 msgid "Plugin %s enabled"
-msgstr ""
+msgstr "Plugin %s ကို ဖွင့်ထားသည်"
 
 #: admin/modules/system/plugin_action.php:78 lib/Cli/Commands/DeactivePlugin.php:69
-#, fuzzy
 msgid "Plugin %s disabled"
-msgstr "အမြန်ပြန်လည်အပ်နှံခြင်းကို မရနိုင်ရန် ပြုလုပ်ထားသည်။"
+msgstr "Plugin %s ကို ပိတ်ထားသည်။"
 
 #: admin/modules/system/plugin_action.php:84
 msgid "Something error : turn on development mode to get more information"
-msgstr ""
+msgstr "အမှားအယွင်းတစ်ခု ဖြစ်ပွားနေပါသည်။ အချက်အလက်များကို ပိုမိုသိရန် Development Mode ကို ဖွင့်ပါ။"
 
 #: admin/modules/system/plugins.php:54 admin/modules/system/plugins.php:104
 msgid "Plugin"
-msgstr ""
+msgstr "Plugin"
 
 #: admin/modules/system/plugins.php:55
 #, fuzzy
 msgid "Enable plugin"
-msgstr "လုပ်နိုင်ရန် ဖွင့်ပေးသည်။"
+msgstr "Plugin လုပ်နိုင်ရန် ဖွင့်ပေးသည်။"
 
 #: admin/modules/system/plugins.php:59
+#, fuzzy
 msgid "Extension ZIP is not exists."
-msgstr ""
+msgstr "Extension ZIP မရှိပါ။"
 
 #: admin/modules/system/plugins.php:71
 #, fuzzy
 msgid "Plugin List"
-msgstr "ဒဏ်ငွေ စာရင်းဇယား"
+msgstr "ပလပ်အင်စာရင်း"
 
 #: admin/modules/system/plugins.php:106
 #, fuzzy
 msgid "Enable/Disable"
-msgstr "မလုပ်နိုင်ရန် ပိတ်လိုက်သည်။"
+msgstr "ဖွင့်/ပိတ်"
 
 #: admin/modules/system/plugins.php:119 admin/modules/system/plugins.php:219
 msgid "Enabled"
@@ -7721,72 +7739,76 @@ msgstr "မလုပ်နိုင်ရန် ပိတ်လိုက်သ�
 #: admin/modules/system/plugins.php:135
 #, fuzzy
 msgid "Version"
-msgstr "ပါရှန်[အီရန်] (فارسی)"
+msgstr "ဗားရှင်း"
 
 #: admin/modules/system/plugins.php:135
-#, fuzzy
 msgid "By"
-msgstr "ဝယ်ပါ"
+msgstr "အားဖြင့်"
 
 #: admin/modules/system/plugins.php:135
 #, fuzzy
 msgid "View Detail"
-msgstr "အသင်းဝင်အချက်အလက်အသေးစိတ်"
+msgstr "အသေးစိတ်ကြည့်ရန်"
 
 #: admin/modules/system/plugins.php:185
 msgid "Plugin has been disabled.\\nRun Migration too? This may will drop this plugin's table and the data can not be restored!"
-msgstr ""
+msgstr "Plugin ကို ပိတ်ထားပြီးပါပြီ။  ဒေတာရွှေ့ပြောင်းခြင်း ကိုလည်း လုပ်မလား။\n"
+"ဤလုပ်ဆောင်မှုကြောင့် Plugin နှင့် သက်ဆိုင်သော ဇယား များကို ဖျက်ပစ်\n"
+"နိုင်ပြီး ဖျက်သိမ်းထားသော ဒေတာများကို ပြန်လည်ရယူနိုင်မည် မဟုတ်ပါ။"
 
 #: admin/modules/system/register_site.php:24
 #, fuzzy
 msgid "Please update your Library Name first!"
-msgstr "သင်၏ စကားဝှက်ကို update လုပ်ပါ။"
+msgstr "ကျေးဇူးပြု၍ သင့်စာကြည့်တိုက်အမည်ကို ဦးစွာ အပ်ဒိတ်လုပ်ပါ။"
 
 #: admin/modules/system/register_site.php:29
 msgid "Please check up the agreement"
-msgstr ""
+msgstr "သဘောတူညီချက် (Agreement) ကို စစ်ဆေးကြည့်ပါ။"
 
 #: admin/modules/system/register_site.php:77
 msgid "Failed to register your site. Open system log for more info"
-msgstr ""
+msgstr "သင့် Site ကို မှတ်ပုံတင်ရာတွင် မအောင်မြင်ပါ။ နောက်ထပ်အချက်အလက်များအတွက် စနစ်မှတ်တမ်းကို ဖွင့်ပါ။"
 
 #: admin/modules/system/register_site.php:87
 #, fuzzy
 msgid "Register Your Site"
-msgstr "မှတ်ပုံတင်သည့် နေ့စွဲ"
+msgstr "သင့်ဆိုက်ကို မှတ်ပုံတင်ပါ။"
 
 #: admin/modules/system/register_site.php:90
 msgid "We'd love to stay in touch and provide you with important things for your SLiMS site! By registering:"
-msgstr ""
+msgstr "သင့် SLiMS Site အတွက် အရေးကြီးသော အချက်အလက်များကို ပေးပို့နိုင်ရန်  ကျွန်ုပ်တို့အနေဖြင့် သင်နှင့် ဆက်သွယ်လိုပါသည်။ Register လုပ်ခြင်းအားဖြင့် −"
 
 #: admin/modules/system/register_site.php:92
 msgid "You are contributing to our SLiMS statistics of the worldwide community, which help us improve SLiMS and our community sites."
-msgstr ""
+msgstr "ကမ္ဘာတစ်ဝှမ်းရှိ SLiMS အသုံးပြုသူ အသိုင်းအဝိုင်း၏ စာရင်းအင်းများကို\n"
+"သင်ကူညီပံ့ပိုးနေပါသည်။\n"
+"ဤအချက်အလက်များသည် SLiMS နှင့် အသိုင်းအဝိုင်း Website များကို\n"
+"ပိုမိုတိုးတက်ကောင်းမွန်စေရန် ကူညီပါသည်။"
 
 #: admin/modules/system/register_site.php:93
 msgid "If you wish, your site can be included in the list of registered SLiMS sites in your country."
-msgstr ""
+msgstr "သင်ဆန္ဒရှိပါကသင့် Site ကို သင့်နိုင်ငံအတွင်း မှတ်ပုံတင်ထားသော SLiMS Site စာရင်းတွင်ထည့်သွင်းဖော်ပြနိုင်ပါသည်။"
 
 #: admin/modules/system/register_site.php:114
 #, fuzzy
 msgid "Site listing"
-msgstr "ပျောက်ဆုံးသောစာအုပ်စာရင်း"
+msgstr "ဆိုက်စာရင်း"
 
 #: admin/modules/system/register_site.php:115
 msgid "Do not list my site"
-msgstr ""
+msgstr "ကျွန်ုပ်၏ ဝဘ်ဆိုက်ကို စာရင်းထဲတွင် ထည့်မဖော်ပြပါနှင့်။"
 
 #: admin/modules/system/register_site.php:116
 msgid "Only display my site name"
-msgstr ""
+msgstr "ကျွန်ုပ်၏ဝက်ဆိုက်အမည်ကိုသာပြသပါ။"
 
 #: admin/modules/system/register_site.php:117
 msgid "Display my site name with the link"
-msgstr ""
+msgstr "လင့်ခ်နှင့်အတူ မိမိ site အမည်ကို ပြသရန်"
 
 #: admin/modules/system/register_site.php:118
 msgid "You can choose to have your site listed publicly in the list of registeted sites, with or without a link to your site."
-msgstr ""
+msgstr "မိမိ site ကို မှတ်ပုံတင်ထားသော site များစာရင်းတွင် အများပြည်သူကြည့်ရှုနိုင်အောင် (site လင့်ခ် ပါ/မပါ) ရွေးချယ်၍ ပြသနိုင်ပါသည်။"
 
 #: admin/modules/system/register_site.php:119
 #, fuzzy
@@ -7794,16 +7816,17 @@ msgid "NPP (Optional)"
 msgstr "အင်ဒိုနီးရှား NPP (ရွေးချယ်နိုင်သည်)"
 
 #: admin/modules/system/register_site.php:119
+#, fuzzy
 msgid "A spesific identification code of some library in Indonesia under coordinated by Indnesia National Library."
-msgstr ""
+msgstr "အင်ဒိုနီးရှား အမျိုးသားစာကြည့်တိုက်၏ ကြီးကြပ်မှုအောက်ရှိ အင်ဒိုနီးရှားစာကြည့်တိုက်အချို့အတွက် သီးသန့်သတ်မှတ်ထားသော ကုဒ်နံပါတ် (Identification Code) ဖြစ်ပါသည်။"
 
 #: admin/modules/system/register_site.php:123
 msgid "I agree to the <a class=\"notAJAX\" href=\"https://analytics.slims.web.id/?p=privacy\">Privacy notice and data processing agreement</a>"
-msgstr ""
+msgstr "<a class=\"notAJAX\" href=\"https://analytics.slims.web.id/?p=privacy\">ကိုယ်ရေးအချက်အလက် လုံခြုံမှုဆိုင်ရာ သတိပေးချက်နှင့် ဒေတာစီမံဆောင်ရွက်မှု သဘောတူညီချက်</a>ကို ကျွန်ုပ် သဘောတူပါသည်။"
 
 #: admin/modules/system/shortcut.php:60
 msgid "Shortcut Settings"
-msgstr "ဖြတ်လမ်းတို Settings"
+msgstr "ဖြတ်လမ်းတိုသတ်မှတ်ချက်များ"
 
 #: admin/modules/system/shortcut.php:63
 msgid "Add or remove application shortcuts"
@@ -7811,7 +7834,7 @@ msgstr "Application ဖြတ်လမ်းတိုများကို ထ�
 
 #: admin/modules/system/shortcut.php:71
 msgid "Shortcut setting saved"
-msgstr "ဖြတ်လမ်းတို Settings သိမ်းဆည်းပြီး"
+msgstr "ဖြတ်လမ်းတိုသတ်မှတ်ချက်များသိမ်းဆည်းပြီး"
 
 #: admin/modules/system/shortcut.php:112
 msgid "Move back"
@@ -7847,26 +7870,26 @@ msgstr "UCS ဦးစားပေးများကိုပြုပြင�
 
 #: admin/modules/system/submenu.php:36
 msgid "Plugins"
-msgstr ""
+msgstr "Plugins"
 
 #: admin/modules/system/submenu.php:37
 #, fuzzy
 msgid "Configure custom field"
-msgstr "အဓိကအကြောင်းအရာဦးစားပေးများကိုရွေးချယ်ရန်"
+msgstr "စိတ်ကြိုက်အကွက်ချိန်ညှိမည်"
 
 #: admin/modules/system/submenu.php:38
+#, fuzzy
 msgid "Currency Setting"
-msgstr ""
+msgstr "ငွေကြေးစနစ် သတ်မှတ်ခြင်း"
 
 #: admin/modules/system/submenu.php:38
 #, fuzzy
 msgid "Configure System Currency"
-msgstr "ကွန်ပျူတာစနစ်ကို ကမ္ဘာသုံးပုံစံအတိုင်း စီစဉ်ပါ။"
+msgstr "စနစ်ငွေကြေးကို ပြင်ဆင်သတ်မှတ်ပါ"
 
 #: admin/modules/system/submenu.php:39
-#, fuzzy
 msgid "E-Mail Setting"
-msgstr "တည်ဆောက်ထားသော အခြေအနေများကို သိမ်းဆည်းပါ"
+msgstr "အီးမေးလ်ဆက်တင်"
 
 #: admin/modules/system/submenu.php:39
 msgid "Configure E-Mail Preferences"
@@ -7878,7 +7901,7 @@ msgstr "Captcha ဆက်တင်"
 
 #: admin/modules/system/submenu.php:40
 msgid "Configure Captcha"
-msgstr ""
+msgstr "Captcha ကို ပြင်ဆင်သတ်မှတ်ရန်"
 
 #: admin/modules/system/submenu.php:46 admin/modules/system/submenu.php:48
 msgid "Biblio Indexes"
@@ -7943,16 +7966,16 @@ msgstr "ကွန်ပျူတာစနစ်မှတ်တမ်းမျာ
 
 #: admin/modules/system/theme.php:107
 msgid "Custom data saved! Reload the page to see changes."
-msgstr ""
+msgstr "စိတ်ကြိုက်ဒေတာကို သိမ်းဆည်းပြီးပါပြီ။\n"
+"ပြောင်းလဲမှုများကို မြင်ရန် စာမျက်နှာကို ပြန်လည် Reload လုပ်ပါ။"
 
 #: admin/modules/system/theme.php:111
-#, fuzzy
 msgid "This theme not customizable. "
-msgstr "ဤ Theme (ပုံစံ) ကို စိတ်ကြိုက် ပြောင်းလဲ၍မရပါ။"
+msgstr "ဤ ပုံစံ/အပြင်အဆင် (Theme ) ကို စိတ်ကြိုက် ပြောင်းလဲ၍မရပါ။"
 
 #: admin/modules/system/theme.php:204 admin/modules/system/theme.php:231
 msgid "Theme Configuration"
-msgstr "အဓိကအကြောင်းအရာပြင်ဆင်မှု"
+msgstr "ပုံစံ/အပြင်အဆင် (Theme ) ပြင်ဆင်မှု"
 
 #: admin/modules/system/theme.php:225
 msgid "Public Template"
@@ -7964,7 +7987,7 @@ msgstr "စီမံခန့်ခွဲမှုအတွက် ဖန်တ�
 
 #: admin/modules/system/theme.php:264
 msgid "Admin Theme Configuration"
-msgstr "Admin Panel ၏ Themeကို ပြင်ဆင်သတ်မှတ်ခြင်း"
+msgstr "Admin Panel ၏ ပုံစံ/အပြင်အဆင် (Theme ) ကို ပြင်ဆင်သတ်မှတ်ခြင်း"
 
 #: admin/modules/system/ucsetting.php:62 admin/modules/system/ucsetting.php:66 admin/modules/system/ucsetting.php:77
 msgid "UCS Configuration"
@@ -7973,7 +7996,7 @@ msgstr "UCS သတ်မှတ်ခြင်း"
 #: admin/modules/system/ucsetting.php:62
 #, fuzzy
 msgid "Settings "
-msgstr "သတ်မှတ်ခြင်း သိမ်းဆည်းပြီး"
+msgstr "ဆက်တင်များ"
 
 #: admin/modules/system/ucsetting.php:66
 msgid "Failed save settings!"
@@ -8068,25 +8091,25 @@ msgid "Someone has left the room."
 msgstr "တစ်စုံတစ်ယောက်အခန်းမှထွက်ပါတယ်"
 
 #: files/membercard/classic/membercard.php:306
-#, fuzzy
 msgid "Library Rules"
 msgstr "စာကြည့်တိုက်ဆိုင်စည်းမျဥ်းများ"
 
 #: files/membercard/classic/tinfo.inc.php:22 files/membercard/old/tinfo.inc.php:25
 msgid "Front Header1 Text"
-msgstr ""
+msgstr "ရှေ့ဖက် ခေါင်းစီး ၁ စာသား"
 
 #: files/membercard/classic/tinfo.inc.php:29 files/membercard/old/tinfo.inc.php:40
+#, fuzzy
 msgid "Front Header2 Text"
-msgstr ""
+msgstr "ရှေ့ဖက် ခေါင်းစီး ၂ စာသား"
 
 #: files/membercard/classic/tinfo.inc.php:36 files/membercard/old/tinfo.inc.php:55
 msgid "Back Header1 Text"
-msgstr ""
+msgstr "နောက်ဖက် ခေါင်းစီး ၁ စာသား"
 
 #: files/membercard/classic/tinfo.inc.php:43 files/membercard/old/tinfo.inc.php:70
 msgid "Back Header2 Text"
-msgstr ""
+msgstr "နောက်ဖက် ခေါင်းစီး ၂ စာသား"
 
 #: files/membercard/classic/tinfo.inc.php:50 files/membercard/old/tinfo.inc.php:121
 #, fuzzy
@@ -8099,8 +8122,9 @@ msgid "Box Height"
 msgstr "အမြင့်ဆုံးအမြင့်"
 
 #: files/membercard/classic/tinfo.inc.php:64 files/membercard/old/tinfo.inc.php:133
+#, fuzzy
 msgid "Factor"
-msgstr ""
+msgstr "အဆပွားကိန်း"
 
 #: files/membercard/classic/tinfo.inc.php:71 files/membercard/old/tinfo.inc.php:139
 msgid "Barcode Scale"
@@ -8108,31 +8132,33 @@ msgstr "ဘားကုဒ်စကေး"
 
 #: files/membercard/classic/tinfo.inc.php:84
 msgid "Font Color"
-msgstr ""
+msgstr "စာလုံးအရောင်"
 
 #: files/membercard/classic/tinfo.inc.php:92
 msgid "Card Front Color"
-msgstr ""
+msgstr "ကတ်ရှေ့ဘက် အရောင်"
 
 #: files/membercard/classic/tinfo.inc.php:100
 msgid "Card Back Color"
-msgstr ""
+msgstr "ကတ်နောက်ဘက် အရောင်"
 
 #: files/membercard/classic/tinfo.inc.php:108 files/membercard/old/tinfo.inc.php:145
 msgid "City"
-msgstr ""
+msgstr "မြို့"
 
 #: files/membercard/classic/tinfo.inc.php:120 files/membercard/old/tinfo.inc.php:157
+#, fuzzy
 msgid "Officials"
-msgstr ""
+msgstr "တာဝန်ခံ/အရာရှိများ"
 
 #: files/membercard/classic/tinfo.inc.php:126 files/membercard/old/tinfo.inc.php:163
+#, fuzzy
 msgid "Officials ID"
-msgstr ""
+msgstr "တာဝန်ခံ/အရာရှိ၏ မှတ်ပုံတင်အမှတ်။"
 
 #: files/membercard/classic/tinfo.inc.php:132 files/membercard/old/tinfo.inc.php:265
 msgid "Back Side Image"
-msgstr ""
+msgstr "နောက်ဘက်ပုံ"
 
 #: files/membercard/individual-membercard.php:6
 msgid "Library Member Card"
@@ -8140,31 +8166,31 @@ msgstr "စာကြည့်တိုက်အသင်းဝင်ကတ်"
 
 #: files/membercard/old/tinfo.inc.php:32
 msgid "Front Header1 Font Size"
-msgstr ""
+msgstr "ရှေ့ဖက်ခေါင်းစီး ၁ စာလုံးအရွယ်အစားး"
 
 #: files/membercard/old/tinfo.inc.php:47
 msgid "Front Header2 Font Size"
-msgstr ""
+msgstr "ရှေ့ဖက်ခေါင်းစီး ၂ စာလုံးအရွယ်အစားး"
 
 #: files/membercard/old/tinfo.inc.php:62
 msgid "Back Header1 Font Size"
-msgstr ""
+msgstr "နောက်ဖက် ခေါင်းစီး ၁ စာလုံးအရွယ်အစား"
 
 #: files/membercard/old/tinfo.inc.php:77
 msgid "Back Header2 Font Size"
-msgstr ""
+msgstr "နောက်ဖက် ခေါင်းစီး ၂ စာလုံးအရွယ်အစား"
 
 #: files/membercard/old/tinfo.inc.php:85
 msgid "Header Color"
-msgstr ""
+msgstr "ခေါင်းစီး အရောင်"
 
 #: files/membercard/old/tinfo.inc.php:99
 msgid "Rules Font Size"
-msgstr ""
+msgstr "စည်းမျဉ်းများ ဖောင့်အရွယ်အစား"
 
 #: files/membercard/old/tinfo.inc.php:113
 msgid "Address Font Size"
-msgstr ""
+msgstr "လိပ်စာ ဖောင့်အရွယ်အစား"
 
 #: files/membercard/old/tinfo.inc.php:151
 #, fuzzy
@@ -8173,18 +8199,18 @@ msgstr "အလုပ်အကိုင်အမည်"
 
 #: files/membercard/old/tinfo.inc.php:257
 msgid "Front Side Image"
-msgstr ""
+msgstr "ရှေ့ဘက်ပုံ"
 
 #: files/membercard/old/tinfo.inc.php:273
 msgid "Stamp file"
-msgstr ""
+msgstr "တံဆိပ်ဖိုင်"
 
 #: files/membercard/old/tinfo.inc.php:281
+#, fuzzy
 msgid "Signature_File"
-msgstr ""
+msgstr "လက်မှတ်ဖိုင်"
 
 #: files/membercard/old/tinfo.inc.php:289
-#, fuzzy
 msgid "Logo"
 msgstr "စာကြည့်တိုက် Logo"
 
@@ -8198,91 +8224,94 @@ msgstr "သင်သည် အသင်းဝင်အနေဖြင့် ဝ�
 
 #: lib/Auth/Methods/Ldap.php:83 lib/Auth/Methods/Ldap.php:174
 msgid "Failed to connect to LDAP server"
-msgstr ""
+msgstr "LDAP Server နှင့် ချိတ်ဆက်မရပါ။"
 
 #: lib/Auth/Methods/Ldap.php:91 lib/Auth/Methods/Ldap.php:181
 msgid "Failed to bind to directory server!"
-msgstr ""
+msgstr "Directory server သို့ ချိတ်ဆက်၍ အတည်ပြုခြင်း (Bind) မအောင်မြင်ပါ။"
 
 #: lib/Auth/Methods/Ldap.php:98 lib/Auth/Methods/Ldap.php:188
 msgid "LDAP search failed because of error!"
-msgstr ""
+msgstr "အမှားအယွင်းကြောင့် LDAP ရှာဖွေမှု မအောင်မြင်ပါ။"
 
 #: lib/Auth/Methods/Ldap.php:126
+#, fuzzy
 msgid "Member insertion error because of:"
-msgstr ""
+msgstr "အဖွဲ့ဝင် အချက်အလက် ထည့်သွင်းရာတွင် အမှား ဖြစ်ပွားခဲ့ပါသည်။\n"
+"အကြောင်းရင်းမှာ −"
 
 #: lib/Auth/Methods/Ldap.php:131 lib/Auth/Methods/Ldap.php:216
 msgid "LDAP Record not found!"
-msgstr ""
+msgstr "LDAP မှတ်တမ်း (Record) ကို မတွေ့ရှိပါ။"
 
 #: lib/Auth/Methods/Native.php:55 lib/Auth/Methods/Native.php:68
 #, fuzzy
 msgid "Username or Password not exists in database!"
-msgstr "ဤစာအုပ်ကို အချက်အလက်များဘဏ်တွင် မှတ်ပုံတင်ထားခြင်း မရှိပါ။"
+msgstr "အသုံးပြုသူအမည် သို့မဟုတ် စကားဝှက်သည် ဒေတာဘေ့စ်တွင် မရှိပါ။"
 
 #: lib/Auth/Methods/Native.php:95
 #, fuzzy
 msgid "Username not exists in database!"
-msgstr "ဤစာအုပ်ကို အချက်အလက်များဘဏ်တွင် မှတ်ပုံတင်ထားခြင်း မရှိပါ။"
+msgstr "အသုံးပြုသူအမည်သည် ဒေတာဘေ့စ်တွင် မရှိပါ။"
 
 #: lib/Auth/Methods/Native.php:108
-#, fuzzy
 msgid "Failed to update user password with hash"
-msgstr "သင်၏ စကားဝှက်ကို update လုပ်ပါ။"
+msgstr "အသုံးပြုသူ စကားဝှက်ကို hash ဖြင့် အပ်ဒိတ်လုပ်၍မရပါ"
 
 #: lib/Captcha/Factory.php:203
 msgid "Captcha Error : {class} is not compatible with captcha contract!"
-msgstr ""
+msgstr "Captcha အမှား - {class} သည် Captcha သတ်မှတ်ချက်များနှင့် ကိုက်ညီမှုမရှိပါ။"
 
 #: lib/Cli/Commands/DatabaseBackup.php:54 lib/Cli/Commands/DatabaseBackup.php:57
 msgid "Backup database has been finished as %s"
-msgstr ""
+msgstr "ဒေတာဘေ့စ် (Database) ကို အရန်သိမ်းဆည်းခြင်း လုပ်ငန်းစဉ် %s အဖြစ် ပြီးဆုံးပါပြီ။"
 
 #: lib/Cli/Commands/DatabaseBackup.php:56
 msgid "Backup logging is not saved successfully"
-msgstr ""
+msgstr "အရန်သိမ်းဆည်းမှု မှတ်တမ်း (Logging) ကို သိမ်းဆည်းခြင်း မအောင်မြင်ပါ။"
 
 #: lib/Cli/Commands/DatabaseHealth.php:70
 msgid "No table to repair. Everything is all right."
-msgstr ""
+msgstr "ပြုပြင်ရန် ဒေတာဇယား (Table) မရှိပါ။ အားလုံး ကောင်းမွန်ပါသည်။"
 
 #: lib/Cli/Commands/DatabaseMigrate.php:58
 msgid "Success migrating database"
-msgstr ""
+msgstr "ဒေတာဘေ့စ်ကို ပြောင်းရွှေ့ခြင်း (Migrating) အောင်မြင်ပါသည်။\n"
+""
 
 #: lib/Cli/Commands/DeactivePlugin.php:76
 msgid "All plugin has been disabled"
-msgstr ""
+msgstr "Plugin အားလုံးကို ပိတ်ထားပြီး ဖြစ်သည်။"
 
 #: lib/Extension.php:31
 msgid "Feature %s is not available."
-msgstr ""
+msgstr "%s လုပ်ဆောင်ချက်ကို မရရှိနိုင်ပါ။"
 
 #: lib/Extension.php:133
 msgid "Some PHP extension required by SLiMS is not loaded : %s"
-msgstr ""
+msgstr "SLiMS အတွက် လိုအပ်တဲ့ PHP Extension တစ်ခုကို Load မလုပ်ထားပါ : %s"
 
 #: lib/Filesystems/Guard.php:30
 msgid "Mime {mime} is not allowed!"
-msgstr ""
+msgstr "ဖိုင်အမျိုးအစား {mime} ကို ခွင့်မပြုပါ။"
 
 #: lib/Filesystems/Guard.php:47
+#, fuzzy
 msgid "Extension {extension} is not allowed!"
-msgstr ""
+msgstr "extension {extension} ကို ခွင့်မပြုပါ။"
 
 #: lib/Filesystems/Guard.php:64
 msgid "Size {fileSize} greater than {maxSize}."
-msgstr ""
+msgstr "ဖိုင်ပမာဏ {fileSize} သည် သတ်မှတ်ထားသော အများဆုံးပမာဏ {maxSize} ထက် ကျော်လွန်နေပါသည်။"
 
 #: lib/Filesystems/Guard.php:78
 msgid "Wrong image filetype."
-msgstr ""
+msgstr "ရုပ်ပုံဖိုင်အမျိုးအစား မှားယွင်းနေပါသည်။"
 
 #: lib/Plugins.php:425
 #, fuzzy
 msgid "Main List"
-msgstr "ဒဏ်ငွေ စာရင်းဇယား"
+msgstr "အဓိကစာရင်း"
 
 #. jim did this using Google translate
 #: lib/SearchEngine/SearchFilter.php:23
@@ -8299,7 +8328,7 @@ msgstr "ပူးတွဲပါဖိုင်အမျိုးအစား"
 
 #: lib/SearchEngine/SearchFilter.php:53
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #: lib/SearchEngine/SearchFilter.php:57
 msgid "Audio"
@@ -8310,9 +8339,8 @@ msgid "Video"
 msgstr "ဗီဒီယို"
 
 #: lib/SearchEngine/SearchFilter.php:219
-#, fuzzy
 msgid "See More"
-msgstr "ဆက်ဖတ်ရန်"
+msgstr "ပိုမိုကြည့်ရှုရန်"
 
 #: lib/biblio_list_elasticsearch.inc.php:279 lib/biblio_list_model.inc.php:221
 msgid "Put marked selection into basket"
@@ -8320,7 +8348,7 @@ msgstr "အမှတ်အသားလုပ်၍ ရွေးချယ်ထ�
 
 #: lib/comment.inc.php:66
 msgid " comments available"
-msgstr " ထင်မြင်ချက်ပေးရန်"
+msgstr "ထင်မြင်ချက်ပေးရန်"
 
 #: lib/comment.inc.php:69
 msgid " at "
@@ -8332,16 +8360,16 @@ msgstr " ရေးပါ"
 
 #: lib/detail.inc.php:98
 msgid "Maybe the data is temporary unvailable"
-msgstr ""
+msgstr "ဒေတာ (အချက်အလက်) များ ခေတ္တရရှိနိုင်ခြင်း မရှိသေးပါ။"
 
 #: lib/detail.inc.php:149
 msgid "Please login to see this attachment"
-msgstr ""
+msgstr "ပူးတွဲဖိုင်ကိုကြည့်ရန် စနစ်ကိုဝင်ရောက်ပါ။"
 
 #: lib/detail.inc.php:153
 #, fuzzy
 msgid "You have no authorization to download this file."
-msgstr "သင့်မှာ ဤအပိုင်းကို ဝင်ရောက်ကြည့်ရှုခွင့် မရှိပါ။"
+msgstr "ဤဖိုင်ကို ဒေါင်းလုဒ်လုပ်ရန် သင့်တွင် ခွင့်ပြုချက်မရှိပါ။"
 
 #: lib/detail.inc.php:254
 msgid "Currently On Loan (Due on "
@@ -8349,12 +8377,12 @@ msgstr "လက်ရှိငှါးရမ်းထားဆဲ (ပြန်�
 
 #: lib/detail.inc.php:256
 msgid "Available but not for loan"
-msgstr "စာကြည့်တိုက်တွင်ရနိုင်သည်။ သို့သော်ငှါးရန်မဟုတ်ပါ။"
+msgstr "စာကြည့်တိုက်တွင်ရနိုင်သည်။ သို့သော်ငှားရန်မဟုတ်ပါ။"
 
 #: lib/detail.inc.php:263 lib/detail.inc.php:269
 #, fuzzy
 msgid "Location name is not set"
-msgstr "စာအုပ်တည်နေရာစာရင်း"
+msgstr "တည်နေရာအမည်ကို မသတ်မှတ်ရသေးပါ"
 
 #: lib/detail.inc.php:458
 msgid "Click to view others documents with this author"
@@ -8374,7 +8402,7 @@ msgstr "အစီရင်ခံခြင်း"
 
 #: lib/marc/XMLParser.inc.php:43
 msgid "Can't load MARC Source."
-msgstr ""
+msgstr "MARC ရင်းမြစ်ကို တင်၍မရပါ။"
 
 #: lib/module.inc.php:47
 msgid "View OPAC in New Window"
@@ -8383,11 +8411,12 @@ msgstr "OPAC ကို Window အသစ်တွင်ကြည့်ရန်"
 #: lib/module.inc.php:322
 #, fuzzy
 msgid "Warning"
-msgstr "ပြန်လည်အပ်နှံရမည့်နေ့စွဲ သတိပေးခြင်း"
+msgstr "သတိပေးချက်"
 
 #: lib/module.inc.php:323
 msgid "You don't have access to interact with this module. Call system administrator to give you right to access it."
-msgstr ""
+msgstr "ဒီ Module ကို အသုံးပြုခွင့် မရှိပါ။\n"
+"အသုံးပြုခွင့်ပေးနိုင်ရန် System Administrator ကို ဆက်သွယ်ပါ။"
 
 #: plugins/label_barcode/index.php:281
 msgid "Labels & Barcode Printing"
@@ -8395,12 +8424,12 @@ msgstr "လေဘယ်နှင့်ဘားကုဒ်များ ထု�
 
 #: plugins/read_counter/index.php:64
 msgid "No data found with item code {itemcode}."
-msgstr ""
+msgstr "စာပေပစ္စည်းကုဒ် {itemcode} ဖြင့် ရှာဖွေထားသော အချက်အလက် မတွေ့ရှိပါ။"
 
 #: plugins/read_counter/index.php:72 plugins/read_counter/read_counter_plugin.php:15
 #, fuzzy
 msgid "Read Counter"
-msgstr "ဧည့်သည်ဦးရေ မှတ်တမ်းဖတ်ရန်"
+msgstr "ဖတ်ပြီးသားစာအုပ်အရေအတွက်"
 
 #: plugins/read_counter/index.php:75
 msgid "Enter item code / barcode value into input form below!"
@@ -8422,7 +8451,7 @@ msgstr "ဆက်ဖတ်ရန်"
 #: plugins/read_counter/report.php:51
 #, fuzzy
 msgid "Read Until"
-msgstr "နေ့မတိုင်မီအထိသီးသန့်လျာထားသည်။"
+msgstr "အထိဖတ်ပါ"
 
 #: simbio2/simbio_DB/datagrid/simbio_dbgrid.inc.php:93
 msgid "DELETE"
