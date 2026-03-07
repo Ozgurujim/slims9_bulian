@@ -14,9 +14,10 @@ msgstr ""
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. This translation based on Australian English library terminology, spelling and reduced capitalisation, with some grammatical improvements contains the strings necessary for SLIMS OPAC translation.
-#. It will not provide translation of the library adminisration and cataloguing components
-#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 06/10/2025
+#. This DRAFT translation contains the strings necessary for SLIMS 9.7.2 translation to the Burmese language.
+#. It provides translation of the library administration and cataloguing components. This translation was facilitated by Poeditor.com, and the majority of the work was done by Daw Ah Win.
+#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 19/02/2026
+#. သတ္တဝါအားလုံး လွတ်မြောက်မှုကို ရရှိနိုင်ကြပါစေ
 #: chat.php:81
 msgid "Logout"
 msgstr "စနစ်မှထွက်ရန်"
