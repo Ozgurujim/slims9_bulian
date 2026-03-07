@@ -14,10 +14,9 @@ msgstr ""
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. This DRAFT translation contains the strings necessary for SLIMS 9.7.2 translation to the Burmese language.
-#. It provides translation of the library administration and cataloguing components. This translation was facilitated by Poeditor.com, and the majority of the work was done by Daw Ah Win.
-#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 19/02/2026
-#. သတ္တဝါအားလုံး လွတ်မြောက်မှုကို ရရှိနိုင်ကြပါစေ
+#. This translation based on Australian English library terminology, spelling and reduced capitalisation, with some grammatical improvements contains the strings necessary for SLIMS OPAC translation.
+#. It will not provide translation of the library adminisration and cataloguing components
+#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 06/10/2025
 #: chat.php:81
 msgid "Logout"
 msgstr "စနစ်မှထွက်ရန်"
@@ -83,7 +82,7 @@ msgstr "အားလုံး"
 #: template/default/tinfo.inc.php:147 template/default/tinfo.inc.php:157
 #: template/default/tinfo.inc.php:167
 msgid "Hide"
-msgstr "မမြင်ရအောင်ဖုံးကွယ်ထားပါ"
+msgstr "မမြင်ရအောင်ဝှက်ပါ"
 
 #: template/default/tinfo.inc.php:114 template/default/tinfo.inc.php:130
 #: template/default/tinfo.inc.php:146 template/default/tinfo.inc.php:156
@@ -105,7 +104,7 @@ msgstr "တာဝန်ယူလုပ်ဆောင်ချက်များ
 #: template/lightweight/custom_frontpage_record.inc.php:6
 #: template/lightweight/detail_template.php:129
 msgid "Edition"
-msgstr "ထုတ်ဝေသည့်အကြိမ်"
+msgstr "တည်းဖြတ်ကြိမ်"
 
 #: template/default/detail_template.php:110
 #: template/lightweight/detail_template.php:143
@@ -142,7 +141,7 @@ msgstr "စာစဉ်များအမည်"
 #: template/default/detail_template.php:82
 #: template/lightweight/detail_template.php:94
 msgid "Classification"
-msgstr "မျိုးတူစုခြင်း"
+msgstr "မျိုးတူစုအမှတ်"
 
 #: clustering.inc.php:98
 msgid "Subject(s)"
@@ -187,7 +186,7 @@ msgstr "အဖွဲ့ အစည်း"
 #: template/lightweight/custom_frontpage_record.inc.php:11
 #: template/lightweight/detail_template.php:37
 msgid "Availability"
-msgstr "အသုံးပြုနိုင်မှု"
+msgstr "ရရှိနိုင်မှု"
 
 #: default.inc.php:129
 msgid "Found <strong>{biblio_list->num_rows}</strong> from your keywords"
@@ -195,15 +194,15 @@ msgstr "သင်၏ အဓိကစာလုံးများမှ ရလဒ�
 
 #: member.inc.php:188
 msgid "Bookmarked"
-msgstr "မှတ်သားထားပြီး"
+msgstr "မှတ်သားထားမှု"
 
 #: show_detail.inc.php:132
 msgid "Citation for: {title}"
-msgstr "ကိုးကားချက်: {title}"
+msgstr "{title} အတွက် ကိုးကားချက်"
 
 #: template/default/biblio_list_template.php:161
 msgid "Items is not available"
-msgstr "ဤစာကြည့်တိုက်ပစ္စည်းကိုလက်ရှိအချိန်တွင် မရနိုင်ပါ။"
+msgstr "ဤစာအုပ်ကိုလက်ရှိအချိန်တွင် မရနိုင်ပါ။"
 
 #: template/lightweight/biblio_list_template.php:169
 msgid "Share to"
@@ -219,11 +218,11 @@ msgstr "ဩစတြေးလျ အင်္ဂလိပ်စကား (Austra
 
 #: lib/lang/localisation.php:67 sysconfig.inc.php:598
 msgid "Bengali"
-msgstr "ဘင်ဂါလီဘာသာ (বাংলা)"
+msgstr "ဘင်္ဂါလီဘာသာ (বাংলা)"
 
 #: lib/lang/localisation.php:68
 msgid "Burmese (Myanmar)"
-msgstr "မြန်မာစာ"
+msgstr "မြန်မာဘာသာ"
 
 #: lib/lang/localisation.php:69 sysconfig.inc.php:599
 msgid "Brazilian Portuguese"
@@ -231,7 +230,7 @@ msgstr "ဘရာဇီးပေါ်တူဂီ (Português brasileiro)"
 
 #: lib/lang/localisation.php:70 sysconfig.inc.php:601
 msgid "English"
-msgstr "အင်္ဂလိပ် (English)"
+msgstr "အင်္ဂလိပ်ဘာသာ (English)"
 
 #: lib/lang/localisation.php:71 sysconfig.inc.php:602
 msgid "Espanol"
@@ -291,11 +290,11 @@ msgstr "အချက်အလက်မရှိပါ။"
 #: template/lightweight/biblio_list_template.php:50
 #: template/lightweight/biblio_list_template.php:79
 msgid "View record detail description for this title"
-msgstr "ဤခေါင်းစဉ်အတွက်အသေးစိတ်ဖော်ပြချက်ကိုကြည့်ရန်"
+msgstr "အသေးစိတ်ဖော်ပြချက်ကိုကြည့်ရန်"
 
 #: template/lightweight/biblio_list_template.php:81
 msgid "View record detail description in XML Format"
-msgstr "ဤခေါင်းစဉ်အတွက်အသေးစိတ်ဖော်ပြချက်ကို XML ပုံစံဖြင့် ကြည့်ရန်"
+msgstr "XML ပုံစံဖြင့် ကြည့်ရန်"
 
 #: template/default/biblio_list_template.php:130
 #: template/default/biblio_list_template.php:154
@@ -305,7 +304,7 @@ msgstr "ကိုးကားရန်"
 
 #: template/lightweight/biblio_list_template.php:147
 msgid "none copy available"
-msgstr "စာအုပ်ဆင်တူနောက်တစ်အုပ်မရှိပါ"
+msgstr "ဆင်တူနောက်တစ်အုပ်မရှိပါ"
 
 #: template/lightweight/biblio_list_template.php:149
 msgid "{numberAvailable} copies available for loan"
@@ -313,55 +312,55 @@ msgstr "ရရှိနိုင်သော စာအုပ် {numberAvailable
 
 #: template/lightweight/biblio_list_template.php:161
 msgid "mark this"
-msgstr "ဤစာအုပ်အမည်ကိုအမှတ်အသားလုပ်ရန်"
+msgstr "မှတ်သားရန်"
 
 #: template/lightweight/biblio_list_template.php:170
 msgid "Share this title to Facebook"
-msgstr "ဤစာအုပ်အမည်ကို Facebook မှာ မျှဝေပါ။"
+msgstr "Facebook သို့ မျှဝေရန်"
 
 #: template/lightweight/biblio_list_template.php:171
 msgid "Share this title to Twitter"
-msgstr "ဤစာအုပ်အမည်ကို Twitter မှာ မျှဝေပါ။"
+msgstr "Twitter သို့ မျှဝေရန်"
 
 #: template/lightweight/biblio_list_template.php:172
 msgid "Share this title to Google Plus"
-msgstr "ဤစာအုပ်အမည်ကို Google Plus မှာ မျှဝေပါ။"
+msgstr "Google Plus သို့ မျှဝေရန်"
 
 #: template/lightweight/biblio_list_template.php:173
 msgid "Share this title to Digg It"
-msgstr "ဤစာအုပ်အမည်ကို Digg It မှာ မျှဝေပါ။"
+msgstr "Digg It သို့ မျှဝေရန်"
 
 #: template/lightweight/biblio_list_template.php:174
 msgid "Share this title to Reddit"
-msgstr "ဤစာအုပ်အမည်ကို Reddit မှာ မျှဝေပါ။"
+msgstr "Reddit သို့ မျှဝေရန်"
 
 #: template/lightweight/biblio_list_template.php:175
 msgid "Share this title to LinkedIn"
-msgstr "ဤစာအုပ်အမည်ကို LinkedIn မှာ မျှဝေပါ။"
+msgstr "LinkedIn သို့ မျှဝေရန်"
 
 #: template/lightweight/biblio_list_template.php:176
 msgid "Share this title to StumbleUpon"
-msgstr "ဤစာအုပ်အမည်ကို StumbleUpon မှာ မျှဝေပါ။"
+msgstr "StumbleUpon သို့ မျှဝေရန်"
 
 #: template/default/citation/apa_style_template.php:54
 #: template/lightweight/citation/apa_style_template.php:20
 msgid "APA Style"
-msgstr "APA စတိုင်"
+msgstr "APA ပုံစံ"
 
 #: template/default/citation/chicago_style_template.php:20
 #: template/lightweight/citation/chicago_style_template.php:20
 msgid "Chicago Style"
-msgstr "Chicago စတိုင်"
+msgstr "Chicago ပုံစံ"
 
 #: template/default/citation/mla_style_template.php:54
 #: template/lightweight/citation/mla_style_template.php:20
 msgid "MLA Style"
-msgstr "MLA စတိုင်"
+msgstr "MLA ပုံစံ"
 
 #: template/default/citation/turabian_style_template.php:23
 #: template/lightweight/citation/turabian_style_template.php:23
 msgid "Turabian Style"
-msgstr "Turabian စတိုင်"
+msgstr "Turabian ပုံစံ"
 
 #: template/default/detail_template.php:42
 #: template/lightweight/detail_template.php:30
@@ -381,12 +380,12 @@ msgstr "အသေးစိပ်အချက်အလက်များ"
 #: template/default/detail_template.php:134
 #: template/lightweight/detail_template.php:163
 msgid "Other version/related"
-msgstr "အခြားဗားရှင်း/ဆက်စပ်သော"
+msgstr "အခြားမူ/ဆက်စပ်မှု"
 
 #: template/default/detail_template.php:136
 #: template/lightweight/detail_template.php:164
 msgid "No other version available"
-msgstr "အခြားဗားရှင်းကို မရနိုင်ပါ။"
+msgstr "အခြားမူမရှိပါ။"
 
 #: template/default/detail_template.php:144
 #: template/lightweight/detail_template.php:181
@@ -413,7 +412,7 @@ msgstr "ရလဒ်မရှိပါ"
 #: template/default/parts/_result-search.php:76
 #: template/lightweight/index_template.inc.php:112
 msgid "Please try again"
-msgstr "ထပ်ကြိုးစားပါ"
+msgstr "ထပ်မံကြိုးစားပါ"
 
 #: template/lightweight/index_template.inc.php:130
 msgid "Search Result"
@@ -426,11 +425,11 @@ msgstr "အချက်အလက်"
 
 #: template/lightweight/index_template.inc.php:146
 msgid "Search Cluster"
-msgstr "ရှာဖွေမှု အစုအဝေး"
+msgstr "အုပ်စုလိုက်ရှာဖွေခြင်း"
 
 #: template/lightweight/index_template.inc.php:158
 msgid "Generating search cluster..."
-msgstr "ရှာဖွေမှု အစုအဝေးကို ထုတ်လုပ်နေသည်"
+msgstr "ရှာဖွေမှုအုပ်စုထုတ်ပေးနေသည်"
 
 #: template/lightweight/index_template.inc.php:194
 msgid "SEARCH"
@@ -443,11 +442,11 @@ msgstr "ရှာလိုသော စာအုပ်အမည်၊ စာရ�
 
 #: template/lightweight/index_template.inc.php:199
 msgid "use logical search \"title=library AND author=robert\""
-msgstr "logical operator (နှင့် ၊သို့မဟုတ် စသည်) များကိုသုံးး၍ ရှာဖွေမှုကို အသုံးပြုပါ။ ဥပမာ - \"ခေါင်းစဉ်=စာကြည့်တိုက် နှင့် စာရေးဆရာ=ရောဘတ်\""
+msgstr "logical operator (နှင့် ၊သို့မဟုတ် စသည်) များကိုသုံး၍ ရှာဖွေနိုင်ပါသည်။ ဥပမာ - \"ခေါင်းစဉ်=စာကြည့်တိုက် နှင့် စာရေးဆရာ=ရောဘတ်\""
 
 #: template/lightweight/index_template.inc.php:200
 msgid "just click on the Search button to see all collections"
-msgstr "စုစည်းမှုများအားလုံးကို ကြည့်ရှုရန် \"ရှာဖွေရန်\" ခလုတ်ကို နှိပ်ပါ။"
+msgstr "အားလုံးကို ကြည့်ရှုရန် \"ရှာဖွေရန်\" ခလုတ်ကို နှိပ်ပါ။"
 
 #: template/lightweight/login_template.inc.php:84
 msgid "Back To Home"
@@ -481,7 +480,7 @@ msgstr "ဘာသာစကားရွေးရန်"
 
 #: template/lightweight/visitor_template.php:33
 msgid "Please insert your library member ID otherwise your full name instead"
-msgstr "ကျေးဇူး ပြု၍သင်၏စာကြည့်တိုက်အသင်းဝင် နံပါတ်ထည့်ပါ။ သို့မဟုတ်သင်၏အမည်အပြည့်အစုံ ထည့်ပါ။"
+msgstr "စာကြည့်တိုက်အသင်းဝင် နံပါတ် သို့မဟုတ် အမည်အပြည့်အစုံ ထည့်ပါ။"
 
 #: template/lightweight/visitor_template.php:46
 msgid "Member ID / Visitor Name"
@@ -506,12 +505,12 @@ msgstr "သတင်းများ"
 #: template/default/biblio_list_template.php:123
 #: template/default/biblio_list_template.php:156
 msgid "Add to basket"
-msgstr "ခြင်းတောင်းထဲသို့ ထည့်ရန်"
+msgstr "ခြင်းထဲသို့ ထည့်ရန်"
 
 #: template/default/biblio_list_template.php:129
 #: template/default/biblio_list_template.php:153
 msgid "MARC Download"
-msgstr "MARC ဒေတာ ဒေါင်းလုတ်ရန်"
+msgstr "MARC ဒေါင်းလုဒ်လုပ်ရန်"
 
 #: template/default/biblio_list_template.php:169
 msgid "Item Not Available"
@@ -521,7 +520,7 @@ msgstr "လက်ရှိမရရှိနိုင်သေးပါ။"
 #: template/default/detail_template.php:24
 #: template/default/parts/_navbar.php:98
 msgid "Bookmark"
-msgstr "အမှတ်အသားပြုရန်"
+msgstr "မှတ်သားရန်"
 
 #: template/default/biblio_list_template.php:223
 #: template/default/detail_template.php:30
@@ -530,12 +529,12 @@ msgstr "မျှဝေရန်"
 
 #: template/default/detail_template.php:148
 msgid "You must be logged in to post a comment"
-msgstr "မှတ်ချက်ပေးရန် သင့်အကောင့်ကိုဝင်ရမည်။"
+msgstr "မှတ်ချက်ရေးရန် login ဝင်ပါ။"
 
 #: template/default/parts/_home.php:29
 #: template/default/parts/_modal_topic.php:15
 msgid "Select the topic you are interested in"
-msgstr "သင်စိတ်ဝင်စားသော ခေါင်းစဉ်ကို ရွေးချယ်ပါ။"
+msgstr "စိတ်ဝင်စားသော ခေါင်းစဉ်ကို ရွေးချယ်ပါ။"
 
 #: template/default/parts/_home.php:34
 #: template/default/parts/_modal_topic.php:73
@@ -563,7 +562,7 @@ msgstr "ပိုမိုကြည့်ရှုရန်..."
 
 #: template/default/parts/_home.php:68
 msgid "Popular among our collections"
-msgstr "ကျွန်ုပ်တို့၏ စုဆောင်းမှုများထဲမှ လူကြိုက်အများဆုံးများ"
+msgstr "လူကြိုက်များသော စာအုပ်များ"
 
 #: template/default/parts/_home.php:70
 msgid "Our library's line of collection that have been favoured by our users were shown here. Look for them. Borrow them. Hope you also like them"
@@ -571,19 +570,19 @@ msgstr "ကျွန်ုပ်တို့စာကြည့်တိုက်
 
 #: template/default/parts/_home.php:82
 msgid "New collections + updated"
-msgstr "အသစ်ဖြည့်သွင်းထားသော စုဆောင်းမှုများနှင့် ပြင်ဆင်မွမ်းမံထားသောအချက်အလက်များ"
+msgstr "အသစ်နှင့် ပြင်ဆင်မွမ်းမံထားသောအချက်အလက်များ"
 
 #: template/default/parts/_home.php:84
 msgid "These are new collections list. Hope you like them. Maybe not all of them are new. But in term of time, we make sure that these are fresh from our processing oven"
-msgstr "ဤစာရင်းသည် အသစ်ထည့်သွင်းထားသော စာအုပ်များ ဖြစ်ပါသည်။ သင်တို့ နှစ်သက်ကြမည်ဟု မျှော်လင့်ပါသည်။ အားလုံးအသစ်စက်စက် မဟုတ်နိုင်သော်လည်း လတ်တလောရောက်ရှိထားသော စာအုပ်များ ဖြစ်ပါသည်။"
+msgstr "အသစ်ထည့်သွင်းထားသော စာအုပ်များ ဖြစ်ပါသည်။ သင်တို့ နှစ်သက်ကြမည်ဟု မျှော်လင့်ပါသည်။ အားလုံးအသစ်စက်စက် မဟုတ်နိုင်သော်လည်း လတ်တလောရောက်ရှိထားသော စာအုပ်များ ဖြစ်ပါသည်။"
 
 #: template/default/parts/_home.php:97
 msgid "Top reader of the year"
-msgstr "ဒီနှစ်အတွက် စာဖတ်အများဆုံးသူ"
+msgstr "တစ်နှစ်တာအကောင်းဆုံးစာဖတ်သူ"
 
 #: template/default/parts/_home.php:99
 msgid "Our best users, readers, so far. Continue to read if you want your name being mentioned here"
-msgstr "လက်ရှိ အထူးချွန်ဆုံး အသုံးပြုသူ/စာဖတ်သူများ  ဖြစ်ပါသည်။ သင့်နာမည်ပါဝင်ချင်ရင် ဆက်လက်ဖတ်ရှုပါ။"
+msgstr "ကျွန်ုပ်တို့၏ အကောင်းဆုံး စာဖတ်သူများ။ သင့်နာမည်ပါဝင်ချင်ရင် ဆက်လက်ဖတ်ရှုပါ။"
 
 #: template/default/parts/_modal_advanced.php:27
 msgid "Enter title"
@@ -632,7 +631,7 @@ msgstr "ဘာသာရေး"
 
 #: template/default/parts/_modal_topic.php:55
 msgid "Pure Science"
-msgstr "ရိုးရိုးသိပ္ပံ"
+msgstr "သဘာဝသိပ္ပံ"
 
 #: template/default/parts/_modal_topic.php:79
 msgid "History & Geography"
@@ -652,11 +651,11 @@ msgstr "အစဉ်အတိုင်းစီရန်"
 
 #: template/default/parts/_search-form.php:25
 msgid "Enter keyword to search collection..."
-msgstr "စုစည်းမှုများကို ရှာဖွေရန် သော့ချက်စာလုံး ရိုက်ထည့်ပါ..."
+msgstr "ရှာဖွေရန်သော့ချက်စာလုံး ရိုက်ထည့်ပါ..."
 
 #: template/default/parts/_search-form.php:33
 msgid "Search by :"
-msgstr "ရှာဖွေရန် -"
+msgstr "ရှာဖွေမည့်ပုံစံ -"
 
 #: template/default/parts/_search-form.php:46
 msgid "OR TRY"
@@ -680,16 +679,16 @@ msgstr "သော့ချက်စာလုံးများ ထည့်သ�
 
 #: template/default/parts/footer.php:72
 msgid "Keep SLiMS Alive"
-msgstr "SLiMS ကို ဆက်လက်ရှင်သန်အောင် ထိန်းသိမ်းပါ"
+msgstr "SLiMS ကို ကူညီပါ"
 
 #: template/default/parts/footer.php:75
 msgid "Want to Contribute?"
-msgstr "ကျေးဇူးပြု၍ ပါဝင်ကူညီလိုပါသလား။"
+msgstr "ပါဝင်ကူညီလိုပါသလား။"
 
 #: template/default/parts/footer.php:81
 #: template/default/visitor_template.php:78
 msgid "Powered by "
-msgstr "ပံ့ပိုးကူညီသည် "
+msgstr "ပံ့ပိုးထားသူ "
 
 #: template/default/parts/footer.php:88
 msgid "Chat"
@@ -697,19 +696,19 @@ msgstr "စာတိုပေးပို့ရန်"
 
 #: template/default/tinfo.inc.php:39
 msgid "Enable this theme for mobile?"
-msgstr "မိုဘိုင်းအတွက် ဒီပုံစံ/အပြင်အဆင် (Theme )ကို ဖွင့်လိုပါသလား။"
+msgstr "မိုဘိုင်းအတွက် ဒီပုံစံ/အပြင်အဆင် (Theme )ကို သုံးမလား?"
 
 #: template/default/tinfo.inc.php:43
 msgid "Yes, please!"
-msgstr "ဟုတ်ကဲ့၊ ကျေးဇူးပြုပြီး!"
+msgstr "ဟုတ်ကဲ့၊ သုံးပါမယ်။"
 
 #: template/default/tinfo.inc.php:44
 msgid "No, I want use lighweight theme"
-msgstr "မဟုတ်ပါ။ ပေါ့ပါးတဲ့ ပုံစံ/အပြင်အဆင် (Theme ) ကို သုံးချင်ပါတယ်။"
+msgstr "မဟုတ်ပါ။ ရိုးရှင်းသော ပုံစံ/အပြင်အဆင် (Theme ) ကို သုံးပါမည်"
 
 #: template/default/tinfo.inc.php:49
 msgid "Library Sub Name"
-msgstr "စာကြည့်တိုက်၏ အခွဲအမည်"
+msgstr "စာကြည့်တိုက် အမည်ခွဲ"
 
 #: template/default/tinfo.inc.php:59
 msgid "Disable Slide"
@@ -717,11 +716,11 @@ msgstr "ဆလိုက်ကိုပိတ်ရန်"
 
 #: template/default/tinfo.inc.php:69
 msgid "Slide Transition"
-msgstr "ဆလိုက်များကြား ကူးပြောင်းမှု"
+msgstr "Slide ကူးပြောင်းမှုပုံစံ"
 
 #: template/default/tinfo.inc.php:73
 msgid "Fade"
-msgstr "မှေးမှိန်ခြင်း"
+msgstr "မှိန်ပျောက်ခြင်း"
 
 #: template/default/tinfo.inc.php:74
 msgid "Slide Left"
@@ -741,7 +740,7 @@ msgstr "အောက်သို့ ရွေ့ခြင်း"
 
 #: template/default/tinfo.inc.php:78
 msgid "Zoom In"
-msgstr "ချဲ့ကြည့်ခြင်း"
+msgstr "ချဲ့ခြင်း"
 
 #: template/default/tinfo.inc.php:79
 msgid "Burn"
@@ -749,15 +748,15 @@ msgstr "ပုံရိပ်ကူးပြောင်းခြင်း"
 
 #: template/default/tinfo.inc.php:80
 msgid "Flash"
-msgstr "လျှပ်တပြက်ပေါ်ခြင်း"
+msgstr "လျှပ်ခနဲဖြစ်ခြင်း"
 
 #: template/default/tinfo.inc.php:85
 msgid "Slide Animation"
-msgstr "ဆလိုက်ပေါ် ပုံရိပ်လှုပ်ရှားမှု"
+msgstr "ဆလိုက်လှုပ်ရှားမှု"
 
 #: template/default/tinfo.inc.php:104
 msgid "Delay"
-msgstr "နောက်ကျခြင်း"
+msgstr "ကြန့်ကြာချိန်"
 
 #: template/default/tinfo.inc.php:110
 msgid "Popular Collection"
@@ -765,7 +764,7 @@ msgstr "လူကြိုက်များသောစုစည်းမှု
 
 #: template/default/tinfo.inc.php:120
 msgid "Popular Items"
-msgstr "လူကြိုက်များသောစာကြည့်တိုက်ပစ္စည်းများ"
+msgstr "လူကြိုက်များသောစာပေပစ္စည်းများ"
 
 #: template/default/tinfo.inc.php:126
 msgid "New Collection"
@@ -773,11 +772,11 @@ msgstr "စုစည်းမှုအသစ်"
 
 #: template/default/tinfo.inc.php:136
 msgid "New Items"
-msgstr "စာကြည့်တိုက်ပစ္စည်းအသစ်များ"
+msgstr "စာကြည့်တိုက်စာပေပစ္စည်းအသစ်များ"
 
 #: template/default/tinfo.inc.php:142
 msgid "Top Reader"
-msgstr "ထိပ်တန်း စာဖတ်သူ"
+msgstr "အကောင်းဆုံးစာဖတ်သူ"
 
 #: template/default/tinfo.inc.php:152
 msgid "Suggestion"
@@ -789,31 +788,31 @@ msgstr "မြေပုံ"
 
 #: template/default/tinfo.inc.php:172
 msgid "Map URL"
-msgstr "မြေပုံ လိပ်စာ"
+msgstr "မြေပုံလင့်ခ်"
 
 #: template/default/tinfo.inc.php:180
 msgid "Map Description"
-msgstr "မြေပုံ ဖော်ပြချက်"
+msgstr "မြေပုံဖော်ပြချက်"
 
 #: template/default/tinfo.inc.php:186
 msgid "Facebook URL"
-msgstr "ဖေ့စ်ဘုတ် လိပ်စာ"
+msgstr "Facebook လင့်ခ်"
 
 #: template/default/tinfo.inc.php:194
 msgid "Twitter URL"
-msgstr "Twitter လိပ်စာ"
+msgstr "Twitter လင့်ခ်"
 
 #: template/default/tinfo.inc.php:202
 msgid "Youtube URL"
-msgstr "Youtube လိပ်စာ"
+msgstr "Youtube လင့်ခ်"
 
 #: template/default/tinfo.inc.php:210
 msgid "Instagram URL"
-msgstr "Instagram လိပ်စာ"
+msgstr "Instagram လင့်ခ်"
 
 #: template/default/tinfo.inc.php:218
 msgid "Footer About Us"
-msgstr "အောက်ခြေမှတ်စု (Footer) - ကျွန်ုပ်တို့အကြောင်း"
+msgstr "အောက်ခြေမှတ်စု (Footer)ရှိ ကျွန်ုပ်တို့အကြောင်း"
 
 #: template/default/tinfo.inc.php:224
 msgid "Visitor log voice"
@@ -821,11 +820,11 @@ msgstr "ဧည့်သည်မှတ်တမ်းအသံ"
 
 #: template/default/visitor_template.php:55
 msgid "Welcome to "
-msgstr "ကြိုဆိုပါတယ် "
+msgstr "ကြိုဆိုပါသည် "
 
 #: template/default/visitor_template.php:66
 msgid "Enter your member ID"
-msgstr "သင့်ရဲ့အသင်းဝင်နံပါတ်ထည့်ပါ။"
+msgstr "အသင်းဝင်နံပါတ်ထည့်ပါ။"
 
 #: template/default/visitor_template.php:71
 msgid "Enter your institution"
@@ -837,7 +836,7 @@ msgstr "အသင်းဝင်တစ်ဦးဖြစ်ပါက သင့�
 
 #: template/default/visitor_template.php:74
 msgid "Check In"
-msgstr "ဝင်ရောက်မှု မှတ်ပုံတင်ရန်"
+msgstr "စာရင်းသွင်းရန် (ဝင်ရန်)"
 
 #: template/lightweight/index_template.inc.php:93
 #: template/lightweight/index_template.inc.php:204
@@ -989,7 +988,7 @@ msgstr "အုပ်စု အမည်"
 
 #: chat.php:102
 msgid "You may also hit Enter button to starting in conversation. "
-msgstr "စကားပြောဆိုမှု စတင်ရန်အတွက် Enter ခလုတ်ကိုလည်း နှိပ်နိုင်ပါသည်။"
+msgstr "စကားပြောဆိုမှု စတင်ရန်အတွက် Enter ခလုတ်ကိုလည်း နှိပ်နိုင်ပါသည်။ "
 
 #: clustering.inc.php:111 clustering.inc.php:133
 msgid "More result"
@@ -2058,7 +2057,7 @@ msgstr "ရွေးချယ်ထားသော အချက်အလက်�
 
 #: admin/modules/bibliography/dl_print.php:239
 msgid "Change print label settings"
-msgstr "လေဘယ်ပုံနှိပ်သည့်သတ်မှတ်ချက်ပြောင်းရန်"
+msgstr "လေဘယ်ပုံနှိပ်သည့်သတ်မှတ်ချက် (setting) ပြောင်းရန်"
 
 #: admin/modules/bibliography/dl_print.php:248
 #: admin/modules/bibliography/item_barcode_generator.php:234
@@ -2711,7 +2710,7 @@ msgstr "စာရေးသူများ/ လုပ်ဆောင်ရသည�
 
 #: admin/modules/bibliography/index.php:812
 msgid "Add Author(s)"
-msgstr "စာရေးသူ(များ) ထပ်ထည့်ရန်"
+msgstr "စာရေးသူ(များ) ထည့်ရန်"
 
 #: admin/modules/bibliography/index.php:818
 msgid "Main source of information to show who has written, composed, illustrated, or in other ways contributed to the existence of the item."
@@ -2843,7 +2842,7 @@ msgstr "တန်ဖိုး"
 
 #: admin/modules/bibliography/index.php:927
 msgid "Item(s) code batch generator"
-msgstr "အချက်အလက်ဆိုင် အလိုအလျောက် ကုဒ်စံနစ်"
+msgstr "အလိုအလျောက် item ကုဒ်စံနစ်"
 
 #: admin/modules/bibliography/index.php:931
 msgid "Add New Items"
@@ -3112,7 +3111,7 @@ msgstr "သင်သည် စာအုပ်ဆိုင်ရာ အချက�
 #: admin/modules/membership/member_type.php:334
 #: admin/modules/system/content.php:322 admin/modules/system/content.php:326
 msgid "Last Updated"
-msgstr "နောက်ဆုံးအကြိမ်က ဖြည့်စွက်ခဲ့သည့် နေ့စွဲ"
+msgstr "နောက်ဆုံးအကြိမ်က ထပ်ဖြည့်စွက်ခဲ့သည့် နေ့စွဲ"
 
 #: admin/modules/bibliography/index.php:1205
 msgid "Current url is not valid or your internet is down."
@@ -3197,7 +3196,7 @@ msgstr "ရွေးချယ်ထားသောအချက်အလက်မ
 
 #: admin/modules/bibliography/item_barcode_generator.php:225
 msgid "Change print barcode settings"
-msgstr "ဘားကုဒ်ပုံနှိပ်သည့်အစီအစဉ်ပြောင်းရန်"
+msgstr "ဘားကုဒ်ပုံနှိပ်သည့်သတ်မှတ်ချက် (setting) ပြောင်းရန်"
 
 #: admin/modules/bibliography/item_export.php:152
 msgid "There is no record in item database yet, Export FAILED!"
@@ -3624,7 +3623,7 @@ msgstr "စာရေးသူထပ်ထည့်ပြီး"
 
 #: admin/modules/bibliography/pop_author.php:144
 msgid "Add Author"
-msgstr "စာရေးသူ ထပ်ထည့်ရန်"
+msgstr "စာရေးသူထည့်ရန်"
 
 #: admin/modules/bibliography/pop_author.php:150
 #: admin/modules/bibliography/pop_author_edit.php:91
@@ -3948,11 +3947,11 @@ msgstr "ရွေးချယ်ထားသော အချက်အလက်�
 
 #: admin/modules/bibliography/printed_card.php:317
 msgid "Change print catalog settings"
-msgstr "ကက်တလောက်ကတ် ပုံနှိပ်သည့်သတ်မှတ်ချက်ပြောင်းရန်"
+msgstr "ကက်တလောက်ကတ် ပုံနှိပ်သည့်သတ်မှတ်ချက် (setting)ပြောင်းရန်"
 
 #: admin/modules/bibliography/printed_card.php:317
 msgid "Change Print Catalog settings"
-msgstr "ကက်တလောက်ကတ် ပုံနှိပ်သည့်သတ်မှတ်ချက်ပြောင်းရန်"
+msgstr "ကက်တလောက်ကတ် ပုံနှိပ်သည့်သတ်မှတ်ချက် (setting) ပြောင်းရန်"
 
 #: admin/modules/bibliography/printed_card.php:366
 #: admin/modules/reporting/customs/procurement_report.php:57
@@ -4659,7 +4658,7 @@ msgstr "တစ်ရက် အတွက် ဒဏ်ငွေ"
 
 #: admin/modules/circulation/loan_rules.php:220
 msgid "Overdue Grace Periode"
-msgstr "ပြန်လည်အပ်နှံရန် ခွင့်ပြုရက်မှ အသာတကြည်ကျော်လွန်ခွင့်"
+msgstr "ရက်နောက်ကျသော်လည်း ဒဏ်ကြေးကောက်ခံခြင်းမပြုဘဲ သည်းခံခွင့်လွှတ်ပေးမည့် ရက်ကာလ"
 
 #: admin/modules/circulation/loan_rules.php:224
 msgid "You are going to edit loan rules"
@@ -4966,7 +4965,7 @@ msgstr "ဘာသာစကားအချက်အလက် သိမ်းဆ�
 #: admin/modules/master_file/doc_language.php:123
 #: admin/modules/master_file/publisher.php:134
 msgid "%s still in use %d biblio"
-msgstr "%s ကို bibliographic မှတ်တမ်း %d ခုတွင် ဆက်လက် အသုံးပြုနေပါသည်။ "
+msgstr "%s ကို bibliographic မှတ်တမ်း %d ခုတွင် ဆက်လက် အသုံးပြုနေပါသည်။"
 
 #: admin/modules/master_file/doc_language.php:162
 msgid "Language List"
@@ -5796,7 +5795,7 @@ msgstr "ပညာရပ်အသစ် ထပ်ဖြည့်ပါ"
 
 #: admin/modules/master_file/topic.php:255
 msgid "Classification Code"
-msgstr "မျိုးတူစုသင်္ကေတ"
+msgstr "မျိုးတူစုအမှတ်ကုဒ်"
 
 #: admin/modules/master_file/topic.php:260
 #: admin/modules/master_file/topic.php:299
@@ -6187,7 +6186,7 @@ msgstr "တစ်ရက်အတွက် ဒဏ်ငွေ"
 
 #: admin/modules/membership/member_type.php:307
 msgid "Overdue Grace Period"
-msgstr "ပြန်ပို့ရန် နောက်ဆုံးရက်ထက် ကျော်လွန်ခွင့်ရှိသော ရက်များ"
+msgstr "ရက်နောက်ကျသော်လည်း ဒဏ်ကြေးကောက်ခံခြင်းမပြုဘဲ သည်းခံခွင့်လွှတ်ပေးမည့် ရက်ကာလ"
 
 #: admin/modules/membership/submenu.php:26
 msgid "MEMBERSHIP"
@@ -6371,11 +6370,11 @@ msgstr "စာစုများ/ စာအုပ်များသုံးခ�
 #: admin/modules/reporting/customs/customs_report_list.inc.php:32
 #: admin/modules/reporting/customs/loan_by_class.php:58
 msgid "Loans by Classification"
-msgstr "မျိုးတူစုအလိုက် စာငှားမှတ်တမ်းများ"
+msgstr "မျိုးတူစုအမှတ်အလိုက် စာငှားမှတ်တမ်းများ"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:32
 msgid "Loan statistic by classification"
-msgstr "မျိုးတူစုအလိုက်စာငှားစာရင်း"
+msgstr "မျိုးတူစုအမှတ်အလိုက်စာငှားစာရင်း"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:33
 msgid "List of library member/patron"
@@ -9662,7 +9661,7 @@ msgstr "နောက်ဆုံးစာမျက်နှာ"
 
 #: sysconfig.inc.php:706
 msgid "Personal Name"
-msgstr "ကိုယ်ပိုင်အမည်"
+msgstr "ပုဂ္ဂိုလ်အမည်"
 
 #: sysconfig.inc.php:707
 msgid "Organizational Body"
