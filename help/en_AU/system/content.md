@@ -8,7 +8,7 @@ This function is used to change the appearance of the SLiMS application content.
 - **Help on usage** (accessed from the OPAC)
 - **Library information** (also accessed from the OPAC)
 
-Example of usage: consider a path created for the new content that is stored as '*librarian*'. On a SLiMS system accessed by the URL http://localhost/slims , to display this content then we need to write the url:
+Example of usage: consider a path created for the new content that is stored as "*librarian*". On a SLiMS system accessed by the URL http://localhost/slims , to display this content then we need to write the url:
 
 http://localhost/slims/index.php?p=librarian
 
