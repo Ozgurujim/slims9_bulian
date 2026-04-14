@@ -22,3 +22,13 @@ Clicking the **Download report** button will generate a .html file containing th
 Commencing with Senayan3-stable14, the three types of report are equipped with a print feature of various Pie charts. You get this graph simply by clicking the “Show in Chart/Plot“ which appears in all three types of report (Statistics Collection, Loan Report, and Membership Report).
 
 
+
+------
+
+
+
+
+[//]: # " created by jim@burmastudy.org based on SLIMS 9.7.2   10/04/2026"
+
+
+

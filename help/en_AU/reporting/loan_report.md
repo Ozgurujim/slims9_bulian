@@ -29,3 +29,14 @@ This report contains information on borrowing from the complete collection , wit
   Clicking either of the  **Show in chart/plot** buttons will generate a graphic representation of the data , which will be displayed and can be printed or captured.
 
   
+  
+  ------
+  
+  
+  
+  
+  [//]: # " created by jim@burmastudy.org based on SLIMS 9.7.2   10/04/2026"
+  
+  
+  
+  
