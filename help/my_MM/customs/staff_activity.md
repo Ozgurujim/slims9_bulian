@@ -1,16 +1,5 @@
-### Staff Activity
+### Aktivitas staff
+<hr>
+Menu ini memperlihatkan aktifitas Staff perpustakaan yang mempunyai account di aplikasi Senayan. Informasi yang ditampilkan adalah Username, Login Name, Bibliografy data entry, Item data Entry, Member data entry, dan Circulation. Jadi dengan menu ini akan terlihat staff melakukan apa dan berapa kali.
 
-------
-
-This menu shows the activities of the library staff who have an account in application. The information shown is:
-
-- *Username,* 
-- *Login Name,* 
-- *Bibliography Data Entry,* 
-- *Items Data Entry,* 
-- *Member Data Entry, and* 
-- *Circulation.* 
-
-So this menu will make visible which staff did what, and how many times.
-
-To enhance the accuracy of the information, a filter is also provided that allows you to view activities from the start to the end date (as specified).
+Untuk memperakurat informasi, disediakan pula filter yang memungkinkan kita melihat aktifitas dari tanggal awal sampai akhir (seperti yang ditentukan).

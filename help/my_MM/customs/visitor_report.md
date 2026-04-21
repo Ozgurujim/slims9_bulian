@@ -1,6 +1,4 @@
-### Visitor Statistic
-
-------
+###Visitor Statistic
 
 This is a report that contains statistics of library visitors. This report contains:
 - Member Type, and 

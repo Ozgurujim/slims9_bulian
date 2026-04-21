@@ -1,21 +1,22 @@
-#### Master File / Collection Type
+#### Master File / Collection အမျိုးအစား
+
 <hr>
-The various collections of resources owned by the library, for example: Textbook, Reference, Fiction.
+စာကြည့်တိုက်ပိုင် အရင်းအမြစ်အမျိုးမျိုး၊ ဥပမာ- Textbook၊ Reference၊ Fiction။
 
-This enables management of the collections master file. It displays the list of all collections in the SLiMS database , with data for:
+၎င်းသည် collection master file ကို စီမံခန့်ခွဲနိုင်စေပါသည်။ ၎င်းသည် SLiMS database ရှိ collection အားလုံး၏စာရင်းကို ပြသပြီး အောက်ပါတို့အတွက် အချက်အလက်များ ပါဝင်သည်-
 
-- *Collection type* ( name of the collection category)
-- *Last update* ( When record was last edited)
+- *Collection အမျိုးအစား* (collection အမျိုးအစား၏အမည်)
 
-This section is provided with facilities to DELETE  and EDIT collection data.
+- *နောက်ဆုံးအပ်ဒိတ်လုပ်ခဲ့သည့်အချိန်* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-To edit an item , double-click on the title , or single-click on the pencil (edit) icon.
+ဤအပိုင်းတွင် collection data များကို ဖျက်ခြင်းနှင့် တည်းဖြတ်ခြင်းအတွက် အထောက်အကူပြုပစ္စည်းများ ပါဝင်သည်။
 
-A search function allows you to search for entries by keywords.
+အရာတစ်ခုကို တည်းဖြတ်ရန်၊ ခေါင်းစဉ်ကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ရန်) အိုင်ကွန်ကို နှိပ်ပါ။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+ရှာဖွေရေးလုပ်ဆောင်ချက်သည် keyword များဖြင့် entry များကို ရှာဖွေနိုင်စေပါသည်။
 
-##### Add new collection type
+ရလဒ်များကို column တစ်ခုစီ၏ထိပ်ရှိ field အမည်ကို နှိပ်ခြင်းဖြင့် စီနိုင်သည်။
 
-This provides the facility to add new collection types directly to the Senayan system. 
+##### Collection အမျိုးအစားအသစ်ထည့်ပါ
 
+၎င်းသည် Senayan စနစ်သို့ collection အမျိုးအစားအသစ်များကို တိုက်ရိုက်ထည့်သွင်းရန် အထောက်အကူပြုပစ္စည်းတစ်ခု ပေးပါသည်။

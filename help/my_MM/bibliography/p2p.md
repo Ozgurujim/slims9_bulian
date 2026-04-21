@@ -1,18 +1,19 @@
-#### P2P Service
+#### P2P ဝန်ဆောင်မှု
 
 <hr>
-The basic concept of this feature is to share catalogue data among SLiMS users. This is an XML P2P service utilising the facilities that already exist in SLiMS for sharing catalog data. 
-#### Method of use
+ဤအင်္ဂါရပ်၏ အခြေခံအယူအဆမှာ Senayan အသုံးပြုသူများအကြား ကတ်တလောက်ဒေတာများကို မျှဝေရန်ဖြစ်သည်။ ၎င်းသည် Senayan တွင် ရှိပြီးသား ကတ်တလောက်ဒေတာများကို မျှဝေရန် အသုံးပြုသည့် XML P2P ဝန်ဆောင်မှုတစ်ခုဖြစ်သည်။
+
+#### အသုံးပြုနည်း
 
 <hr>
-To use this P2P service, simply click the P2P service, enter a keyword and select the location / url / library intended to search. If the system finds a searchable collection, it will be displayed.
+ဤ P2P ဝန်ဆောင်မှုကို အသုံးပြုရန်၊ P2P ဝန်ဆောင်မှုကို နှိပ်ပါ၊ သော့ချက်စာလုံးတစ်ခု ရိုက်ထည့်ပါ၊ ထို့နောက် သင်ရှာဖွေလိုသော တည်နေရာ / url / စာကြည့်တိုက်ကို ရွေးချယ်ပါ။ စနစ်သည် ရှာဖွေနိုင်သော စုစည်းမှုကို တွေ့ရှိပါက ပြသပေးပါလိမ့်မည်။
 
-Search on P2P service can use specific Boolean search models. 
-> For example ISBN = 0-596-00108-8 AND Title = bazaar. 
+P2P ဝန်ဆောင်မှုတွင် ရှာဖွေခြင်းသည် သတ်မှတ်ထားသော Boolean ရှာဖွေရေးပုံစံများကို အသုံးပြုနိုင်သည်။
+
+> ဥပမာအားဖြင့်၊ ISBN = 0-596-00108-8 နှင့် Title = bazaar။
 >
-> 
 
-Besides ISBN and Title, details can also be searched using Author, GMD and Subject. 
+ISBN နှင့် Title အပြင်၊ အသေးစိတ်အချက်အလက်များအတွက် Author၊ GMD နှင့် Subject တို့ကို အသုံးပြု၍လည်း ရှာဖွေနိုင်ပါသည်။
 
 
 

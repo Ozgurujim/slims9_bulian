@@ -1,31 +1,32 @@
-#### Loan History
+##### ချေးငွေမှတ်တမ်း
+
+<hr>
 
 ```
-This displays a list of items that have been borrowed.
-The data that appears consists of:
+၎င်းသည် ချေးယူထားသော အရာများစာရင်းကို ပြသသည်။
+ပေါ်လာသော အချက်အလက်များတွင် အောက်ပါတို့ ပါဝင်သည်-
 ```
 
-- *Member ID,*
-- *Member Name,*
-- *Item Code,*
-- *Title,*
-- *Loan date,*
-- *Due date.*
+- *အဖွဲ့ဝင် ID၊*
+- *အဖွဲ့ဝင်အမည်၊*
+- *ပစ္စည်းကုဒ်၊*
+- *ရာထူး၊*
+- *ချေးငွေရက်စွဲ၊*
+- *ပေးရမည့်ရက်စွဲ။*
 
 ```
-This menu also provides the facility to print a borrowing history list, and to export the data to a spreadsheet [XLXS] format file which will download to your browsers default download location.
-
-In addition, it is also possible to search for historical data.
-The historical data search is carried out based on:
+ဤမီနူးသည် ချေးငွေမှတ်တမ်းစာရင်းကို ပရင့်ထုတ်ပြီး သင့်ဘရောက်ဆာ၏ မူရင်းဒေါင်းလုဒ်တည်နေရာသို့ ဒေါင်းလုဒ်လုပ်မည့် spreadsheet [XLXS] ဖော်မတ်ဖိုင်သို့ ဒေတာကို ထုတ်ယူနိုင်စေပါသည်။
+ထို့အပြင်၊ သမိုင်းဝင်ဒေတာများကို ရှာဖွေနိုင်ပါသည်။
+သမိုင်းဝင်ဒေတာရှာဖွေမှုများကို အောက်ပါတို့အပေါ် အခြေခံ၍ လုပ်ဆောင်သည်-
 ```
 
-- Member ID/Member Name,
-- Document Title,
-- Item Code,
-- Loan Date From
-- Loan Date Until.
+- အဖွဲ့ဝင် ID/အဖွဲ့ဝင်အမည်၊
+- စာရွက်စာတမ်းခေါင်းစဉ်၊
+- ပစ္စည်းကုဒ်၊
+- ချေးငွေရက်စွဲမှ
+- ချေးငွေရက်စွဲအထိ။
 
-This facility can be displayed by clicking **Show More Filter Options**. 
+ဤအင်္ဂါရပ်ကို **စစ်ထုတ်ရွေးချယ်စရာများ ပိုမိုပြပါ** ကို နှိပ်ခြင်းဖြင့် ပြသနိုင်သည်။
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Circulation/loanhistory" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

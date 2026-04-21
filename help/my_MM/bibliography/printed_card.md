@@ -1,50 +1,54 @@
-#### Catalogue Printing
+#### ကတ်တလောက်ပုံနှိပ်ခြင်း
+
 <hr>
-This feature can be used to print traditional catalogue cards (Shelf List, Author, Subject, Title). 
-The steps for printing are similar to printing a barcode or book label: 
+ဤအင်္ဂါရပ်ကို ရိုးရာကတ်တလောက်ကတ်များ (စင်စာရင်း၊ စာရေးသူ၊ ဘာသာရပ်၊ ခေါင်းစဉ်) ကို ရိုက်နှိပ်ရန် အသုံးပြုနိုင်ပါသည်။
 
-- **Change Print Catalogue Settings** to select which cards are printed:
+ပုံနှိပ်ခြင်းအတွက် အဆင့်များသည် ဘားကုဒ် သို့မဟုတ် စာအုပ်တံဆိပ်ကို ရိုက်နှိပ်ခြင်းနှင့် ဆင်တူပါသည်။
 
-  * Shelf list card [Show/Hide]
+- မည်သည့်ကတ်များကို ရိုက်နှိပ်ရမည်ကို ရွေးချယ်ရန် **ပုံနှိပ်ကတ်တလောက်ဆက်တင်များကို ပြောင်းလဲရန်**
 
-  * Title card [Show/Hide]
+* စင်စာရင်းကတ် [ပြ/ဝှက်]
 
-  * Author card [Show/Hide]
+* ခေါင်းစဉ်ကတ် [ပြ/ဝှက်]
 
-  * Subject card [Show/Hide]
+* စာရေးသူကတ် [ပြ/ဝှက်]
 
-    Then  click **Save Settings**
+* ခေါင်းစဉ်ကတ် [ပြ/ဝှက်]
 
-- **Select** the titles for which you want to print cards, by clicking on the title(s) or the checkbox at the side. A checkmark will appear in the box of those selected. 
+ထို့နောက် **ဆက်တင်များကို သိမ်းဆည်းပါ** ကို နှိပ်ပါ။
 
-  When printing consecutive title labels, select the first title, hold Shift key, and select the last title in your selection to select more than one in rapid sequence. *Note: one print run can only contain a maximum of 50 records.* 
+- ကတ်များကို ရိုက်နှိပ်လိုသော ခေါင်းစဉ်များကို **ရွေးချယ်ပါ**၊ ခေါင်းစဉ်(များ) သို့မဟုတ် ၎င်းတို့ဘေးရှိ အကွက်ကို နှိပ်ခြင်းဖြင့် ရွေးချယ်ပါ။ ရွေးချယ်ထားသော ခေါင်းစဉ်များဘေးရှိ အကွက်တွင် အမှန်ခြစ်တစ်ခု ပေါ်လာပါမည်။
 
-- **Add** the data to the print queue. 
+ဆက်တိုက် ခေါင်းစဉ်တံဆိပ်များကို ရိုက်နှိပ်သည့်အခါ၊ ပထမဆုံးခေါင်းစဉ်ကို ရွေးချယ်ပါ၊ Shift ခလုတ်ကို ဖိထားပြီး သင်ရွေးချယ်ထားသော နောက်ဆုံးခေါင်းစဉ်ကို ရွေးချယ်ပါ၊ ထို့နောက် ဆက်တိုက်တစ်ခုထက်ပို၍ ရွေးချယ်ပါ။ *မှတ်ချက်- ရိုက်နှိပ်ခြင်းအလုပ်တွင် အများဆုံး မှတ်တမ်း ၅၀ သာ ပါဝင်နိုင်သည်။*
 
-- **Print** the catalogue cards for the data 
+- ရိုက်နှိပ်စာရင်းသို့ ဒေတာထည့်ပါ။
 
-- **Clear** the print queue ( optional).
+- ဒေတာအတွက် **ကတ်တလောက်ကတ်များကို ရိုက်နှိပ်ပါ။
 
-
+- **ပုံနှိပ်စာရင်းကို ရှင်းလင်းပါ** (ရွေးချယ်နိုင်သည်)။
 
 ------
 
-- You can click **Change Print Catalogue Settings** to select which cards are printed:
+- **ပုံနှိပ်ကတ်တလောက်ဆက်တင်များကို ပြောင်းလဲရန်**နှိပ်နိုင်သည်-
 
-  * Shelf List card [Show/Hide]
+* စင်ကတ် [ပြ/ဝှက်]
 
-  * Title card [Show/Hide]
+* ခေါင်းစဉ်ကတ် [ပြ/ဝှက်]
 
-  * Author card [Show/Hide]
+* စာရေးသူကတ် [ပြ/ဝှက်]
 
-  * Subject card [Show/Hide]
+* ခေါင်းစဉ်ကတ် [ပြ/ဝှက်]
 
-    Then  click **Save Settings**
-  
-  
-  
-  <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Catalog%20Printing" 
-     onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
-     <u>🔗See Also: SLiMS online UserGuide
-  </u></a>
+* ခေါင်းစဉ်ကတ် [ပြ/ဝှက်]
+
+ထို့နောက် **ဆက်တင်များကို သိမ်းဆည်းပါ** ကို နှိပ်ပါ။
+
+
+
+<a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Catalog%20Printing" 
+   onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;">
+   <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Catalog%20Printing" 
+   onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
+   <u>🔗See Also: SLiMS online UserGuide
+</u></a>
 

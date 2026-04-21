@@ -1,12 +1,13 @@
-#### Import Data
+#### ဒေတာတင်သွင်းခြင်း
+
 <hr>
-The “Import Data” menu is used to retrieve cataloguing data from outside of SLiMS, via a file in CSV format (or also from a database that has been exported from Senayan to a file in CSV format), and to then include it in Senayan. 
+“ဒေတာတင်သွင်းခြင်း” မီနူးကို SLiMS ပြင်ပမှ CSV ဖော်မတ်ဖိုင်မှတစ်ဆင့် (သို့မဟုတ် Senayan မှ CSV ဖော်မတ်ဖိုင်သို့ တင်ပို့ထားသော ဒေတာဘေ့စ်မှလည်း) ဒေတာများကို ကတ်တလောက်ရယူရန်နှင့် Senayan တွင် ထည့်သွင်းရန်အတွက် အသုံးပြုသည်။
 
-You must specify the file containing the data,  and can choose the field separator character, the field enclosing character, the number of records to import, which record to start from, and whether the first record consists of the field names.
+ဒေတာပါရှိသော ဖိုင်ကို သင်သတ်မှတ်ရမည်ဖြစ်ပြီး field separator စာလုံး၊ field enclosing စာလုံး၊ တင်သွင်းရမည့် မှတ်တမ်းအရေအတွက်၊ မည်သည့်မှတ်တမ်းမှ စတင်ရမည်နှင့် ပထမဆုံးမှတ်တမ်းတွင် field အမည်များ ပါဝင်ခြင်း ရှိ၊ မရှိကို ရွေးချယ်နိုင်သည်။
 
-Generally, the defaults will OK to use, unless the CSV file is unusual in format.
+ယေဘုယျအားဖြင့် CSV ဖိုင်သည် ဖော်မတ်တွင် ပုံမှန်မဟုတ်ပါက default များကို အသုံးပြုနိုင်ပါသည်။
 
-The CSV file for importing should generally be in the same format as a standard SLiMS CSV export file, so it is worthwhile studying one of those for format, field names, and field order, if you are importing a CSV from a different application.
+တင်သွင်းရန်အတွက် CSV ဖိုင်သည် ယေဘုယျအားဖြင့် standard SLiMS CSV တင်ပို့ဖိုင်နှင့် တူညီသော ဖော်မတ်ဖြစ်သင့်သောကြောင့် အခြားအပလီကေးရှင်းတစ်ခုမှ CSV ကို တင်သွင်းပါက ဖော်မတ်၊ field အမည်များနှင့် field အစီအစဉ်အတွက် ၎င်းတို့ထဲမှ တစ်ခုကို လေ့လာသင့်ပါသည်။
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Data%20Import" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

@@ -1,6 +1,4 @@
-### Items title list
-
-------
+###Items title list
 
 Displays a list of all items, with their titles. Each record provides :
 

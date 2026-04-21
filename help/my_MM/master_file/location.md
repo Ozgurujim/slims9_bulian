@@ -1,24 +1,26 @@
 #### Master File / Location
+
 <hr>
-Location information in SLiMS is used to indicate  resources that might be located together in a particular building or branch of the library.
+SLiMS ရှိ တည်နေရာအချက်အလက်ကို စာကြည့်တိုက်၏ သီးခြားအဆောက်အအုံ သို့မဟုတ် ဌာနခွဲတစ်ခုတွင် အတူတကွတည်ရှိနိုင်သည့် အရင်းအမြစ်များကို ညွှန်ပြရန် အသုံးပြုသည်။
 
-##### Location list 
+##### တည်နေရာစာရင်း
 
-This function enables management of the location master-file. It displays the list of possible locations ( e.g Engineering faculty library )  in the SLiMS database , with data for:
+ဤလုပ်ဆောင်ချက်သည် တည်နေရာ master-file ကို စီမံခန့်ခွဲနိုင်စေပါသည်။ ၎င်းသည် SLiMS ဒေတာဘေ့စ် (ဥပမာ- အင်ဂျင်နီယာစာကြည့်တိုက်) ရှိ ဖြစ်နိုင်ခြေရှိသော တည်နေရာများစာရင်းကို ပြသပြီး အောက်ပါတို့အတွက် အချက်အလက်များ ပါရှိသည်-
 
-- *Location code (*unique code for the status)
-- *Location name* (description of the status)
-- *Last update* (when the record was last edited)
+- *တည်နေရာကုဒ် (*တည်နေရာအတွက် ထူးခြားသောကုဒ်)
 
-This section is provided with facilities to DELETE  and EDIT location data.
+- *တည်နေရာအမည်* (တည်နေရာဖော်ပြချက်)
 
-To edit a location , double-click on the location , or single-click on the pencil (edit) icon.
+- *နောက်ဆုံးအပ်ဒိတ်လုပ်ခဲ့သည့်အချိန်* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-A search function allows you to search for entries by location name keywords.
+ဤအပိုင်းတွင် တည်နေရာဒေတာကို ဖျက်ခြင်းနှင့် တည်းဖြတ်ခြင်းအတွက် အထောက်အကူပြုပစ္စည်းများ ပါရှိသည်။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+တည်နေရာတစ်ခုကို တည်းဖြတ်ရန် တည်နေရာကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ခြင်း) အိုင်ကွန်ကို နှိပ်ပါ။
 
-##### Add new location
+ရှာဖွေရေးလုပ်ဆောင်ချက်သည် တည်နေရာအမည် သော့ချက်စာလုံးများဖြင့် မှတ်တမ်းများကို ရှာဖွေနိုင်စေပါသည်။
 
-This provides the facility to add new locations directly to the data in the Senayan system. Locations' information to be entered includes the fields listed above, with the exception of *Last updated*, which is done automatically when the **Save** button is clicked.
+ရလဒ်များကို ကော်လံတစ်ခုစီ၏ထိပ်ရှိ အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် စီနိုင်သည်။
 
+##### တည်နေရာအသစ်ထည့်ပါ
+
+၎င်းသည် Senayan စနစ်ရှိ ဒေတာသို့ တည်နေရာအသစ်များကို တိုက်ရိုက်ထည့်နိုင်စေပါသည်။ ထည့်သွင်းရမည့် နေရာများ၏ အချက်အလက်တွင် အထက်ဖော်ပြပါ အကွက်များ ပါဝင်မည်ဖြစ်ပြီး *နောက်ဆုံး အပ်ဒိတ်လုပ်ထားသည်* မှလွဲ၍ ၎င်းမှာ **သိမ်းဆည်းရန်** ခလုတ်ကို နှိပ်လိုက်သောအခါ အလိုအလျောက် လုပ်ဆောင်သွားမည်ဖြစ်သည်။

@@ -1,12 +1,11 @@
-### Custom Recapitulations
+### စိတ်ကြိုက်ပြန်လည်အကျဉ်းချုပ်များ
 
-------
+ဤမီနူးသည် အောက်ပါတို့၏ ပြန်လည်အကျဉ်းချုပ်ကို ပြသသည်-
 
-This menu displays the recapitulation of:
-- *Titles, based on Classification,* 
-- *GMD,* 
-- *Collection Type or Language.* 
+- အမျိုးအစားခွဲခြားမှုအပေါ်အခြေခံသည့် ခေါင်းစဉ်များ၊
+- GMD၊
+- စုစည်းမှုအမျိုးအစား သို့မဟုတ် ဘာသာစကား။
 
-This option can be set by selecting the recapitulation filter available. Senayan also supports recap for classifications not based on decimal numbers. For example, REF for reference.
+ရရှိနိုင်သော ပြန်လည်အကျဉ်းချုပ် filter ကို ရွေးချယ်ခြင်းဖြင့် ဤရွေးချယ်မှုကို သတ်မှတ်နိုင်သည်။ Senayan သည် ဒဿမဂဏန်းများအပေါ်အခြေခံခြင်းမရှိသော အမျိုးအစားခွဲခြားမှုများအတွက် ပြန်လည်အကျဉ်းချုပ်ကိုလည်း ပံ့ပိုးပေးသည်။ ဥပမာအားဖြင့်၊ ရည်ညွှန်းချက်အတွက် REF။
 
-Custom Recapitulation - “**Print Current Page**” provides the facility to print reports, and "**Export to spreadsheet format**" to place the report in a spreadsheet.
+စိတ်ကြိုက်ပြန်လည်အကျဉ်းချုပ် - “**လက်ရှိစာမျက်နှာကို ပုံနှိပ်ပါ**” သည် အစီရင်ခံစာများကို ပုံနှိပ်ရန် အထောက်အကူပြုပြီး အစီရင်ခံစာကို spreadsheet တွင် ထည့်သွင်းရန် "**Export to spreadsheet format**" ကို ပံ့ပိုးပေးသည်။

@@ -1,31 +1,32 @@
 #### Item List
+
 <hr>
-This function is used to view items in the SLiMS catalogue. The information displayed in this menu, for each record is:
+ဤလုပ်ဆောင်ချက်ကို SLiMS ကတ်တလောက်ရှိ ပစ္စည်းများကိုကြည့်ရှုရန်အသုံးပြုသည်။ ဤမီနူးတွင်ပြသထားသော အချက်အလက်များသည် မှတ်တမ်းတစ်ခုစီအတွက်-
 
-- *Item code*
+- *ပစ္စည်းကုဒ်*
 
-- *Title*
+- *ခေါင်းစဉ်*
 
-- *Type*
+- *စုဆောင်းမှုအမျိုးအစား၊*
 
-- *Location*
+- *တည်နေရာ*
 
-- *Call number*
+- *ခေါ်ဆိုနံပါတ်*
 
-- *Last updated*
+- *နောက်ဆုံးအပ်ဒိတ်လုပ်ထားသည်*
 
-  
+ကော်လံ၏ထိပ်ရှိ ကွက်လပ်အမည်ကို နှိပ်ခြင်းဖြင့် စာရင်းကို ဤကွက်လပ်များထဲမှ တစ်ခုခုအလိုက် စီနိုင်သည်။ ဥပမာ- ပစ္စည်းကုဒ်ဖြင့် စီရန် "ပစ္စည်းကုဒ်" ကို နှိပ်ပါ။
+
+သော့ချက်စာလုံးများနှင့် ကိုက်ညီသော ပစ္စည်းများကို ကတ်တလောက်တွင် ရှာဖွေပေးမည့် ရှာဖွေရေးလုပ်ဆောင်ချက်တစ်ခုရှိသည်။
+
+ဤမီနူးကို ပစ္စည်းများကို တည်းဖြတ်ရန်နှင့် ဖျက်ရန်လည်း အသုံးပြုနိုင်သည်။
+
+ပစ္စည်းတစ်ခုကို တည်းဖြတ်ရန် ခေါင်းစဉ်ကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ရန်) အိုင်ကွန်ကို တစ်ချက်နှိပ်ပါ။
 
 
-The list may be sorted by any of these fields by simply clicking on the field name at the top of the column. E.g to sort by Item code, simply click "Item code".
-
-A search function exists which will search the catalogue for items matching the keywords
-
-This menu can also be used to edit and delete items. 
-
-To edit an item , double-click on the title , or single-click on the pencil ( edit) icon.
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Item%20List" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>
+

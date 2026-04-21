@@ -1,18 +1,17 @@
-#### MARC export
+#### MARC EXPORT
+
 <hr>
-MARC EXPORT enables SLiMS to export catalogue data in MARC format as a .MRC file for use in other systems.
+MARC EXPORT သည် SLiMS အား အခြားစနစ်များတွင် အသုံးပြုရန်အတွက် MARC ဖော်မတ်ဖြင့် .MRC ဖိုင်အဖြစ် ကတ်တလောက်ဒေတာကို ထုတ်ယူခွင့်ပြုသည်။
 
-- Search for titles to be exported by: ISBN, author, or title, 
-- Select the required titles - this must be done by marking individual checkboxes
-- Export the data by clicking **Add to export queue**, then **Export now**
+- ထုတ်ယူရန် ခေါင်းစဉ်များကို ရှာဖွေပါ- ISBN၊ စာရေးသူ သို့မဟုတ် ခေါင်းစဉ်၊
+- လိုအပ်သော ခေါင်းစဉ်များကို ရွေးချယ်ပါ - သင့်လျော်သော အကွက်များကို အမှန်ခြစ်ခြင်းဖြင့် ပြုလုပ်ပါ
+- **Add to export queue** ကို နှိပ်ပြီးနောက် **Export now** ကို နှိပ်ခြင်းဖြင့် ဒေတာကို ထုတ်ယူပါ။
 
-Additionally, **Batch export** allows for bulk records to be exported in *MARC RAW ,  MARCXML* , or  *MARCJSON* format. You may choose how many records to export and the beginning record number.
+ထို့အပြင်၊ **Batch export** သည် သင့်အား *MARC RAW၊ MARCXML* သို့မဟုတ် *MARCJSON* ဖော်မတ်ဖြင့် အစုလိုက်မှတ်တမ်းများကို ထုတ်ယူခွင့်ပြုသည်။ ထုတ်ယူရန် မှတ်တမ်းအရေအတွက်နှင့် စတင်မှတ်တမ်းနံပါတ်ကို ရွေးချယ်နိုင်သည်။
+
+
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/MARC%20Export%20and%20Import" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>
-
-
-
-

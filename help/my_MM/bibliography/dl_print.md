@@ -1,45 +1,48 @@
-#### Label Printing Menu 
+#### တံဆိပ်ပုံနှိပ်ခြင်း မီနူး
+
 <hr>
-With this menu you can print labels based on the collection of bibliographic data which is entered in SLiMS. The following sequence prints labels using the Label Printing menu:
-- Click **Label Printing**, and a screen with functions will display:
+ဤမီနူးသည် SLiMS ထဲသို့ထည့်သွင်းထားသော မှတ်တမ်းများစုစည်းမှုအပေါ် အခြေခံ၍ တံဆိပ်များကို ရိုက်နှိပ်နိုင်စေပါသည်။ အောက်ပါလုပ်ထုံးလုပ်နည်းသည် တံဆိပ်ပုံနှိပ်ခြင်း မီနူးကို အသုံးပြု၍ တံဆိပ်များကို ရိုက်နှိပ်ပါသည်။
+- **တံဆိပ်ပုံနှိပ်ခြင်း** ကို နှိပ်ပါ၊ လုပ်ဆောင်ချက်များပါရှိသော မျက်နှာပြင်တစ်ခု ပေါ်လာပါလိမ့်မည်။
 
-- **Select** the titles for which you want to print labels, by clicking on the title(s) or the checkbox at the side. A checkmark will appear in the box of those selected. 
+- ခေါင်းစဉ်(များ) သို့မဟုတ် ၎င်းတို့ဘေးရှိ အမှန်ခြစ်အမှတ်အသားကို နှိပ်ခြင်းဖြင့် သင်တံဆိပ်များကို ရိုက်နှိပ်လိုသော ခေါင်းစဉ်များကို **ရွေးချယ်ပါ**။ ရွေးချယ်ထားသော ခေါင်းစဉ်များအတွက် အကွက်တွင် အမှန်ခြစ်အမှတ်အသားတစ်ခု ပေါ်လာပါလိမ့်မည်။
 
-  When printing consecutive title labels, select the first title, hold Shift key, and select the last title in your selection to select more than one in rapid sequence. *Note: one print run can only contain a maximum of 50 records.* 
+ဆက်တိုက် ခေါင်းစဉ်တံဆိပ်များကို ရိုက်နှိပ်သည့်အခါ၊ ပထမခေါင်းစဉ်ကို ရွေးချယ်ပါ၊ Shift ခလုတ်ကို ဖိထားပြီး သင်လိုချင်သော စာရင်းရှိ နောက်ဆုံးခေါင်းစဉ်ကို ရွေးချယ်ပါ၊ ထို့နောက် ဆက်တိုက်တစ်ခုထက်ပို၍ ရွေးချယ်ပါ။ *မှတ်ချက်- တစ်ကြိမ်လျှင် အများဆုံး မှတ်တမ်း ၅၀ အထိ ရိုက်နှိပ်နိုင်ပါသည်။*
 
-  In this Print Label menu, it is possible to print more than one label, depending on how many copies of a title exist.
+ဤ Print Label မီနူးတွင်၊ သင်တွင်ရှိသော ခေါင်းစဉ်မိတ္တူမည်မျှပေါ် မူတည်၍ တံဆိပ်တစ်ခုထက်ပို၍ ရိုက်နှိပ်နိုင်ပါသည်။
 
-- Click **Add to Print Queue** to enter a selection in the print queue.
+- ပုံနှိပ်တန်းစီတွင် ရွေးချယ်မှုတစ်ခုထည့်ရန် **ပုံနှိပ်တန်းစီသို့ ထည့်ပါ** ကို နှိပ်ပါ။
 
-- Click **Print Labels For Selected Data** to start printing the selected data,  and it will display a pop-up that asks you to send labels to the printer.
+- ရွေးချယ်ထားသော ဒေတာကို ရိုက်နှိပ်ရန် **ရွေးချယ်ထားသော ဒေတာအတွက် တံဆိပ်များကို ရိုက်နှိပ်ပါ** ကို နှိပ်ပါ၊ ထို့နောက် ပရင်တာသို့ တံဆိပ်များပို့ရန် တောင်းဆိုသည့် ပေါ့ပ်အပ်တစ်ခု ပေါ်လာပါလိမ့်မည်။
 
-- An option exists to **Clear Print Queue** at any stage.
+- မည်သည့်အဆင့်တွင်မဆို **ပရင့်တန်းစီခြင်းကို ရှင်းလင်းရန်** ရွေးချယ်စရာတစ်ခုရှိပါသည်။
 
-  ------
+------
 
-  You can click **Change Print Label Settings** to adjust:
+အောက်ပါတို့ကို ချိန်ညှိရန် **ပရင့်တံဆိပ်ဆက်တင်များပြောင်းလဲရန်** ကို နှိပ်နိုင်သည်-
 
-  * Page margin [px]
+* စာမျက်နှာအနားသတ်များ [px]
 
-  * Items per row [ default = 3]
+* တစ်တန်းလျှင် အရာဝတ္ထုများ [default = 3]
 
-  * Items margin [cm]
+* အရာဝတ္ထုအနားသတ်များ [cm]
 
-  * Box width [cm]
+* သေတ္တာအကျယ် [cm]
 
-  * Box height [cm]
+* သေတ္တာအမြင့် [cm]
 
-  * Include text header [ Yes/No]
+* စာသားခေါင်းစဉ်ထည့်သွင်းပါ [ဟုတ်ကဲ့/မဟုတ်ပါ]
 
-  * Header text [ if empty, the library name will be used ]
+* ခေါင်းစဉ်စာသား [ဗလာဖြစ်ပါက စာကြည့်တိုက်အမည်ကို အသုံးပြုပါမည်]
 
-  * Fonts
+* ဖောင့်များ
 
-  * Font size [pt]
+* ဖောင့်အရွယ်အစား [pt]
 
-  * Border size [ px]
+* ဘောင်အရွယ်အစား [px]
 
-    Then  click **Save Settings**
+ထို့နောက် **ဆက်တင်များကို သိမ်းဆည်းရန်] ကို နှိပ်ပါ
+
+
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Labels%20Printing" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

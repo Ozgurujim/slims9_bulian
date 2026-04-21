@@ -1,6 +1,4 @@
-### Visitor List
-
-------
+###Visitor List
 
 This report contains a list of names of library members or non-members who visit the library. This report contains information: 
 - Member ID, 

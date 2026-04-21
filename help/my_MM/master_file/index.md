@@ -1,9 +1,10 @@
 #### Master File / GMD
+
 <hr>
-In this module we can enter master file data that is used for lookups in cataloguing data entry. 
+ဤ module သည် cataloging အတွက်အသုံးပြုသော master file data ကိုထည့်သွင်းရန်ခွင့်ပြုသည်။
 
-GMD : General Material Designation – The physical form of the media item . While this was utilised in AACR2 cataloguing, it was superseded in RDA cataloguing by content, media, and carrier terms.
+GMD : အထွေထွေပစ္စည်းဖော်ပြချက် – မီဒီယာပစ္စည်း၏ ရုပ်ပိုင်းဆိုင်ရာပုံစံ။ ၎င်းကို AACR2 catalog တွင်အသုံးပြုခဲ့သော်လည်း RDA catalog ရှိ content, media နှင့် carrier ဟူသောအသုံးအနှုန်းများဖြင့် အစားထိုးခဲ့သည်။
 
-SLiMS retains this functionality for libraries still using AACR2 standards, but libraries should adhere to the standard GMDs.
+SLiMS သည် AACR2 စံနှုန်းများကို ဆက်လက်အသုံးပြုနေသော libraries များအတွက် ဤလုပ်ဆောင်ချက်ကို ထိန်းသိမ်းထားသော်လည်း libraries များသည် စံ GMD ကို လိုက်နာသင့်သည်။
 
-The layout and function of this section is similar to other master-file entry/management screens.
+ဤအပိုင်း၏ အပြင်အဆင်နှင့် လုပ်ဆောင်ချက်သည် အခြား master file entry/management interface များနှင့် ဆင်တူသည်။

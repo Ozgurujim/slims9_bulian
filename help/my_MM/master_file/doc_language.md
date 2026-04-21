@@ -1,27 +1,28 @@
-#### Master File / Doc. language
+#### Master File / Doc. Language
 
 <hr>
-The language used by the document. Eg: Indonesian, English, French, Javanese etc..
+စာရွက်စာတမ်းအသုံးပြုသော ဘာသာစကား။ ဥပမာ- အင်ဒိုနီးရှား၊ အင်္ဂလိပ်၊ ပြင်သစ်၊ ဂျာဗားစသည်ဖြင့်။
 
-##### Language list
+##### ဘာသာစကားစာရင်း
 
-This enables management of the document language master file. It displays the list of all languages available for selection when entering data about a documents language in the SLiMS database , with data for:
+၎င်းသည် စာရွက်စာတမ်းဘာသာစကား master file ကို စီမံခန့်ခွဲနိုင်စေပါသည်။ SLiMS database တွင် စာရွက်စာတမ်းဘာသာစကားနှင့်ပတ်သက်သည့် အချက်အလက်များကို ထည့်သွင်းသည့်အခါ ရွေးချယ်နိုင်သော ဘာသာစကားအားလုံး၏စာရင်းကို ပြသထားပြီး အောက်ပါတို့အတွက် အချက်အလက်များ ပါဝင်သည်-
 
-- *Language* (name of the language)
-- *Last update* (when the record was last edited)
+- *ဘာသာစကား* (ဘာသာစကားအမည်)
 
-This section is provided with facilities to DELETE  and EDIT language data.
+- *နောက်ဆုံးအပ်ဒိတ်လုပ်ခဲ့သည့်အချိန်* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-To edit an item , double-click on the language name , or single-click on the pencil (edit) icon.
+ဤအပိုင်းတွင် ဘာသာစကားဒေတာဘေ့စ်ကို ဖျက်ခြင်းနှင့် တည်းဖြတ်ခြင်းအတွက် အထောက်အကူပြုပစ္စည်းများ ပါဝင်သည်။
 
-A search function allows you to search for entries by keywords.
+အရာတစ်ခုကို တည်းဖြတ်ရန်၊ ဘာသာစကားအမည်ကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ခြင်း) အိုင်ကွန်ကို နှိပ်ပါ။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+ရှာဖွေရေးလုပ်ဆောင်ချက်သည် သော့ချက်စာလုံးများဖြင့် မှတ်တမ်းများကို ရှာဖွေနိုင်စေပါသည်။
 
-##### Add new language
+ရလဒ်များကို ကော်လံတစ်ခုစီ၏ထိပ်ရှိ field name ကို နှိပ်ခြင်းဖြင့် စီနိုင်သည်။
 
-This provides the facility to add new document languages directly to the Senayan system. 
+## ဘာသာစကားအသစ်ထည့်ပါ
 
-You must allocate a language code as well as the name of the language. The language code *should* be the ISO 639-2 or 3 code for the language you enter. These codes are detailed at : https://www.iso.org/iso-639-language-codes.html
+၎င်းသည် Senayan စနစ်သို့ တိုက်ရိုက်စာရွက်စာတမ်းဘာသာစကားအသစ်များထည့်ရန် အထောက်အကူပြုပစ္စည်းတစ်ခုကို ပေးပါသည်။
 
-*Note: this is a lookup file for describing the language a resource has been authored in. It does not affect the translation languages available for the SLiMS OPAC or administration interface.*
+ဘာသာစကားကုဒ်အပြင်၊ ဘာသာစကားအမည်ကို သတ်မှတ်ရပါမည်။ ဘာသာစကားကုဒ်သည် သင်ထည့်သွင်းမည့်ဘာသာစကားအတွက် ISO 639-2 သို့မဟုတ် 3 ကုဒ်ဖြစ်သင့်သည်။ ဤကုဒ်များကို https://www.iso.org/iso-639-language-codes.html တွင် အသေးစိတ်ဖော်ပြထားသည်။
+
+*မှတ်ချက်- ဤသည်မှာ အရင်းအမြစ်တစ်ခုရေးသားထားသည့် ဘာသာစကားကိုညွှန်ပြရန် ရှာဖွေဖိုင်တစ်ခုဖြစ်သည်။ ၎င်းသည် SLiMS OPAC သို့မဟုတ် စီမံခန့်ခွဲမှုမျက်နှာပြင်အတွက် ရရှိနိုင်သော ဘာသာပြန်ဘာသာစကားများကို မထိခိုက်ပါ။

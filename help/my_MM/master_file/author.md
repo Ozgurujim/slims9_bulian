@@ -1,26 +1,29 @@
 #### Master File / Author
+
 <hr>
 
-##### Author list
+##### စာရေးသူစာရင်း
 
+ဤသည်မှာ စာရေးသူ၏ master file ကို စီမံခန့်ခွဲနိုင်စေပါသည်။ ၎င်းသည် SLiMS database ရှိ စာရေးသူအားလုံး၏ စာရင်းကို ပြသထားပြီး အောက်ပါတို့အတွက် အချက်အလက်များ ပါဝင်သည်-
 
-This enables management of the Authors master file. It displays the list of all authors in the SLiMS database , with data for:
+- *စာရေးသူအမည်* (စာရေးသူ၏အမည်)
 
-- *Author name* (name of the author)
-- *Author year* (birth year of the author)
-- *Authority type* (person/organisation/conference)
-- *Authority files* (source, eg. Library of Congress )
-- *Last update* (when record was last edited)
+- *စာရေးသူနှစ်* (စာရေးသူ၏မွေးသက္ကရာဇ်)
 
-This section is provided with facilities to DELETE  and EDIT author data.
+- *စာရေးသူအမျိုးအစား* (လူ/အဖွဲ့အစည်း/ညီလာခံ)
 
-To edit an author , double-click on the author , or single-click on the pencil (edit) icon.
+- *အာဏာပိုင်* (ရင်းမြစ်၊ ဥပမာ- ကွန်ဂရက်စာကြည့်တိုက်)
 
-A search function allows you to search for entries by author-name keywords.
+- *နောက်ဆုံးအပ်ဒိတ်လုပ်ခဲ့သည်* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-Results can be sorted by clicking on the field name at the top of each column. 
+ဤအပိုင်းတွင် စာရေးသူဒေတာကို ဖျက်ခြင်းနှင့် တည်းဖြတ်ခြင်းအတွက် ကိရိယာများ ပါဝင်သည်။
 
-##### Add new author
+စာရေးသူကို တည်းဖြတ်ရန် စာရေးသူကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ရန်) အိုင်ကွန်ကို နှိပ်ပါ။
 
-This provides the facility to add new authors directly to the data in the Senayan system. Authors' information includes the fields listed above, with the exception of *Last updated*, which is done automatically when the **Save** button is clicked.
+ရှာဖွေရေးလုပ်ဆောင်ချက်သည် စာရေးသူအမည် keyword များဖြင့် entry များကို ရှာဖွေနိုင်စေပါသည်။
 
+ရလဒ်များကို column တစ်ခုစီ၏ထိပ်ရှိ field name ကို နှိပ်ခြင်းဖြင့် စီနိုင်သည်။
+
+##### စာရေးသူအသစ်ထည့်ပါ
+
+ဤသည်မှာ Senayan စနစ်ရှိဒေတာသို့ စာရေးသူအသစ်များကို တိုက်ရိုက်ထည့်သွင်းရန် အထောက်အကူပြုပစ္စည်းများကို ပေးပါသည်။ စာရေးသူအချက်အလက်တွင် အထက်ဖော်ပြပါ အကွက်များ ပါဝင်ပြီး *နောက်ဆုံးအပ်ဒိတ်လုပ်ထားသည်* ကို ချန်လှပ်ထားပါသည်၊ ၎င်းကို **သိမ်းဆည်းရန်** ခလုတ်ကို နှိပ်လိုက်သောအခါ အလိုအလျောက် လုပ်ဆောင်ပါသည်။

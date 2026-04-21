@@ -1,10 +1,12 @@
-#### Add New Entry, Edit Entries
-<hr>
-This menu is used to display a list of title entries, to select and edit existing titles, and to add a new title with its cataloguing data. 
-To do create a new entry, click on the “<b>Add New Entry</b>” button. Complete the entry of cataloguing data and then <b>Save</b>. Then, unless you are cataloguing in advance of receiving the item for inclusion in the collection, you should enable <b>Edit</b>, and add the item (copy) details.
-A search function allows you to search for entries by title, topics, authors, ISBN and/or publisher.
+#### အသစ်ထည့်ပါ၊ ထည့်သွင်းမှုများကို တည်းဖြတ်ပါ။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+<hr>
+ခေါင်းစဉ်ထည့်သွင်းမှုများစာရင်းကိုပြသရန်၊ ရှိပြီးသားခေါင်းစဉ်များကိုရွေးချယ်ပြီး တည်းဖြတ်ရန်နှင့် ၎င်း၏ကတ်တလောက်ဒေတာဖြင့် ခေါင်းစဉ်အသစ်တစ်ခုကို ထည့်ရန် ဤမီနူးကိုအသုံးပြုပါ။
+အသစ်တစ်ခုဖန်တီးရန် “<b>ထည့်သွင်းမှုအသစ်ထည့်ပါ</b>” ခလုတ်ကို နှိပ်ပါ။ ကတ်တလောက်ဒေတာကို သင်ထည့်သွင်းပြီးသောအခါ၊ <b>သိမ်းဆည်းရန်</b> ကိုနှိပ်ပါ။ ထို့နောက် စုစည်းမှုတွင် ပါဝင်သည့်အရာများကို လက်ခံရယူရန် စာရင်းသွင်းမထားပါက၊ သင်သည် <b>တည်းဖြတ်ရန်</b> ကိုဖွင့်ပြီး အကြောင်းအရာအသေးစိတ်များကို ထည့်သင့်သည် (မိတ္တူ)။
+
+ရှာဖွေမှုလုပ်ဆောင်ချက်သည် ခေါင်းစဉ်၊ ဘာသာရပ်၊ စာရေးဆရာ၊ ISBN နှင့်/သို့မဟုတ် ထုတ်ဝေသူအလိုက် ထည့်သွင်းမှုများကို ရှာဖွေနိုင်စေပါသည်။
+
+ကော်လံတစ်ခုစီ၏ထိပ်ရှိ အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် ရလဒ်များကို စီစဥ်နိုင်သည်။
 
 
 
@@ -12,7 +14,3 @@ Results can be sorted by clicking on the field name at the top of each column.
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>
-
-
-
-

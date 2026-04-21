@@ -1,20 +1,21 @@
-#### Overdue List
+#### ကြွေးမြီလွန်ကဲမှုစာရင်း
 
 ------
 
-A facility to find members with overdue loans status. Information displayed in this facility is:
+ကြွေးမြီလွန်ကဲမှုအခြေအနေရှိသော အဖွဲ့ဝင်များကို ရှာဖွေရန် အထောက်အကူပြုပစ္စည်း။ ဤအထောက်အကူပြုပစ္စည်းတွင် ပြသထားသော အချက်အလက်များမှာ-
 
-- **Member ID**, 
-- **Member name**, 
-- **Title**, 
-- **Days overdue**, 
-- **Loan date**, 
-- **Due date**. 
+- **အဖွဲ့ဝင် ID**,
+- **အဖွဲ့ဝင်အမည်**,
+- **ရာထူး**,
+- **ကြွေးမြီလွန်ကဲသောရက်များ**,
+- **ချေးငွေရက်စွဲ**,
+- **ပြန်အမ်းရမည့်ရက်စွဲ**.
 
-From this menu you can also print, and search overdues. Overdues searches can be done by: 
-- **Member ID/Member name**, 
-- **Loan date from**, 
-- **Loan date until.**
+ဤမီနူးမှ သင်သည် ပရင့်ထုတ်နိုင်ပြီး ကြွေးမြီလွန်ကဲမှုများကို ရှာဖွေနိုင်သည်။ ကြွေးမြီလွန်ကဲမှုရှာဖွေမှုများကို အောက်ပါတို့ဖြင့် ပြုလုပ်နိုင်သည်-
+
+- **အဖွဲ့ဝင် ID/အဖွဲ့ဝင်အမည်**,
+- **ချေးငွေရက်စွဲမှ**,
+- **ချေးငွေရက်စွဲအထိ**
 
 
 
@@ -22,3 +23,4 @@ From this menu you can also print, and search overdues. Overdues searches can be
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>
+

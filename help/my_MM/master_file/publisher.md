@@ -1,25 +1,26 @@
 #### Master File / Publisher
+
 <hr>
-This look-up table contains the authoritative list of publishers used in the catalogue.
-##### Publisher list
+ဤ look-up table တွင် catalog တွင်အသုံးပြုထားသော authoritative publisher စာရင်းပါရှိသည်။
 
+##### Publisher စာရင်း
 
-This function enables management of the publisher master-file. It displays the list of publishers ( e.g Penguin , CSIRO Publishing, etc )  in the lookup table , with data for:
+ဤ function သည် publisher master-file ကို manage လုပ်နိုင်သည်။ ၎င်းသည် lookup table တွင် publisher စာရင်း (ဥပမာ Penguin၊ CSIRO Publishing စသည်) ကိုပြသပြီး အောက်ပါ data များပါဝင်သည်-
 
-- *Publisher name* (authoritative name of the publisher)
-- *Last update* (when the record was last edited)
+- *Publisher အမည်* (publisher ၏ authority အမည်)
+- *နောက်ဆုံး update* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-This section is provided with facilities to DELETE  and EDIT publisher data.
+ဤအပိုင်းတွင် publisher data ကို DELETE နှင့် EDIT လုပ်ရန် အထောက်အကူပြုပစ္စည်းများ ပါရှိသည်။
 
-To edit a publisher , double-click on the publisher , or single-click on the pencil (edit) icon.
+publisher ကို တည်းဖြတ်ရန် publisher ကို double-click နှိပ်ပါ သို့မဟုတ် ခဲတံ (edit) icon ကို single-click နှိပ်ပါ။
 
-A search function allows you to search for entries by publisher keywords.
+search function သည် publisher keyword များဖြင့် entry များကို ရှာဖွေနိုင်စေပါသည်။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+ရလဒ်များကို column တစ်ခုစီ၏ထိပ်ရှိ field name ကို နှိပ်ခြင်းဖြင့် စီနိုင်သည်။
 
-##### Add new publisher
+##### publisher အသစ်ထည့်ပါ
 
-This provides the facility to add publishers directly to the data in the Senayan system. Publishers' information includes the fields listed above, with the exception of *Last updated*, which is done automatically when the **Save** button is clicked.
+၎င်းသည် Senayan system ရှိ data ထဲသို့ publisher များကို တိုက်ရိုက်ထည့်သွင်းရန် အထောက်အကူပြုပစ္စည်း ပေးပါသည်။ ထုတ်ဝေသူများ၏ အချက်အလက်တွင် အထက်ဖော်ပြပါ အကွက်များ ပါဝင်ပြီး *နောက်ဆုံး အပ်ဒိတ်လုပ်ထားသည်* မှလွဲ၍ **သိမ်းဆည်းပါ** ခလုတ်ကို နှိပ်လိုက်သောအခါ အလိုအလျောက် လုပ်ဆောင်သည်။
 
-Adding a publisher to the master-file can also be done during the cataloguing data input for a new title if the publisher is not found to exist in the master-file during the publisher data input. In that case, the option to *Add* the publisher will be presented to the cataloguer, so care should be taken to enter data correctly as the name will then be added to the master-file.
+ထုတ်ဝေသူဒေတာ ထည့်သွင်းစဉ်အတွင်း ထုတ်ဝေသူသည် master-file တွင် ရှိနေခြင်းမရှိပါက ခေါင်းစဉ်အသစ်အတွက် ကတ်တလောက်ဒေတာထည့်သွင်းစဉ်တွင်လည်း ထုတ်ဝေသူကို ထည့်သွင်းနိုင်သည်။ ထိုသို့ဖြစ်ပါက ထုတ်ဝေသူကို *ထည့်သွင်းရန်* ရွေးချယ်မှုကို ကတ်တလောက်ပြုလုပ်သူထံ တင်ပြမည်ဖြစ်သောကြောင့် အမည်ကို master-file တွင် ထည့်သွင်းမည်ဖြစ်သောကြောင့် ဒေတာကို မှန်ကန်စွာထည့်သွင်းရန် ဂရုစိုက်သင့်သည်။
 

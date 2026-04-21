@@ -1,26 +1,26 @@
-#### Master File / Place
+#### မာစတာဖိုင် / တည်နေရာ
 
 <hr>
-This look-up table contains the authoritative list of places of publication used in the catalogue.
-##### Place list
+ဤရှာဖွေမှုဇယားတွင် ကတ်တလောက်တွင် အသုံးပြုထားသော ထုတ်ဝေမှုတည်နေရာများ၏ တရားဝင်စာရင်း ပါဝင်သည်။
 
+##### တည်နေရာစာရင်း
 
-This function enables management of the place master-file. It displays the list of places of publication ( e.g Chiang Mai, Thailand ; Brisbane, Australia etc. )  in the lookup table , with data for:
+ဤလုပ်ဆောင်ချက်သည် တည်နေရာတစ်ခု၏ တရားဝင်ဖိုင်ကို စီမံခန့်ခွဲနိုင်စေပါသည်။ ၎င်းသည် ရှာဖွေမှုဇယားတွင် ထုတ်ဝေမှုတည်နေရာများစာရင်း (ဥပမာ- ထိုင်း၊ ချင်းမိုင်၊ ဘရစ်စဘိန်း၊ ဩစတြေးလျ စသည်) ကို အောက်ပါအချက်အလက်များဖြင့် ပြသထားသည်-
 
-- *Place name* (authoritative geographic name for the place of publication)
-- *Last update* (when the record was last edited)
+- *တည်နေရာအမည်* (တည်နေရာအတွက် တရားဝင်ပထဝီဝင်အမည်)
 
-This section is provided with facilities to DELETE  and EDIT place data.
+- *နောက်ဆုံးအပ်ဒိတ်လုပ်ခဲ့သည့်အချိန်* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-To edit a place , double-click on the label , or single-click on the pencil (edit) icon.
+ဤအပိုင်းတွင် တည်နေရာဒေတာကို ဖျက်ခြင်းနှင့် တည်းဖြတ်ခြင်းအတွက် အထောက်အကူပြုပစ္စည်းများ ပါဝင်သည်။
 
-A search function allows you to search for entries by place keywords.
+တည်နေရာတစ်ခုကို တည်းဖြတ်ရန် အညွှန်းကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ခြင်း) အိုင်ကွန်ကို နှိပ်ပါ။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+ရှာဖွေရေးလုပ်ဆောင်ချက်သည် တည်နေရာသော့ချက်စာလုံးများဖြင့် မှတ်တမ်းများကို ရှာဖွေနိုင်စေပါသည်။
 
-##### Add new place
+ရလဒ်များကို ကော်လံတစ်ခုစီ၏ထိပ်ရှိ အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် စီနိုင်သည်။
 
-This provides the facility to add places directly to the data in the Senayan system. Places' information includes the fields listed above, with the exception of *Last updated*, which is done automatically when the **Save** button is clicked.
+##### တည်နေရာအသစ်ထည့်ပါ
 
-Adding a place to the master-file can also be done during the cataloguing data input if the place is not found during the place data input for a new title.  
+၎င်းသည် Senayan စနစ်ရှိဒေတာသို့ တည်နေရာများကို တိုက်ရိုက်ထည့်သွင်းရန် အထောက်အကူပြုပစ္စည်းတစ်ခုကို ပေးပါသည်။ တည်နေရာအချက်အလက်တွင် အထက်ဖော်ပြပါ အကွက်များ ပါဝင်ပြီး *နောက်ဆုံးအပ်ဒိတ်လုပ်ထားသည်* မှလွဲ၍ ၎င်းသည် **သိမ်းဆည်းရန်** ခလုတ်ကို နှိပ်လိုက်သောအခါ အလိုအလျောက် အပ်ဒိတ်လုပ်ပါသည်။
 
+ခေါင်းစဉ်အသစ်အတွက် တည်နေရာအချက်အလက်ထည့်သွင်းစဉ်အတွင်း တည်နေရာကို မတွေ့ရှိပါက ကတ်တလောက်ဒေတာထည့်သွင်းစဉ်အတွင်း မာစတာဖိုင်သို့ တည်နေရာတစ်ခုကိုလည်း ထည့်သွင်းနိုင်ပါသည်။

@@ -1,33 +1,43 @@
-#### Loan Rules
+#### စာကြည့်တိုက်စည်းမျဥ်းများ (Library rules)
 
-------
+စာကြည့်တိုက်စည်းမျဥ်း (Library rules) နှင့်ပတ်သက်၍ အောက်ပါအချက်အလက်များကို တွေ့ရှိရပါသည်။
 
-This is a facility to define lending rules based on: 
-- **Member type**, 
-- **Collection type**, and 
-- **GMD**. 
+- **အဖွဲ့ဝင်အမျိုးအစား**၊
+- **စုဆောင်းမှုအမျိုးအစား** နှင့်
+- **GMD**
 
-The rules set out in this facility are: 
-- The limit to the number of loan items (**Loan limit**), 
-- The period of the loan (**Loan period**), 
-- The limit to loan extensions (**Reborrow limit**), 
-- The penalty per day for an overdue item (**Fine each day**), and 
-- Overdue tolerance (**Overdue grace period**).
+ဤကဏ္ဍများတွင်ဖော်ပြထားသော စည်းမျဉ်းများမှာ-
 
-An example of defining Loan Rules:
+**၁။ စာငှားစည်းမျဥ်းများ သတ်မှတ်ခြင်း (Loan Rules)** စနစ်အတွင်း၌ စာအုပ်ငှားရမ်းခြင်းဆိုင်ရာ စည်းမျဥ်းများကို Member Type (အသင်းဝင်အမျိုးအစား)၊ Collection Type (စာအုပ်အမျိုးအစား) နှင့် GMD တို့အပေါ် အခြေခံ၍ သတ်မှတ်နိုင်ပါသည်။ အဆိုပါ စည်းမျဥ်းများတွင် အဓိကအားဖြင့် အောက်ပါအချက်များ ပါဝင်ပါသည်-
 
-1. In the library you have 3 types of resources: books, audiovisual (AV) and theses.
-2. One type of membership policy your library has is : <u>Student loans</u>, with a total allowance of 2 items, consisting of : one item from the book collection and one more from the AV collection.
-3. For that you would need to create the membership type: "Student" , with total borrowing from two collections.
-4. So, in *Loan Rules* these three rules must be defined:
-	- Member type = "Student", Collection type ="Book" , loan limit = 1.
-	- Member type "Student", Collection type ="AV",  loan limit = 1.
-	- Member type "Student", Collection type ="Theses",  loan limit = 0.
+**Loan Limit:** ငှားရမ်းနိုင်မည့် စာအုပ်အရေအတွက် ကန့်သတ်ချက်
+**Loan Period:** ငှားရမ်းနိုင်သည့် ကာလ (ရက်အရေအတွက်)။
+**Reborrow Limit:** ငှားရမ်းသက်တမ်း ထပ်မံတိုးနိုင်သည့် အကြိမ်အရေအတွက် ကန့်သတ်ချက်။
+**Fine Each Day:** သတ်မှတ်ရက်ထက် နောက်ကျပါက တစ်နေ့လျှင် ပေးဆောင်ရမည့် ဒဏ်ကြေး။
+**Overdue Grace Period:** နောက်ကျသော်လည်း ဒဏ်ကြေးမယူဘဲ ခွင့်လွှတ်ပေးထားသည့် ရက်ကာလ။
 
-Everything must be defined, otherwise limits can be exceeded.
+**၂။ စာကြည့်တိုက်ကတ်တွင် စည်းမျဥ်းများ ထည့်သွင်းခြင်း (Membercard Print)** 
+အသင်းဝင်ကတ်များ (Membership cards) ပုံနှိပ်ထုတ်ဝေရာတွင် ကတ်၏ အခြားတစ်ဖက် (ကျောဘက်) ၌ စာကြည့်တိုက်စည်းမျဥ်းများ (Library rules)၊ စာကြည့်တိုက် ဝဘ်ဆိုက်နှင့် အီးမေးလ်လိပ်စာ စသည်တို့ကို ထည့်သွင်းပုံနှိပ်နိုင်ပါသည်။
+
+**၃။ စည်းမျဥ်းချိုးဖောက်သူများကို အရေးယူခြင်း (Violations & Sanctions)** 
+စာကြည့်တိုက်စည်းမျဥ်းများကို ချိုးဖောက်သော အသင်းဝင်များကို အရေးယူမှုအနေဖြင့် ၎င်းတို့၏ အသင်းဝင်အချက်အလက်တွင် **"Pending Membership"** ဟု အမှန်ခြစ်၍ သတ်မှတ်ထားနိုင်ပါသည်။ ထိုသို့ သတ်မှတ်ခံရပါက အဆိုပါအသင်းဝင်သည် အသင်းဝင်သက်တမ်း ရှိနေသေးသော်လည်း စနစ်အတွင်းမှ စာအုပ်များကို ဆက်လက်ငှားရမ်းခွင့် ရရှိတော့မည် မဟုတ်ပါ။
+
+ဥပမာအားဖြင့်
+
+၁။ စာကြည့်တိုက်တွင် စာအုပ်များ၊ အသံရုပ်သံ (AV) နှင့် ဘွဲ့ယူကျမ်းများ အရင်းအမြစ် ၃ မျိုးရှိသည်။
+
+၂။ သင့်စာကြည့်တိုက်တွင်ရှိသော အသင်းဝင်မူဝါဒအမျိုးအစားတစ်ခုမှာ- <u>ကျောင်းသားများ</u> ဖြစ်ပြီး စုစုပေါင်း ၂ မျိုးခွင့်ပြုထားပြီး စာအုပ်စုဆောင်းမှုမှ တစ်ခုနှင့် AV စုဆောင်းမှုမှ တစ်ခု ပါဝင်သည်။
+၃။ အဲဒီအတွက် "ကျောင်းသား" ဆိုတဲ့ အသင်းဝင်အမျိုးအစားကို ဖန်တီးဖို့ လိုအပ်ပါတယ်၊ စုဆောင်းမှုနှစ်ခုကနေ စုစုပေါင်းငှားယူရမှာပါ။
+၄။ ဒါကြောင့် **စာငှားစည်းမျဉ်းများ** မှာ ဒီစည်းမျဉ်းသုံးခုကို သတ်မှတ်ရပါမယ်-
+
+- အသင်းဝင်အမျိုးအစား = "ကျောင်းသား", စုဆောင်းမှုအမျိုးအစား = "စာအုပ်", စာငှားကန့်သတ်ချက် = ၁။
+- အသင်းဝင်အမျိုးအစား "ကျောင်းသား", စုဆောင်းမှုအမျိုးအစား = "AV", စာငှားကန့်သတ်ချက် = ၁။
+- အသင်းဝင်အမျိုးအစား "ကျောင်းသား", စုဆောင်းမှုအမျိုးအစား = "Theses", စာငှားကန့်သတ်ချက် = ၀။
+
+အရာအားလုံးကို သတ်မှတ်ရပါမယ်၊ မဟုတ်ရင် ကန့်သတ်ချက်တွေကို ကျော်လွန်သွားနိုင်ပါတယ်။
+
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Circulation/loanrules" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>
-

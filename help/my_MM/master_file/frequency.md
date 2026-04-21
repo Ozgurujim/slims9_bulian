@@ -1,28 +1,31 @@
-####Master File / Frequency
+#### Master File / Frequency
+
 <hr>
 
-Lists the lookup frequencies for serial publications
+စီးရီးထုတ်ဝေမှုများအတွက် ရှာဖွေမှုကြိမ်နှုန်းများစာရင်း
 
-##### Frequency available
+###### ရရှိနိုင်သော ကြိမ်နှုန်းများ
 
-Displays the list of frequencies in the lookup table, with data for 
+ရှာဖွေရေးဇယားတွင် ဒေတာပါရှိသော ကြိမ်နှုန်းများစာရင်းကို ပြသထားသည်
 
-- *Frequency* (text description of the frequency)
-- *Language* (optional, specifies the language from the available document languages)
-- *Time increment* (the interval between issues in time units)
-- *Time unit* ( day/week/month/year)
-- *Last update* (when record was last edited)
+- *ကြိမ်နှုန်း* (ကြိမ်နှုန်း၏ စာသားဖော်ပြချက်)
 
-This section is provided with facilities to DELETE  and EDIT frequency data.
+- *ဘာသာစကား* (ရွေးချယ်နိုင်သည်၊ ရရှိနိုင်သော စာရွက်စာတမ်းဘာသာစကားများမှ ဘာသာစကားကို သတ်မှတ်သည်)
 
-To edit an item , double-click on the frequency, or single-click on the pencil (edit) icon.
+- *အချိန်တိုးမြှင့်မှု* (အချိန်ယူနစ်များဖြင့် ထုတ်ဝေမှုများအကြား အချိန်ကြားကာလ)
 
-A search function allows you to search for entries .
+- *အချိန်ယူနစ်* (ရက်/အပတ်/လ/နှစ်)
 
-Results can be sorted by clicking on the field name at the top of each column. 
+- *နောက်ဆုံး အပ်ဒိတ်လုပ်ခဲ့သည်* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
+ဤအပိုင်းတွင် ကြိမ်နှုန်းဒေတာကို ဖျက်ခြင်းနှင့် တည်းဖြတ်ခြင်းအတွက် အထောက်အကူပြုပစ္စည်းများ ပါဝင်သည်။
 
+အရာတစ်ခုကို တည်းဖြတ်ရန်၊ ကြိမ်နှုန်းကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ခြင်း) အိုင်ကွန်ကို နှိပ်ပါ။
 
-**Add new frequency**
+ရှာဖွေရေးလုပ်ဆောင်ချက်သည် မှတ်တမ်းများကို ရှာဖွေခွင့်ပြုသည်။
 
-This provides the facility to add new frequencies directly to the data in the Senayan system. Frequency information includes the fields listed above, with the exception of *Last updated*, which is done automatically when the **Save** button is clicked.
+ကော်လံတစ်ခုစီ၏ထိပ်ရှိ အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် ရလဒ်များကို စီနိုင်သည်။
+
+**ကြိမ်နှုန်းအသစ်ထည့်ပါ**
+
+၎င်းသည် Senayan စနစ်ရှိ ဒေတာသို့ ကြိမ်နှုန်းအသစ်များကို တိုက်ရိုက်ထည့်ရန် အထောက်အကူပြုပစ္စည်းတစ်ခုကို ပေးသည်။ ကြိမ်နှုန်းအချက်အလက်တွင် အထက်ဖော်ပြပါ အကွက်များပါဝင်ပြီး *နောက်ဆုံးအပ်ဒိတ်လုပ်ထားသည်* ကို ချန်လှပ်ထားပါသည်၊ သို့သော် **သိမ်းဆည်းရန်** ခလုတ်ကို နှိပ်လိုက်သောအခါ အလိုအလျောက် လုပ်ဆောင်သွားမည်ဖြစ်သည်။

@@ -1,33 +1,38 @@
-#### Loan History
+#### ချေးငွေမှတ်တမ်း
 
-------
+ပြုလုပ်ခဲ့သော ငွေပေးငွေယူတိုင်းအကြောင်း အချက်အလက်များ ပါဝင်သည်။ ရလဒ်ဒေတာမှတ်တမ်းများတွင် အောက်ပါတို့ ပါဝင်သည်-
 
-Contains data of every transaction ever undertaken. Resulting data records are comprised of: 
-- **Member ID**, 
-- **Member name**, 
-- **Item code**, 
-- **Title**, 
-- **Loan date**, 
-- **Due date**. 
+- **အဖွဲ့ဝင် ID**,
 
-In this menu the facility is also provided to print a list of the borrowing history. In addition it is also possible to perform a search of loan history data. Loan history data  can be searched by:
-- **Member ID/Member name**, 
+- **အဖွဲ့ဝင်အမည်**,
 
-- **Title**, 
+- **ပစ္စည်းကုဒ်**,
 
-- **Item code**, 
+- **ရာထူး**,
 
-- **Loan date from**,  
+- **ချေးငွေရက်စွဲ**,
 
-- **Loan  date until**, 
+- **ပေးရမည့်ရက်စွဲ**။
 
-- **Loan status,**
+ဤမီနူးသည် ချေးငွေမှတ်တမ်းစာရင်းကို ရိုက်နှိပ်ရန်အတွက်လည်း ပံ့ပိုးမှုပေးပါသည်။ ထို့အပြင်၊ ချေးငွေမှတ်တမ်းဒေတာကို ရှာဖွေနိုင်ပါသည်။ ချေးငွေမှတ်တမ်းဒေတာကို အောက်ပါတို့ဖြင့် ရှာဖွေနိုင်သည်-
 
-- **Location**
+- **အဖွဲ့ဝင် ID/အဖွဲ့ဝင်အမည်**,
 
-  The number of records to display per page can be specified, between 20 & 200
+- **စာအုပ်အမည်**,
 
- This facility can be displayed by clicking the **Show More Filter Options** button, and  activated by clicking the **Apply Filter** button.
+- **ပစ္စည်းကုဒ်**,
+
+- **ချေးငွေရက်စွဲမှ**,
+
+- **ချေးငွေရက်စွဲအထိ**,
+
+- **ချေးငွေအခြေအနေ**,
+
+- **တည်နေရာ**
+
+စာမျက်နှာတစ်ခုလျှင် ပြသရန် မှတ်တမ်းအရေအတွက်ကို ၂၀ မှ ၂၀၀ အထိ သတ်မှတ်နိုင်သည်။
+
+ဤပံ့ပိုးမှုကို **Show More Filter Options** ခလုတ်ကို နှိပ်ခြင်းဖြင့် ပြသနိုင်ပြီး **Apply Filter** ခလုတ်ကို နှိပ်ခြင်းဖြင့် အသက်သွင်းနိုင်သည်။
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Circulation/loanhistory" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

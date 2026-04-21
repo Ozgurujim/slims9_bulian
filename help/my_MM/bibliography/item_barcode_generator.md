@@ -1,51 +1,51 @@
-#### Item Barcodes Printing
+#### ပစ္စည်းဘားကုဒ်များ ရိုက်နှိပ်ခြင်း
+
 <hr>
-The menu provides a means to print barcodes for items that have been included in the SLiMS catalogue.
-A search function allows you to search for items by keyword.
+SLiMS ကတ်တလောက်တွင် ပါဝင်သော ပစ္စည်းများအတွက် ဘားကုဒ်များ ရိုက်နှိပ်ရန် မီနူးက နည်းလမ်းတစ်ခု ပေးပါသည်။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+ရှာဖွေရေးလုပ်ဆောင်ချက်က သော့ချက်စာလုံးဖြင့် ပစ္စည်းများကို ရှာဖွေနိုင်စေပါသည်။
 
-- **Select** the items for which you want to print barcodes, by clicking on the title(s) or the checkbox at the side. A checkmark will appear in the box of those selected. 
+ရလဒ်များကို ကော်လံတစ်ခုစီ၏ အပေါ်ဘက်ရှိ အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် စီနိုင်ပါသည်။
 
-  When printing consecutive item barcodes, select the first one, hold the Shift key, and select the last title in your group to select more than one in rapid sequence. *Note: one print run can only contain a maximum of 50 records.* 
+- ခေါင်းစဉ်(များ) သို့မဟုတ် ဘေးရှိ အကွက်ကို နှိပ်ခြင်းဖြင့် ဘားကုဒ်များ ရိုက်နှိပ်လိုသော ပစ္စည်းများကို **ရွေးချယ်ပါ**။ ရွေးချယ်ထားသော ပစ္စည်းများအတွက် အကွက်တွင် အမှန်ခြစ်တစ်ခု ပေါ်လာပါမည်။
 
-  
+ပစ္စည်းဘားကုဒ်များကို ဆက်တိုက် ရိုက်နှိပ်သည့်အခါ၊ ပထမတစ်ခုကို ရွေးချယ်ပါ၊ Shift ခလုတ်ကို ဖိထားပြီး သင့်အဖွဲ့ရှိ နောက်ဆုံးခေါင်းစဉ်ကို ရွေးချယ်ပါ၊ သို့မဟုတ် တစ်ခုထက်ပို၍ ဆက်တိုက် ရွေးချယ်ပါ။ *မှတ်ချက်- တစ်ကြိမ်တည်းတွင် အများဆုံး မှတ်တမ်း ၅၀ အထိ ရိုက်နှိပ်နိုင်ပါသည်။*
 
-- Click **Add to Print Queue** to enter the selection in the print queue.
+- ရွေးချယ်မှုကို ရိုက်နှိပ်ရန် **ပုံနှိပ်တန်းစီသို့ ထည့်ရန်** ကို နှိပ်ပါ။
 
-- Click **Print Barcodes for Selected Data** to start printing the Selected Data, and it will display a pop-up that asks you to send barcodes to the printer.
+- ရွေးချယ်ထားသော ဒေတာကို ရိုက်နှိပ်ရန် **ရွေးချယ်ထားသော အချက်အလက်များအတွက် ဘားကုဒ်များ ရိုက်နှိပ်ပါ** ကို နှိပ်ပါ၊ ထို့နောက် ပရင်တာသို့ ဘားကုဒ်များ ပို့ရန် တောင်းဆိုသည့် ပေါ့ပ်အပ်တစ်ခု ပေါ်လာပါမည်။
 
-- An option exists to **Clear Print Queue** at any stage.
+- မည်သည့်အဆင့်တွင်မဆို **ပရင့်တန်းစီခြင်းကို ရှင်းလင်းရန်** ရွေးချယ်စရာတစ်ခုရှိပါသည်။
 
-  ------
+------
 
-  You can click **Change Print Barcode Settings** to adjust:
+အောက်ပါတို့ကို ချိန်ညှိရန် **ပရင့်ဘားကုဒ်ဆက်တင်များပြောင်းလဲရန်** ကို နှိပ်နိုင်သည်-
 
-  * Barcode Page margin [cm]
+* ဘားကုဒ်စာမျက်နှာအနားသတ် [စင်တီမီတာ]
 
-  * Barcode Items per row [ default = 3]
+* ဘားကုဒ်ပစ္စည်းများ တစ်တန်းလျှင် [ပုံသေ = 3]
 
-  * Barcode Items margin [cm]
+* ဘားကုဒ်ပစ္စည်းအနားသတ် [စင်တီမီတာ]
 
-  * Barcode Box width [cm]
+* ဘားကုဒ်ဘောက်စ်အကျယ် [စင်တီမီတာ]
 
-  * Barcode Box height [cm]
+* ဘားကုဒ်ဘောက်စ်အမြင့် [စင်တီမီတာ]
 
-  * Barcode Include text header [Hide/Show]
+* ဘားကုဒ်ထည့်သွင်းခေါင်းစဉ် [ဝှက်/ပြ]
 
-  * Barcode Cut Title [ character # ]
+* ဘားကုဒ်ဖြတ်တောက်ခေါင်းစဉ် [စာလုံးအရေအတွက်]
 
-  * Barcode Header text [ if empty, the library name will be used ]
+* ဘားကုဒ်ခေါင်းစီးစာသား [ဗလာဖြစ်နေပါက၊ စာကြည့်တိုက်အမည်ကို အသုံးပြုပါမည်]
 
-  * Barcode Fonts
+* ဘားကုဒ်ဖောင့်များ
 
-  * Barcode Font size [pt]
+* ဘားကုဒ်ဖောင့်အရွယ်အစား [pt]
 
-  * Barcode  Scale [% relative to box]
+* ဘားကုဒ်စကေး [ဘောက်စ်နှင့် % ဆက်စပ်မှု]
 
-  * Barcode Border size [ px]
+* ဘားကုဒ်ဘောင်အရွယ်အစား [px]
 
-    Then  click **Save Settings**
+ထို့နောက် **ဆက်တင်များကို သိမ်းဆည်းပါ** ကို နှိပ်ပါ
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Barcode%20Printing" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

@@ -1,5 +1,5 @@
-### Due Date Warning
+### ပေးရမည့်ရက် သတိပေးချက်
 
 ------
 
-This report contains the items of the borrower that will be due <strong>within 3 days</strong>.
+ဤအစီရင်ခံစာတွင် ငွေချေးသူ၏ ပေးချေရမည့်ပစ္စည်းများ <strong>၃ ရက်အတွင်း</strong> ပေးဆောင်ရမည်ဖြစ်သည်။

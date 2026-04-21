@@ -1,27 +1,28 @@
 #### Master File / Label
+
 <hr>
-To provide specific information about a catalogued resource,  labels can be defined using the label master-file function. These labels are primarily used to provide visual cues , and potentially hyperlinks, in the SLiMS OPAC.
+Labels များကို catalog လုပ်ထားသော resource တစ်ခုအကြောင်း သီးခြားအချက်အလက်များ ပေးစွမ်းရန်အတွက် label master-file function ကို အသုံးပြု၍ သတ်မှတ်နိုင်သည်။ ဤ label များကို အဓိကအားဖြင့် SLiMS OPAC တွင် visual cues များနှင့် hyperlink များ ပေးစွမ်းရန် အသုံးပြုသည်။
 
 ##### Label list
 
+ဤ function သည် label master-file ကို စီမံခန့်ခွဲနိုင်စေပါသည်။ ၎င်းသည် lookup table တွင် label များစာရင်း (ဥပမာ- title အသစ်၊ အကြိုက်ဆုံး title၊ multimedia) ကို ပြသပြီး အောက်ပါတို့အတွက် data များပါဝင်သည်-
 
-This function enables management of the label master-file. It displays the list of labels ( e.g New title, favourite title,  multimedia )  in the lookup table , with data for:
+- *Label description* (အသုံးပြုသူများ မြင်တွေ့ရသည့်အတိုင်း status ၏ ဖော်ပြချက်)
 
-- *Label description* (description of the status seen by users)
-- *Label name* (unique name for the label, used internally by SLiMS, in the form *label-xyz*)
-- *Last update* (when the record was last edited)
+- *Label name* (Label အတွက် SLiMS မှ အတွင်းပိုင်းတွင် အသုံးပြုသော ထူးခြားသည့်အမည်၊ *label-xyz* format ဖြင့်)
 
-This section is provided with facilities to DELETE  and EDIT label data.
+- *last update* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-To edit a label , double-click on the label , or single-click on the pencil (edit) icon.
+ဤအပိုင်းတွင် label data များကို DELETE နှင့် EDIT အတွက် အထောက်အကူပြုပစ္စည်းများ ပါဝင်သည်။
 
-A search function allows you to search for entries by label keywords.
+label တစ်ခုကို တည်းဖြတ်ရန် label ကို double-click နှိပ်ပါ သို့မဟုတ် ခဲတံ (edit) icon ကို single-click နှိပ်ပါ။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+search function သည် label keywords များဖြင့် entry များကို ရှာဖွေနိုင်စေပါသည်။
 
-##### Add new label
+ရလဒ်များကို ကော်လံတစ်ခုစီ၏ထိပ်ရှိ ကွက်လပ်အမည်ကို နှိပ်ခြင်းဖြင့် စီစစ်နိုင်ပါသည်။
 
-This provides the facility to add labels directly to the data in the Senayan system. Labels' information includes the fields listed above, with the exception of *Last updated*, which is done automatically when the **Save** button is clicked.
+##### အညွှန်းအသစ်ထည့်ပါ
 
-Adding or editing a label also provides a *File attachment* facility,  to install a graphic file to act as an icon for the label. The image should be in PNG format.
+၎င်းသည် Senayan စနစ်ရှိဒေတာသို့ အညွှန်းများကို တိုက်ရိုက်ထည့်နိုင်စေပါသည်။ အညွှန်းအချက်အလက်တွင် အထက်ဖော်ပြပါ ကွက်လပ်များပါဝင်ပြီး *နောက်ဆုံးအပ်ဒိတ်* ခလုတ်ကို နှိပ်လိုက်သောအခါ အလိုအလျောက် အပ်ဒိတ်လုပ်ပါသည်။
 
+အညွှန်းတစ်ခုထည့်ခြင်း သို့မဟုတ် တည်းဖြတ်ခြင်းသည် အညွှန်းအတွက် အိုင်ကွန်အဖြစ် လုပ်ဆောင်ရန် ဂရပ်ဖစ်ဖိုင်တစ်ခုထည့်ရန် *ဖိုင်ပူးတွဲပါ* လုပ်ဆောင်ချက်ကိုလည်း ပေးပါသည်။ ရုပ်ပုံသည် PNG ဖော်မတ်ဖြစ်သင့်သည်။

@@ -1,14 +1,19 @@
-#### Export Data
+#### ဒေတာထုတ်ယူခြင်း
+
 <hr>
-The “Export Data” menu is used to export cataloguing data from SLiMS, via a file in CSV format, to allow it to be imported into other applications (or to another SLiMS database ). 
-You can choose the field separator character, the field enclosing character, the number of records to export, which record to start from, and whether to make the first row consist of the field names.
-Generally, the defaults will OK to use unless the target application has special requirements.
+“ဒေတာထုတ်ယူခြင်း” မီနူးကို SLiMS မှ CSV ဖော်မတ်ဖိုင်မှတစ်ဆင့် ကတ်တလောက်ဒေတာများကို ထုတ်ယူရန်အသုံးပြုပြီး အခြားအပလီကေးရှင်းများ (သို့မဟုတ် အခြား SLiMS ဒေတာဘေ့စ်သို့) ထဲသို့ တင်သွင်းနိုင်စေပါသည်။
 
-The export is initiated by clicking the **Export now**  button.
+သင်သည် field separator character၊ field enclosing character၊ ထုတ်ယူရမည့် မှတ်တမ်းအရေအတွက်၊ မည်သည့်မှတ်တမ်းမှ စတင်ရမည်နှင့် ပထမတန်းတွင် field အမည်များပါဝင်ရမည်ကို ရွေးချယ်နိုင်သည်။
 
-The resulting file will be named *senayan_biblio_export.csv* and will be saved in your browser's download location.
+ယေဘုယျအားဖြင့် target application တွင် အထူးလိုအပ်ချက်များမရှိပါက default များကို အသုံးပြုနိုင်ပါသည်။
 
-This process can be understood as a data exchange.
+**ယခုထုတ်ယူခြင်း** ခလုတ်ကို နှိပ်ခြင်းဖြင့် ထုတ်ယူမှုကို စတင်သည်။
+
+ရလဒ်ဖိုင်ကို *senayan_biblio_export.csv* ဟု အမည်ပေးမည်ဖြစ်ပြီး သင့် browser ၏ download location တွင် သိမ်းဆည်းထားမည်ဖြစ်သည်။
+
+ဤလုပ်ငန်းစဉ်ကို data exchange အဖြစ် နားလည်နိုင်သည်။
+
+
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Data%20Export" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

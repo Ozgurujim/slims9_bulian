@@ -1,24 +1,29 @@
-### Start transaction
+### စာငှားလုပ်ငန်းစဉ်စတင်ခြင်း
 
-------
+SLiMS စနစ်ရှိ **Start Transaction** လုပ်ငန်းစဉ်သည် Circulation (စာငှားလုပ်ငန်း) အပိုင်းတွင် အဓိကလုပ်ဆောင်ရသည့် နေရာဖြစ်ပါသည်။ စာငှားလုပ်ငန်းစဉ်များကို စတင်ရန်အတွက် သက်ဆိုင်ရာ အသင်းဝင်၏ အမည် (Name) သို့မဟုတ် အသင်းဝင်အမှတ် (Member ID) ကို ဦးစွာရိုက်ထည့်ရပါမည်။ ထိုသို့ထည့်သွင်းလိုက်ပါက အောက်ပါ အသင်းဝင်အချက်အလက်များ ပေါ်လာမည်ဖြစ်ပါသည်။ 
 
-This screen allows you to make transactions via the Member ID (ID of member). Once a Member ID is inserted in the request box, it will display the member's information, namely: 
-- *Member name* (The name of the member), 
-- *Member email* (The member's email address), 
-- *Register date* (The date the member registered), 
-- *Member ID* (The member's ID ), 
-- *Member type* (The type of membership), 
-- *Expiry date* (The membership end date), and 
-- *Member photo*.  ( If it has been included in the membership record). This allows borrower verification.
+- *အသင်းဝင်အမည် (Member Name)၊*
+- *အသင်းဝင်အီးမေးလ် (Member Email)၊*
+- *မှတ်ပုံတင်သည့်ရက်စွဲ (Register Date)၊*
+- *အသင်းဝင် ID (Member ID)၊*
+- *အသင်းဝင်အမျိုးအစား (Member Type)၊*
+- *သက်တမ်းကုန်ဆုံးရက် (Expiry Date) နှင့်*
+- *အသင်းဝင်ဓာတ်ပုံ (Photo of member)။ 
 
-Underneath the displayed details there are tabs for functions: 
-- **Loans** (to make loan transactions), 
-- **Current loans** (a list of the current loans the member has), 
-- **Reserve** (to create reservations of titles for future borrowing), 
-- **Fines** (fines the borrower has incurred, if the library has a fines policy), 
-- **Loan history** ( the history of borrowing undertaken by the member). 
+ပြသထားသော အသေးစိတ်အချက်အလက်များအောက်တွင် အောက်ပါ Tab ၅ ခုကို တွေ့မြင်ရမည်ဖြစ်ပါသည်။
 
-In **Current loans** there are also facilities for returns (**Return**) and to extend lending (**Extend**).
+- **စာငှားများ** (**Loans**) - စာအုပ်ငှားရမ်းသည့် လုပ်ငန်းစဉ်များ မှတ်တမ်းတင်ရန်
+- **လက်ရှိစာငှားများ** (**Current Loans**) -  လက်ရှိငှားရမ်းထားသော စာရင်းကို ကြည့်ရှုရန်၊ ဤ Tab တွင် စာအုပ်ပြန်အပ်ခြင်း (Return) နှင့် သက်တမ်းတိုးခြင်း (Extend) တို့ကို လုပ်ဆောင်နိုင်ပါသည်)၊
+-  **ကြိုတင်မှာယူမှု** (**Book Reservation)** -  အခြားသူ ငှားရမ်းထားဆဲဖြစ်သော စာအုပ်များကို မိမိအတွက် ကြိုတင်မှာယူထားရန် (Book Reservation)၊
+- **ဒဏ်ငွေများ** (**Fines)** -  စာအုပ်နောက်ကျမှ အပ်နှံခြင်းကြောင့်ဖြစ်ပေါ်လာသော ဒဏ်ကြေးငွေ (ရှိခဲ့ပါက) အချက်အလက်များကို မှတ်တမ်းတင်ရန်၊
+- **စာငှားမှတ်တမ်း** (**Loan History**) - အဆိုပါအသင်းဝင်၏ ယခင်ငှားရမ်းခဲ့ဖူးသော စာအုပ်မှတ်တမ်းများကို ကြည့်ရှုရန်။
+
+**အထူးသတိပြုရမည့်အချက် (အရေးကြီးပါသည်)** စာအုပ်ငှားရမ်းခြင်း (Loans) နှင့် ကြိုတင်မှာယူခြင်း (Reserve) လုပ်ငန်းစဉ်များ လုပ်ဆောင်ပြီးတိုင်း **"Finish Transaction"** ခလုတ်ကို မဖြစ်မနေ နှိပ်ပေးရန် လိုအပ်ပါသည်။ အကယ်၍ ဤခလုတ်ကို မနှိပ်ခဲ့ပါက သင်လုပ်ဆောင်ခဲ့သမျှ မှတ်တမ်းများသည် စနစ်အတွင်း သိမ်းဆည်းမည်မဟုတ်သည့်အပြင် နောက်ထပ်လာမည့်သူများအတွက်လည်း စာငှားလုပ်ငန်းစဉ်များ ဆက်လက်လုပ်ဆောင်နိုင်မည် မဟုတ်ပါ။
+
+**အခြား သိရှိထားသင့်သော အချက်များ**
+
+**ပြေစာထုတ်ခြင်း:** "Finish Transaction" ကိုနှိပ်ပြီးပါက စာငှားပြေစာ (Transaction note) ကို ပရင့်ထုတ်နိုင်ပါသည်။ (ဤသို့ထုတ်နိုင်ရန် System Configuration အောက်တွင် Print Circulation Receipt ကို ကြိုတင်ဖွင့်ထားရန် လိုအပ်ပါသည်)။ 
+**ရက်စွဲပြင်ဆင်ခြင်း:** စနစ်မှ အလိုအလျောက် သတ်မှတ်ပေးသော စာငှားရက်နှင့် ပြန်အပ်ရက်များကို အသုံးပြုလိုခြင်းမရှိပါက မိမိပြောင်းလဲလိုသော ရက်စွဲနေရာတွင် ကလစ်နှိပ်၍ ကိုယ်တိုင် (Manually) ပြင်ဆင်သတ်မှတ်နိုင်ပါသည်။
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Circulation/starttransaction" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

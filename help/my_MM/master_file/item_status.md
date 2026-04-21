@@ -1,29 +1,31 @@
-#### Master File / Item status
-<hr>
+1. #### Master File / Item status
 
-##### Item status
+   <hr>
 
+   ##### Item status
 
-This enables management of the Item status master file. It displays the list of possible item statuses ( e.g missing, not for loan, repair )  in the SLiMS database , with data for:
+   ၎င်းသည် Item status master file ကို စီမံခန့်ခွဲနိုင်စေပါသည်။ ၎င်းသည် SLiMS database တွင် ဖြစ်နိုင်ချေရှိသော item status စာရင်း (ဥပမာ- ပျောက်ဆုံးသွားခြင်း၊ ချေးငွေအတွက်မဟုတ်ခြင်း၊ ပြုပြင်ခြင်း) ကို ပြသထားပြီး အောက်ပါတို့အတွက် data များပါဝင်သည်-
 
-- *Item status code* (unique code for the status)
-- *Item status name* (description of the status)
-- *Last update* (when the record was last edited)
+   - *Item status code* (status အတွက် ထူးခြားသော code)
 
-This section is provided with facilities to DELETE  and EDIT item status data.
+   - *Item status name* (status ၏ ဖော်ပြချက်)
 
-To edit an status , double-click on the status , or single-click on the pencil (edit) icon.
+   - *နောက်ဆုံး update* (မှတ်တမ်းကို နောက်ဆုံးတည်းဖြတ်ခဲ့သည့်အချိန်)
 
-A search function allows you to search for entries by item status name keywords.
+   ဤအပိုင်းတွင် item status data ကို DELETE နှင့် EDIT လုပ်ရန် အထောက်အကူပြုပစ္စည်းများ ပါဝင်သည်။
 
-Results can be sorted by clicking on the field name at the top of each column. 
+   status တစ်ခုကို တည်းဖြတ်ရန် status ကို double-click နှိပ်ပါ သို့မဟုတ် ခဲတံ (edit) icon ကို single-click နှိပ်ပါ။
 
-##### Add new item status
+   ရှာဖွေရေး function သည် item status name keywords များဖြင့် entry များကို ရှာဖွေနိုင်စေပါသည်။
 
-This provides the facility to add new item statuses directly to the data in the Senayan system. Item status' information includes the fields listed above, with the exception of *Last updated*, which is done automatically when the **Save** button is clicked.
+   ရလဒ်များကို column တစ်ခုစီ၏ထိပ်ရှိ field name ကို နှိပ်ခြင်းဖြင့် စီနိုင်သည်။
 
-There are two additional options , to allow you to set Rules for the  new status. 
+   ##### Item status အသစ်ထည့်ပါ
 
-1. Checking the *No loan transaction* box will prevent items with the new status being loaned (e.g. digital/online collections ). 
-2. Checking the *Skipped by stocktake* box will remove items with this new status from the stocktake process.
+   ၎င်းသည် Senayan system ရှိ data သို့ item status အသစ်များကို တိုက်ရိုက်ထည့်ရန် အထောက်အကူပြုပစ္စည်းများကို ပေးသည်။ 'ပစ္စည်းအခြေအနေ' အချက်အလက်တွင် အထက်ဖော်ပြပါ အကွက်များ ပါဝင်ပြီး *နောက်ဆုံးအပ်ဒိတ်လုပ်ထားသည်* မှလွဲ၍ သင် **သိမ်းဆည်းရန်** ခလုတ်ကို နှိပ်လိုက်သောအခါ အလိုအလျောက် အပ်ဒိတ်လုပ်ပါသည်။
 
+   အခြေအနေအသစ်များအတွက် စည်းမျဉ်းများ သတ်မှတ်ရန် ရွေးချယ်စရာနှစ်ခု ရှိပါသည်။
+
+   ၁။ *ချေးငွေမရသော ငွေပေးငွေယူများ* အကွက်ကို အမှန်ခြစ်ခြင်းဖြင့် အခြေအနေအသစ်ရှိသော ပစ္စည်းများကို ချေးငွေပေးခြင်းမှ တားဆီးပေးမည် (ဥပမာ- ဒစ်ဂျစ်တယ်/အွန်လိုင်း စုဆောင်းမှုများ)။
+
+   ၂။ *စတော့ခ်လုပ်ခြင်းဖြင့် ကျော်သွားပါ * အကွက်ကို အမှန်ခြစ်ခြင်းဖြင့် ဤအခြေအနေအသစ်ရှိသော ပစ္စည်းများကို စတော့ခ်လုပ်ငန်းစဉ်မှ ဖယ်ရှားပေးမည်ဖြစ်သည်။
