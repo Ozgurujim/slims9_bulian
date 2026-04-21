@@ -1,8 +1,40 @@
-### Librarian and system users
+### Librarian and system users profiles
 
 ------
 
-A facility to determine which users can access the system, according to their permissions. These users will be able to perform a login with username and password. This menu item contains the options:
+A facility to determine which users can access the system, according to their permissions. These users will be able to perform a login to Library Administration with username and password. Additionally, logged-in staff can edit their data, set passwords, and set two-factor authentication 
+
+#### Home -> Change user profile
+
+This menu item contains the options for the user to edit:
+
+* *Login username* (the login name allocated to the user) - can't be changed by user
+
+* *Real name* (the user's real name)
+
+* *User type* (security group)
+
+* *Last login* (when the user last logged in)
+
+* *Last update* (when the record was last updated)
+
+* *Email*
+
+* *Social Media*
+
+* *User Photo*
+
+* *Old Password  ; New Password; Confirmation*
+
+* *Enable two-factor authentication*
+
+  Be sure to **Update** the record before exiting the screen.
+
+------
+
+#### System -> Librarian & system users
+
+This menu item is only accessible to the super-user and contains the options:
 
 - **Add new user** (adding users), 
 - **User list** (list of users), 
@@ -21,13 +53,13 @@ The user list displays the following information for each user:
 
 * *Last update* (when the record was last updated)
 
-  The list may be sorted by any of these fields by simply clicking on the field name at the top of the column. E.g to sort by User type , simply click "User type".
+The list may be sorted by any of these fields by simply clicking on the field name at the top of the column. E.g to sort by User type , simply click "User type".
 
-  A search function exists which will search the user list for users matching the keywords
+A search function exists which will search the user list for users matching the keywords
 
-  This facility can also be used to edit and delete items. 
+This facility can also be used to edit and delete items. 
 
-  To edit an item , double-click on the title , or single-click on the pencil ( edit) icon.
+To edit an item , double-click on the title , or single-click on the pencil ( edit) icon.
 
 Within user information, a user can also add their internet credentials, e.g. Facebook profile, blog or websites, etc.
 
