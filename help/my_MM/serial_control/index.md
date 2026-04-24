@@ -1,12 +1,23 @@
-### Serial Control
-<hr>
+### စီးရီးလိုက်ထိန်းချုပ်မှုး
 
-The Serial Control Module will run if bibliographic data is subscribed for periodical titles.
-The information that distinguishes between magazine bibliographic data and other document types is the frequency/time the serial is published. If there is no bibliographic data in a table that indicates the frequency, this functionality will not work.
+------
 
-- *Subscription Start*: fill in the date the subscription will start to be received at the library.
-- *Total Exemplar Expected*: enter the total number you expect to receive in a period of a subscription. E.g to subscribe for a year on a monthly basis insert 12.
-- *Period Name*: Name the subscription period to provide differentiation between periods. Also give a name to distinguish copy subscription one, a second subscription, and so on.
-- *Subscription Notes*: Insert important or useful notes on the subscription. 
-- *GMD*: if necessary, replace it with the appropriate GMD of the item to be subscribed
+မဂ္ဂဇင်းခေါင်းစဉ်များအတွက် စာစုစာရင်းဒေတာကို စာရင်းသွင်းပါက Serial Control Module သည် အလုပ်လုပ်ပါမည်။
+
+မဂ္ဂဇင်း စာစုစာရင်းဒေတာနှင့် အခြားစာရွက်စာတမ်းအမျိုးအစားများကို ခွဲခြားသတ်မှတ်ပေးသော အချက်အလက်မှာ စီးရီးထုတ်ဝေသည့် ကြိမ်နှုန်း/အချိန်ဖြစ်သည်။ <u>ကြိမ်နှုန်းကို ဖော်ပြသောဇယားတွင် စာစုစာရင်းဒေတာ မရှိပါက ဤလုပ်ဆောင်ချက်သည် အလုပ်မလုပ်ပါ။</u>
+
+- *စာရင်းသွင်းမှုစတင်ခြင်း*: စာကြည့်တိုက်တွင် စာရင်းသွင်းမှုစတင်လက်ခံရရှိမည့်ရက်စွဲကို ဖြည့်ပါ။
+- *စုစုပေါင်းမျှော်လင့်ထားသည့် နမူနာ*: စာရင်းသွင်းမှုကာလတစ်ခုတွင် သင်လက်ခံရရှိရန် မျှော်လင့်ထားသည့် စုစုပေါင်းအရေအတွက်ကို ရိုက်ထည့်ပါ။ ဥပမာအားဖြင့် တစ်နှစ်တာအတွက် လစဉ်စာရင်းသွင်းရန် ၁၂ ကိုထည့်ပါ။
+- *ကာလအမည်*: ကာလများအကြား ခွဲခြားမှုကို ပေးစွမ်းရန် စာရင်းသွင်းမှုကာလကို အမည်ပေးပါ။ မိတ္တူစာရင်းသွင်းမှု၊ ဒုတိယစာရင်းသွင်းမှု စသည်တို့ကို ခွဲခြားသတ်မှတ်ရန် အမည်တစ်ခုလည်း ပေးပါ။
+- *စာရင်းသွင်းမှုမှတ်စုများ*: စာရင်းသွင်းမှုတွင် အရေးကြီးသော သို့မဟုတ် အသုံးဝင်သော မှတ်စုများကို ထည့်ပါ။
+- *GMD*: လိုအပ်ပါက စာရင်းသွင်းမည့်အရာ၏ သင့်လျော်သော GMD ဖြင့် အစားထိုးပါ။
+
+------
+
+
+
+
+[//]: # " created by jim@burmastudy.org based on SLIMS 9.7.2   10/04/2026"
+
+
 
