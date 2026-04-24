@@ -1,10 +1,10 @@
-### Shortcut settings
+### ဖြတ်လမ်းတိုသတ်မှတ်ချက်များ
 
 ------
 
-Provides a facility to edit the Shortcut menu items that are presented in the Admin interface.
+Admin စီမံခန့်ခွဲသူ မျက်နှာပြင် တွင် ပြသထားသော ဖြတ်လမ်းတို (Shortcut) Menu ရှိ အရာများကို ပြင်ဆင်တည်းဖြတ်ရန် လုပ်ဆောင်ချက်ကို ပံ့ပိုးပေးပါသည်။
 
-Highlight an item in the left pane, and click the **Select** button. The item will appear in the right pane. Click the **Save** button, and your settings are saved and the item will appear in the Shortcut menu for Admin users.
+ဘယ်ဘက်အကွက်ရှိ အရာ တစ်ခုကို ရွေးချယ်မှတ်သား (Highlight) ပြီး ရွေးချယ်ရန် (**Select**) ခလုတ်ကို နှိပ်ပါ။ ထိုအရာ သည် ညာဘက်အကွက်တွင် ပေါ်လာပါမည်။ သိမ်းဆည်းရန် (**Save**) ခလုတ်ကို နှိပ်ပါက သင့်ဆက်တင်များကို သိမ်းဆည်းပြီးဖြစ်ကာ ၎င်းသည် Admin အသုံးပြုသူများအတွက် ဖြတ်လမ်း (Shortcut) menu တွင် ပေါ်လာမည်ဖြစ်ပါသည်။
 
-To remove an item highlight it in the right pane, click the **Move back**  button, and **Save**.
+အရာ တစ်ခုကို ဖယ်ရှားလိုပါက ညာဘက် အကွက်တွင် ၎င်းကို ရွေးချယ်မှတ်သား (Highlight) လုပ်ပါ။ ****Move back** (နောက်သို့ရွှေ့ရန်) ခလုတ်ကို နှိပ်ပြီး သိမ်းဆည်းရန် (**Save**) ကို နှိပ်ပါ။
 

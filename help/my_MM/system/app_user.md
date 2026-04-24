@@ -1,42 +1,66 @@
-### Librarian and system users
+### စာကြည့်တိုက်မှူးနှင့် စနစ်အသုံးပြုသူများ ပရိုဖိုင်များ
 
 ------
 
-A facility to determine which users can access the system, according to their permissions. These users will be able to perform a login with username and password. This menu item contains the options:
+အသုံးပြုသူများ၏ လုပ်ပိုင်ခွင့်များ (permissions) အလိုက် စနစ်ကို မည်သူတွေ ဝင်ရောက်အသုံးပြုနိုင်မည်ကို သတ်မှတ်ပေးသော လုပ်ဆောင်ချက်ဖြစ်ပါသည်။ ဤအသုံးပြုသူများသည် အသုံးပြုသူအမည် (username) နှင့် စကားဝှက် (password) တို့ကို အသုံးပြု၍ စာကြည့်တိုက်စီမံခန့်ခွဲမှု (Library Administration) သို့ အကောင့်ဝင် (login) နိုင်မည်ဖြစ်ပါသည်။ ထို့အပြင်၊ အကောင့်ဝင်ထားသော ဝန်ထမ်းများသည် ၎င်းတို့၏အချက်အလက်များကို ပြင်ဆင်ခြင်း၊ စကားဝှက်များ သတ်မှတ်ခြင်းနှင့် Two-factor authentication (အဆင့်နှစ်ဆင့်ဖြင့် လုံခြုံရေးအတည်ပြုခြင်း) ကို သတ်မှတ်ခြင်းများ ပြုလုပ်နိုင်ပါသည်။
 
-- **Add new user** (adding users), 
-- **User list** (list of users), 
-- **Search** (search for a user), 
-- **Edit** and **Delete** user. 
+**အသုံးပြုသူပရိုဖိုင် ပြောင်းလဲရန်**
 
-The user list displays the following information for each user:
+ ဤ Menu တွင် အသုံးပြုသူအနေဖြင့် အောက်ပါတို့ကို ပြင်ဆင်ရန် ရွေးချယ်စရာများ ပါဝင်ပါသည် -
 
-* *Real name* (the user's real name)
+- *ဝင်ရောက်သူအမည်* (အသုံးပြုသူအတွက် သတ်မှတ်ပေးထားသော အကောင့်ဝင်ရန်အမည်) - အသုံးပြုသူမှ ပြောင်းလဲ၍မရပါ။
+- *အမည်ရင်း (အသုံးပြုသူ၏ အမည်ရင်း)*
+- *အသုံးပြုသူအမျိုးအစား* 
+- *နောက်ဆုံး အကောင့်ဝင်ခဲ့သည့်အချိန်*
+- *မှတ်တမ်းကို နောက်ဆုံးမွမ်းမံခဲ့သည့်အချိန်*
+- *အီးမေးလ်*
+- *လူမှုမီဒီယာ*
+- *အသုံးပြုသူဓာတ်ပုံ*
+- *စကားဝှက်ဟောင်း ; စကားဝှက်အသစ် ; အတည်ပြုချက်*
+- နှစ်ဆင့်အထောက်အထားစိစစ်ခြင်း (Two-factor authenticationကို ဖွင့်ရန်
 
-* *Login username* (the login name allocated to the user)
+စာမျက်နှာမှ မထွက်ခွာမီ မှတ်တမ်းများကို မွမ်းမံရန် (**Update**) သေချာပါစေ။
 
-* *User type* (security group)
+------
 
-* *Last login* (when the user last logged in)
 
-* *Last update* (when the record was last updated)
+**စနစ် -> စာကြည့်တိုက်မှူးနှင့် စနစ်အသုံးပြုသူများ**
 
-  The list may be sorted by any of these fields by simply clicking on the field name at the top of the column. E.g to sort by User type , simply click "User type".
+ဤ Menu ကို super-user (အမြင့်ဆုံးလုပ်ပိုင်ခွင့်ရှိသူ) သာလျှင် ဝင်ရောက်အသုံးပြုနိုင်ပြီး အောက်ပါရွေးချယ်စရာများ ပါဝင်ပါသည် -
 
-  A search function exists which will search the user list for users matching the keywords
+- **အသုံးပြုသူအသစ်ထည့်ရန်**
 
-  This facility can also be used to edit and delete items. 
+- **အသုံးပြုသူစာရင်း**
 
-  To edit an item , double-click on the title , or single-click on the pencil ( edit) icon.
+- **အသုံးပြုသူကို ရှာဖွေရန်** 
 
-Within user information, a user can also add their internet credentials, e.g. Facebook profile, blog or websites, etc.
+- **အသုံးပြုသူကို ပြင်ဆင်ရန်နှင့် ဖျက်ရန်**။
 
-To add a new user, click **Add New User,** and then fill in the Login username, Real name, User type ( that they will belong to), and Password. These are mandatory.
+  ဤ Menuတွင် အသုံးပြုသူအနေဖြင့် အောက်ပါတို့ကို ပြင်ဆင်ရန် ရွေးချယ်စရာများ ပါဝင်ပါသည် -
 
-Optionally, you may enter information on Email address, various social media accounts such as Facebook, blog address etc.
+* *အမည်ရင်း* (အသုံးပြုသူ၏ အမည်ရင်း)
+* *ဝင်ရောက်သူအမည်* (အသုံးပြုသူအတွက် သတ်မှတ်ပေးထားသော အကောင့်ဝင်ရန်အမည်) 
+* *အသုံးပြုသူအမျိုးအစား* 
+* *နောက်ဆုံး အကောင့်ဝင်ခဲ့သည့်အချိန်*
+* *မှတ်တမ်းကို နောက်ဆုံးမွမ်းမံခဲ့သည့်အချိန်*
 
-A User photo may be uploaded or captured using the built-in camera function if available.
+ကော်လံ၏ထိပ်ရှိ ကွက်လပ်အမည်ကို နှိပ်ခြင်းဖြင့် စာရင်းကို ဤကွက်လပ်များထဲမှ တစ်ခုခုအလိုက် စီနိုင်သည်။ ဥပမာ- အသုံးပြုသူအမျိုးအစားအလိုက် စီရန် "အသုံးပြုသူအမျိုးအစား" ကို နှိပ်ပါ။
 
-Checkboxes permit optional allocation to Group(s): Admin , Circulation, Librarians, Visitors.
+သော့ချက်စာလုံးများနှင့် ကိုက်ညီသော အသုံးပြုသူများအတွက် အသုံးပြုသူစာရင်းကို ရှာဖွေပေးမည့် ရှာဖွေရေးလုပ်ဆောင်ချက်တစ်ခု လည်း ပါရှိပါသည်။
 
-Be sure to **Save** the record before exiting the screen.
+ဤလုပ်ဆောင်ချက်ကို အချက်အလက်များ ပြင်ဆင်ရန်နှင့် ဖျက်ရန်အတွက်လည်း အသုံးပြုနိုင်ပါသည်။
+
+အချက်အလက်တစ်ခုကို တည်းဖြတ်ရန်၊ ခေါင်းစဉ်ကို နှစ်ချက်နှိပ်ပါ သို့မဟုတ် ခဲတံ (တည်းဖြတ်ရန်) အိုင်ကွန်ကို တစ်ချက်နှိပ်ပါ။
+
+အသုံးပြုသူအချက်အလက်အတွင်း၊ အသုံးပြုသူသည် ၎င်းတို့၏ အင်တာနက်အထောက်အထားများ၊ ဥပမာ Facebook ပရိုဖိုင်၊ ဘလော့ဂ် သို့မဟုတ် ဝဘ်ဆိုက်များ စသည်တို့ကိုလည်း ထည့်သွင်းနိုင်သည်။
+
+အသုံးပြုသူအသစ်ထည့်ရန်၊ **အသုံးပြုသူအသစ်ထည့်ရန်** ကို နှိပ်ပြီးနောက် Login အသုံးပြုသူအမည်၊ အမည်ရင်း၊ အသုံးပြုသူအမျိုးအစား (၎င်းတို့ပါဝင်မည့်) နှင့် စကားဝှက်တို့ကို ဖြည့်စွက်ပါ။ ယင်းတို့သည် မဖြစ်မနေဖြည့်သွင်းရမည့်အချက်အလက်များ ဖြစ်ပါသည်။
+
+ရွေးချယ်နိုင်သည်မှာ၊ အီးမေးလ်လိပ်စာ၊ Facebook၊ ဘလော့ဂ်လိပ်စာစသည့် လူမှုမီဒီယာအကောင့်အမျိုးမျိုးအကြောင်း အချက်အလက်များကို ထည့်သွင်းနိုင်သည်။
+
+အသုံးပြုသူ၏ ဓာတ်ပုံကို တင်နိုင်သည် (upload) သို့မဟုတ် စနစ်တွင် ကင်မရာလုပ်ဆောင်ချက်ပါဝင်ပါက တိုက်ရိုက်ရိုက်ကူး (capture) နိုင်ပါသည်။
+
+အမှန်ခြစ်အကွက်များ (Checkboxes) ကို အသုံးပြု၍ Admin၊ Circulation၊ Librarians၊ Visitors စသည့် အုပ်စု(များ) သို့ ရွေးချယ်သတ်မှတ်နိုင်ပါသည်။
+
+စာမျက်နှာမှ မထွက်ခွာမီ မှတ်တမ်းများကို သိမ်းဆည်းရန် **(Save)** သေချာပါစေ။
+

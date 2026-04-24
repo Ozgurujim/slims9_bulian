@@ -1,9 +1,12 @@
-### Barcode generator
+### ဘားကုဒ်ထုတ်လုပ်စက်
 
 ------
 
-Enter the code that will be made into barcodes in the columns on the screen. Determine the size of the barcode (Small, Medium, or Big), and click the **Generate barcode** button. Then these will be displayed in the form of a barcode , in a popup,  and can be printed in a printer. The default encoding used is barcode 128B. You can modify this barcode encoding in the Senayan global configuration file , *sysconfig.inc.php*.
+မျက်နှာပြင်ပေါ်ရှိ ကော်လံများတွင် ဘားကုဒ်များအဖြစ် ပြုလုပ်မည့် ကုဒ်ကို ရိုက်ထည့်ပါ။ ဘားကုဒ်၏ အရွယ်အစား (အသေး၊ အလတ် သို့မဟုတ် အကြီး) ကို ဆုံးဖြတ်ပြီး **ဘားကုဒ်ထုတ်လုပ်ခြင်း** ခလုတ်ကို နှိပ်ပါ။ ထို့နောက် ၎င်းတို့ကို ဘားကုဒ်ပုံစံဖြင့်၊ ပေါ့ပ်အပ်တွင် ပြသမည်ဖြစ်ပြီး ပရင်တာတွင် ရိုက်နှိပ်နိုင်သည်။ အသုံးပြုထားသော မူရင်းကုဒ်ကုဒ်မှာ ဘားကုဒ် 128B ဖြစ်သည်။ ဤဘားကုဒ်ကုဒ်ကုဒ်ကို Senayan global configuration ဖိုင်၊ *sysconfig.inc.php* တွင် ပြင်ဆင်နိုင်ပြီး **System Configuration** မီနူးခွဲတွင်လည်း သတ်မှတ်နိုင်သည်။
 
-*Note:*
-The characters that can be processed in the Barcode generator are just the ASCII alphanumeric character set.
+*မှတ်ချက် ၁:*
+ဘားကုဒ်ထုတ်လုပ်စက်တွင် လုပ်ဆောင်နိုင်သော စာလုံးများသည် ASCII အက္ခရာနှင့်ဂဏန်း စာလုံးအစုံသာဖြစ်သည်။
+
+*မှတ်ချက် ၂:*
+SLiMS 9.7.2 တွင် ဘားကုဒ်ကုဒ်ကုဒ်များဖြစ်သည့် Code 128 နှင့် Code 39 တို့သည်သာ လုပ်ဆောင်နိုင်ပြီး System Configuration မီနူးတွင် ရွေးချယ်နိုင်ပါသည်။
 

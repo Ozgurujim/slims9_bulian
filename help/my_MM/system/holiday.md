@@ -1,14 +1,14 @@
-### Holiday Settings
+### အားလပ်ရက်ဆက်တင်များ
 
 ------
 
-A facility to determine days where the library is not open for service. Defining these holidays will effect calculation of weekdays that the library is active/open, and fine calculation if fines are implemented. There are two types of holidays that can be defined in this menu:
-- Regular days off (Monday till Sunday), and 
-- Special holidays (defined by date, month and year).
+စာကြည့်တိုက်ဝန်ဆောင်မှုမဖွင့်သည့်ရက်များကို ဆုံးဖြတ်ရန် အထောက်အကူပြုပစ္စည်း။ ဤအားလပ်ရက်များကို သတ်မှတ်ခြင်းသည် စာကြည့်တိုက်ဖွင့်/ဖွင့်ထားသည့် ရက်သတ္တပတ်ရက်များကို တွက်ချက်ခြင်းနှင့် ဒဏ်ကြေးများ အကောင်အထည်ဖော်ပါက ဒဏ်ကြေးတွက်ချက်ခြင်းတို့ကို အကျိုးသက်ရောက်စေမည်ဖြစ်သည်။ ဤမီနူးတွင် သတ်မှတ်နိုင်သော အားလပ်ရက်အမျိုးအစားနှစ်မျိုးရှိသည်-
 
-Clicking the **Holiday setting** button will show the days of the week, and the current setting for days off ( indicated by the checkbox.) To adjust the regular days of the week the library is closed, mark the checkbox(es) and click the **Save settings** button.
+- ပုံမှန်အားလပ်ရက်များ (တနင်္လာနေ့မှ တနင်္ဂနွေနေ့အထိ) နှင့်
+- အထူးအားလပ်ရက်များ (ရက်စွဲ၊ လနှင့် ခုနှစ်အလိုက် သတ်မှတ်သည်)။
 
-To view special holidays already set, click the **Special holiday** button. This will display the list of  special holidays with the day of the week, the start date of the holiday and the holiday description. The usual sorting and edit functions are provided.
+**အားလပ်ရက်ဆက်တင်** ခလုတ်ကို နှိပ်ခြင်းဖြင့် ရက်သတ္တပတ်၏ရက်များနှင့် လက်ရှိအားလပ်ရက်ဆက်တင်ကို ပြသပေးမည်ဖြစ်သည် (အကွက်ဖြင့် ညွှန်ပြထားသည်)။ စာကြည့်တိုက်ပိတ်ထားသည့် ရက်သတ္တပတ်၏ ပုံမှန်ရက်များကို ချိန်ညှိရန်အတွက် အကွက်(များ)ကို အမှတ်အသားပြုပြီး **ဆက်တင်များကို သိမ်းဆည်းပါ** ခလုတ်ကို နှိပ်ပါ။
 
-To add a special holiday, click the **Add special holiday** buttons and  determine the date, month, year and description of the holiday. In addition, special holidays can also be configured for a range of dates (from the start date until the date of completion of holidays).
+သတ်မှတ်ထားပြီးသော အထူးအားလပ်ရက်များကို ကြည့်ရှုရန် **အထူးအားလပ်ရက်** ခလုတ်ကို နှိပ်ပါ။ ၎င်းသည် ရက်သတ္တပတ်၏ရက်၊ အားလပ်ရက်စတင်သည့်ရက်စွဲနှင့် အားလပ်ရက်ဖော်ပြချက်ပါရှိသော အထူးအားလပ်ရက်များစာရင်းကို ပြသပေးမည်ဖြစ်သည်။ ပုံမှန်စီခြင်းနှင့် တည်းဖြတ်ခြင်းလုပ်ဆောင်ချက်များကို ပံ့ပိုးပေးထားသည်။
 
+အထူးအားလပ်ရက်ထည့်ရန် **အထူးအားလပ်ရက်ထည့်ပါ** ခလုတ်များကို နှိပ်ပြီး အားလပ်ရက်၏ရက်စွဲ၊ လ၊ ခုနှစ်နှင့် ဖော်ပြချက်ကို ဆုံးဖြတ်ပါ။ ထို့အပြင်၊ အထူးအားလပ်ရက်များကို ရက်စွဲအမျိုးမျိုးအတွက် (စတင်သည့်နေ့မှ အားလပ်ရက်များပြီးဆုံးသည့်နေ့အထိ) ပြင်ဆင်သတ်မှတ်နိုင်ပါသည်။

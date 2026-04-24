@@ -1,36 +1,45 @@
-### System configuration
+### စနစ်ဆက်တင်များ
 
 ------
 
-Using this form you can make changes to the global preferences in SLiMS applications, such as:
-- **Library name** (Name of library, appears in OPAC and printed items such as labels and cards)
-- **Library sub-name** (additional library name, optional)
-- **Logo image** (Library logo image file, can be uploaded, may be used in OPAC and member cards)
-- **Default application language** (Language that Admin. modules are displayed in, and is OPAC default)
-- **Number of titles to show in OPAC result list** (number of titles that will be displayed on every page in the OPAC)
-- **Show promoted titles on homepage** (showing title in the home page of the OPAC)
-- **Quick return**  [Enable/Disable] (to allow the return of items via a quick method)
-- **Print circulation receipt** [Print/Don't print]
-- **Loan and due date - Manual change** [Enable/Disable]
-- **Loan limit override**  [Enable/Disable] (ability for staff to override limits)
-- **Ignore holidays fine calculation** [Enable/Disable] (whether to count holidays in calculating fines)
-- **OPAC XML detail** [Enable/Disable] (allow XML display of title detail)
-- **OPAC XML result** [Enable/Disable] (allow XML display of search results)
-- **Enable SEARCH spellchecker** [Enable/Disable]
-- **Allow OPAC file download** [Allow/Forbid]   (allow/forbid users to download title file attachments)
-- **Session login timeout** ( set time before a logged-in user is automatically logged out)
-- **Barcode encoding** [ Code 128/Code 38] (set the encoding system used for barcodes)
-- **Allowed counter IP** ( allowed IP address for counter - default is 127.0.0.1)
-- **Visitor limitation by time**  [Enable/Disable]
-- **Time visitor limitation** [in minutes] (limits visitor to set time, if limitation is enabled)
-- **Reserve method** [Database/Email]
-- **Reserve for item on loan only** [Enable/Disable] ( allow reservation only for those items that are  already  loaned)
+ဤပုံစံကို အသုံးပြု၍ SLiMS အပလီကေးရှင်းများရှိ ကမ္ဘာလုံးဆိုင်ရာ ဦးစားပေးမှုများကို ပြောင်းလဲနိုင်သည်-
 
-In this screen  we can also see which version of SLiMS we are using.
+- **စာကြည့်တိုက်အမည်** (စာကြည့်တိုက်အမည်၊ OPAC တွင် ပေါ်လာပြီး အညွှန်းများနှင့် ကတ်များကဲ့သို့သော ပုံနှိပ်ထားသော အရာများ)
+- **စာကြည့်တိုက်အမည်ခွဲ** (နောက်ထပ်စာကြည့်တိုက်အမည်၊ ရွေးချယ်နိုင်သည်)
+- **လိုဂိုပုံ** (စာကြည့်တိုက်လိုဂိုပုံဖိုင်၊ အပ်လုဒ်လုပ်နိုင်သည်၊ OPAC နှင့် အသင်းဝင်ကတ်များတွင် အသုံးပြုနိုင်သည်)
+- **ပုံသေအပလီကေးရှင်းဘာသာစကား** (Admin မော်ဂျူးများကို ပြသသည့်ဘာသာစကားဖြစ်ပြီး OPAC ပုံသေဖြစ်သည်)
+- **ပုံသေအပလီကေးရှင်းအချိန်ဇုန်** (၎င်းတို့သည် PHP မှ ပံ့ပိုးပေးသော အချိန်ဇုန်များဖြစ်ရမည်)
+- **ရှာဖွေရေးအင်ဂျင်** (ရှာဖွေရေးအင်ဂျင်ကို ရွေးချယ်ပြီး ခွင့်ပြုပါက ပြင်ဆင်ပါ)
+- **OPAC ရလဒ်စာရင်းတွင် ပြသရန် ခေါင်းစဉ်အရေအတွက်** (OPAC ရှိ စာမျက်နှာတိုင်းတွင် ပြသမည့် ခေါင်းစဉ်အရေအတွက်)
+- **ပင်မစာမျက်နှာတွင် မြှင့်တင်ထားသော ခေါင်းစဉ်များကို ပြသပါ** (OPAC ၏ ပင်မစာမျက်နှာတွင် အရင်းအမြစ်၏ ခေါင်းစဉ်ကို ပြသခြင်း)
+- **အမြန်ပြန်ပို့ခြင်း** [ဖွင့်/ပိတ်ခြင်း] (အမြန်နည်းလမ်းဖြင့် အရာများကို ပြန်ပို့ခွင့်ပြုရန်၊ ပုံသေ=ဖွင့်ပါ)
+- **ပုံနှိပ်ထုတ်ဝေခြင်း ပြေစာ** [ပရင့်ထုတ်/မပရင့်ထုတ်ပါ] (default= မပရင့်ထုတ်ပါ)
+- **ချေးငွေနှင့် ပေးရမည့်ရက် - ကိုယ်တိုင်ပြောင်းလဲခြင်း** [ဖွင့်/ပိတ်] (default = ပိတ်)
+- **ချေးငွေကန့်သတ်ချက် အစားထိုးခြင်း** [ဖွင့်/ပိတ်] (ဝန်ထမ်းများ ကန့်သတ်ချက်များကို အစားထိုးနိုင်စွမ်း၊ default=ပိတ်)
+- **အားလပ်ရက်ဒဏ်ကြေးတွက်ချက်မှုကို လျစ်လျူရှုပါ** [ဖွင့်/ပိတ်] (ဒဏ်ကြေးတွက်ချက်ရာတွင် အားလပ်ရက်များကို ထည့်သွင်းရေတွက်ရန်၊ default=ပိတ်)
+- **OPAC XML အသေးစိတ်** [ဖွင့်/ပိတ်] (ခေါင်းစဉ်အသေးစိတ်ကို XML ပြသခွင့်ပြု၊ default=ဖွင့်)
+- **OPAC XML ရလဒ်** [ဖွင့်/ပိတ်] (ရှာဖွေမှုရလဒ်များကို XML ပြသခွင့်ပြု၊ default=ဖွင့်)
+- **SEARCH စာလုံးပေါင်းစစ်ဆေးသူကို ဖွင့်ပါ** [ဖွင့်/ပိတ်] (default=ဖွင့်)
+- **OPAC ဖိုင်ဒေါင်းလုဒ်လုပ်ခွင့်ပြု** [ခွင့်ပြု/တားမြစ်] (အသုံးပြုသူများအား ခေါင်းစဉ်ဖိုင်ပူးတွဲဖိုင်များကို ဒေါင်းလုဒ်လုပ်ခွင့်ပြု/တားမြစ်)
+- **Session login timeout** (ဝင်ရောက်ထားသောအသုံးပြုသူ အလိုအလျောက် logout မလုပ်မီ အချိန်သတ်မှတ်ပါ)
+- **Remember me Timeout** ("remember me" token သက်တမ်းကုန်ဆုံးမည့်ရက်မတိုင်မီ ရက်များ)
+- **ဘားကုဒ် ကုဒ်သွင်းခြင်း** [ ကုဒ် ၁၂၈/ကုဒ် ၃၈] (ဘားကုဒ်များအတွက် အသုံးပြုသော ကုဒ်သွင်းစနစ်ကို သတ်မှတ်ပါ)
+- **ခွင့်ပြုထားသော ကောင်တာ IP** (ကောင်တာအတွက် ခွင့်ပြုထားသော IP လိပ်စာ - မူရင်းမှာ 127.0.0.1 ဖြစ်သည်)
+- **အချိန်အလိုက် လာရောက်လည်ပတ်သူ ကန့်သတ်ချက်** [ဖွင့်/ပိတ်]
+- **အချိန် လာရောက်လည်ပတ်သူ ကန့်သတ်ချက်** [မိနစ်အလိုက်] (ကန့်သတ်ချက်ကို ဖွင့်ထားပါက လာရောက်လည်ပတ်သူအား အချိန်သတ်မှတ်ရန် ကန့်သတ်ထားသည်)
+- **ကြိုတင်မှာယူမှုနည်းလမ်း** [ဒေတာဘေ့စ်/အီးမေးလ်]။ ( မူရင်းမှာ ဒေတာဘေ့စ်ဖြစ်သည်)။ *ကြိုတင်မှာယူမှုပြုလုပ်ရန် နည်းလမ်းသတ်မှတ်သည်။*
+- **ငှားရမ်းထားသောပစ္စည်းအတွက်သာ ကြိုတင်မှာယူပါ** [ဖွင့်/ပိတ်] (ငှားရမ်းပြီးသားပစ္စည်းများအတွက်သာ ကြိုတင်မှာယူခွင့်ပြုသည်)
+- **အတည်ပြုချက်သတိပေးချက်ကို အသက်သွင်းပါလား။**[ [ဖွင့်/ပိတ်] (default=ဖွင့်ပါ)
+- **SSL အတည်ပြုချက်ကို လျစ်လျူရှုပါ** [ဖွင့်/ပိတ်] (default=ဖွင့်ပါ)
+- **ရိုးရှင်းသောရှာဖွေမှုကို ပိုမိုရိုးရှင်းစေရန်၊ ရှာဖွေမှုစံနှုန်းများကို ကျဉ်းမြောင်းစေရန်။** [မဟုတ်ပါ/ဟုတ်ကဲ့] (default သည် မဟုတ်ပါ)
+- **ခိုင်မာသော စကားဝှက်မူဝါဒ** [ဟုတ်ကဲ့/မဟုတ်ပါ] (default သည် ဟုတ်ကဲ့ဖြစ်သည်။ အနည်းဆုံး စကားဝှက်လိုအပ်ချက်များကို ပြဋ္ဌာန်းသည်)
+- **စကားဝှက် အနည်းဆုံး စာလုံးများ (ခိုင်မာသော စကားဝှက်မူဝါဒသည် ဟုတ်ကဲ့ဖြစ်ပါက)** (စာလုံးအရေအတွက် သတ်မှတ်ပါ၊ default = ၈)
 
-*Notes:* **Show promoted titles on homepage** feature on this system: if the check box is checked, the front page of the OPAC display will be blank, unless there is a set of bibliographic data to display on the front page. See the **Add new entry** menu in the *Cataloguing* module.
+ဤမျက်နှာပြင်တွင် ကျွန်ုပ်တို့အသုံးပြုနေသော SLiMS ၏ ဗားရှင်းကိုလည်း မြင်တွေ့နိုင်သည်။
 
-When you have altered the System configuration, be sure to click the **Save settings** button before exiting or changes will be lost.
+*မှတ်ချက်များ-* ဤစနစ်တွင် **ပင်မစာမျက်နှာတွင် မြှင့်တင်ထားသော ခေါင်းစဉ်များကို ပြသပါ** အင်္ဂါရပ်- အမှန်ခြစ်အကွက်ကို အမှန်ခြစ်ပါက၊ OPAC မျက်နှာပြင်၏ ရှေ့စာမျက်နှာတွင် ခေါင်းစဉ်များကို မပြသပါ၊ ရှေ့စာမျက်နှာတွင် ပြသရန် စာစုစာရင်းဒေတာအစုံအလင် မရှိပါက။ *Cataloguing* မော်ဂျူးရှိ **Add new entry** မီနူးနှင့် "Promote to Homepage" setting ကိုကြည့်ပါ။
 
+### အရေးကြီးသည်
 
+System configuration ကို ပြောင်းလဲပြီးသည်နှင့် ထွက်ခွာခြင်းမပြုမီ **Save settings** ခလုတ်ကို နှိပ်ရန် သေချာပါစေ၊ မဟုတ်ပါက ပြောင်းလဲမှုများ ဆုံးရှုံးသွားပါလိမ့်မည်။
 

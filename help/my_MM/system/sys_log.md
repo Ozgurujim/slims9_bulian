@@ -1,14 +1,13 @@
-### System Log
+### စနစ်မှတ်တမ်း
 
 ------
 
-This is a menu to view the recorded events on the Senayan system. Records for each event that are produced show :
+ဤသည်မှာ Senayan စနစ်တွင် မှတ်တမ်းတင်ထားသော ဖြစ်ရပ်များကို ကြည့်ရှုရန် မီနူးတစ်ခုဖြစ်သည်။ ထုတ်လုပ်သော ဖြစ်ရပ်တစ်ခုစီအတွက် မှတ်တမ်းများတွင် အောက်ပါတို့ကို ပြသထားသည်-
 
-* *Time*
-* *Location* (module name)
-* *Message* (description). Messages that appear in the system logs include who (User/Administrator) conducted what ,and where.
+* *အချိန်*
+* *တည်နေရာ* (မော်ဂျူးအမည်)
+* *မက်ဆေ့ချ်* (ဖော်ပြချက်)။ စနစ်မှတ်တမ်းများတွင် ပေါ်လာသော မက်ဆေ့ချ်များတွင် မည်သူ (အသုံးပြုသူ/စီမံခန့်ခွဲသူ) သည် မည်သည့်အရာကို မည်သည့်နေရာတွင် လုပ်ဆောင်ခဲ့သည် ပါဝင်သည်။
 
-When the SLiMS application is used, it will automatically log the SLiMS work and the log size and load will also increase. 
+SLiMS အပလီကေးရှင်းကို အသုံးပြုသောအခါ၊ ၎င်းသည် SLiMS လုပ်ဆောင်ချက်ကို အလိုအလျောက် မှတ်တမ်းတင်မည်ဖြစ်ပြီး မှတ်တမ်းအရွယ်အစားနှင့် ဝန်လည်း တိုးလာမည်ဖြစ်သည်။
 
-Therefore, the system log function also contains the facility to **Save logs to file**. This process will save the existing log, and then the logs can be cleared by clicking the **Clear logs** button.
-
+ထို့ကြောင့်၊ စနစ်မှတ်တမ်းလုပ်ဆောင်ချက်တွင် **မှတ်တမ်းများကို ဖိုင်သို့ သိမ်းဆည်းရန်** လုပ်ဆောင်ချက်လည်း ပါဝင်သည်။ ဤလုပ်ငန်းစဉ်သည် ရှိပြီးသားမှတ်တမ်းကို သိမ်းဆည်းမည်ဖြစ်ပြီး ထို့နောက် **မှတ်တမ်းများကို ရှင်းလင်းရန်** ခလုတ်ကို နှိပ်ခြင်းဖြင့် မှတ်တမ်းများကို ရှင်းလင်းနိုင်သည်။

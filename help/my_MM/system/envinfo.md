@@ -1,20 +1,20 @@
-### System environment
+### စနစ်ပတ်ဝန်းကျင်
 
 ------
 
-This screen displays relevant information about the particular SLiMS installation and its hosting environment. This data is especially relevant when troubleshooting an installation, and should be provided when requesting support in forums etc.
+ဤမျက်နှာပြင်သည် သတ်မှတ်ထားသော SLiMS တပ်ဆင်မှုနှင့် ၎င်း၏ hosting ပတ်ဝန်းကျင်နှင့်ပတ်သက်သည့် သက်ဆိုင်ရာအချက်အလက်များကို ပြသသည်။ ဤဒေတာသည် ထည့်သွင်းမှုပြဿနာရှာဖွေရာတွင် အထူးသက်ဆိုင်ပြီး ဖိုရမ်များစသည်တို့တွင် ပံ့ပိုးမှုတောင်းဆိုသည့်အခါ ပေးသင့်သည်။
 
-Variables displayed are:
+ပြသထားသော variable များမှာ-
 
-- **SLiMS version** ( the version of SLiMS running , as read from the sysconfig file)
-- **Operating system** (of the host)
-- **OS Architecture** (e.g. x86_64 64 bit)
-- **Web server** (the application on the server which is serving webpages for SLiMS)
-- **PHP version** (the version of PHP language running on the SLiMS server)
-- **MySQL database version**  (the version of MySQL compatible database running on the server)
-- **MySQL client version** (the version of MySQL client installed on the server)
-- **Browser/User agent** (information on the browser and system that you are using to view this data)
-- **Hostname** (the domain or host name of the server)
-- **jQuery version** (the version of jQuery being used)
-- **HTML5 support?** (whether HTML5 support is available on the system, and enabled)
+- **SLiMS ဗားရှင်း** ( sysconfig ဖိုင်မှဖတ်ထားသည့်အတိုင်း SLiMS လည်ပတ်နေသော ဗားရှင်း)
+- **လည်ပတ်နေသောစနစ်** (host ၏)
+- **OS ဗိသုကာ** (ဥပမာ x86_64 64 bit)
+- **ဝဘ်ဆာဗာ** (SLiMS အတွက် ဝက်ဘ်စာမျက်နှာများကို ဝန်ဆောင်မှုပေးနေသော ဆာဗာပေါ်ရှိ အပလီကေးရှင်း)
+- **PHP ဗားရှင်း** (SLiMS ဆာဗာပေါ်တွင် လည်ပတ်နေသော PHP ဘာသာစကား၏ ဗားရှင်း)
+- **MySQL ဒေတာဘေ့စ် ဗားရှင်း** (ဆာဗာပေါ်တွင် လည်ပတ်နေသော MySQL နှင့် တွဲဖက်အသုံးပြုနိုင်သော ဒေတာဘေ့စ်၏ ဗားရှင်း)
+- **MySQL client ဗားရှင်း** (ဆာဗာပေါ်တွင် ထည့်သွင်းထားသော MySQL client ဗားရှင်း)
+- **Browser/User agent** (ဤဒေတာကိုကြည့်ရှုရန် သင်အသုံးပြုနေသော browser နှင့် စနစ်ဆိုင်ရာ အချက်အလက်)
+- **Hostname** (ဆာဗာ၏ domain သို့မဟုတ် host name)
+- **jQuery ဗားရှင်း** (အသုံးပြုနေသော jQuery ဗားရှင်း)
+- **HTML5 ပံ့ပိုးမှုလား?** (HTML5 ဟုတ်မဟုတ် ပံ့ပိုးမှုကို စနစ်တွင် ရရှိနိုင်ပြီး ဖွင့်ထားသည်)။
 

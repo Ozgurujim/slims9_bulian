@@ -1,32 +1,31 @@
-### Database backup
+### ဒေတာဘေ့စ် အရန်ကူးယူခြင်း
 
 ------
 
-A facility to backup the SLiMS database. 
+SLiMS ဒေတာဘေ့စ်ကို အရန်ကူးယူရန် အထောက်အကူပြုပစ္စည်း။
 
-The screen displays details of existing backups, with fields as follows:
+မျက်နှာပြင်သည် ရှိပြီးသား အရန်ကူးယူမှုများ၏ အသေးစိတ်အချက်အလက်များကို အောက်ပါအတိုင်း ကွက်လပ်များဖြင့် ပြသထားသည်-
 
-* **Backup executor** (the user who initiated the backup)
-* **Backup time** (the time and date the backup was created)
-* **Backup file location** (the path to the backup file and its name )
-* **File size** (the size of the backup)
+* **အရန်ကူးယူသူ** (အရန်ကူးယူခြင်းကို စတင်သူ အသုံးပြုသူ)
+* **အရန်ကူးယူချိန်** (အရန်ကူးယူမှု ဖန်တီးခဲ့သည့် အချိန်နှင့် ရက်စွဲ)
+* **အရန်ကူးယူမှုဖိုင်တည်နေရာ** (အရန်ကူးယူမှုဖိုင်၏ လမ်းကြောင်းနှင့် ၎င်း၏အမည်)
+* **ဖိုင်အရွယ်အစား** (အရန်ကူးယူမှု၏ အရွယ်အစား)
 
-To create a backup, click the  **Start new backup** button and SLiMS will back up automatically. The format of backup files created by SLIMS is .sql in layout and compressed using TAR.GZ . They are named according to the creation date and store within  the directory *files/backup*.
+အရန်ကူးယူမှုတစ်ခု ဖန်တီးရန်အတွက် **အရန်ကူးယူမှုအသစ်စတင်ပါ** ခလုတ်ကို နှိပ်ပါ၊ SLiMS သည် အလိုအလျောက် အရန်ကူးယူမည်ဖြစ်သည်။ SLIMS မှ ဖန်တီးထားသော အရန်ကူးယူမှုဖိုင်များ၏ ဖော်မတ်သည် layout တွင် .sql ဖြစ်ပြီး TAR.GZ ကို အသုံးပြု၍ ချုံ့ထားသည်။ ၎င်းတို့ကို ဖန်တီးသည့်ရက်စွဲအလိုက် အမည်ပေးထားပြီး *ဖိုင်များ/အရန်ကူးယူမှု* directory တွင် သိမ်းဆည်းထားသည်။
 
-Backup files can be downloaded by clicking the **Download** button.
+အရန်ကူးယူမှုဖိုင်များကို **ဒေါင်းလုဒ်** ခလုတ်ကို နှိပ်ခြင်းဖြင့် ဒေါင်းလုဒ်လုပ်နိုင်သည်။
 
-Unwanted backups can be deleted by selection using the checkbox, followed by clicking on the **Delete selected data** button.
+မလိုအပ်သော အရန်ကူးယူမှုများကို checkbox ကို အသုံးပြု၍ ရွေးချယ်ခြင်းဖြင့် ဖျက်ပစ်နိုင်ပြီး ထို့နောက် **ရွေးချယ်ထားသောဒေတာကို ဖျက်ပစ်ပါ** ခလုတ်ကို နှိပ်ခြင်းဖြင့် ဖျက်ပစ်နိုင်သည်။
 
-The normal search and sort functions are available to manage a large number of backups.
+ပုံမှန်ရှာဖွေမှုနှင့် စီစစ်ခြင်းလုပ်ဆောင်ချက်များသည် အရန်ကူးယူမှုအများအပြားကို စီမံခန့်ခွဲရန် ရရှိနိုင်ပါသည်။
 
-Backups should be carried out regularly and methodically according to a well-planned schedule.
+အရန်ကူးယူမှုများကို ကောင်းမွန်စွာ စီစဉ်ထားသော အချိန်ဇယားအတိုင်း မှန်မှန်နှင့် စနစ်တကျ လုပ်ဆောင်သင့်သည်။
 
-A full database backup provides one of the key functions for migrating a SLiMS system to a new server, and for recovery from system failure.
+ဒေတာဘေ့စ် အပြည့်အစုံ အရန်ကူးယူခြင်းသည် SLiMS စနစ်တစ်ခုကို ဆာဗာအသစ်သို့ ရွှေ့ပြောင်းရန်နှင့် စနစ်ချို့ယွင်းမှုမှ ပြန်လည်ရယူရန်အတွက် အဓိကလုပ်ဆောင်ချက်များထဲမှ တစ်ခုကို ပေးစွမ်းသည်။
 
-<u>Note:</u> 
-*To do this backup, the mysql database user must have the right to LOCK TABLES*.
+<u>မှတ်ချက်-</u>
+*ဤအရန်ကူးယူမှုကို ပြုလုပ်ရန် mysql ဒေတာဘေ့စ်အသုံးပြုသူသည် ဇယားများကို လော့ချပိုင်ခွင့်ရှိရမည်*။
 
-<u>Note:</u>
+<u>မှတ်ချက်-</u>
 
-*This function backs up the SLiMS database only. Uploaded content such book covers images, attached files, member photos etc., must be backed-up separately.*
-
+*ဤလုပ်ဆောင်ချက်သည် SLiMS ဒေတာဘေ့စ်ကိုသာ အရန်ကူးယူသည်။ စာအုပ်တွင်ပါရှိသော ပုံများ၊ ပူးတွဲပါဖိုင်များ၊ အဖွဲ့ဝင်ဓာတ်ပုံများ စသည်တို့ကဲ့သို့သော အပ်လုဒ်လုပ်ထားသော အကြောင်းအရာများကို သီးခြားအရန်ကူးယူရမည်။*

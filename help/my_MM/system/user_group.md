@@ -1,24 +1,24 @@
-### User groups
+### အသုံးပြုသူအုပ်စုများ
 
 ------
 
-A facility to define groups of users. In this you can create groupings of your system users and grant read (Read) or Write (Write) permissions for the Senayan modules. Each user can be placed in more than one group.
+အသုံးပြုသူအုပ်စုများကို သတ်မှတ်ရန် အထောက်အကူပြုပစ္စည်း။ ဤတွင် သင့်စနစ်အသုံးပြုသူများ၏ အုပ်စုများကို ဖန်တီးနိုင်ပြီး Senayan မော်ဂျူးများအတွက် ဖတ်ရှုခြင်း (Read) သို့မဟုတ် ရေးသားခြင်း (Write) ခွင့်ပြုချက်များကို ပေးနိုင်သည်။ အသုံးပြုသူတစ်ဦးချင်းစီကို အုပ်စုတစ်ခုထက်ပို၍ ထည့်သွင်းနိုင်သည်။
 
-Provides the functions of:
+အောက်ပါလုပ်ဆောင်ချက်များကို ပံ့ပိုးပေးသည်-
 
-- **Group list** (listing existing security groups)
-- **Search** (search for a group)
-- **Edit** and **Delete** groups
-- **Add new groups** (add a group). 
+- **အုပ်စုစာရင်း** (ရှိပြီးသား လုံခြုံရေးအုပ်စုများကို စာရင်းပြုစုခြင်း)
+- **ရှာဖွေခြင်း** (အုပ်စုတစ်ခုကို ရှာဖွေခြင်း)
+- **ပြင်ဆင်ခြင်း** နှင့် **ဖျက်ခြင်း** အုပ်စုများ
+- **အုပ်စုအသစ်များထည့်ခြင်း** (အုပ်စုတစ်ခုထည့်ခြင်း)။
 
-The usual facility to sort the list by clicking on a field name is available.
+အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် စာရင်းကို စီရန် ပုံမှန်အထောက်အကူပြုပစ္စည်းကို ရရှိနိုင်ပါသည်။
 
-To add a group click the **Add new group** button, and fill in the information of the new module, namely: 
+အုပ်စုတစ်ခုထည့်ရန် **အုပ်စုအသစ်ထည့်ခြင်း** ခလုတ်ကို နှိပ်ပြီး မော်ဂျူးအသစ်၏ အချက်အလက်များကို ဖြည့်ပါ၊ ၎င်းတို့မှာ-
 
-- *Module name* (the name of the module), 
+- *မော်ဂျူးအမည်* (မော်ဂျူး၏အမည်)၊
 
-- *Module path* (path/location of the module), 
+- *မော်ဂျူးလမ်းကြောင်း* (မော်ဂျူး၏လမ်းကြောင်း/တည်နေရာ)၊
 
-- *Module description* (brief description of the module)
+- *မော်ဂျူးဖော်ပြချက်* (မော်ဂျူး၏အကျဉ်းချုပ်ဖော်ပြချက်)
 
-  When the fields are completed, click the **Save** button
+အကွက်များ ဖြည့်စွက်ပြီးသည်နှင့် **သိမ်းဆည်းခြင်း** ခလုတ်ကို နှိပ်ပါ။

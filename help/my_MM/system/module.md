@@ -1,24 +1,22 @@
-### Modules
+### မော်ဂျူးများ
 
 ------
 
-Provides the functions of:
-- **Module list** (listing existing modules)
-- **Search** (search for a module)
-- **Edit** and **Delete** modules
-- **Add new modules** (add a module). 
+အောက်ပါလုပ်ဆောင်ချက်များကို ပံ့ပိုးပေးသည်-
 
-The usual facility to sort the list by clicking on a field name is available.
+- **မော်ဂျူးစာရင်း** (ရှိပြီးသား မော်ဂျူးများကို စာရင်းပြုစုခြင်း)
+- **ရှာဖွေခြင်း** (မော်ဂျူးတစ်ခုကို ရှာဖွေခြင်း)
+- **တည်းဖြတ်ခြင်း** နှင့် **ဖျက်ခြင်း** မော်ဂျူးများ
+- **မော်ဂျူးအသစ်များထည့်ခြင်း** (မော်ဂျူးတစ်ခုထည့်ခြင်း)။
 
+အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် စာရင်းကို စီရန် ပုံမှန်လုပ်ဆောင်ချက်ကို ရရှိနိုင်ပါသည်။
 
+မော်ဂျူးတစ်ခုထည့်ရန်၊ မော်ဂျူးဖိုဒါကို *admin/modules/* ဖိုဒါတွင် ထားရှိပြီးသားဖြစ်ရမည်။ ထို့နောက် **မော်ဂျူးအသစ်များထည့်ခြင်း** ခလုတ်ကို နှိပ်ပြီး မော်ဂျူးအသစ်၏ အချက်အလက်များကို ဖြည့်ပါ၊ ၎င်းတို့မှာ-
 
-To add a module, the module folder must already be placed in the folder *admin/modules/*. Then click the **Add new modules** button, and fill in the information of the new module, namely: 
-- *Module name* (the name of the module), 
+- *မော်ဂျူးအမည်* (မော်ဂျူး၏အမည်)၊
 
-- *Module path* (path/location of the module), 
+- *မော်ဂျူးလမ်းကြောင်း* (မော်ဂျူး၏လမ်းကြောင်း/တည်နေရာ)၊
 
-- *Module description* (brief description of the module)
+- *မော်ဂျူးဖော်ပြချက်* (မော်ဂျူး၏အကျဉ်းချုပ်ဖော်ပြချက်)
 
-  
-
-When the fields are completed, click the **Save** button
+အကွက်များ ဖြည့်စွက်ပြီးသည်နှင့် ပျောက်ဆုံးသွားသော **သိမ်းဆည်းခြင်း** ခလုတ်ကို နှိပ်ပါ။

@@ -1,16 +1,15 @@
-### System configuration
+### စနစ်ဖွဲ့စည်းပုံ
 
 ------
 
-Using this form you can make changes to the settings for UCS ( Union Catalog Server) usage. By connecting to a union catalog server OPAC results will reflect collection holdings of other libraries participating in the Union catalog, facilitating inter-library loans, and copy cataloguing.
+ဤပုံစံကို အသုံးပြု၍ UCS (Union Catalog Server) အသုံးပြုမှုအတွက် ဆက်တင်များကို ပြောင်းလဲနိုင်ပါသည်။ union catalog server သို့ ချိတ်ဆက်ခြင်းဖြင့် OPAC ရလဒ်များသည် Union catalog တွင် ပါဝင်သော အခြားစာကြည့်တိုက်များ၏ စုဆောင်းမှုပိုင်ဆိုင်မှုများကို ထင်ဟပ်စေမည်ဖြစ်ပြီး၊ စာကြည့်တိုက်အချင်းချင်း ချေးငွေများနှင့် မိတ္တူကတ်တလောက်များကို လွယ်ကူချောမွေ့စေမည်ဖြစ်သည်။
 
- The configurable settings are:
+ပြင်ဆင်နိုင်သော ဆက်တင်များမှာ-
 
-- **Enable UCS**  [Enable/Disable] (enabling of UCS functions)
-- **Auto delete record**  [Enable/Disable] (s)
-- **Auto insert record**  [Enable/Disable] (s)
-- **Server address** (UCS server address)
-- **Server ID** (UCS server connection ID)
-- **Server password** (UCS server connection password)
-- **Server name** (UCS server name)
-
+- **UCS ကိုဖွင့်ပါ** [ဖွင့်/ပိတ်ပါ] (UCS လုပ်ဆောင်ချက်များကို ဖွင့်ခြင်း)
+- **မှတ်တမ်းကို အလိုအလျောက်ဖျက်ပါ** [ဖွင့်/ပိတ်ပါ] (များ)
+- **မှတ်တမ်းကို အလိုအလျောက်ထည့်သွင်းပါ** [ဖွင့်/ပိတ်ပါ] (များ)
+- **ဆာဗာလိပ်စာ** (UCS ဆာဗာလိပ်စာ)
+- **ဆာဗာ ID** (UCS ဆာဗာချိတ်ဆက်မှု ID)
+- **ဆာဗာစကားဝှက်** (UCS ဆာဗာချိတ်ဆက်မှုစကားဝှက်)
+- **ဆာဗာအမည်** (UCS ဆာဗာအမည်)

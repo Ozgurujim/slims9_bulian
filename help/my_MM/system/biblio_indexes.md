@@ -1,15 +1,13 @@
-### Bibliographic indexes
+### စာစုစာရင်း အညွှန်းများ
 
-------
+ဤလုပ်ဆောင်ချက်ကို SLiMS အသုံးပြုသော ကတ်တလောက်ဇယားများကို အညွှန်းရန်အသုံးပြုသည်။ ဤအညွှန်းကို ပေးထားသောကြောင့် SLiMS ၏ ရှာဖွေမှုစွမ်းဆောင်ရည် တိုးတက်လာမည်ဖြစ်သည်။
 
-This function is used to index the catalogue tables used by SLiMS. Given this indexing, the search performance of SLiMS will be improved.
+ဤမီနူးတွင် လုပ်ဆောင်ချက်သုံးခုရှိသည်-
 
-There are three functions in this menu:
-- **Emptying index** (clear the existing index results)
-- **Re-create index** (re-index the catalogue data)
-- **Update the index** (to index new bibliographic data that has not yet been indexed)
+- **အညွှန်းကို ဗလာဖြစ်စေခြင်း** (ရှိပြီးသား အညွှန်းရလဒ်များကို ရှင်းလင်းပါ)
+- **အညွှန်းကို ပြန်လည်ဖန်တီးပါ** (ကတ်တလောက်ဒေတာကို ပြန်လည်အညွှန်းထည့်ပါ)
+- **အညွှန်းကို အပ်ဒိတ်လုပ်ပါ** (အညွှန်းမထည့်ရသေးသော စာစုစာရင်းဒေတာအသစ်များကို အညွှန်းထည့်ရန်)
 
-You can locate the setting for index type within *config/sysconfig.local.inc.php*.
+*config/sysconfig.local.inc.php* တွင် အညွှန်းအမျိုးအစားအတွက် ဆက်တင်ကို သင်ရှာဖွေနိုင်သည်။
 
-Data is also displayed, giving the total number of catalogued title records, the total of those that are indexed, and the number of unindexed records.
-
+ဒေတာကိုလည်း ပြသထားပြီး ကတ်တလောက်ခေါင်းစဉ်မှတ်တမ်းစုစုပေါင်းအရေအတွက်၊ အညွှန်းထည့်ထားသော မှတ်တမ်းစုစုပေါင်းနှင့် အညွှန်းမထည့်ရသေးသော မှတ်တမ်းအရေအတွက်တို့ကို ပေးပါသည်။

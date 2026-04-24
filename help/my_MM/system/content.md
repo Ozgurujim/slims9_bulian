@@ -1,38 +1,35 @@
-### Content
+### အကြောင်းအရာ
 
 ------
 
-This function is used to change the appearance of the SLiMS application content. By default, contents that already exist and can be modified via this screen are: 
-- **Homepage info**, (located at the front of the OPAC & displayed when “Home” is clicked)
-- **Welcome to Admin page** [the initial display when entering the Admin menu - SLiMS management console]
-- **Help on usage** (accessed from the OPAC)
-- **Library information** (also accessed from the OPAC)
+ဒီလုပ်ဆောင်ချက်ကို SLiMS အပလီကေးရှင်း အကြောင်းအရာရဲ့ အသွင်အပြင်ကို ပြောင်းလဲဖို့အတွက် အသုံးပြုပါတယ်။ မူရင်းအားဖြင့်၊ ရှိပြီးသားဖြစ်ပြီး ဒီမျက်နှာပြင်ကနေတစ်ဆင့် ပြုပြင်နိုင်တဲ့ အကြောင်းအရာတွေကတော့ -
 
-Example of usage: consider a path created for the new content that is stored as '*librarian*'. On a SLiMS system accessed by the URL http://localhost/slims , to display this content then we need to write the url:
+- **Homepage info**, (OPAC ရဲ့ ရှေ့ဘက်မှာ ရှိပြီး “Home” ကို နှိပ်လိုက်တဲ့အခါ ပြသပါတယ်)
+- **Admin စာမျက်နှာကို ကြိုဆိုပါတယ်** [Admin menu ထဲကို ဝင်တဲ့အခါ ကနဦးပြသမှု - SLiMS management console]
+- **အသုံးပြုမှုဆိုင်ရာ အကူအညီ** (OPAC မှ ဝင်ရောက်ကြည့်ရှုနိုင်ပါသည်)
+- **Library information** (OPAC မှလည်း ဝင်ရောက်ကြည့်ရှုနိုင်ပါသည်)
 
-http://localhost/slims/index.php?p=librarian
+အသုံးပြုမှု ဥပမာ- "*librarian*" အဖြစ် သိမ်းဆည်းထားတဲ့ အကြောင်းအရာအသစ်အတွက် ဖန်တီးထားတဲ့ လမ်းကြောင်းတစ်ခုကို ထည့်သွင်းစဉ်းစားပါ။ URL မှ ဝင်ရောက်ကြည့်ရှုနိုင်သော SLiMS စနစ်တွင် http://localhost/slims ဒီ content ကိုပြသဖို့အတွက် url ကိုရေးရပါမယ်- http://localhost/slims/index.php?p=librarian
 
-We can create the navigation to this URL in the OPAC by editing the OPAC template.
+OPAC template ကို တည်းဖြတ်ခြင်းဖြင့် OPAC ရှိ ဤ URL သို့ လမ်းညွှန်မှုကို ဖန်တီးနိုင်ပါသည်။
 
-Information displayed in the Content list:
+အကြောင်းအရာစာရင်းတွင် ပြသထားသော အချက်အလက်များ-
 
-* *Content title* (user-friendly title for the content)
-* *Path (must be unique)*  (a variable)
-* *Last updated* (generated automatically)
+* *အကြောင်းအရာခေါင်းစဉ်* (အကြောင်းအရာအတွက် အသုံးပြုရလွယ်ကူသော ခေါင်းစဉ်)
+* *လမ်းကြောင်း (ထူးခြားရမည်)* (ကိန်းရှင်တစ်ခု)
+* *နောက်ဆုံးအပ်ဒိတ်လုပ်ရမည်* (အလိုအလျောက်ထုတ်ပေးသည်)
 
-The usual facility to sort the list by clicking on a field name is available.
+အကွက်အမည်ကို နှိပ်ခြင်းဖြင့် စာရင်းကို စီရန် ပုံမှန်လုပ်ဆောင်ချက် ရရှိနိုင်ပါသည်။
 
+အကြောင်းအရာအသစ်တစ်ခုထည့်ရန် **အကြောင်းအရာအသစ်ထည့်ရန်** ခလုတ်ကို နှိပ်ပါ။ အောက်ပါတို့ကို ရိုက်ထည့်ရန် editor မျက်နှာပြင်တစ်ခု ပွင့်လာပါလိမ့်မည်။
 
+* *အကြောင်းအရာခေါင်းစဉ်* [လိုအပ်သည်]
 
-To add new a new content item click the **Add new content** button . An editor screen will open requiring you to enter :
+* *ဤသည်မှာ သတင်းဖြစ်သည်* [ဟုတ်ကဲ့/မဟုတ်ပါ]
 
-* *Content title* [required]
+* *လမ်းကြောင်း (ထူးခြားရမည်)* [ ]
+* *အကြောင်းအရာဖော်ပြချက်* [ ၎င်းသည် တကယ့်အကြောင်းအရာဖြစ်ပြီး image insert၊ text formatting နှင့် source editing အပါအဝင် လုပ်ဆောင်ချက်များစွာကို ပေးစွမ်းသည့် built-in WYSIWYG editor ကို အသုံးပြု၍ html အဖြစ် တည်းဖြတ်နိုင်ပါသည်။ ]
 
-* *This is news* [Yes/No]
+အကွက်များ ပြီးမြောက်သွားသောအခါ **သိမ်းဆည်းရန်** ခလုတ်ကို နှိပ်ပါ။
 
-* *Path (must be unique)* [ ]
-* *Content description* [ this is the actual content and can be edited as html , using the inbuilt WYSIWYG editor which provides a wide range of functions including image insert, text formatting, and source editing ]
-
-When the fields are completed, click the **Save** button.
-
-The usual edit and search functions are also available. 
+ပုံမှန်တည်းဖြတ်ခြင်းနှင့် ရှာဖွေရေးလုပ်ဆောင်ချက်များကိုလည်း ရရှိနိုင်ပါသည်။
