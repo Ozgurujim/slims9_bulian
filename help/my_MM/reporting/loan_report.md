@@ -1,31 +1,39 @@
-### Loan Report
+ချေးငွေအစီရင်ခံစာ
 
 ------
 
-This report contains information on borrowing from the complete collection , with data on:
+ဤအစီရင်ခံစာတွင် စုဆောင်းမှုအပြည့်အစုံမှ ချေးငွေရယူခြင်းနှင့်ပတ်သက်သည့် အချက်အလက်များပါဝင်ပြီး အောက်ပါအချက်အလက်များပါဝင်သည်-
 
-- *Total loans*
+- *စုစုပေါင်းချေးငွေများ*
 
-- *Total loans, by GMD/media*
+- *စုစုပေါင်းချေးငွေများ၊ GMD/မီဒီယာအလိုက်*
 
-- *Total loans, by collection type*
+- *စုစုပေါင်းချေးငွေများ၊ စုဆောင်းမှုအမျိုးအစားအလိုက်*
 
-- *Total loan transactions*
+- *စုစုပေါင်းချေးငွေလွှဲပြောင်းမှုများ*
 
-- *Transaction average (per day)*
+- *ပျမ်းမျှငွေလွှဲပြောင်းမှု (တစ်နေ့လျှင်)*
 
-- *Total peak transaction*
+- *အမြင့်ဆုံးငွေလွှဲပြောင်းမှုစုစုပေါင်း*
 
-- *Members already having loans*
+- *ချေးငွေရရှိထားသော အဖွဲ့ဝင်များ*
 
-- *Members never having loans*
+- *ချေးငွေမရှိသော အဖွဲ့ဝင်များ*
 
-- *Total overdue loans*
+- *စုစုပေါင်းနောက်ကျချေးငွေများ*
+
+**အစီရင်ခံစာဒေါင်းလုဒ်လုပ်ပါ** ခလုတ်ကိုနှိပ်ခြင်းဖြင့် အစီရင်ခံစာပါရှိသော ဖိုင်တစ်ခုကို ထုတ်ပေးမည်ဖြစ်ပြီး ၎င်းကိုကြည့်ရှုရန်၊ သိမ်းဆည်းရန် သို့မဟုတ် ပရင့်ထုတ်ရန်အတွက် ပြသမည်ဖြစ်သည်။
+
+**ဇယား/ပုံကြမ်းတွင်ပြပါ** ခလုတ်တစ်ခုခုကို နှိပ်ခြင်းဖြင့် အချက်အလက်၏ ဂရပ်ဖစ်ကိုယ်စားပြုမှုကို ထုတ်ပေးမည်ဖြစ်ပြီး ၎င်းကို ပြသမည်ဖြစ်ပြီး ပရင့်ထုတ်နိုင်သည် သို့မဟုတ် ဖမ်းယူနိုင်သည်။
+
+------
+
+
+
+
+[//]: # " created by jim@burmastudy.org based on SLIMS 9.7.2   10/04/2026"
 
   
 
-  Clicking the **Download report** button will generate a file containing the report, which will then be displayed for viewing, saving, or printing.
 
-  Clicking either of the  **Show in chart/plot** buttons will generate a graphic representation of the data , which will be displayed and can be printed or captured.
 
-  

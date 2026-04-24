@@ -1,27 +1,35 @@
-### Collection Statistics
+### စုဆောင်းမှု စာရင်းအင်းများ
 
 ------
 
-This report contains information on the complete collection regarding:
-- *Total titles* 
+ဤအစီရင်ခံစာတွင် အောက်ပါတို့နှင့်ပတ်သက်သည့် စုစည်းမှုအပြည့်အစုံနှင့်ပတ်သက်သည့် အချက်အလက်များပါဝင်သည်-
 
-- *Total titles with items* ( copies )
+- *စုစုပေါင်းခေါင်းစဉ်များ*
 
-- *Total items/copies*
+- *ပစ္စည်းပါ စုစုပေါင်းခေါင်းစဉ်များ* (မိတ္တူများ)
 
-- *Total checkout items* ( items on loan)
+- *ပစ္စည်း/မိတ္တူစုစုပေါင်း*
 
-- *Total items in library* (currently on hand in the library, not borrowed)
+- *ငွေရှင်းသည့်ပစ္စည်းစုစုပေါင်း* (ငှားရမ်းသည့်ပစ္စည်းများ)
 
-- *Total titles by GMD/media*
+- *စာကြည့်တိုက်ရှိပစ္စည်းစုစုပေါင်း* (စာကြည့်တိုက်တွင် လက်ရှိရှိနေသည်၊ ငှားရမ်းခြင်းမဟုတ်ပါ)
 
-- *Total items, by collection type*
+- *GMD/မီဒီယာအလိုက် ခေါင်းစဉ်စုစုပေါင်း*
 
-- *10 Most popular titles* (most borrowed)
+- *ပစ္စည်း၊ စုစည်းမှုအမျိုးအစားအလိုက် စုစုပေါင်း*
 
-  
+- *လူကြိုက်အများဆုံးခေါင်းစဉ် ၁၀ ခု* (အများဆုံးငှားရမ်း)
 
-Clicking the **Download report** button will generate a file containing the report, which will then be displayed for viewing, saving, or printing.
+**အစီရင်ခံစာဒေါင်းလုဒ်လုပ်ပါ** ခလုတ်ကိုနှိပ်ခြင်းဖြင့် အစီရင်ခံစာပါရှိသောဖိုင်တစ်ခုကို ထုတ်ပေးမည်ဖြစ်ပြီး ၎င်းကိုကြည့်ရှုရန်၊ သိမ်းဆည်းရန် သို့မဟုတ် ပရင့်ထုတ်ရန်အတွက် ပြသမည်ဖြစ်သည်။
 
-Clicking either of the  **Show in chart/plot** buttons will generate a graphic representation of the data , which will be displayed and can be printed or captured.
+**ဇယား/ပုံကြမ်းတွင်ပြပါ** ခလုတ်တစ်ခုခုကို နှိပ်ခြင်းဖြင့် အချက်အလက်၏ ဂရပ်ဖစ်ကိုယ်စားပြုမှုကို ထုတ်ပေးမည်ဖြစ်ပြီး ၎င်းကို ပြသမည်ဖြစ်ပြီး ပရင့်ထုတ်နိုင်သည် သို့မဟုတ် ဖမ်းယူနိုင်သည်။
+
+------
+
+
+
+
+[//]: # " created by jim@burmastudy.org based on SLIMS 9.7.2   10/04/2026"
+
+
 

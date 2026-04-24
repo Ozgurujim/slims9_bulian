@@ -1,24 +1,31 @@
-### Membership Report
+### အသင်းဝင်အစီရင်ခံစာ
 
 ------
 
-This report contains information on membership , with data on:
-- *Total registered members* 
+ဤအစီရင်ခံစာတွင် အသင်းဝင်ခြင်းဆိုင်ရာ အချက်အလက်များပါဝင်ပြီး အောက်ပါအချက်အလက်များမှာ-
 
-- *Total active members*
+- *မှတ်ပုံတင်ထားသော အသင်းဝင်စုစုပေါင်း*
 
-- *Total members by members type*
+- *တက်ကြွသော အသင်းဝင်စုစုပေါင်း*
 
-- *Total expired members* 
+- *အသင်းဝင်အမျိုးအစားအလိုက် အသင်းဝင်စုစုပေါင်း*
 
-- *10 most active members*
+- *သက်တမ်းကုန်ဆုံးသွားသော အသင်းဝင်စုစုပေါင်း*
 
-  
+- *တက်ကြွဆုံး အသင်းဝင် ၁၀ ဦး*
 
-The time period for assessing the 10 most active members can be varied by selecting start and end dates for the range, and clicking **Submit**. The default for both is the current date.
+တက်ကြွဆုံး အသင်းဝင် ၁၀ ဦးကို အကဲဖြတ်ရန် အချိန်ကာလကို အပိုင်းအခြားအတွက် စတင်ရက်နှင့် ပြီးဆုံးရက်များကို ရွေးချယ်ပြီး **တင်သွင်းရန်** ကို နှိပ်ခြင်းဖြင့် ပြောင်းလဲနိုင်သည်။ နှစ်ခုစလုံးအတွက် ပုံသေမှာ လက်ရှိရက်စွဲဖြစ်သည်။
 
-Clicking the **Download report** button will generate a .html file containing the report, which will then be displayed for viewing, saving, or printing.
+**အစီရင်ခံစာဒေါင်းလုဒ်လုပ်ရန်** ခလုတ်ကို နှိပ်ခြင်းဖြင့် အစီရင်ခံစာပါရှိသော .html ဖိုင်တစ်ခုကို ထုတ်ပေးမည်ဖြစ်ပြီး ၎င်းကို ကြည့်ရှုရန်၊ သိမ်းဆည်းရန် သို့မဟုတ် ပရင့်ထုတ်ရန်အတွက် ပြသမည်ဖြစ်သည်။
 
-Commencing with Senayan3-stable14, the three types of report are equipped with a print feature of various Pie charts. You get this graph simply by clicking the “Show in Chart/Plot“ which appears in all three types of report (Statistics Collection, Loan Report, and Membership Report).
+Senayan3-stable14 မှစတင်၍ အစီရင်ခံစာအမျိုးအစားသုံးမျိုးတွင် Pie ဇယားအမျိုးမျိုး၏ ပရင့်ထုတ်ခြင်းအင်္ဂါရပ်ပါရှိသည်။ အစီရင်ခံစာအမျိုးအစားသုံးမျိုးလုံး (စာရင်းအင်းစုဆောင်းမှု၊ ချေးငွေအစီရင်ခံစာနှင့် အသင်းဝင်အစီရင်ခံစာ) တွင်ပေါ်လာသော “ဇယား/ပုံကြမ်းတွင်ပြရန်” ကို နှိပ်ခြင်းဖြင့် ဤဇယားကို သင်ရရှိမည်ဖြစ်သည်။
+
+------
+
+
+
+
+[//]: # " created by jim@burmastudy.org based on SLIMS 9.7.2   10/04/2026"
+
 
 
