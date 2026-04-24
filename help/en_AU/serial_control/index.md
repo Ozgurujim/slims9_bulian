@@ -1,8 +1,7 @@
 ### Serial Control
 <hr>
-
 The Serial Control Module will run if bibliographic data is subscribed for periodical titles.
-The information that distinguishes between magazine bibliographic data and other document types is the frequency/time the serial is published. If there is no bibliographic data in a table that indicates the frequency, this functionality will not work.
+The information that distinguishes between magazine bibliographic data and other document types is the frequency/time the serial is published. <u>If there is no bibliographic data in a table that indicates the frequency, this functionality will not work.</u>
 
 - *Subscription Start*: fill in the date the subscription will start to be received at the library.
 - *Total Exemplar Expected*: enter the total number you expect to receive in a period of a subscription. E.g to subscribe for a year on a monthly basis insert 12.
