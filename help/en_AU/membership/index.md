@@ -6,11 +6,11 @@
 
 This is used to view the members who are registered in the system. Information displayed is: 
 
-- Member ID, 
-- Member name, 
-- Membership type, 
-- E-mail
-- Last updated. 
+- *Member ID,* 
+- *Member name,* 
+- *Membership type,* 
+- *E-mail*
+- *Last updated.* 
 
 This section is provided with facilities to DELETE  and EDIT member data.
 
@@ -40,6 +40,12 @@ This provides the facility to add new members to the data in the Senayan system.
 Expiry date contains a checkbox for **Auto Set**. The intent of this facility, is that if the Auto Set is checked, the member's expiry date will then be calculated based on membership type. However, if unchecked, then the expiry date can be determined manually, by selecting the date of expiry.
 
 This form also provides the option **Pending membership**. If Pending membership is checked, then that member will not be able to borrow, although their membership is still active and retained in the database. It can be applied as a sanction against members who break the library rules.
+
+#### View expired member
+
+This provides a list of members  whose membership has expired. You can search for a member by name.  Click on the column names to sort the list by that column. You can edit the member details and extend the membership that way, OR you can click the **Extend selected member(s)** button, which will automatically extend the membership for one year. ***Note:** You must mark the checkboxes of expired mebers you want to extend <u>before</u> you click the Extend button.*
+
+
 
 
 
