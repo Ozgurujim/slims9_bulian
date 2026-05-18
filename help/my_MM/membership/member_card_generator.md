@@ -1,62 +1,56 @@
-#### Member Card Printing
+#### အသင်းဝင်ကတ်ပုံနှိပ်ခြင်း (Membercard Print)
 
 ------
 
-This menu is used to print member cards. . The information contained in this membership card is: 
+ဤ  Menu ကို အသင်းဝင်ကတ်များ ပုံနှိပ်ထုတ်ယူရန်အတွက် အသုံးပြုပါသည်။ ကတ်ပုံနှိပ်ထုတ်ယူပုံ အဆင့်ဆင့်သည် ဘားကုဒ် (သို့မဟုတ်) တံဆိပ် (Label) ပုံနှိပ်ခြင်းလုပ်ငန်းစဉ်များနှင့် အတူတူပင်ဖြစ်ပါသည်။
 
-- ID
+**အသင်းဝင်ကတ်တွင် ပါဝင်မည့် အဓိကအချက်အလက်များ**
 
-- Name
+- အသင်းဝင်အမှတ်
+- အသင်းဝင်အမည် 
+- အသင်းဝင်အမျိုးအစား
+- ဘားကုဒ် 
+- ဓာတ်ပုံ (ရှိပါက)
+- စာကြည့်တိုက်အမည်
 
-- Member type
+ကတ်၏ အခြားတစ်ဖက် (ကျောဘက်) တွင် စာကြည့်တိုက်ဆိုင်ရာ အချက်အလက်များဖြစ်သော - စာကြည့်တိုက်စည်းမျဉ်းများ (Library rules)၊ ဝဘ်ဆိုက် နှင့် အီးမေးလ် စသည်တို့ ပါဝင်မည်ဖြစ်ပါသည်။ 
 
-- Barcode
+**ရှာဖွေခြင်း**
+ရှာဖွေရေးလုပ်ဆောင်ချက်သည် *အသင်းဝင် ID* နှင့် *အသင်းဝင်အမည်*၊ သော့ချက်စာလုံးများဖြင့် အသင်းဝင်များကိုရှာဖွေနိုင်စေပါသည်။ ကော်လံတစ်ခုစီ၏ထိပ်ရှိ အကွက်အမည်ကိုနှိပ်ခြင်းဖြင့် ရလဒ်များကို စီနိုင်သည်။
 
-- Photo (if any)
+* ကတ်များ ရိုက်နှိပ်လိုသော အသင်းဝင်များကို၊ ၎င်းတို့၏ အသင်းဝင်အမည်(များ) သို့မဟုတ် ဘေးရှိ အမှန်ခြစ်အကွက် (checkbox) များကို နှိပ်ခြင်းဖြင့် ရွေးချယ်ပါ။ ရွေးချယ်ထားသော အကွက်များတွင် အမှန်ခြစ်တစ်ခု ပေါ်လာပါမည်။ 
+* ပုံနှိပ်တန်းစီခြင်းတွင် ရွေးချယ်မှုကိုထည့်သွင်းရန် **ပုံနှိပ်တန်းစီထည့်ရန်**  နှိပ်ပါ။
+* ရွေးချယ်ထားသောဒေတာကို ပရင့်ထုတ်ရန် **အသင်းဝင်ကတ်များရိုက်နှိပ်သတ်မှတ်ခြင်း** ကို နှိပ်ပါ၊ ထို့နောက် ပရင်တာသို့ ဘားကုဒ်များပေးပို့ရန် တောင်းဆိုသည့် ပေါ့ပ်အပ် (Popup) တစ်ခု ပြသပါလိမ့်မည်။
 
-- Name of the library
+ဆက်တိုက်ရှိနေသော အသင်းဝင်ကတ်များကို ရိုက်နှိပ်သည့်အခါ၊ ပထမတစ်ခုကို ရွေးချယ်ပါ၊ Shift ခလုတ်ကို ဖိထားပြီး သင့်အဖွဲ့ရှိ နောက်ဆုံးအမည်ကို ရွေးချယ်ခြင်းဖြင့် တစ်ခုထက်ပို၍ လျင်မြန်စွာ ဆက်တိုက် ရွေးချယ်နိုင်ပါသည်။ 
+**မှတ်ချက် - တစ်ကြိမ်ပုံနှိပ်ရာတွင် အများဆုံး ကတ် ၁၀ ကတ် အထိသာ ပါဝင်နိုင်ပါသည်။**
 
-  ------
+* မည်သည့်အဆင့်တွင်မဆို **ပုံနှိပ်တန်းစီခြင်းကိုရှင်းလင်းပါ** အတွက် ရွေးချယ်စရာတစ်ခုရှိပါသည်။
 
-  A search function allows you to search for members by *Member ID* and *Member name* keywords
 
-  Results can be sorted by clicking on the field name at the top of each column. 
+**စာကြည့်တိုက်ကတ်၏ ပုံစံကို ရွေးချယ်ခြင်း**
 
-  * **Select** the members for whom you want to print cards, by clicking on the Member name(s) or the checkbox(es) at the side. A checkmark will appear in the boxes of those selected. 
+SLiMS 9 Bulian ဗားရှင်းတွင် "Classic" ဟုခေါ်သော ကတ်ဒီဇိုင်းပုံစံအသစ် ပါဝင်လာသောကြောင့် အသုံးပြုသူများအနေဖြင့် Classic နှင့် Old ဟူ၍ ကတ်ပုံစံ (၂) မျိုးကို ရွေးချယ်အသုံးပြုနိုင်ပါသည်။ ပုံနှိပ်မည့်ကတ်၏ အသွင်အပြင်ကို ပြောင်းလဲလိုပါက **အသင်းဝင်ကတ်များပုံနှိပ်သတ်မှတ်ခြင်း ** ခလုတ်ကိုနှိပ်၍ မိမိအသုံးပြုလိုသော ကတ်ဒီဇိုင်း (Theme) ကို ရွေးချယ်နိုင်ပါသည်။  ၎င်းအောက်တွင် **သက်ဝင်စေပါ** ခလုတ်ကို နှိပ်ခြင်းဖြင့် ကတ်အပြင်အဆင်တစ်ခုကို ရွေးချယ်နိုင်ပြီး/သို့မဟုတ် ကတ်သတ်မှတ်ချက်များကို ချိန်ညှိရန် **စိတ်ကြိုက်ပြုလုပ်ပါ**ကိုနှိပ်၍ ပြုပြင်ပြောင်းလဲနိုင်ပါသည်။  ၎င်းတွင် အောက်ပါတို့ ပါဝင်နိုင်သည်-
 
-  When printing consecutive member cards, select the first one, hold the Shift key, and select the last name in your group to select more than one in rapid sequence. *Note: one print run can only contain a maximum of 10 cards*.
+ရှေ့ဘက် ခေါင်းစီး ၁ စာသား
+ရှေ့ဘက် ခေါင်းစီး ၂ စာသား
+နောက်ဘက် ခေါင်းစီး ၁ စာသား
+နောက်ဘက် ခေါင်းစီး ၂ စာသား
+ဘောက်စ် အကျယ်
+ဘောက်စ် အမြင့်
+အချိုး
+ဘားကုဒ် စကေး
+စည်းမျဉ်းများ
+ဖောင့်အရောင်
+ကတ်ရှေ့ဘက် အရောင်
+ကတ်နောက်ဘက် အရောင်
+မြို့
+ရာထူး
+စာကြည့်တိုက်မှူးအမည်
+စာကြည့်တိုက်မှူး၏ ID
+နောက်ဘက် ဓာတ်ပုံ/ပုံရိပ်
 
-  * Click **Add to Print Queue** to enter the selection in the print queue.
-
-  * Click **Print Member Cards for Selected Data** to start printing the selected data, and it will display a pop-up that asks you to send barcodes to the printer.
-
-  * An option exists to **Clear Print Queue** at any stage.
-
-  ------
-
-  You can click **Member Card Print  Settings** to choose the style of library card.
-
-  Choose a card theme by clicking **Activate** under it, and/or **Customize** to adjust the card parameters, which may include:
-
-  *Front Header1 Text*
-  *Front Header2 Text*
-  *Back Header1 Text*
-  *Back Header2 Text*
-  *Box Width*
-  *Box Height*
-  *Factor*
-  *Barcode Scale*
-  *Rules*
-  *Font Color*
-  *Card Front Color*
-  *Card Back Color*
-  *City*
-  *Title*
-  *Officials*
-  *Officials ID*
-  *Back Side Image*
-
-  Then  click **Save Settings**
+ထို့နောက် **ဆက်တင်များကိုသိမ်းဆည်းပါ** ကို နှိပ်ပါ။
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Membership/membercard%20print" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">

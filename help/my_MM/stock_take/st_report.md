@@ -1,7 +1,12 @@
-### Stocktake Report
+### စာရင်းစစ်ဆေးမှု အစီရင်ခံစာ
+
 <hr>
-Use this menu to see the results of the activities that have been performed in stock-take. The form of the report contains information about the number of items checked, items lost, and number of items on loan. This menu does not work if the Initialisation is not done.
-<a href="https://slims.web.id/docs/user-guide/Modules/Stocktake/initialize/report" 
+
+စာရင်းစစ်ဆေးခြင်း (stock-take) တွင် လုပ်ဆောင်ခဲ့သော လုပ်ငန်းများ၏ ရလဒ်များကို ကြည့်ရှုရန် ဤ menu ကို အသုံးပြုပါ။ 
+
+အစီရင်ခံစာပုံစံတွင် စစ်ဆေးပြီးသော item အရေအတွက်၊ ပျောက်ဆုံးနေသော item များနှင့် ငှားရမ်းထားသော item အရေအတွက် စသည့် အချက်အလက်များ ပါဝင်ပါသည်။ Initialisation (ကနဦးပြင်ဆင်ခြင်း) မလုပ်ဆောင်ရသေးပါက ဤ menu အလုပ်လုပ်မည် မဟုတ်ပါ။
+
+<a href="https://slims.web.id/docs/user-guide/Modules/Stocktake/initialize/listupload" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>

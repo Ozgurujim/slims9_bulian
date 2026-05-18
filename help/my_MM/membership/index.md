@@ -1,49 +1,52 @@
-
-
-#### View Member List
+#### အသင်းဝင်စာရင်းကိုကြည့်ရန်
 
 ------
 
-This is used to view the members who are registered in the system. Information displayed is: 
+ဤလုပ်ဆောင်ချက်ကို စနစ်တွင် စာရင်းသွင်းထားသော အသင်းဝင်များကို ကြည့်ရှုရန် အသုံးပြုပါသည်။ ပြသထားသော အချက်အလက်များမှာ-
 
-- Member ID, 
-- Member name, 
-- Membership type, 
-- E-mail
-- Last updated. 
+- *အသင်းဝင် ID၊*
+- *အသင်းဝင်အမည်၊*
+- *အသင်းဝင်အမျိုးအစား၊*
+- *အီးမေးလ်*
+- *နောက်ဆုံးပြင်ဆင်ခဲ့သည့်အချိန်*
 
-This section is provided with facilities to DELETE  and EDIT member data.
+ဤအပိုင်းတွင် အသင်းဝင်ဒေတာများကို ပယ်ဖျက်ရန် နှင့် တည်းဖြတ်ရန် အတွက်လုပ်ဆောင်ချက်များလည်းပါရှိသည်။
 
-#### Add New Member
+#### အသင်းဝင်အသစ် ထည့်သွင်းရန်
 
-This provides the facility to add new members to the data in the Senayan system. Members' information included are: 
+ဤသည်မှာ SLiMS စနစ်ရှိ ဒေတာသို့ အသင်းဝင်အသစ်များ ထည့်သွင်းရန်ဖြစ်ပါသည်။ ပါဝင်သည့် အသင်းဝင်များ၏ အချက်အလက်များမှာ -
 
-- *Member ID* (ID -barcode/RFID for the member)
-- *Member name* (full name of the member)
-- *Birth date* 
-- *Register date* (date of registration)
-- *Expiry date* (the expiration date)
-- *Institution* (name of institution, agency or organization name )
-- *Membership type* (type of membership)
-- *Gender* (gender)
-- *Address* (home or work address)
-- *Postal code* (zip code)
-- *Mail address* (for mailed correspondence)
-- *Phone number* (phone number)
-- *Fax number* (fax number)
-- *Personal ID number* (personal ID number such as identity card number)
-- *Notes* (short notes regarding member)
-- *Upload a photo* (photo file of member), or use the camera function [if enabled]. 
-- *E-mail* ( email address)
-- *Password*  ( & confirmation )
+- *အသင်းဝင် ID* (အသင်းဝင်အတွက် ID - ဘားကုဒ်/RFID)*
+- *အသင်းဝင်အမည်* (အသင်းဝင်၏ အမည်အပြည့်အစုံ)*
+- *မွေးသက္ကရာဇ်*
+- *မှတ်ပုံတင်သည့်ရက်စွဲ* 
+- *သက်တမ်းကုန်ဆုံးရက်* 
+- *အဖွဲ့အစည်း (ကျောင်းအမည်၊ တက္ကသိုလ်အမည်၊ အဖွဲ့အစည်းအမည်၊ အေဂျင်စီ သို့မဟုတ် အဖွဲ့အစည်းအမည်)*
+- *အသင်းဝင်အမျိုးအစား*
+- *ကျား/မ* 
+- *လိပ်စာ (အိမ် သို့မဟုတ် အလုပ်လိပ်စာ)*
+- *စာတိုက်ကုဒ် (zip ကုဒ်)*
+- *စာပေးစာယူအတွက် လိပ်စာ*
+- *ဖုန်းနံပါတ်* 
+- *ဖက်စ်နံပါတ်* 
+- *မှတ်ပုံတင်ကတ်နံပါတ်ကဲ့သို့သော ကိုယ်ရေးအမှတ်အသား နံပါတ်*
+- *အသင်းဝင်နှင့်ပတ်သက်သော မှတ်စုတိုမျာ*
+- *အသင်းဝင်၏ ဓာတ်ပုံဖိုင် သို့မဟုတ် [ဖွင့်ထားပါက] ကင်မရာလုပ်ဆောင်ချက်ကို အသုံးပြု၍ ဓာတ်ပုံရိုက်ထည့်ပါ။*
+- *အီးမေးလ်လိပ်စာ*
+- *စကားဝှက် (နှင့် အတည်ပြုချက်)*
 
-Expiry date contains a checkbox for **Auto Set**. The intent of this facility, is that if the Auto Set is checked, the member's expiry date will then be calculated based on membership type. However, if unchecked, then the expiry date can be determined manually, by selecting the date of expiry.
+သက်တမ်းကုန်ဆုံးရက်တွင် **အလိုအလျောက်သတ်မှတ်ခြင်း** အတွက် အမှန်ခြစ်ကွက်တစ်ခု ပါရှိသည်။ ဤလုပ်ဆောင်ချက်၏ ရည်ရွယ်ချက်မှာ အလိုအလျောက်သတ်မှတ်ခြင်းကို အမှန်ခြစ်ထားပါက အသင်းဝင်၏ သက်တမ်းကုန်ဆုံးရက်ကို အသင်းဝင်အမျိုးအစားပေါ် မူတည်၍ စနစ်မှ အလိုအလျောက် တွက်ချက်မည်ဖြစ်သည်။ သို့သော် အမှန်ခြစ်မထားပါက သက်တမ်းကုန်ဆုံးမည့်ရက်စွဲကို ကိုယ်တိုင်ရွေးချယ် သတ်မှတ်နိုင်ပါသည်။
 
-This form also provides the option **Pending membership**. If Pending membership is checked, then that member will not be able to borrow, although their membership is still active and retained in the database. It can be applied as a sanction against members who break the library rules.
+ဤပုံစံတွင် **ဆိုင်းငံ့ထားသော အသင်းဝင်ခြင်း** ရွေးချယ်ခွင့်ကိုလည်း ပေးထားသည်။  အကယ်၍ဆိုင်းငံ့ထားသော အသင်းဝင်ခြင်းကို အမှန်ခြစ်ထားပါက ထိုအသင်းဝင် သည် အသင်းဝင်အဖြစ် အသက်ဝင်နေဆဲဖြစ်ပြီး ဒေတာဘေ့စ်တွင် သိမ်းဆည်းထားဆဲဖြစ်သော်လည်း စာအုပ်ငှားရမ်းနိုင်မည်မဟုတ်ပါ။ စ၎င်းကို စာကြည့်တိုက်စည်းမျဉ်းများ ဖောက်ဖျက်သော အသင်းဝင်များအား အရေးယူမှုတစ်ခုအဖြစ် အသုံးပြုနိုင်ပါသည်။
 
+**သက်တမ်းကုန်ဆုံးသွားသော အသင်းဝင်ကိုကြည့်ရန်**
 
+ဤလုပ်ဆောင်ချက်သည် အသင်းဝင်သက်တမ်း ကုန်ဆုံးသွားသော အသင်းဝင်များ၏ စာရင်းကို ပြသပေးပါသည်။ အသင်းဝင်တစ်ဦးကို အမည်ဖြင့် ရှာဖွေနိုင်ပါသည်။ စာရင်းကို သက်ဆိုင်ရာ ကော်လံအလိုက် စီ (sort) ရန် ကော်လံအမည်များကို နှိပ်ပါ။
+အသင်းဝင်၏ အသေးစိတ်အချက်အလက်များကို  တည်းဖြတ်နိုင်ပြီး အသင်းဝင်အဖြစ် သက်တမ်းတိုးနိုင်သည်၊ သို့မဟုတ် **ရွေးချယ်ထားသောအသင်းဝင်(များ)** တိုးချဲ့ပါ  ခလုတ်ကို နှိပ်နိုင်ပြီး ၎င်းသည် အသင်းဝင်သက်တမ်းကို တစ်နှစ် အလိုအလျောက် သက်တမ်းတိုးပေးမည်ဖြစ်ပါသည်။
 
-<a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Copy%20Cataloging/Z3950%20SRU" 
+**မှတ်ချက်**- သက်တမ်းတိုးရန် (Extend) ခလုတ်ကို မနှိပ်မီ သက်တမ်းတိုးလိုသော သက်တမ်းကုန်ဆုံးနေသည့် အသင်းဝင်များ၏ အမှန်ခြစ်အကွက်များ (checkboxes) ကို မဖြစ်မနေ အမှန်ခြစ်မှတ်သားပေးရပါမည်။
+
+  <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Copy%20Cataloging/Z3950%20SRU" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>

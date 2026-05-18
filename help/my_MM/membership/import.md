@@ -1,14 +1,23 @@
-#### Import Data
+#### အသင်းဝင်အချက်အလက်များ တင်သွင်းခြင်း (**Member Import**) 
 
-<hr>
-The “Import Data” menu is used to retrieve member data from outside of SLiMS, via a file in CSV format (or also from a database that has been exported from Senayan to a file in CSV format), and to then include it in Senayan. 
-You must specify the file containing the data,  and can choose the field separator character, the field enclosing character, the number of records to import, which record to start from, and whether the first record consists of the field names.
+------
 
-Generally, the defaults will OK to use, unless the CSV file is unusual in format.
+ဤ Menu သည် SLiMS စနစ်ပြင်ပမှ အသင်းဝင်အချက်အလက် (member data) များကို စနစ်အတွင်းသို့ ဆွဲယူတင်သွင်းရန်အတွက် အသုံးပြုခြင်း ဖြစ်ပါသည်။ 
+ဤ Menu ကို အသုံးပြု၍ အသင်းဝင်အချက်အလက် (member data) များကို ထုတ်ယူပါက ရလဒ်အနေဖြင့် ရရှိလာမည့် ဖိုင်အမျိုးအစားမှာ **.csv format** ဖြစ်ပါသည်။ 
 
-The CSV file for importing should usually be in the same format as a standard SLiMS CSV export file, so it is worthwhile studying one of those for format, field names, and field order, if you are importing a CSV from a different application.
+
+- တင်သွင်းမည့် ဖိုင်ပုံစံသည် **.csv format** ဖြစ်ရန် လိုအပ်ပါသည်။ 
+- တင်သွင်းမည့် အချက်အလက်များ၏ ကော်လံအစီအစဉ်များသည် Member Export ပြုလုပ်ရာတွင် ရရှိလာသည့် ကော်လံပုံစံများနှင့် အတိအကျ ကိုက်ညီမှုရှိရပါမည်။
+- SLiMS တွင် အသုံးပြုထားသော အသင်းဝင်အချက်အလက်များ၏ ကော်လံပုံစံ (column patterns) များကို ရှင်းလင်းစွာ မြင်တွေ့နိုင်ရန်အတွက် အဆိုပါ .csv ဖိုင်ကို **MS-Excel** သို့မဟုတ် အခြား spreadsheet application များကို အသုံးပြု၍ ဖွင့်ကြည့်နိုင်ပါသည်။
+- သင်သည် **အကွက်များကိုခွဲခြားထားမည့် သင်္ကေတ** (field separator character)၊ **အကွက်များကို ပိတ်ကာပေးမည့် သင်္ကေတ\*** (field enclosing character)၊ **တင်သွင်းမည့် မှတ်တမ်းအရေအတွက်၊ မည်သည့်မှတ်တမ်းမှ စတင်ရမည်နှင့် **ပထမတန်းတွင် ကော်လံအမည်များ**အမည်များပါဝင်ခြင်း ရှိ၊ မရှိကို  ရွေးချယ်နိုင်သည်။အချက်အလက်များ တင်သွင်းသည့်အခါ **ပထမဆုံးတန်းသည် ကော်လံအမည်များဖြစ်သည်ဟူသော ရွေးချယ်စရာနေရာ ပါရှိပါသည်။ အကယ်၍ သင်တင်သွင်းမည့်ဖိုင်၏ ပထမဆုံးတန်းတွင် database ၌ မှတ်သားထားသည့်အတိုင်း ကော်လံအမည်များကို ထည့်သွင်းထားပါက၊ တင်သွင်းသည့်အခါ အဆိုပါအကွက်ကို **(Yes)** ဟု အမှန်ခြစ် ရွေးချယ်ပေးရန်။
+  **နောက်ဆုံးကော်လံသည် စကားဝှက်ဖြစ်သည် ဟူသော ရွေးချယ်စရာနေရာ **တင်သွင်းသည့်အခါ ဖြစ်သည်၊ မဖြစ်သည်ကိုအဆိုပါအကွက်ကို ရွေးချယ်ပေးရန်လိုအပ်ပါသည်။
+
+ယေဘုယျအားဖြင့် CSV ဖိုင်၏ ဖော်မတ်သည် ပုံမှန်မဟုတ်သော အခြေအနေမျိုးမှလွဲ၍ ပုံသေဆက်တင်များ (defaults) ကို အသုံးပြုရုံဖြင့် အဆင်ပြေနိုင်ပါသည်။
+
+တင်သွင်းရန်အတွက် CSV ဖိုင်သည် ယေဘုယျအားဖြင့် စံသတ်မှတ်ထားသော SLiMS CSV ထုတ်ယူသည့် (export) ဖိုင်နှင့် တူညီသောဖော်မတ် ဖြစ်သင့်ပါသည်။ ထို့ကြောင့် အကယ်၍ သင်သည် အခြားအပလီကေးရှင်းတစ်ခုမှ CSV ကို တင်သွင်းမည်ဆိုပါက ဖော်မတ်၊ field အမည်များနှင့် field အစီအစဉ်များအတွက် ၎င်းစံဖိုင်များထဲမှ တစ်ခုကို လေ့လာထားသင့်ပါသည်။
 
 <a href="https://slims.web.id/docs/user-guide/Modules/Membership/member%20import" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>
+

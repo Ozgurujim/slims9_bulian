@@ -1,16 +1,22 @@
-#### Export Data
+#### အသင်းဝင်အချက်အလက်များ ထုတ်ယူခြင်း (Member Export)
 
 ------
 
-This menu is used to retrieve the membership data within the Senayan application, and the resulting data is then output as a .CSV file.
+ဤ Menu သည် SLiMS ‌ဒေတာဘေ့စ် အတွင်းရှိ အသင်းဝင်အချက်အလက် (member data) များကို ပြင်ပသို့ ထုတ်ယူရန်အတွက် အသုံးပြုခြင်းဖြစ်သည်။ 
 
-You can choose the field separator character, the field enclosing character, the number of records to export, which record to start from, and whether to make the first row consist of the field names.
+လုပ်ဆောင်ချက်အသေးစိတ်မှာ အောက်ပါအတိုင်းဖြစ်ပါသည် -
 
-The export is initiated by clicking the **Export now**  button.
+- ဤ Menu ကို အသုံးပြု၍ အသင်းဝင်အချက်အလက် (member data) များကို ထုတ်ယူပါက ရလဒ်အနေဖြင့် ရရှိလာမည့် ဖိုင်အမျိုးအစားမှာ **.csv format** ဖြစ်ပါသည်။ 
+- SLiMS တွင် အသုံးပြုထားသော အသင်းဝင်အချက်အလက်များ၏ ကော်လံပုံစံ (column patterns) များကို ရှင်းလင်းစွာ မြင်တွေ့နိုင်ရန်အတွက် အဆိုပါ .csv ဖိုင်ကို **MS-Excel** သို့မဟုတ် အခြား spreadsheet application များကို အသုံးပြု၍ ဖွင့်ကြည့်နိုင်ပါသည်။
+- သင်သည် **အကွက်များကိုခွဲခြားထားမည့် သင်္ကေတ** (field separator character)၊ **အကွက်များကို ပိတ်ကာပေးမည့် သင်္ကေတ\*** (field enclosing character)၊ **မှတ်တမ်းခွဲခြားမှု**၊ ထုတ်ယူရမည့် မှတ်တမ်းအရေအတွက်၊ မည်သည့်မှတ်တမ်းမှ စတင်ရမည်နှင့် **ပထမတန်းတွင် ကော်လံအမည်များ**အမည်များပါဝင်ခြင်း ရှိ၊ မရှိကို  ရွေးချယ်နိုင်သည်။
+- အဆိုပါအကွက်ကို အမှန်ခြစ် (Yes) ရွေးချယ်ခဲ့ပါက၊ ထုတ်ယူလိုက်သောဖိုင်၏ ပထမဆုံးအကွက်တန်း (first row) တွင် database ၌ မှတ်သားထားသည့်အတိုင်း ကော်လံတစ်ခုချင်းစီ၏ အမည်များ ပါဝင်လာမည် ဖြစ်ပါသည်။
 
-The resulting file will be named *senayan_member_export.csv* and will be saved in your browser's download location.
+**ယခုထုတ်ယူမည်** ခလုတ်ကို နှိပ်ခြင်းဖြင့် ထုတ်ယူမှုကို စတင်ပါသည်။
 
-<a href="https://slims.web.id/docs/user-guide/Modules/Membership/member%20export" 
+ရလဒ်ဖိုင်ကို *senayan_member_export.csv* ဟု အမည်ပေးမည်ဖြစ်ပြီး သင့် browser ၏ ဒေါင်းလုဒ်တည်နေရာတွင် သိမ်းဆည်းထားမည်ဖြစ်သည်။
+
+   <a href="https://slims.web.id/docs/user-guide/Modules/Membership/member%20export" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
 </u></a>
+
