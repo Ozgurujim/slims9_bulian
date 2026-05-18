@@ -1,8 +1,11 @@
-###Visitor List
+#### စာကြည့်တိုက်သို့ လာရောက်သူစာရင်း
 
-This report contains a list of names of library members or non-members who visit the library. This report contains information: 
-- Member ID, 
-- Visitor Name, 
-- Membership Type, 
-- Institution, and 
-- Visit Date.
+------
+
+ ဤအစီရင်ခံစာတွင် စာကြည့်တိုက်သို့ လာရောက်သော စာကြည့်တိုက် အသင်းဝင်များ သို့မဟုတ် အသင်းဝင်မဟုတ်သူများ၏ အမည်စာရင်း ပါဝင်ပါသည်။ ဤအစီရင်ခံစာတွင် အောက်ပါအချက်အလက်များ ပါဝင်ပါသည် -
+- အသင်းဝင် ID, 
+- လာရောက်လေ့လာသူ အမည် (ဧည့်သည်အမည်),  
+- အသင်းဝင် အမျိုးအစား
+- အဖွဲ့အစည်းနှင့်
+- လာရောက်လေ့လာသည့် ရက်စွဲ။
+

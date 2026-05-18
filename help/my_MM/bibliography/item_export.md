@@ -1,14 +1,16 @@
-#### Biblio Item Export
+### စာအုပ်ဆိုင်ရာ item အချက်အလက်များ ထုတ်ယူခြင်း (Biblio Item Export)
 
 <hr>
-Item export ကို SLiMS ဒေတာဘေ့စ်မှ CSV format ဖိုင်သို့ item data များကို export လုပ်ရန်အသုံးပြုသည်။ အခြား SLiMS ဒေတာဘေ့စ်တွင်အသုံးပြုရန်အတွက် SLiMS ဒေတာဘေ့စ်တစ်ခုတည်းမှ ဤအရာကိုလုပ်ဆောင်နေပါက catalog data ကို export လုပ်ပြီးနောက် item export လုပ်သင့်သည်။
-data ပါဝင်သောဖိုင်၊
-field separator character၊
-field enclosing character၊
-import လုပ်ရမည့် record အရေအတွက်၊
-ဘယ် record နဲ့စတင်ရမလဲ၊ နှင့်
-ပထမဆုံး record တွင် field name များပါဝင်သင့်မသင့်ကို သတ်မှတ်ရမည်။
-ယေဘုယျအားဖြင့် target application မှလိုအပ်သော CSV file သည် custom format မဟုတ်ပါက default များကို အသုံးပြုနိုင်သည်။ ထိုသို့ဆိုလျှင် CSV file ၏ format ကို လိုအပ်သလိုပြောင်းလဲရန် setting များကို ချိန်ညှိနိုင်သည်။
+SLiMS စနစ်ရှိ စာအုပ်ဆိုင်ရာ item အချက်အလက်များ ထုတ်ယူခြင်း လုပ်ငန်းစဉ်နှင့်ပတ်သက်၍ အောက်ပါအတိုင်း အသုံးပြုနိုင်ပါသည်-
+
+Item export (item ထုတ်ယူခြင်း) ကို SLiMS ဒေတာဘေ့စ်မှ item ဒေတာများကို CSV ဖော်မတ်ဖိုင်မှတစ်ဆင့် ထုတ်ယူ (export) ရန် အသုံးပြုပါသည်။ အကယ်၍ ဤလုပ်ဆောင်ချက်ကို SLiMS ဒေတာဘေ့စ်တစ်ခုမှ အခြား SLiMS ဒေတာဘေ့စ်တစ်ခုသို့ ကူးပြောင်းအသုံးပြုရန်အတွက် ပြုလုပ်ခြင်းဖြစ်ပါက၊ item ထုတ်ယူခြင်းကို စာအုပ်အချက်အလက် (bibliographic data) များ ထုတ်ယူပြီးမှသာ ပြုလုပ်သင့်ပါသည်။
+
+ဒေတာများပါဝင်မည့်ဖိုင်ကို သင်သတ်မှတ်ပေးရမည်ဖြစ်ပြီး၊ နယ်ပယ်များကိုခွဲခြားထားခြင်းသင်္ကေတ၊ နယ်ပယ်များကိုပိတ်ပေးမည့် သင်္ကေတ၊ ထုတ်ယူလိုသော မှတ်တမ်းအရေအတွက်၊ စတင်ထုတ်ယူမည့် မှတ်တမ်းအမှတ်၊ ဖိုင်၏ ပထမဆုံးတန်းတွင် အကွက်အမည်များ (field names) ထည့်သွင်းရန် ရှိ/မရှိ  တို့ကို မိမိလိုအပ်သလို ရွေးချယ်သတ်မှတ်နိုင်ပါသည်။ 
+
+ပုံမှန်မဟုတ်သော အခြေအနေမျိုးမှလွဲ၍ ပုံသေဆက်တင်များ (defaults) ကို အသုံးပြုရုံဖြင့် အဆင်ပြေနိုင်ပါသည်။ အကယ်၍ ပုံမှန်မဟုတ်ပါက၊ သင့်လိုအပ်ချက်နှင့်အညီ CSV ဖိုင်၏ ဖော်မတ်ကို ပြောင်းလဲရန်အတွက် ဆက်တင်များကို ချိန်ညှိနိုင်ပါသည်။
+
+
+
 <a href="https://slims.web.id/docs/user-guide/Modules/Bibliography/Item%20Export" 
    onclick="const w=800;const h=600;window.open(this.href,'newwindow','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top='+((screen.availHeight-h)/2)+',resizable=yes'); return false;" style="color: purple; text-decoration: underline;">
    <u>🔗See Also: SLiMS online UserGuide
