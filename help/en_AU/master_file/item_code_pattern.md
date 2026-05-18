@@ -1,4 +1,4 @@
-#### Master File / Item Code Pattern
+#### Master File: Item code pattern
 
 <hr>
 

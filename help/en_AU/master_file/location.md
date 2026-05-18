@@ -1,4 +1,4 @@
-#### Master File / Location
+#### Master File: Location
 <hr>
 Location information in SLiMS is used to indicate  resources that might be located together in a particular building or branch of the library.
 

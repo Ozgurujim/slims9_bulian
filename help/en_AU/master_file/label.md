@@ -1,5 +1,6 @@
-#### Master File / Label
+#### Master File: Label
 <hr>
+
 To provide specific information about a catalogued resource,  labels can be defined using the label master-file function. These labels are primarily used to provide visual cues , and potentially hyperlinks, in the SLiMS OPAC.
 
 ##### Label list

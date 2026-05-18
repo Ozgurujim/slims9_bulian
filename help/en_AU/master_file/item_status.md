@@ -1,4 +1,4 @@
-#### Master File / Item status
+#### Master File: Item status
 <hr>
 
 ##### Item status

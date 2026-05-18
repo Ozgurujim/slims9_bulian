@@ -1,4 +1,4 @@
-#### Master File / RDA : Content type, Media, Carrier type
+#### Master File: RDA - Content type, Media type, Carrier type
 
 <hr>
 These look-up tables contain the authoritative RDA descriptors used in the catalogue.

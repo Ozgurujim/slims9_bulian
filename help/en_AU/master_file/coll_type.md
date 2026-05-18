@@ -1,5 +1,6 @@
-#### Master File / Collection Type
+#### Master File: Collection type
 <hr>
+
 The various collections of resources owned by the library, for example: Textbook, Reference, Fiction.
 
 This enables management of the collections master file. It displays the list of all collections in the SLiMS database , with data for:

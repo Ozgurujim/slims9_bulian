@@ -1,8 +1,6 @@
-#### Master File / Frequency
+#### Master File: Frequency
 
 <hr>
-
-
 Lists the lookup frequencies for serial publications
 
 ##### Frequency available

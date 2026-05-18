@@ -1,6 +1,7 @@
-#### Master File / Subject
+#### Master File: Subject & Orphaned subject
 
 <hr>
+
 This look-up table contains the authoritative list of subjects used in the catalogue along with cross-referencing.
 
 ##### Subject list
@@ -41,13 +42,14 @@ References and scope notes can be edited or deleted.
 
 ------
 
-### **Orphans**:
+#### **Orphaned subject**:
 
 Over time, titles may be deleted from the catalogue, and as a result entries in the master-files of Author, Subject, Publisher or Place may remain without any link to a resource held by the library. If staff wish to unclutter these master-files, the "orphaned" data entries can be identified with these tools, and deleted if considered no longer needed.
 
 The operation is the same for each tool to find orphaned entries in its master-file.
 
-Choosing the menu item, e.g Orphaned Author, will open the relevant list interface ( e.g Author List ), which has the same appearance as the usual master-file list, ***but displays just those entries which are orphaned***. 
+**To find and delete these orphaned subjects**, follow these steps:
 
-The orphaned entries that you decide should be removed can be selected and deleted in the normal fashion.
+Go to the sidebar menu and select **Orphaned subject. ** This will open the same screen as the regular Subject list screen, but  **only those subject records that are no longer linked to any books/resources in the library** ,  and are no longer used, (orphaned) will be displayed. If no data is displayed, it means that no orphaned subject entries exist.
 
+You can easily remove the subject records in this list by selecting them and deleting them as you normally would.

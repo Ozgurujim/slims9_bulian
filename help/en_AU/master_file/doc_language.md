@@ -1,6 +1,7 @@
-#### Master File / Doc. language
+#### Master File: Doc. language
 
 <hr>
+
 The language used by the document. Eg: Indonesian, English, French, Javanese etc..
 
 ##### Language list
