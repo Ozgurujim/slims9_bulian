@@ -4,7 +4,7 @@ msgstr ""
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: Burma Study Center translation team\n"
-"Language-Team: \n"
+"Language-Team: BSC SLiMS team\n"
 "Language: my\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. This DRAFT translation contains the strings necessary for SLIMS 9.7.2 translation to the Burmese language.
-#. It provides translation of the library administration and cataloguing components. This translation was facilitated by Poeditor.com, and the majority of the work was done by Daw Ah Win.
-#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 15/03/2026
+#. This translation based on Australian English library terminology, spelling and reduced capitalisation, with some grammatical improvements contains the strings necessary for SLIMS OPAC translation to Myanmar language
+#.
+#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 23/06/2026
 #: admin/admin_template/akasia-dz/function.php:84
 #: admin/admin_template/akasia/function.php:93 lib/contents/chat.php:81
 #: lib/module.inc.php:48 template/default-BSC/parts/_navbar.php:100
@@ -421,7 +421,7 @@ msgstr "အားလုံး"
 #: template/default/tinfo.inc.php:148 template/default/tinfo.inc.php:158
 #: template/default/tinfo.inc.php:168
 msgid "Hide"
-msgstr "မမြင်ရအောင်ဝှက်ပါ"
+msgstr "ဖုံးကွယ်ပါ"
 
 #: admin/modules/bibliography/index.php:670
 #: admin/modules/bibliography/index.php:1122
@@ -488,7 +488,7 @@ msgstr "တည်းဖြတ်ကြိမ်"
 #: template/default/detail_template.php:110
 #: template/lightweight/detail_template.php:143
 msgid "Specific Detail Info"
-msgstr "အသေးစိပ်အချက်အလက်"
+msgstr "သီးခြားအသေးစိတ်အချက်အလက်"
 
 #: admin/modules/bibliography/index.php:869
 #: admin/modules/bibliography/index.php:873
@@ -566,7 +566,7 @@ msgstr "စာအုပ်တည်နေရာ"
 #: template/default/parts/_modal_advanced.php:79
 #: template/lightweight/partials/advsearch.php:56
 msgid "Collection Type"
-msgstr "စုစည်းမှုအမျိုးအစား"
+msgstr "စာစုအမျိုးအစား"
 
 #: admin/modules/bibliography/index.php:954
 #: admin/modules/bibliography/marcsru.php:363
@@ -609,7 +609,7 @@ msgstr "GMD"
 #: template/lightweight/custom_frontpage_record.inc.php:8
 #: template/lightweight/detail_template.php:73
 msgid "Collation"
-msgstr "ရုပ်ပိုင်းဆိုင်ရာ ဖော်ပြချက်"
+msgstr "စာမျက်နှာနှင့် အရွယ်အစား"
 
 #: admin/modules/bibliography/index.php:1010
 #: template/akasia-BSC/custom_frontpage_record.inc.php:9
@@ -782,7 +782,7 @@ msgstr "ရရှိနိုင်မှု"
 #: template/default-BSC/parts/_result-search.php:40
 #: template/default/parts/_result-search.php:40
 msgid "Found <strong>{biblio_list->num_rows}</strong> from your keywords"
-msgstr "သင်၏ အဓိကစာလုံးများမှ ရလဒ် <strong>{biblio_list->num_rows}</strong> ခုကိုတွေ့ ရှိသည်"
+msgstr "သင်၏ သော့ချက်စကားလုံးများမှ ရလဒ် <strong>{biblio_list->num_rows}</strong> ခုကိုတွေ့ ရှိသည်"
 
 #: lib/contents/member.inc.php:188
 #: template/default-BSC/biblio_list_template.php:223
@@ -1403,7 +1403,7 @@ msgstr "စာရေးသူ(များ)၏ အမည်ထည့်ပါ"
 #: template/default-BSC/parts/_modal_advanced.php:43
 #: template/default/parts/_modal_advanced.php:43
 msgid "Enter subject"
-msgstr "ဘာသာရပ်ကို ထည့်သွင်းပါ။"
+msgstr "Subjectကို ထည့်သွင်းပါ။"
 
 #: template/default-BSC/parts/_modal_advanced.php:50
 #: template/default/parts/_modal_advanced.php:50
@@ -1535,7 +1535,7 @@ msgstr "မိုဘိုင်းအတွက် ဒီပုံစံ/အပ�
 
 #: template/default-BSC/tinfo.inc.php:44 template/default/tinfo.inc.php:44
 msgid "Yes, please!"
-msgstr "ဟုတ်ကဲ့၊ သုံးပါမယ်။"
+msgstr "ဟုတ်ကဲ့၊ လုပ်မည်။"
 
 #: template/default-BSC/tinfo.inc.php:45 template/default/tinfo.inc.php:45
 msgid "No, I want use lighweight theme"
@@ -1623,7 +1623,7 @@ msgstr "မြေပုံ"
 
 #: template/default-BSC/tinfo.inc.php:173 template/default/tinfo.inc.php:173
 msgid "Map URL"
-msgstr "မြေပုံလင့်ခ်"
+msgstr "မြေပုံ လင့်ခ်"
 
 #: template/default-BSC/tinfo.inc.php:181 template/default/tinfo.inc.php:181
 msgid "Map Description"
@@ -1635,7 +1635,7 @@ msgstr "Facebook လင့်ခ်"
 
 #: template/default-BSC/tinfo.inc.php:195 template/default/tinfo.inc.php:195
 msgid "Twitter URL"
-msgstr "Twitter လင့်ခ်"
+msgstr "URLTwitter လင့်ခ်"
 
 #: template/default-BSC/tinfo.inc.php:203 template/default/tinfo.inc.php:203
 msgid "Youtube URL"
@@ -1681,7 +1681,7 @@ msgstr "စာရင်းသွင်းရန် (ဝင်ရန်)"
 #: template/lightweight/index_template.inc.php:93
 #: template/lightweight/index_template.inc.php:204
 msgid "Put some keyword(s)..."
-msgstr "အဓိကစာလုံးအချို့ကို ထည့်ပါ။"
+msgstr "သော့ချက်စကားလုံးအချို့ကို ထည့်ပါ။"
 
 #: sysconfig.inc.php:615
 msgid "Myanmar"
@@ -1906,8 +1906,8 @@ msgid "Your Name:"
 msgstr "အုပ်စု အမည်"
 
 #: lib/contents/chat.php:102
-msgid "You may also hit Enter button to starting in conversation. "
-msgstr "စကားပြောဆိုမှု စတင်ရန်အတွက် Enter ခလုတ်ကိုလည်း နှိပ်နိုင်ပါသည်။ "
+msgid "You may also hit Enter button to starting in conversation."
+msgstr "စကားပြောဆိုမှု စတင်ရန်အတွက် Enter ခလုတ်ကိုလည်း နှိပ်နိုင်ပါသည်။"
 
 #: lib/contents/clustering.inc.php:111 lib/contents/clustering.inc.php:133
 msgid "More result"
@@ -1989,7 +1989,7 @@ msgstr "မကြာမီက ရောက်ရှိမှုများ"
 #: admin/modules/system/user_group.php:249
 #: admin/modules/system/user_group.php:261 lib/contents/common.inc.php:77
 msgid "Last Update"
-msgstr "နောက်ဆုံးအကြိမ်က ဖြည့်စွက်ခဲ့သည့် နေ့စွဲ"
+msgstr "နောက်ဆုံးပြင်ဆင်မွမ်းမံမှု"
 
 #: lib/contents/common.inc.php:78
 msgid "Most Loaned"
@@ -2023,7 +2023,7 @@ msgstr "ခေါင်းစဉ်အလိုက် (အ-က/ Z-A) စီခ�
 #: admin/modules/master_file/detail_comment.php:117
 #: lib/contents/default.inc.php:156 plugins/label_barcode/index.php:381
 msgid "Query took"
-msgstr "ရှာဖွေသ့အချိန်"
+msgstr "ရှာဖွေမှုအတွက်ကြာချိန်"
 
 #: admin/modules/bibliography/dl_print.php:345
 #: admin/modules/bibliography/index.php:1380
@@ -2077,7 +2077,7 @@ msgstr "ပြီးမြောက်ရန်စက္ကန့်"
 #: plugins/read_counter/index.php:96 plugins/read_counter/report.php:40
 #: plugins/read_counter/report.php:75 plugins/read_counter/report.php:122
 msgid "Item Code"
-msgstr "စာကြည့်တိုက်ပစ္စည်းသင်္ကေတနံပါတ်"
+msgstr "item ကုဒ်နံပါတ်"
 
 #: admin/modules/bibliography/checkout_item.php:81
 #: admin/modules/circulation/circulation_action.php:345
@@ -2093,7 +2093,7 @@ msgstr "စာကြည့်တိုက်ပစ္စည်းသင်္က
 #: lib/contents/download_loan_history.inc.php:63
 #: lib/contents/member.inc.php:398 lib/contents/member.inc.php:506
 msgid "Loan Date"
-msgstr "စာငှါးနေ့စွဲ"
+msgstr "ငှားရမ်းသည့်ရက်စွဲ"
 
 #: admin/modules/bibliography/checkout_item.php:82
 #: admin/modules/circulation/circulation_action.php:345
@@ -2107,7 +2107,7 @@ msgstr "စာငှါးနေ့စွဲ"
 #: lib/contents/download_current_loan.inc.php:64
 #: lib/contents/member.inc.php:399
 msgid "Due Date"
-msgstr "ပြန်လည်အပ်နှံရမည့်နေ့စွဲ"
+msgstr "ပြန်အပ်နှံရမည့်နေ့စွဲ"
 
 #: lib/contents/download_current_loan.inc.php:88
 msgid "Current Loan item(s)"
@@ -2251,7 +2251,7 @@ msgstr "စကားဝှက်အသစ်ကို အတည်ပြုပ�
 #: admin/modules/system/user_group.php:227 lib/contents/login.inc.php:200
 #: lib/contents/newpass.inc.php:128
 msgid "Update"
-msgstr "အသစ်ပြောင်းပါ။"
+msgstr "ပြင်ဆင်မွမ်းမံရန် (Update)"
 
 #: lib/contents/login.inc.php:204
 msgid "Not valid token!"
@@ -2329,7 +2329,7 @@ msgstr "ယခင်ငှားရမ်းထားသော စာရင်�
 #: admin/modules/system/custom_field.php:305
 #: admin/modules/system/custom_field.php:386 lib/contents/member.inc.php:540
 msgid "Remove"
-msgstr "ဖယ်ထုတ်ပါ။"
+msgstr "ဖယ်ရှားရန်"
 
 #: lib/contents/member.inc.php:570
 msgid "Reserve title(s) on Basket"
@@ -2341,7 +2341,7 @@ msgstr "သင့် ခြင်း (Basket) ရှင်းပါ"
 
 #: lib/contents/member.inc.php:572
 msgid "Remove selected title(s) from Basket"
-msgstr "ရွေးချယ်ထားသောစာအုပ်အမည်(များ) ကို Basket မှဖယ် ထုတ်ပြစ်ပါ။"
+msgstr "ရွေးချယ်ထားသောစာအုပ်အမည်(များ) ကို Basket မှဖယ်ရှားရန်"
 
 #: lib/contents/member.inc.php:574
 msgid "title(s) on basket"
@@ -2430,7 +2430,7 @@ msgstr "သင်ရွေးချယ်ထားသည့်စာအုပ်
 #: admin/modules/reporting/customs/loan_history.php:65
 #: lib/contents/member.inc.php:858
 msgid "Loan History"
-msgstr "စာငှါးမှတ်တမ်း"
+msgstr "စာငှားမှတ်တမ်း"
 
 #: lib/contents/member.inc.php:862
 msgid "My Account"
@@ -2636,12 +2636,12 @@ msgstr "ID ရရှိနိုင်သည်"
 #: admin/AJAX_lookup_handler.php:62 admin/AJAX_lookup_handler.php:63
 #: admin/AJAX_vocabolary_control.php:46
 msgid "Keyword can't be empty"
-msgstr "အဓိကစကားလုံးကိုဗလာထား၍ မရပါ။"
+msgstr "သော့ချက်စကားလုံးကိုဗလာထား၍ မရပါ။"
 
 #: admin/AJAX_lookup_handler.php:131 admin/AJAX_lookup_handler.php:135
 #: admin/AJAX_vocabolary_control.php:86 admin/AJAX_vocabolary_control.php:90
 msgid "Add New"
-msgstr "သတင်းအချက်အလက် ထပ်ထည့်သည်"
+msgstr "အသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/admin_template/akasia-dz/function.php:55
 #: admin/admin_template/akasia/function.php:59
@@ -2727,7 +2727,8 @@ msgid ""
 "        the overdued collection(s) are:"
 msgstr ""
 "သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
-"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါသည်။"
+"ဤအီးမေးလ်သည် သင့်တွင် စာကြည့်တိုက်ချေးငွေများ <strong>ပေးရန်နောက်ကျ</strong>နေကြောင်း အကြောင်းကြားရန်ဖြစ်ပြီး \n"
+"၎င်းတို့မှာ-"
 
 #: admin/admin_template/duedateMail.php:55
 msgid ""
@@ -2760,8 +2761,9 @@ msgid ""
 "This is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\n"
 "the overdued collection(s) are:"
 msgstr ""
-"သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
-"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါသည်။"
+"သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>&nbsp;\n"
+"ဤအီးမေးလ်သည် သင့်တွင် စာကြည့်တိုက်ချေးငွေများ <strong>ပေးရန်နောက်ကျ</strong>နေကြောင်း အကြောင်းကြားရန်ဖြစ်ပြီး \n"
+"၎င်းတို့မှာ-"
 
 #: admin/admin_template/overdue-mail-tpl.php:10
 msgid ""
@@ -2788,8 +2790,9 @@ msgid ""
 "         This is notification e-mail to inform you that you have <strong>OVERDUED</strong> library loan,\n"
 "        the overdued collection(s) are:"
 msgstr ""
-"သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>\n"
-"ဤအီးမေးလ်သည် ဌားထားသော စာအုပ် ရက်ကျော်နေပြီဖြစ်ကြောင်း အကြောင်းကြားစာ အီးမေးလ်ဖြစ်ပါသည်။"
+"သို့ <strong><!--MEMBER_NAME--> (<!--MEMBER_ID-->)</strong>&nbsp;\n"
+"ဤအီးမေးလ်သည် သင့်တွင် စာကြည့်တိုက်ချေးငွေများ <strong>ပေးရန်နောက်ကျ</strong>နေကြောင်း အကြောင်းကြားရန်ဖြစ်ပြီး \n"
+"၎င်းတို့မှာ-"
 
 #: admin/admin_template/overdueMail.php:62
 msgid ""
@@ -2820,7 +2823,7 @@ msgstr "<strong>Freetype</strong> အထောက်အကူကို PHP GD ex
 
 #: admin/default/home.php:71
 msgid "There are currently <strong>{num_overdue}</strong> library members having overdue. Please check at <b>Circulation</b> module at <b>Overdues</b> section for more detail"
-msgstr "ယခု <strong>{num_overdue}</strong> စာကြည့်တိုက်အသင်းဝင်များသည် စာအုပ်ပြန်အပ်ရန် ရက်ကျော်နေပြီဖြစ်ပါသည်။ အသေးစိတ်ကိုသိရန်အတွက်<b> စာငှား</b> ဌာန <b>ရက်လွန်စာရင်း</b> မှာစစ်ဆေးပါ။"
+msgstr "ယခု စာကြည့်တိုက်အသင်းဝင် <strong>{num_overdue}</strong> သည် စာအုပ်ပြန်အပ်ရန် ရက်ကျော်နေပြီဖြစ်ပါသည်။ အသေးစိတ်ကိုသိရန်အတွက်<b> စာငှား</b> ဌာန <b>ရက်လွန်စာရင်း</b> မှာစစ်ဆေးပါ။"
 
 #: admin/default/home.php:76
 msgid "<strong>Images</strong> directory and directories under it is not writable. Make sure it is writable by changing its permission or you won't be able to upload any images and create barcodes"
@@ -2828,7 +2831,7 @@ msgstr "<strong>Images<strong> လမ်းညွန်နှင့် ၎င်
 
 #: admin/default/home.php:80
 msgid "<strong>Repository</strong> directory is not writable. Make sure it is writable (and all directories under it) by changing its permission or you won't be able to upload any bibliographic attachments."
-msgstr "<strong>Repository</strong> လမ်းညွန်သည် ရေးသား၍မရပါ။ ယင်း လမ်းညွန် (နှင့်ယင်းအောက်ရှိ လမ်းညွန် များအားလုံး) ကို ယင်း၏ခွင့်ပြုချက်ကို ပြောင်းခြင်းအားဖြင့် ရေးနိုင်သည်ကိုသေချာပါစေ၊ သို့မဟုတ်ပါက စာကြည့်တိုက်ဆိုင်ရာ ပူးတွဲဖေါ်ပြချက်များ ထည့်သွင်းနိုင်မည်မဟုတ်ပါ။"
+msgstr "<strong>Repository</strong> အချက်အလက်သိုလှောင်ခန်း လမ်းညွန်သည် ရေးသား၍မရပါ။ ယင်း လမ်းညွန် (နှင့်ယင်းအောက်ရှိ လမ်းညွန် များအားလုံး) ကို ယင်း၏ခွင့်ပြုချက်ကို ပြောင်းခြင်းအားဖြင့် ရေးနိုင်သည်ကိုသေချာပါစေ၊ သို့မဟုတ်ပါက စာကြည့်တိုက်ဆိုင်ရာ ပူးတွဲဖေါ်ပြချက်များ ထည့်သွင်းနိုင်မည်မဟုတ်ပါ။"
 
 #: admin/default/home.php:84
 msgid "<strong>File upload</strong> directory is not writable. Make sure it is writable (and all directories under it) by changing its permission or you won't be able to upload any file, create report files and create database backups."
@@ -2864,7 +2867,7 @@ msgstr "ယခုအရန်သိမ်းဆည်းမှု (backup) လ�
 
 #: admin/default/home.php:188
 msgid "Total of Collections"
-msgstr "စာစုများစုစုပေါင်း"
+msgstr "စာအုပ်များစုစုပေါင်း"
 
 #: admin/default/home.php:197
 msgid "Total of Items"
@@ -2880,18 +2883,18 @@ msgstr "ဌားရမ်းခဲ့ပြီး"
 #: admin/modules/reporting/customs/item_titles_list.php:292
 #: lib/detail.inc.php:259
 msgid "Available"
-msgstr "ရနိုင်သည်"
+msgstr "ရရှိနိုင်ပါသည် (သို့) အသင့်ရှိသည်"
 
 #: admin/default/home.php:225
 msgid "Latest Transactions"
-msgstr "နောက်ဆုံးပေါ်လွှဲပြောင်းမှုများ"
+msgstr "နောက်ဆုံးစာငှားလုပ်ငန်းစဉ်များ"
 
 #: admin/default/home.php:228 admin/default/home.php:317
 #: admin/modules/circulation/loan.php:167
 #: admin/modules/circulation/loan_history_maintenance.php:233
 #: admin/modules/circulation/pop_loan_receipt.php:88
 msgid "Loan"
-msgstr "စာငှါးရမ်းခြင်း"
+msgstr "စာငှားရမ်းခြင်း"
 
 #: admin/default/home.php:229 admin/default/home.php:257
 #: admin/default/home.php:322 admin/modules/circulation/loan_list.php:98
@@ -2899,14 +2902,14 @@ msgstr "စာငှါးရမ်းခြင်း"
 #: admin/modules/circulation/pop_loan_receipt.php:141
 #: admin/modules/circulation/quick_return.php:91
 msgid "Return"
-msgstr "ပြန်လည်အပ်နှံသည်"
+msgstr "ပြန်အပ်ရန်"
 
 #: admin/default/home.php:230 admin/default/home.php:327
 #: admin/modules/circulation/loan_list.php:98
 #: admin/modules/circulation/loan_list.php:124
 #: admin/modules/membership/index.php:531
 msgid "Extend"
-msgstr "သက်တမ်းတိုးမြှင့်"
+msgstr "သက်တမ်းတိုးရန်"
 
 #: admin/default/home.php:238
 msgid "Summary"
@@ -3022,11 +3025,11 @@ msgstr "ဖြတ်လမ်းတို"
 
 #: admin/default/submenu.php:22 admin/modules/system/app_user.php:609
 msgid "Change User Profiles"
-msgstr "စာကြည့်တိုက်အသုံးပြုသူ၏ ကိုယ်ရေးမှတ်တမ်းပြောင်းလဲရန်"
+msgstr "စာကြည့်တိုက်အသုံးပြုသူ၏ အသင်းဝင်အချက်အလက်များ ပြောင်းလဲရန်"
 
 #: admin/default/submenu.php:22
 msgid "Change Current User Profiles and Password"
-msgstr "ယခုအသုံးပြုသူ၏ ကိုယ်ရေးမှတ်တမ်းနှင့် လျှို့ဝှက်သင်္ကေတ ပြောင်းပါ။"
+msgstr "ယခုအသုံးပြုသူ၏ အသင်းဝင်အချက်အလက်များနှင့် လျှို့ဝှက်သင်္ကေတ ပြောင်းပါ။"
 
 #: admin/default/submenu.php:23 admin/modules/system/submenu.php:56
 msgid "Shortcut Setting"
@@ -3063,7 +3066,7 @@ msgstr "သင်သည် စာကြည့်တိုက်အလိုအ�
 #: admin/modules/bibliography/biblio_utils.inc.php:170
 #: admin/modules/bibliography/biblio_utils.inc.php:214
 msgid "Copy from {type}"
-msgstr "{type} မှ ကူးယူပါ။"
+msgstr "{type} ထံမှ ကူးယူရန်"
 
 #: admin/modules/bibliography/biblio_utils.inc.php:227
 msgid "Hidden in OPAC"
@@ -3076,7 +3079,7 @@ msgstr "Homepage တွင်ကြေညာရန်"
 #: admin/modules/bibliography/checkout_item.php:58
 #: admin/modules/bibliography/submenu.php:32
 msgid "Checkout Items"
-msgstr "ငှားရမ်းသည့်စာအုပ်များ"
+msgstr "ငှားရမ်းထားသော စာအုပ်များ"
 
 #: admin/modules/bibliography/checkout_item.php:123
 #: admin/modules/bibliography/dl_print.php:344
@@ -3121,7 +3124,7 @@ msgstr "ငှားရမ်းသည့်စာအုပ်များ"
 #: admin/modules/system/user_group.php:281 lib/Log/Handler/Systemlog.php:76
 #: plugins/label_barcode/index.php:380
 msgid "Found <strong>{result->num_rows}</strong> from your keywords"
-msgstr "သင်၏ အဓိကစာလုံးများမှ ရလဒ် <strong>{result->num_rows}</strong> ​ခုကိုတွေ့ရှိသည်။"
+msgstr "သင်၏ သော့ချက်စကားလုံးများမှ ရလဒ် <strong>{result->num_rows}</strong> ​ခုကိုတွေ့ရှိသည်။"
 
 #: admin/modules/bibliography/dl_print.php:106
 #: admin/modules/bibliography/item_barcode_generator.php:107
@@ -3132,7 +3135,7 @@ msgstr "သင်၏ အဓိကစာလုံးများမှ ရလဒ�
 #: admin/modules/membership/member_card_generator.php:98
 #: plugins/label_barcode/index.php:100
 msgid "Selected items NOT ADDED to print queue. Only {max_print} can be printed at once"
-msgstr "ပုံနှိပ်ရန် တန်းစီထားသည်များတွင် ထပ်မထည့်သည့်စာအုပ်များကို ရွေးပါ။ တစ်ကြိမ်တွင်{max_print} သာ ပုံနှိပ်နိုင်သည်။"
+msgstr "ရွေးထားသည့်စာအုပ်များကို ပုံနှိပ်တန်းစီခြင်းတွင် မထည့်ပါ။ တစ်ကြိမ်တွင်  အများဆုံး {max_print} သာ ပုံနှိပ်နိုင်သည်။"
 
 #: admin/modules/bibliography/dl_print.php:110
 #: admin/modules/bibliography/item_barcode_generator.php:110
@@ -3144,7 +3147,7 @@ msgstr "ပုံနှိပ်ရန် တန်းစီထားသည်�
 #: admin/modules/membership/member_card_generator.php:103
 #: plugins/label_barcode/index.php:104
 msgid "Selected items added to print queue"
-msgstr "ရွေးထားသည့်စာအုပ်များကို ပုံနှိပ်ရန်တန်းစီတန်းတွင် ထပ်ထည့်လိုက်သည်။"
+msgstr "ရွေးထားသည့်စာအုပ်များကို ပုံနှိပ်တန်းစီခြင်းတွင် ထည့်လိုက်သည်။"
 
 #: admin/modules/bibliography/dl_print.php:117
 #: admin/modules/bibliography/item_barcode_generator.php:119
@@ -3155,7 +3158,7 @@ msgstr "ရွေးထားသည့်စာအုပ်များကို
 #: admin/modules/membership/member_card_generator.php:55
 #: plugins/label_barcode/index.php:111
 msgid "Print queue cleared!"
-msgstr "ပုံနှိပ်ရန် တန်းစီထားသည်များရှင်းလင်းပြီး"
+msgstr "ပုံနှိပ်တန်းစီထားသည်များရှင်းလင်းပြီးပါပြီ!"
 
 #: admin/modules/bibliography/dl_print.php:127
 #: admin/modules/bibliography/item_barcode_generator.php:128
@@ -3191,7 +3194,7 @@ msgstr "လေဘယ်များ ပုံနှိပ်ခြင်း"
 #: admin/modules/bibliography/dl_print.php:234
 #: plugins/label_barcode/index.php:271
 msgid "ERROR! Label failed to generate, possibly because {directory} directory is not writable"
-msgstr "လေဘယ်ကိုထုတ်ရန် မအောင်မြင်ပါ။ {directory} directory ကို မရေးနိုင်၍ ဖြစ်နိုင်ပါသည်။"
+msgstr "အမှား! Label ထုတ်၍မရပါ။ {directory} directory ကို မရေးနိုင်၍ ဖြစ်နိုင်ပါသည်။"
 
 #: admin/modules/bibliography/dl_print.php:248
 #: admin/modules/bibliography/item_barcode_generator.php:234
@@ -3202,7 +3205,7 @@ msgstr "လေဘယ်ကိုထုတ်ရန် မအောင်မြ�
 #: admin/modules/membership/member_card_generator.php:196
 #: plugins/label_barcode/index.php:286
 msgid "Clear Print Queue"
-msgstr "ပုံနှိပ်ရန်တန်းစီတန်းထားခြင်းကို ပယ်ဖျက်ရန်"
+msgstr "ပုံနှိပ်ရန်တန်းစီထားခြင်းကို ပယ်ဖျက်ရန်"
 
 #: admin/modules/bibliography/dl_print.php:249
 #: plugins/label_barcode/index.php:288
@@ -3233,7 +3236,7 @@ msgstr "အများဆုံး"
 #: admin/modules/membership/member_card_generator.php:207
 #: plugins/label_barcode/index.php:303
 msgid "records can be printed at once. Currently there is"
-msgstr "မှတ်တမ်းများကို တစ်ချိန်တည်း ပုံနှိပ်နိုင်ပါသည်။ ယခုလောလောဆယ်ရှိပါသည်။"
+msgstr "မှတ်တမ်းများကို တစ်ကြိမ်တည်း ရိုက်နှိပ်နိုင်ပါသည်။ လက်ရှိတွင်"
 
 #: admin/modules/bibliography/dl_print.php:265
 #: admin/modules/bibliography/item_barcode_generator.php:251
@@ -3260,7 +3263,7 @@ msgstr "ပုံနှိပ်ရန်စောင့်ဆိုင်းန
 #: template/akasia/visitor_template.php:60
 #: template/lightweight/visitor_template.php:60
 msgid "Add"
-msgstr "ထပ်ထည့်ပါရန်"
+msgstr "ထပ်ထည့်ရန်"
 
 #: admin/modules/bibliography/dl_print.php:336
 #: admin/modules/bibliography/item_barcode_generator.php:318
@@ -3271,7 +3274,7 @@ msgstr "ထပ်ထည့်ပါရန်"
 #: admin/modules/membership/member_card_generator.php:252
 #: plugins/label_barcode/index.php:372
 msgid "Add To Print Queue"
-msgstr "ပုံနှိပ်တန်းစီရန် ထပ်ထည့်ရန်"
+msgstr "ပုံနှိပ်တန်းစီရန် ထည့်ရန်"
 
 #: admin/modules/bibliography/dl_print.php:337
 #: admin/modules/bibliography/item_barcode_generator.php:319
@@ -3282,7 +3285,7 @@ msgstr "ပုံနှိပ်တန်းစီရန် ထပ်ထည့�
 #: admin/modules/membership/member_card_generator.php:253
 #: plugins/label_barcode/index.php:373
 msgid "Add to print queue?"
-msgstr "ပုံနှိပ်တန်းစီရန် ထပ်ထည့်မည်လား။"
+msgstr "ပုံနှိပ်တန်းစီရန် ထည့်မည်လား။"
 
 #: admin/modules/bibliography/export.php:57
 #: admin/modules/bibliography/import.php:116
@@ -3292,25 +3295,25 @@ msgstr "ပုံနှိပ်တန်းစီရန် ထပ်ထည့�
 #: admin/modules/membership/export.php:49
 #: admin/modules/membership/import.php:91
 msgid "Required fields (*)  must be filled correctly!"
-msgstr "(*) ဖြင့် ပြထားသော လိုအပ်သည့် အကွက်ကို မှန်ကန်စွာ ဖြည့်စွက်ရမည်။"
+msgstr "(*) ဖြင့် ပြထားသော မဖြစ်မနေဖြည့်သွင်းရမည့် အကွက်များကို မှန်ကန်စွာ ဖြည့်စွက်ရမည်။"
 
 #: admin/modules/bibliography/export.php:107
 #: admin/modules/bibliography/item_export.php:117
 #: admin/modules/membership/export.php:88
 msgid "Error on query to database, Export FAILED!"
-msgstr "အချက်အလက်စုဘဏ်တွင် ရှာဖွေရာတွင် မှားယွင်းချွတ်ချော်နေသည်။"
+msgstr "ဒေတာဘေ့စ်သို့ ရှာဖွေရာတွင် အမှားအယွင်းရှိနေပါသည်၊ ထုတ်ယူခြင်း (Export) မအောင်မြင်ပါ!"
 
 #: admin/modules/bibliography/export.php:175
 msgid "There is no record in bibliographic database yet, Export FAILED!"
-msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်များ သိမ်းဆည်းရာတွင် မှတ်တမ်းများမရှိပါ၊ ပြင်ပသို့ ပို့ဆောင်ခြင်း မအောင်မြင်ပါ။"
+msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်များ သိမ်းဆည်းရာတွင် မှတ်တမ်းများမရှိပါ၊ ထုတ်ယူခြင်း (Export) မအောင်မြင်ပါ!"
 
 #: admin/modules/bibliography/export.php:185
 msgid "Export Tool"
-msgstr "ပြင်ပသို့ ပို့ဆောင်ရန် ကိရိယာ"
+msgstr "အချက်အလက်ထုတ်ယူသည့် ကိရိယာ"
 
 #: admin/modules/bibliography/export.php:188
 msgid "Export bibliographics data to CSV file"
-msgstr "CSV ဖိုင်သို့ စာအုပ်ဆိုင်ရာအချက်အလက်များပို့ဆောင်ပါ။"
+msgstr "စာအုပ်အချက်အလက်များကို CSV ဖိုင်အဖြစ် ထုတ်ယူပါ။"
 
 #: admin/modules/bibliography/export.php:196
 #: admin/modules/bibliography/item_export.php:173
@@ -3326,7 +3329,7 @@ msgstr "ယခုချက်ချင်း ပေးပို့ပါ။"
 #: admin/modules/membership/export.php:156
 #: admin/modules/membership/import.php:375
 msgid "Field Separator"
-msgstr "နယ်ပယ်များကိုခွဲခြားထားခြင်း"
+msgstr "အကွက်များကိုခွဲခြားထားမည့် သင်္ကေတ"
 
 #: admin/modules/bibliography/export.php:207
 #: admin/modules/bibliography/import.php:382
@@ -3335,7 +3338,7 @@ msgstr "နယ်ပယ်များကိုခွဲခြားထားခ
 #: admin/modules/membership/export.php:158
 #: admin/modules/membership/import.php:377
 msgid "Field Enclosed With"
-msgstr "နယ်ပယ်များကို \" \" ဖြင့် ပိတ်ကာထား"
+msgstr "အကွက်များကို ပိတ်ကာပေးမည့် သင်္ကေတ"
 
 #: admin/modules/bibliography/export.php:211
 #: admin/modules/bibliography/item_export.php:188
@@ -3349,7 +3352,7 @@ msgstr "မှတ်တမ်းခွဲခြားမှု"
 #: admin/modules/membership/export.php:164
 #: admin/modules/membership/import.php:379
 msgid "Number of Records To Export (0 for all records)"
-msgstr "မှတ်တမ်းပို့ရန်အရေအတွက် (မှတ်တမ်းအားလုံးအတွက် သုည)"
+msgstr "ထုတ်ယူရမည့် မှတ်တမ်းအရေအတွက် (မှတ်တမ်းအားလုံးအတွက် 0 ဟုထားပါ)"
 
 #: admin/modules/bibliography/export.php:215
 #: admin/modules/bibliography/import.php:386
@@ -3359,29 +3362,29 @@ msgstr "မှတ်တမ်းပို့ရန်အရေအတွက် (�
 #: admin/modules/membership/export.php:166
 #: admin/modules/membership/import.php:381
 msgid "Start From Record"
-msgstr "စတင်ရန်မှတ်တမ်း နံပါတ်"
+msgstr "စတင်ရမည့် မှတ်တမ်းအမှတ်"
 
 #: admin/modules/bibliography/export.php:217
 #: admin/modules/bibliography/item_export.php:194
 #: admin/modules/membership/export.php:168
 msgid "Put columns names in the first row"
-msgstr "ကော်လံအမည်ကို ပထမတန်းမှာထည့်ပါ။"
+msgstr "ပထမတန်းတွင် ကော်လံအမည်များ ထည့်သွင်းပါ။"
 
 #: admin/modules/bibliography/iframe_attach.php:65
 msgid "Are you sure to remove the file attachment data?"
-msgstr "ပူးတွဲဖိုင်ကို ဖယ်ရှားပစ်ရန်သေချာပါသလား"
+msgstr "ပူးတွဲဖိုင်ဒေတာကို ဖယ်ရှားရန်သေချာပါသလား"
 
 #: admin/modules/bibliography/iframe_attach.php:68
 msgid "Do you also want to remove {filename} file from repository?"
-msgstr "အချက်အလက်များမှ {filename} ကိုပါ ဖယ်ရှားလိုပါသလား။"
+msgstr "{filename} ဖိုင်ကို အချက်အလက်သိုလှောင်ခန်း (repository) မှပါ ဖျက်ပစ်လိုပါသလား?"
 
 #: admin/modules/bibliography/iframe_attach.php:86
 msgid "Attachment removed!"
-msgstr "ပူးတွဲဖိုင်ကို ဖယ်ရှားပြီး"
+msgstr "ပူးတွဲဖိုင်ကို ဖျက်ပစ်လိုက်ပါပြီ!"
 
 #: admin/modules/bibliography/iframe_attach.php:105
 msgid "Attachment {filename} succesfully removed!"
-msgstr "ပူးတွဲဖိုင် {filename} အောင်မြင်စွာဖယ်ရှားပြီး။"
+msgstr "ပူးတွဲဖိုင် {filename} အောင်မြင်စွာဖျက်ပစ်လိုက်ပါပြီ!"
 
 #: admin/modules/bibliography/iframe_attach.php:128
 #: admin/modules/bibliography/iframe_author.php:116
@@ -3411,7 +3414,7 @@ msgstr "တည်းဖြတ်ရန်"
 
 #: admin/modules/bibliography/iframe_author.php:65
 msgid "Are you sure to remove selected author?"
-msgstr "ရွေးချယ်ထားသော စာရေးသူကို ဖယ်ရှားပစ်ရန်သေချာပါသလား"
+msgstr "ရွေးချယ်ထားသော စာရေးသူကို ဖယ်ရှားရန်သေချာပါသလား"
 
 #: admin/modules/bibliography/iframe_author.php:65
 #: admin/modules/bibliography/iframe_biblio_rel.php:60
@@ -3430,7 +3433,7 @@ msgstr "စာရေးသူအမည် အောင်မြင်စွာ�
 
 #: admin/modules/bibliography/iframe_author.php:92
 msgid "Author removed!"
-msgstr "စာရေးသူအမည် ဖယ်ရှားပြီး"
+msgstr "စာရေးသူကို ဖျက်ပစ်လိုက်ပါပြီ!"
 
 #: admin/modules/bibliography/iframe_author.php:121
 #: admin/modules/bibliography/pop_author_edit.php:98
@@ -3439,24 +3442,24 @@ msgstr "လုပ်ပိုင်ခွင့်အဆင့်"
 
 #: admin/modules/bibliography/iframe_biblio_rel.php:60
 msgid "Are you sure to remove selected title?"
-msgstr "ရွေးချယ်ထားသည့်ခေါင်းစဉ်ကို ဖယ်ရှားပစ်ရန်သေချာပါသလား"
+msgstr "ရွေးချယ်ထားသော စာအုပ်အမည်ကို ဖယ်ရှားရန် သေချာသလား?"
 
 #: admin/modules/bibliography/iframe_biblio_rel.php:76
 msgid "Biblio relation succesfully removed!"
-msgstr "ဆက်နွယ်သည့် စာအုပ်ဆိုင်ရာ အချက်အလက်များကိုအောင်မြင်စွာ ဖယ်ရှားပြီး"
+msgstr "စာအုပ်ဆက်စပ်မှုကို အောင်မြင်စွာဖျက်ပစ်လိုက်ပါပြီ!"
 
 #: admin/modules/bibliography/iframe_biblio_rel.php:87
 msgid "Biblio relation removed!"
-msgstr "ဆက်နွယ်သည့် စာအုပ်ဆိုင်ရာ အချက်အလက်များ ဖယ်ရှားပြီး"
+msgstr "စာအုပ်ဆက်စပ်မှုကို ဖျက်ပစ်လိုက်ပါပြီ!"
 
 #: admin/modules/bibliography/iframe_item_list.php:61
 msgid "Are you sure to remove selected item?"
-msgstr "ရွေးချယ်ထားသည်ကို ဖယ်ရှားပစ်ရန်သေချာပါသလား"
+msgstr "ရွေးချယ်ထားသော item ကိုဖယ်ရှားရန်သေချာပါသလား?"
 
 #: admin/modules/bibliography/iframe_item_list.php:85
 #: admin/modules/bibliography/item.php:229
 msgid "Item data can not be deleted because still on hold by members"
-msgstr "စာအုပ်အချက်အလက်များကို ဖျက်ပြစ်၍မရပါ၊ အသင်းဝင်များမှ လက်ဝယ်ရယူထားဆဲ ဖြစ်ပါတယ်"
+msgstr "အသင်းဝင်များ ငှားထားဆဲဖြစ်၍ ဖျက်မရပါ။"
 
 #: admin/modules/bibliography/iframe_item_list.php:91
 #: admin/modules/bibliography/item.php:235
@@ -3476,11 +3479,11 @@ msgstr "စာအုပ်များ/ အုပ်ရေများ"
 #: admin/modules/bibliography/iframe_topic.php:63
 #: admin/modules/master_file/iframe_vocabolary_control.php:31
 msgid "Are you sure to remove selected topic?"
-msgstr "ရွေးချယ်ထားသည့်အကြောင်းအရာကို ဖယ်ရှားပစ်ရန်သေချာပါသလား"
+msgstr "ရွေးချယ်ထားသည့်အကြောင်းအရာကို ဖယ်ရှားရန်သေချာပါသလား"
 
 #: admin/modules/bibliography/iframe_topic.php:79
 msgid "Topic removed!"
-msgstr "စာအမည်ကို ဖယ်ရှားပြီး"
+msgstr "အကြောင်းအရာကို ဖျက်ပစ်လိုက်ပါပြီ!"
 
 #: admin/modules/bibliography/iframe_topic.php:90
 #: admin/modules/master_file/iframe_vocabolary_control.php:56
@@ -3497,24 +3500,24 @@ msgstr "စာအမည်ကို အောင်မြင်စွာ ဖယ�
 #: admin/modules/membership/import.php:91
 #: admin/modules/membership/import.php:134
 msgid "Import Tool"
-msgstr "သွင်းယူခြင်းကိရိယာ"
+msgstr "ဒေတာတင်သွင်းသည့် ကိရိယာ"
 
 #: admin/modules/bibliography/import.php:105
 #: admin/modules/bibliography/item_import.php:81
 #: admin/modules/membership/import.php:80
 msgid "No CSV file selected to import, please choose CSV file first!"
-msgstr "တင်သွင်းရန် CSV ဖိုင်ကို မရွေးထားသေးပါ။ ကျေးဇူးပြု၍ CSV ဖိုင်ကို အရင်ရွေးချယ်ပါ!"
+msgstr "တင်သွင်းရန် မည်သည့် CSV ဖိုင်ကိုမျှ ရွေးချယ်ထားခြင်း မရှိပါ။ ကျေးဇူးပြု၍ CSV ဖိုင်ကို အရင်ရွေးချယ်ပါ!"
 
 #: admin/modules/bibliography/import.php:155
 #: admin/modules/bibliography/item_import.php:132
 #: admin/modules/bibliography/marcimport.php:115
 #: admin/modules/membership/import.php:134
 msgid "Upload failed! File type not allowed or the size is more than"
-msgstr "ဖိုင်တင်ခြင်း မအောင်မြင်ပါ။ ဖိုင်အမျိုးအစားခွင့်မပြုပါ၊ သို့မဟုတ် ဖိုင်အရွယ်အစားသည် မှတ်တမ်းအရ အသင်းဝင် အချက်အလက်စုဆောင်းရာနေရာတွင် ထည့်ထားသည်ထက် ကျော်လွန်နေသည်။"
+msgstr "ဖိုင်တင်ခြင်း (Upload) မအောင်မြင်ပါ! ဖိုင်အမျိုးအစားကို ခွင့်မပြုပါ သို့မဟုတ် ဖိုင်အရွယ်အစား အလွန်ကြီးပါသည်။"
 
 #: admin/modules/bibliography/import.php:258
 msgid "Success importing bibliographic data : {title}"
-msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်များ တင်သွင်းမှု အောင်မြင်သည် - {title}။"
+msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်တင်သွင်းမှု အောင်မြင်ပါသည် - {title}။"
 
 #: admin/modules/bibliography/import.php:331
 #: admin/modules/bibliography/item_import.php:345
@@ -3530,7 +3533,7 @@ msgstr "CSV ဖိုင်မှတစ်ဆင့် စာအုပ်မှ�
 #: admin/modules/bibliography/item_import.php:362
 #: admin/modules/membership/import.php:344
 msgid "Download Sample"
-msgstr "နမူနာကို ဆွဲချကူးယူပါ။"
+msgstr "နမူနာပုံစံကို ဒေါင်းလုဒ်ရယူရန်"
 
 #: admin/modules/bibliography/import.php:358
 #: admin/modules/bibliography/item_import.php:370
@@ -3553,11 +3556,11 @@ msgstr "တင်သွင်းမည့် မှတ်တမ်းအရေ�
 #: admin/modules/bibliography/import.php:388
 #: admin/modules/bibliography/item_import.php:399
 msgid "The first row is the columns names"
-msgstr "ပထမတန်းသည် ကော်လံအမည်ပါ။"
+msgstr "ပထမတန်းသည် ကော်လံအမည်များဖြစ်သည်။"
 
 #: admin/modules/bibliography/import_preview.php:63
 msgid "Preview Import"
-msgstr "အကြိုကြည့်ရှုခြင်း တင်သွင်းခြင်း"
+msgstr "တင်သွင်းမည့်ပုံစံကို ကြိုတင်ကြည့်ရှုရန်"
 
 #: admin/modules/bibliography/import_preview.php:66
 msgid "Preview your data before import to SLiMS"
@@ -3565,7 +3568,7 @@ msgstr "SLiMS သို့ မတင်သွင်းမီ သင့်ဒေ�
 
 #: admin/modules/bibliography/import_preview.php:71
 msgid "Importing data to SLiMS"
-msgstr "အချက်အလက်များ SLiMS သို့ ပို့ဆောင်ခြင်း"
+msgstr "SLiMS သို့ ဒေတာများ တင်သွင်းနေပါသည်"
 
 #: admin/modules/bibliography/import_preview.php:76
 msgid "Show import process"
@@ -3577,7 +3580,7 @@ msgstr "တင်သွင်းမှု လုပ်ငန်းစဉ်က�
 
 #: admin/modules/bibliography/import_preview.php:82
 msgid "Imported data list preview"
-msgstr "တင်သွင်ထားသည့် ဒေတာစာရင်း အကြိုကြည့်ရှုမှု"
+msgstr "တင်သွင်းထားသော ဒေတာစာရင်း ကြိုတင်ကြည့်ရှုမှု"
 
 #: admin/modules/bibliography/import_preview.php:83
 msgid "Make sure all the data that appears matches the column you enter."
@@ -3604,7 +3607,7 @@ msgstr "အားလုံး"
 #: admin/modules/bibliography/import_preview.php:171
 #: admin/modules/bibliography/marcimport.php:420
 msgid "Import Now"
-msgstr "ယခု သွင်းယူပါ"
+msgstr "ယခုတင်သွင်းပါ"
 
 #: admin/modules/bibliography/import_preview.php:131
 msgid "Uknown CSV import section!"
@@ -3627,7 +3630,7 @@ msgstr "{imageFilename} အောင်မြင်စွာဖယ်ရှာ�
 #: admin/modules/bibliography/index.php:528
 #: admin/modules/system/app_user.php:150
 msgid "Invalid form submission token!"
-msgstr "မှန်ကန်မှုမရှိသော တင်ပြမှုအမှတ်အသား"
+msgstr "ဖောင်တင်သွင်းမှု မှားယွင်းနေပါသည်!"
 
 #: admin/modules/bibliography/index.php:137
 msgid "Title can not be empty"
@@ -3641,14 +3644,14 @@ msgstr "Field %s တွင် ကိန်းဂဏန်းများသာ �
 #: admin/modules/bibliography/index.php:168
 #: admin/modules/membership/index.php:145 lib/Form/HasCustomField.php:54
 msgid "Field %s is date format, empty not allowed"
-msgstr "Field %s သည် ရက်စွဲပုံစံဖြစ်ပြီး အလွတ်မထားရပါ။"
+msgstr "Field %s သည် ရက်စွဲပုံစံဖြစ်ပြီး ဗလာထားခွင့် မပြုပါ"
 
 #: admin/modules/bibliography/index.php:278
 #: admin/modules/membership/index.php:318
 #: admin/modules/membership/index.php:359 admin/modules/system/app_user.php:297
 #: admin/modules/system/app_user.php:323
 msgid "Image Uploaded Successfully"
-msgstr "ရုပ်ပုံအောင်မြင်စွာတင်ပြီးပြီ။"
+msgstr "ရုပ်ပုံတင်ခြင်း (Upload) အောင်မြင်ပါသည်"
 
 #: admin/modules/bibliography/index.php:283
 #: admin/modules/bibliography/index.php:314
@@ -3656,23 +3659,23 @@ msgstr "ရုပ်ပုံအောင်မြင်စွာတင်ပြ
 #: admin/modules/membership/index.php:270 admin/modules/system/app_user.php:245
 #: admin/modules/system/index.php:172
 msgid "Image Uploaded Failed"
-msgstr "ဖိုင်တင်ပါ"
+msgstr "ရုပ်ပုံတင်ခြင်း (Upload) မအောင်မြင်ပါ"
 
 #: admin/modules/bibliography/index.php:362
 msgid "Bibliography Data Successfully Updated"
-msgstr "ကက်တလောက် အောင်မြင်စွာ ထပ်ဖြည့်ပြီး"
+msgstr "စာအုပ်စာရင်း (သို့) စာအုပ်အချက်အလက်များအောင်မြင်စွာ ထပ်ဖြည့်ပြီး"
 
 #: admin/modules/bibliography/index.php:390
 msgid "Bibliography Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ကက်တလောက်အချက်အလက် ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စာအုပ်စာရင်း (သို့) စာအုပ်အချက်အလက်များထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/bibliography/index.php:439
 msgid "New Bibliography Data Successfully Saved"
-msgstr "ကက်တလောက်အချက်အလက်အသစ်အောင်မြင်စွာ သိမ်းဆည်းပြီး"
+msgstr "စာအုပ်စာရင်း (သို့) စာအုပ်အချက်အလက်အသစ်အောင်မြင်စွာ သိမ်းဆည်းပြီး"
 
 #: admin/modules/bibliography/index.php:465
 msgid "Bibliography Data FAILED to Save. Please Contact System Administrator"
-msgstr "ကက်တလောက်အချက်အလက်သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စာအုပ်စာရင်း (သို့) စာအုပ်အချက်အလက်များသိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/bibliography/index.php:476
 msgid "Item Data FAILED to Save. Insert batch item maximum %s copies"
@@ -3693,7 +3696,7 @@ msgstr "အချက်အလက်သိမ်းဆည်းမှု မအ�
 #: admin/modules/master_file/topic.php:174
 #: admin/modules/membership/member_type.php:217
 msgid "Below data can not be deleted:"
-msgstr "အောက်ဖေါ်ပြပါ အချက်အလက်များကို ဖျောက်ပစ်၍ မရပါ။"
+msgstr "အောက်ပါ အချက်အလက်များကို ဖျက်၍ မရပါ။"
 
 #: admin/modules/bibliography/index.php:626
 #: admin/modules/circulation/loan_rules.php:120
@@ -3722,7 +3725,7 @@ msgstr "အောက်ဖေါ်ပြပါ အချက်အလက်မ�
 #: admin/modules/system/holiday.php:161 admin/modules/system/module.php:127
 #: admin/modules/system/user_group.php:172
 msgid "All Data Successfully Deleted"
-msgstr "မှတ်တမ်းအချက်အလက်များအောင်မြင်စွာပယ်ဖျက်ပြီး။"
+msgstr "အချက်အလက်များအောင်မြင်စွာပယ်ဖျက်ပြီး။"
 
 #: admin/modules/bibliography/index.php:629
 #: admin/modules/circulation/loan_rules.php:127
@@ -3750,7 +3753,7 @@ msgstr "မှတ်တမ်းအချက်အလက်များအော
 #: admin/modules/system/holiday.php:164 admin/modules/system/module.php:130
 #: admin/modules/system/user_group.php:175
 msgid "Some or All Data NOT deleted successfully!\\nPlease contact system administrator"
-msgstr "မှတ်တမ်းအချက်အလက်အချို့ သော်၎င်း အားလုံးသော်၎င်း အောင်မြင်အောင်မပယ်ဖျက်နိုင်ပါ။ \\nကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "အချို့သော သို့မဟုတ် ဒေတာအားလုံးကို အောင်မြင်စွာ ဖျက်မပစ်နိုင်ပါ!  \\\\nကျေးဇူးပြု၍ စနစ်စီမံခန့်ခွဲသူထံ ဆက်သွယ်ပါ။"
 
 #: admin/modules/bibliography/index.php:641
 msgid "Bibliographic"
@@ -3764,7 +3767,7 @@ msgstr "စာကြည့်တိုက်ရှိစာအုပ်စာတ
 #: admin/modules/bibliography/index.php:648
 #: admin/modules/bibliography/submenu.php:29
 msgid "Add New Bibliography"
-msgstr "ကက်တလောက်အသစ် ထပ်ထည့်ရန်"
+msgstr "ကက်တလောက်အသစ်ထည့်သွင်းရန်"
 
 #: admin/modules/bibliography/index.php:654
 msgid "All Fields"
@@ -3792,7 +3795,7 @@ msgstr "စာရေးသူများ"
 
 #: admin/modules/bibliography/index.php:664
 msgid "Advanced Filter"
-msgstr "အဆင့်မြင့်စစ်ထုတ်ခြင်း"
+msgstr "အဆင့်မြင့်စစ်ထုတ်မှု"
 
 #: admin/modules/bibliography/index.php:667
 #: admin/modules/bibliography/index.php:1125
@@ -3802,21 +3805,21 @@ msgstr "OPAC တွင် မမြင်ရအောင်ဖုံးကွယ
 #: admin/modules/bibliography/index.php:673
 #: admin/modules/bibliography/index.php:1129
 msgid "Promote To Homepage"
-msgstr "မူလကနဦး စာမျက်နှာသို့ တင်ပေးပါ"
+msgstr "ပင်မစာမျက်နှာတွင် ဖော်ပြရန်"
 
 #: admin/modules/bibliography/index.php:676
 #: admin/modules/bibliography/index.php:1127
 msgid "Don't Promote"
-msgstr "အများသိအောင်မပြုလုပ်ပါနှင့်"
+msgstr "မဖော်ပြရန်"
 
 #: admin/modules/bibliography/index.php:677
 #: admin/modules/bibliography/index.php:1128
 msgid "Promote"
-msgstr "အများသိအောင်ပြုလုပ်ပါ"
+msgstr "ဖော်ပြရန်"
 
 #: admin/modules/bibliography/index.php:686
 msgid "Upload Selected Bibliographic data to Union Catalog Server*"
-msgstr "ရွေးချယ်ထားသောစာအုပ်ဆိုင်ရာ အချက်အလက်များကို Union Catalog Server* သို့ ထည့်သွင်းပေးပါ"
+msgstr "ရွေးချယ်ထားသောစာအုပ်ဆိုင်ရာ အချက်အလက်များကို စုပေါင်းကတ်တလောက် ဆာဗာ (Union Catalog Server*) သို့ ထည့်သွင်းပေးပါ"
 
 #: admin/modules/bibliography/index.php:705
 #: admin/modules/reporting/customs/dl_detail.php:128
@@ -3832,7 +3835,7 @@ msgstr "အသုံးပြုသူအမည်"
 
 #: admin/modules/bibliography/index.php:707
 msgid "Additional Information"
-msgstr "နောက်ထပ်အချက်အလက်များ"
+msgstr "ထပ်ဆောင်းအချက်အလက်များ"
 
 #: admin/modules/bibliography/index.php:736
 msgid "Biblio Log"
@@ -3890,25 +3893,23 @@ msgstr "စာရေးသူ(များ) ထည့်ရန်"
 
 #: admin/modules/bibliography/index.php:830
 msgid "Main source of information to show who has written, composed, illustrated, or in other ways contributed to the existence of the item."
-msgstr "သတင်းအချက်အလက် အရင်းအမြစ်ကိုဖေါ်ပြပါ။ ထိုစာအုပ်ကို မည်သူရေးသည်၊ ရေးစပ်သီကုံးသည်၊ သို့မဟုတ် အခြားနည်းလမ်းဖြင့် မည်သူမှ အထောက်အပံ့ပေးသည်။"
+msgstr "အဓိကအချက်အလက် အရင်းအမြစ်ဖြစ်သောမည်သူရေးသည်၊ ရေးစပ်သီကုံးသည်၊ သို့မဟုတ် အခြားနည်းလမ်းဖြင့် မည်သူမှ ပါဝင်ကူညီထားသည်။"
 
 #: admin/modules/bibliography/index.php:834
 msgid "A version of publication having substantial changes or additions."
-msgstr ""
-"နောက်ဆုံးထုတ်ဝေခြင်းတွင်ပြည့်စုံသောပြောင်းလဲခြင်းသို့မဟုတ်ထပ်မံ \n"
-"ဖြည့်စွက်ခြင်း"
+msgstr "နောက်ဆုံးထုတ်ဝေခြင်းတွင်ပြည့်စုံသောပြောင်းလဲခြင်းသို့မဟုတ်ထပ်မံ ဖြည့်စွက်ခြင်း"
 
 #: admin/modules/bibliography/index.php:836
 msgid "explain more details about an item e.g. scale within a map, running time in a movie dvd."
-msgstr "ထိုအကြောင်းအရာကို အသေးစိတ် ပိုမိုရှင်းပြပါ။ ဥပမာမြေပုံတွင် ဖေါ်ပြထားသော ကြားအကွာအဝေး၊ ဒီဗီဒီစနစ်ဖြင့်ပြသပါကကြာချိန်။"
+msgstr "အသေးစိတ်ရှင်းလင်းချက် - ဥပမာ-မြေပုံတွင် ဖေါ်ပြထားသော စကေး၊ ဒီဗီဒီစနစ်ဖြစ်ပါကကြာချိန်။"
 
 #: admin/modules/bibliography/index.php:846
 msgid "Choose pattern"
-msgstr "အချက်အလက်ကုဒ်ပုံစံကိုရွေးချယ်ပါ။"
+msgstr "ပုံစံ (pattern) ရွေးချယ်ရန်"
 
 #: admin/modules/bibliography/index.php:861
 msgid "Total item(s)"
-msgstr "စာအုပ်အမျိုးအစား စုစုပေါင်း"
+msgstr "စုစုပေါင်း အုပ်ရေ"
 
 #: admin/modules/bibliography/index.php:863
 #: admin/modules/reporting/customs/procurement_report.php:72
@@ -3918,13 +3919,13 @@ msgstr "ရွေးချယ်စရာများ"
 #: admin/modules/bibliography/index.php:864
 #: admin/modules/master_file/item_code_pattern.php:90
 msgid "Add new pattern"
-msgstr "ပုံစံအသစ်ထည့်ပါ"
+msgstr "ပုံစံ (pattern) အသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/bibliography/index.php:864
 #: admin/modules/bibliography/pop_pattern.php:129
 #: admin/modules/bibliography/pop_pattern.php:161
 msgid "Add New Pattern"
-msgstr "ပုံစံအသစ်ထည့်ပါ"
+msgstr "ပုံစံ (pattern) အသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/bibliography/index.php:877
 #: admin/modules/bibliography/item.php:362
@@ -3954,7 +3955,7 @@ msgstr "စာအုပ်အခြေအနေ"
 #: admin/modules/bibliography/index.php:899
 #: admin/modules/bibliography/item.php:394
 msgid "Buy"
-msgstr "ဝယ်ပါ"
+msgstr "ဝယ်ယူမှု"
 
 #: admin/modules/bibliography/index.php:900
 #: admin/modules/bibliography/item.php:395
@@ -3964,7 +3965,7 @@ msgstr "ဆု/အကူအညီ"
 #: admin/modules/bibliography/index.php:901
 #: admin/modules/bibliography/item.php:396
 msgid "Source"
-msgstr "အရင်းအမြစ်"
+msgstr "ရရှိသည့်ရင်းမြစ်"
 
 #: admin/modules/bibliography/index.php:905
 #: admin/modules/bibliography/item.php:382
@@ -3989,13 +3990,13 @@ msgstr "ငွေတောင်းခံလွှာ"
 #: admin/modules/bibliography/index.php:921
 #: admin/modules/bibliography/item.php:400
 msgid "Invoice Date"
-msgstr "ငွေတောင်းခံလွှာ နေ့စွဲ"
+msgstr "ပြေစာနေ့စွဲ"
 
 #: admin/modules/bibliography/index.php:926
 #: admin/modules/bibliography/index.php:976
 #: admin/modules/bibliography/item.php:388
 msgid "Not Applicable"
-msgstr "မသက်ဆိုင်ပါ။"
+msgstr "မသက်ဆိုင်ပါ (သို့မဟုတ် မလိုအပ်ပါ)"
 
 #: admin/modules/bibliography/index.php:930
 #: admin/modules/bibliography/item.php:392
@@ -4019,11 +4020,11 @@ msgstr "တန်ဖိုး"
 
 #: admin/modules/bibliography/index.php:939
 msgid "Item(s) code batch generator"
-msgstr "အလိုအလျောက် item ကုဒ်စံနစ်"
+msgstr "အစုလိုက် item ကုဒ်စံနစ်ဖန်တီးပေးသည့်စနစ်"
 
 #: admin/modules/bibliography/index.php:943
 msgid "Add New Items"
-msgstr "စာအုပ်အသစ် ထပ်ထည့်ပါ"
+msgstr "item အသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/bibliography/index.php:945
 msgid "Item(s) Data"
@@ -4031,7 +4032,7 @@ msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်"
 
 #: admin/modules/bibliography/index.php:954
 msgid "General material designation. The physical form of publication."
-msgstr "အထွေထွေရုပ်ဝတ္တုပုံစံ၊ ထုတ်ဝေမှုဖေါ်ပြချက်အပြည့်အစုံ"
+msgstr "အထွေထွေရုပ်ဝတ္တုပုံစံ၊ ထုတ်ဝေမှုရုပ်ပိုင်းဆိုင်ရာပုံစံ"
 
 #: admin/modules/bibliography/index.php:961
 msgid "Not set"
@@ -4062,17 +4063,17 @@ msgstr "ဤအချက်အလက်ကို စာနယ်ဇင်းမ�
 #: admin/modules/master_file/frequency.php:241
 #: admin/modules/master_file/submenu.php:42
 msgid "Frequency"
-msgstr "အကြိမ်ပေါင်း"
+msgstr "ထုတ်ဝေမှု အကြိမ်ရေ"
 
 #: admin/modules/bibliography/index.php:986
 msgid "Unique publishing number for each title of publication."
-msgstr "တစ်ခုတည်းသောပုံနှိပ်ထုတ်ဝေရေးနံပါတ်"
+msgstr "သီးခြားထုတ်ဝေမှုအမှတ်"
 
 #: admin/modules/bibliography/index.php:997
 #: admin/modules/bibliography/z3950sru.php:231
 #: admin/modules/reporting/customs/pop_procurement_list.php:201
 msgid "Publishing Year"
-msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နှစ်"
+msgstr "ထုတ်ဝေသည့်နှစ်"
 
 #: admin/modules/bibliography/index.php:997
 msgid "Year of publication"
@@ -4083,19 +4084,19 @@ msgstr "ပုံနှိပ်ထုတ်ဝေသည့်ခုနှစ်
 #: admin/modules/reporting/customs/titles_list.php:159
 #: admin/modules/reporting/customs/titles_list.php:293
 msgid "Publishing Place"
-msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ"
+msgstr "ထုတ်ဝေသည့်နေရာ"
 
 #: admin/modules/bibliography/index.php:1008
 msgid "Physical description of a publication e.g. publication length, width, page numbers, etc."
-msgstr "ရုပ်ပိုင်းဆိုင်ရာဖေါ်ပြချက်။ ဥပမာ စာအုပ်အရှည်၊ အကျယ်၊ စာမျက်နှာအရေအတွက်"
+msgstr "ရုပ်ပိုင်းဆိုင်ရာဖေါ်ပြချက်။ ဥပမာ - စာအုပ်၏ အလျား၊ အနံ၊ စာမျက်နှာ စသည်"
 
 #: admin/modules/bibliography/index.php:1018
 msgid "Sets of ID that put in the book spine."
-msgstr "စာအုပ်အနှောင့်တွင် ထည့်ထားတဲ့ ID အစု။"
+msgstr "စာအုပ်အနှောင့်တွင် ထည့်ထားသော ID အစု။"
 
 #: admin/modules/bibliography/index.php:1021
 msgid "Subjects/Topics"
-msgstr "ပညာရပ်များ/အကြောင်းအရာအမည်"
+msgstr "ပညာရပ်များ/အကြောင်းအရာများ"
 
 #: admin/modules/bibliography/index.php:1021
 msgid "Add Subject(s)"
@@ -4103,11 +4104,11 @@ msgstr "ပညာရပ်များ ထပ်ထည့်ရန်"
 
 #: admin/modules/bibliography/index.php:1031
 msgid "Language use by publication."
-msgstr "ပုံနှိပ်ထုတ်ဝေခြင်းတွင် အသုံးပြုထားသည့် ဘာသာစကား"
+msgstr "ထုတ်ဝေမှုတွင် အသုံးပြုထားသော ဘာသာစကား"
 
 #: admin/modules/bibliography/index.php:1033
 msgid "Abstract/Notes"
-msgstr "အကျဉ်းချုပ်/ မှတ်စုများ၊ ကောက်နှုတ်ချက်"
+msgstr "အကျဉ်းချုပ်/ မှတ်စုများ၊"
 
 #: admin/modules/bibliography/index.php:1033
 msgid "Insert here any abstract or notes from the publication."
@@ -4122,7 +4123,7 @@ msgstr "အကြိုကြည့်ရှုမှုကို ချဲ့�
 #: admin/modules/membership/index.php:619 admin/modules/system/app_user.php:482
 #: admin/modules/system/index.php:349 admin/modules/system/index.php:362
 msgid "Remove Image"
-msgstr "ရုပ်ပုံဖယ်ထုတ်ပါ။"
+msgstr "ရုပ်ပုံကိုဖယ်ရှားရန်။"
 
 #: admin/modules/bibliography/index.php:1056
 #: admin/modules/stock_take/st_upload.php:146
@@ -4133,7 +4134,7 @@ msgstr "ဖိုင်ကို ရွေးပါ။"
 
 #: admin/modules/bibliography/index.php:1058
 msgid "Or download from url"
-msgstr "သို့မဟုတ် URL မှ ဒေါင်းလုဒ်လုပ်ပါ။"
+msgstr "သို့မဟုတ် URL မှ ဒေါင်းလုဒ်ရယူရန်"
 
 #: admin/modules/bibliography/index.php:1062
 #: admin/modules/system/backup.php:277
@@ -4146,11 +4147,11 @@ msgstr "DuckduckGo တွင် ရှာဖွေရန် ကြိုးစ�
 
 #: admin/modules/bibliography/index.php:1075
 msgid "or scan a cover"
-msgstr "သို့မဟုတ် စာအုပ်အဖုံးအား scan ဖတ်ပါ"
+msgstr "သို့မဟုတ်စာအုပ်မျက်နှာဖုံးအား scan ဖတ်ပါ"
 
 #: admin/modules/bibliography/index.php:1079
 msgid "Show scan dialog"
-msgstr "စကားပြောပုံဖေါ်ခြင်းပြပါ"
+msgstr "scan ဖတ်ရန် ဒိုင်ယာလော့(ဂ်) ကိုပြပါ။"
 
 #: admin/modules/bibliography/index.php:1080
 #: admin/modules/membership/index.php:657 admin/modules/system/app_user.php:520
@@ -4159,7 +4160,7 @@ msgstr "ပြန်လည်စတင်ပါ"
 
 #: admin/modules/bibliography/index.php:1082
 msgid "Scan a cover"
-msgstr "စာအုပ်အဖုံးအား scan ဖတ်ပါ"
+msgstr "စာအုပ်မျက်နှာဖုံးကို scan ဖတ်ရန်"
 
 #: admin/modules/bibliography/index.php:1083
 msgid "Format:"
@@ -4167,7 +4168,7 @@ msgstr "ပုံစံအချိုးအစား"
 
 #: admin/modules/bibliography/index.php:1085
 msgid "Scan"
-msgstr "ပုံကူးတယ်"
+msgstr "Scan ဖတ်ရန်"
 
 #: admin/modules/bibliography/index.php:1086
 msgid "Click to show or hide options"
@@ -4175,19 +4176,19 @@ msgstr "ဖေါ်ပြရန် သို့မဟုတ် ဖုံးက�
 
 #: admin/modules/bibliography/index.php:1088
 msgid "History index:"
-msgstr "ရာဇဝင်အညွှန်း"
+msgstr "မှတ်တမ်းအညွှန်း -"
 
 #: admin/modules/bibliography/index.php:1088
 msgid "Recall"
-msgstr "ပြန်လည်သိမ်းဆည်းပါ"
+msgstr "ပြန်လည်ခေါ်ယူရန်"
 
 #: admin/modules/bibliography/index.php:1089
 msgid "Host:"
-msgstr "အစီအစဉ်လက်ခံသည်။"
+msgstr "Host-"
 
 #: admin/modules/bibliography/index.php:1089
 msgid "Get machine"
-msgstr "စက်ရသည်။"
+msgstr "စက်ကို ချိတ်ဆက်ရန်"
 
 #: admin/modules/bibliography/index.php:1090
 msgid "Scanner:"
@@ -4199,11 +4200,11 @@ msgstr "ကွန်ပျူတာပရိုဂရမ်၏ မူလအစ�
 
 #: admin/modules/bibliography/index.php:1091
 msgid "Resolution"
-msgstr "ပုံသိပ်သည်းဆ"
+msgstr "ကြည်လင်ပြတ်သားမှု"
 
 #: admin/modules/bibliography/index.php:1091
 msgid "Horizontal:"
-msgstr "ရေပြင်ညီမျဉ်း"
+msgstr "အလျားလိုက်"
 
 #: admin/modules/bibliography/index.php:1091
 msgid "Vertical:"
@@ -4212,7 +4213,7 @@ msgstr "ဒေါင်လိုက်"
 #: admin/modules/bibliography/index.php:1092
 #: admin/modules/membership/index.php:654 admin/modules/system/app_user.php:517
 msgid "Capture"
-msgstr "ပုံရိပ်ဖမ်းယူသည်"
+msgstr "ပုံရိပ်ဖမ်းယူရန်"
 
 #: admin/modules/bibliography/index.php:1092
 msgid "Width:"
@@ -4257,11 +4258,11 @@ msgstr "ရုပ်ပုံ"
 
 #: admin/modules/bibliography/index.php:1103
 msgid "Add Attachment"
-msgstr "ပူးတွဲဖိုင်ကို ထပ်ထည့်ရန်"
+msgstr "ပူးတွဲဖိုင်ကို ထပ်ဖြည့်ရန်"
 
 #: admin/modules/bibliography/index.php:1108
 msgid "Biblio Relation"
-msgstr "ဆက်နွယ်စာအုပ်"
+msgstr "စာအုပ်ဆက်စပ်မှု"
 
 #: admin/modules/bibliography/index.php:1108
 msgid "Add Relation"
@@ -4289,7 +4290,7 @@ msgstr "သင်သည် စာအုပ်ဆိုင်ရာ အချက�
 #: admin/modules/membership/member_type.php:341
 #: admin/modules/system/content.php:476 admin/modules/system/content.php:480
 msgid "Last Updated"
-msgstr "နောက်ဆုံးအကြိမ်က ထပ်ဖြည့်စွက်ခဲ့သည့် နေ့စွဲ"
+msgstr "နောက်ဆုံးပြင်ခဲ့သည့် နေ့စွဲ"
 
 #: admin/modules/bibliography/index.php:1217
 msgid "Current url is not valid or your internet is down."
@@ -4394,7 +4395,7 @@ msgstr "အချက်အလက်များ CSVဖိုင်သို့ �
 
 #: admin/modules/bibliography/item_import.php:308
 msgid "Success importing item data : {item_code} ({title})"
-msgstr "ပစ္စည်းဒေတာကို တင်သွင်းခြင်း အောင်မြင်ပါသည် : {item_code} ({title})"
+msgstr "item ဒေတာကို တင်သွင်းခြင်း အောင်မြင်ပါသည် : {item_code} ({title})"
 
 #: admin/modules/bibliography/item_import.php:358
 msgid "Item Import tool"
@@ -4472,7 +4473,7 @@ msgstr "သင်တွင် ဤဧရိယာသို့ ဝင်ရော�
 msgid ""
 "<a href=\"http://pear.php.net/index.php\">PEAR</a>, <a href=\"http://pear.php.net/package/File_MARC\">File_MARC</a>\n"
 "  packages need to be installed in order to export MARC record"
-msgstr "MARC ဖိုင်များကို ထုတ်ယူ (Export) နိုင်ရန်အတွက် <a href='http://pear.php.net/index.php'>PEAR</a> ; နှင့် <a href='http://pear.php.net/package/File_MARC'>File_MARC</a> ; package များအား ထည့်သွင်း (Install) ထားရန် လိုအပ်ပါသည်။\""
+msgstr "MARC ဖိုင်များကို ထုတ်ယူ (Export) နိုင်ရန်အတွက် <a href=\"http://pear.php.net/index.php\">PEAR</a> ; နှင့် <a href=\"http://pear.php.net/package/File_MARC\">File_MARC</a> ; package များအား ထည့်သွင်း (Install) ထားရန် လိုအပ်ပါသည်။"
 
 #: admin/modules/bibliography/marcexport.php:68
 msgid "Export queue cleared!"
@@ -4492,15 +4493,15 @@ msgstr "MARC စံနစ်သို့ ကက်တလောက်များ
 
 #: admin/modules/bibliography/marcexport.php:170
 msgid "Clear selected catalog"
-msgstr "ရွေးချယ်ထားသည့် ကက်တလောက်ကို ရှင်းလင်းပါ။"
+msgstr "ရွေးချယ်ထားသည့် ကက်တလောက်အချက်အလက်ကို ရှင်းလင်းပါ။"
 
 #: admin/modules/bibliography/marcexport.php:171
 msgid "Export now"
-msgstr "ယခုပို့ပါ။"
+msgstr "ယခုထုတ်ယူရန်"
 
 #: admin/modules/bibliography/marcexport.php:172
 msgid "Batch Export"
-msgstr "အတွဲလိုက်ပို့ရန်"
+msgstr "အစုလိုက်ထုတ်ခြင်း"
 
 #: admin/modules/bibliography/marcexport.php:181
 msgid "Currently there is"
@@ -4516,11 +4517,11 @@ msgstr "ပြင်ပသို့ပို့ရန် အမျိုးအ�
 
 #: admin/modules/bibliography/marcexport.php:275
 msgid "Add To Export Queue"
-msgstr "ပြင်ပပို့ရန်စီတန်းဖို့ ထပ်ထည့်ပါ"
+msgstr "ထုတ်ယူမည့်တန်းစီစာရင်းသို့ ထပ်ဖြည့်ရန်"
 
 #: admin/modules/bibliography/marcexport.php:276
 msgid "Add to export queue?"
-msgstr "ပြင်ပပို့ရန် စီတန်းဖို့ထပ်ထည့်မည်လား။"
+msgstr "ထုတ်ယူမည့်တန်းစီစာရင်းသို့ ထပ်ထည့်မည်လား?"
 
 #: admin/modules/bibliography/marcimport.php:62
 msgid ""
@@ -4539,7 +4540,7 @@ msgstr "ပြင်ပသို့ ပို့ပေးမည့် ဖို�
 
 #: admin/modules/bibliography/marcimport.php:408
 msgid "MARC Import tool"
-msgstr "MARC သွင်းကုန်ကရိယာ"
+msgstr "MARC တင်သွင်းသည့် ကိရိယာ"
 
 #: admin/modules/bibliography/marcimport.php:411
 msgid "Import bibliographic records from MARC file. The file can be native MARC record format file (.mrc) or MARCXML XML file (.xml). You need to have PHP PEAR and PEAR's File_MARC package installed in your system. To convert native/legacy MARC file to MARCXML you can use <a class=\"notAJAX\" href=\"http://www.loc.gov/standards/marcxml/marcxml.zip\">MARCXML Toolkit</a>"
@@ -4572,11 +4573,11 @@ msgstr "လက်ရှိ MARC SRU လိပ်စာကို ဒေတာဘ�
 #: admin/modules/bibliography/z3950.php:277
 #: admin/modules/bibliography/z3950sru.php:287
 msgid "No Keywords Supplied!"
-msgstr "မည်သည့် အဓိကစကားလုံးမှ မရရှိပါ။"
+msgstr "မည်သည့် သော့ချက်စကားလုံးများထည့်သွင်းထားခြင်း မရှိပါ!"
 
 #: admin/modules/bibliography/marcsru.php:355
 msgid "Found {hits} records from Marc SRU Server."
-msgstr "Marc SRU Server မှ {hits} မှတ်တမ်းများကို တွေ့ရှိသည်။"
+msgstr "MARC SRU Server မှ {hits} မှတ်တမ်းများကို တွေ့ရှိသည်။"
 
 #: admin/modules/bibliography/marcsru.php:359
 #: admin/modules/bibliography/p2p.php:372
@@ -4584,7 +4585,7 @@ msgstr "Marc SRU Server မှ {hits} မှတ်တမ်းများကိ
 #: admin/modules/master_file/item_code_pattern.php:118
 #: simbio2/simbio_DB/datagrid/simbio_dbgrid.inc.php:391
 msgid "Check All"
-msgstr "အားလုံးကို မှတ်ယူပါ။"
+msgstr "အားလုံးကိုရွေးချယ်ရန်"
 
 #: admin/modules/bibliography/marcsru.php:360
 #: admin/modules/bibliography/p2p.php:373
@@ -4592,11 +4593,11 @@ msgstr "အားလုံးကို မှတ်ယူပါ။"
 #: admin/modules/master_file/item_code_pattern.php:119
 #: simbio2/simbio_DB/datagrid/simbio_dbgrid.inc.php:392
 msgid "Uncheck All"
-msgstr "အားလုံးကို မှတ်ယူခြင်းမှ ပယ်ဖျက်ပါ"
+msgstr "အားလုံးကိုရွေးချယ်ခြင်းမှ ပယ်ဖျက်ရန်"
 
 #: admin/modules/bibliography/marcsru.php:361
 msgid "Save Marc Records to Database"
-msgstr "ဒေတာဘေ့စ်သို့ Marc မှတ်တမ်းများ သိမ်းဆည်းပါ"
+msgstr "ဒေတာဘေ့စ်သို့ MARC မှတ်တမ်းများ သိမ်းဆည်းပါ"
 
 #: admin/modules/bibliography/marcsru.php:363
 #: admin/modules/bibliography/p2p.php:376
@@ -4609,7 +4610,7 @@ msgstr "ရွေးချယ်ရန်"
 #: admin/modules/bibliography/z3950.php:274
 #: admin/modules/bibliography/z3950sru.php:284
 msgid "No Results Found!"
-msgstr "ရလဒ်မရှိပါ"
+msgstr "ရလဒ်များ မတွေ့ရှိပါ!"
 
 #: admin/modules/bibliography/marcsru.php:455
 msgid "MARC Search/Retrieve via URL (SRU)"
@@ -4629,7 +4630,7 @@ msgstr "SRU ဆာဗာ- "
 #: admin/modules/bibliography/z3950.php:298
 #: admin/modules/bibliography/z3950sru.php:349
 msgid "* Please make sure you have a working Internet connection."
-msgstr "* သင့်တွင် ဆက်သွယ်မှုရရှိနေသော အင်တာနက် လက်ဝယ်ရှိနေသည်ကို သေချာပါစေ"
+msgstr "* သင့်တွင် ဆက်သွယ်မှုရရှိနေသော အင်တာနက် ချိတ်ဆက်ထားရန် လိုအပ်သည်။"
 
 #: admin/modules/bibliography/p2p.php:63
 msgid "Feature P2P needs some PHP extension such as %s"
@@ -4645,7 +4646,7 @@ msgstr "%s သည် P2P ဝန်ဆောင်မှုမှ (server : %s) �
 
 #: admin/modules/bibliography/p2p.php:288
 msgid "Failed to download data from %s because : %s"
-msgstr "%s မှ ဒေတာ ဒေါင်းလုပ်လုပ်၍ မရပါ။ အကြောင်းရင်းမှာ – %s"
+msgstr "%s မှ ဒေတာဒေါင်းလုဒ်လုပ်ခြင်း မအောင်မြင်ပါ။ အကြောင်းရင်းမှာ – %s"
 
 #: admin/modules/bibliography/p2p.php:299
 #: admin/modules/bibliography/submenu.php:37
@@ -4685,7 +4686,7 @@ msgstr "အသေးစိတ်"
 
 #: admin/modules/bibliography/p2p.php:478
 msgid "No data selected!"
-msgstr "ဒေတာ ရွေးချယ်ထားခြင်း မရှိပါ။"
+msgstr "မည်သည့်ဒေတာကိုမျှ ရွေးချယ်ထားခြင်းမရှိပါ!"
 
 #: admin/modules/bibliography/p2p.php:495
 msgid "Sorry, no result found from %s OR maybe XML result and detail disabled."
@@ -4701,11 +4702,11 @@ msgstr "မမှန်ကန်သော တွဲဖိုင်ဖြစ်�
 
 #: admin/modules/bibliography/pop_attach.php:159
 msgid "Upload FAILED! Forbidden file type or file size too big!"
-msgstr "ရယူခြင်း မအောင်မြင်ပါ၊ တားမြစ်ထားသည့် ဖိုင်အမျိုးအစား သို့မဟုတ် ဖိုင်အရွယ်အစား အလွန်ကြီးမားသည်"
+msgstr "ဖိုင်တင်ခြင်း (Upload) မအောင်မြင်ပါ! တားမြစ်ထားသည့် ဖိုင်အမျိုးအစား သို့မဟုတ် ဖိုင်အရွယ်အစား ကြီးလွန်းနေပါသည်!"
 
 #: admin/modules/bibliography/pop_attach.php:223
 msgid "File Attachment data updated!"
-msgstr "ပူးတွဲဖိုင် အချက်အလက် ထပ်ဖြည့်ပြီး"
+msgstr "ပူးတွဲဖိုင်ကို မွမ်းမံ (Update) ပြီးပါပြီ!"
 
 #: admin/modules/bibliography/pop_attach.php:228
 msgid "File Attachment data FAILED to update!"
@@ -4726,7 +4727,7 @@ msgstr "အခု ရယူပါ"
 
 #: admin/modules/bibliography/pop_attach.php:287
 msgid "Repository ROOT"
-msgstr "သိုလှောင်ရာ အရင်းအမြစ်"
+msgstr "အချက်အလက်သိုလှောင်ခန်း အရင်းအမြစ်"
 
 #: admin/modules/bibliography/pop_attach.php:297
 msgid "Repo. Directory"
@@ -4734,7 +4735,7 @@ msgstr "သိုလှောင်ရာ လမ်းညွှန်"
 
 #: admin/modules/bibliography/pop_attach.php:308
 msgid "File To Attach"
-msgstr "ချိတ်ဆွဲရန် ဖိုင်"
+msgstr "ပူးတွဲရမည့်ဖိုင်"
 
 #: admin/modules/bibliography/pop_attach.php:311
 msgid "URL"
@@ -4746,7 +4747,7 @@ msgstr "ထည့်သွင်းတပ်ဆင်ထားသော လင�
 
 #: admin/modules/bibliography/pop_attach.php:315
 msgid "Link"
-msgstr "လင့်ခ်"
+msgstr "လင့်ခ် (Link)"
 
 #: admin/modules/bibliography/pop_attach.php:315
 msgid "Popup"
@@ -4758,7 +4759,7 @@ msgstr "ထည့်သွင်းခြင်း/ တပ်ဆင်ထား�
 
 #: admin/modules/bibliography/pop_attach.php:316
 msgid "Placement"
-msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာအမည်"
+msgstr "နေရာချထားမှု"
 
 #: admin/modules/bibliography/pop_attach.php:319
 #: admin/modules/reporting/customs/member_fines_list.csv.php:46
@@ -4800,7 +4801,7 @@ msgstr "စာရေးသူ ထပ်ထည့်ခြင်း မအော�
 
 #: admin/modules/bibliography/pop_author.php:136
 msgid "Author added!"
-msgstr "စာရေးသူထပ်ထည့်ပြီး"
+msgstr "စာရေးသူကို ထည့်သွင်းပြီးပါပြီ!"
 
 #: admin/modules/bibliography/pop_author.php:146
 msgid "Add Author"
@@ -4822,11 +4823,11 @@ msgstr "လက်ရှိ စာရေးသူများ ရှာရန်�
 #: admin/modules/bibliography/pop_biblio_rel.php:99
 #: admin/modules/bibliography/pop_topic.php:174
 msgid "Insert To Bibliography"
-msgstr "ကက်တလောက်သို့ ထည့်သွင်းပါ"
+msgstr "စာအုပ်စာရင်းသို့ ထည့်သွင်းရန်"
 
 #: admin/modules/bibliography/pop_author_edit.php:51
 msgid "Authority Level Data FAILED to Updated. Please Contact System Administrator"
-msgstr "လုပ်ပိုင်ခွင့်အဆင့်ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "လုပ်ပိုင်ခွင့်အဆင့်ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/bibliography/pop_author_edit.php:93
 #: admin/modules/master_file/author.php:270
@@ -4837,19 +4838,19 @@ msgstr "လုပ်ပိုင်ခွင့်အမျိုးအစား
 
 #: admin/modules/bibliography/pop_biblio_rel.php:62
 msgid "Biblio relation succesfully updated!"
-msgstr "ဆက်နွယ်စာအုပ်ဆိုင်ရာအချက်များ ထည့်သွင်းပြီး"
+msgstr "စာအုပ်ဆက်စပ်မှုများ အောင်မြင်စွာထည့်သွင်းပြီး"
 
 #: admin/modules/bibliography/pop_biblio_rel.php:67
 msgid "Biblio relation FAILED to Add. Please Contact System Administrator"
-msgstr "အချက်အလက်ထည့်သွင်းခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ စံနစ်စီမံခန့်ခွဲသူကို ဆက်သွယ်ပါ။"
+msgstr "စာအုပ်ဆက်စပ်မှုများထည့်သွင်းခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ စံနစ်စီမံခန့်ခွဲသူကို ဆက်သွယ်ပါ။"
 
 #: admin/modules/bibliography/pop_biblio_rel.php:73
 msgid "Biblio relation added!"
-msgstr "အချက်အလက်ထည့်သွင်းပြီး။"
+msgstr "စာအုပ်ဆက်စပ်မှုများထည့်သွင်းပြီး။"
 
 #: admin/modules/bibliography/pop_biblio_rel.php:85
 msgid "Add Biblio Relation"
-msgstr "ဆက်နွယ်စာအုပ်များ ထပ်ထည့်ပါ"
+msgstr "စာအုပ်ဆက်စပ်မှုများထပ်ထည့်ရန်"
 
 #: admin/modules/bibliography/pop_biblio_rel.php:96
 msgid "Type to search for existing biblio data"
@@ -4891,11 +4892,11 @@ msgstr "ခေါင်းစဥ်အသစ်ကို အောင်မြ�
 #: admin/modules/master_file/pop_vocabolary_control.php:168
 #: admin/modules/master_file/pop_vocabolary_control.php:174
 msgid "Subject FAILED to Add. Please Contact System Administrator"
-msgstr "ပညာရပ် ထပ်ထည့်ခြင်း မအောင်မြင်ပါ"
+msgstr "ပညာရပ် ထပ်ထည့်ခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ စံနစ်စီမံခန့်ခွဲသူကို ဆက်သွယ်ပါ။"
 
 #: admin/modules/bibliography/pop_topic.php:139
 msgid "Subject added!"
-msgstr "ပညာရပ် ထပ်ထည့်ပြီး"
+msgstr "ပညာရပ်ထည့်သွင်းပြီးပါပြီ!"
 
 #: admin/modules/bibliography/pop_topic.php:150
 msgid "Add Subject"
@@ -4904,7 +4905,7 @@ msgstr "ပညာရပ် ထပ်ထည့်ရန်"
 #: admin/modules/bibliography/pop_topic.php:156
 #: admin/modules/reporting/customs/pop_procurement_list.php:50
 msgid "Keyword"
-msgstr "အဓိကစကားလုံး"
+msgstr "သော့ချက်စကားလုံး"
 
 #: admin/modules/bibliography/pop_topic.php:164
 msgid "Primary"
@@ -4912,7 +4913,7 @@ msgstr "အဓိက"
 
 #: admin/modules/bibliography/pop_topic.php:165
 msgid "Additional"
-msgstr "နောက်ထပ်"
+msgstr "ထပ်ဆောင်း"
 
 #: admin/modules/bibliography/pop_topic.php:171
 #: admin/modules/master_file/pop_vocabolary_control.php:238
@@ -4922,7 +4923,7 @@ msgstr "လက်ရှိအကြောင်းအရာ ခေါင်း�
 
 #: admin/modules/bibliography/print_settings.php:54
 msgid "Settings saved"
-msgstr "သတ်မှတ်ခြင်း သိမ်းဆည်းပြီး"
+msgstr "ဆက်တင်များကို သိမ်းဆည်းပြီးပြီ။"
 
 #: admin/modules/bibliography/print_settings.php:78
 #: admin/modules/system/backup_config.php:60
@@ -5001,7 +5002,7 @@ msgstr "(စာကြည့်တိုက်အမည်ကို သုံး�
 #: admin/modules/bibliography/print_settings.php:103
 #: admin/modules/bibliography/print_settings.php:119
 msgid "(name of the font used)"
-msgstr "(အသုံးပြုသောဖောင့်အမည်)"
+msgstr "(အသုံးပြုသောစာလုံးအမည်)"
 
 #: admin/modules/bibliography/print_settings.php:104
 #: admin/modules/bibliography/print_settings.php:120
@@ -5025,15 +5026,15 @@ msgstr "(အကျယ်နှင့်အမြင့်၏နှိုင်�
 
 #: admin/modules/bibliography/print_settings.php:126
 msgid "(decimal value. default is 0.2)"
-msgstr "(ဒသမတန်ဖိုး၊ ပုံမှန် ၀.၂)"
+msgstr "(ဒဿမတန်ဖိုး၊ ပုံမှန် ၀.၂)"
 
 #: admin/modules/bibliography/print_settings.php:127
 msgid "(decimal value. default is 0.05)"
-msgstr "(ဒသမတန်ဖိုး၊ ပုံမှန် ၀.၅)"
+msgstr "(ဒဿမတန်ဖိုး၊ ပုံမှန် ၀.၅)"
 
 #: admin/modules/bibliography/print_settings.php:133
 msgid "font name. default is Courier"
-msgstr "ပုံမှန်ဖောင့်အမည် Courier"
+msgstr "စာလုံးပုံစံအမည်။ ပုံသေစာလုံးမှာ Courier ဖြစ်သည်။"
 
 #: admin/modules/bibliography/print_settings.php:134
 msgid "(hexa color code)"
@@ -5061,7 +5062,7 @@ msgstr "(နံပါတ်)"
 #: admin/modules/bibliography/print_settings.php:146
 #: admin/modules/bibliography/print_settings.php:147
 msgid "(decimal)"
-msgstr "(ဒသမနံပါတ်)"
+msgstr "(ဒဿမနံပါတ်)"
 
 #: admin/modules/bibliography/print_settings.php:167
 #: admin/modules/bibliography/print_settings.php:168
@@ -5089,7 +5090,7 @@ msgstr "(hexa color)"
 
 #: admin/modules/bibliography/print_settings.php:200
 msgid "(normal or bold)"
-msgstr "(normal or bold)"
+msgstr "(ပုံမှန် သို့မဟုတ် စာလုံးမည်း)"
 
 #: admin/modules/bibliography/print_settings.php:222
 msgid "1-100 percent"
@@ -5097,7 +5098,7 @@ msgstr "၁-၁၀၀ ရာခိုင်နှုန်းကို"
 
 #: admin/modules/bibliography/print_settings.php:229
 msgid "(list of rules)"
-msgstr "(စည်းမျဥ်းစာရင်း)"
+msgstr "(စည်းမျဥ်းများစာရင်း)"
 
 #: admin/modules/bibliography/print_settings.php:244
 msgid "Print setting for"
@@ -5132,7 +5133,7 @@ msgstr "ပုံနှိပ်ရန်  %s သတ်မှတ်ချက် 
 #: admin/modules/bibliography/printed_card.php:627
 #: admin/modules/bibliography/printed_card.php:637
 msgid "Print Catalog Format"
-msgstr "ကက်တလောက်ပုံစံကို ပုံနှိပ်ရန်"
+msgstr "ကက်တလောက်ပုံစံဖြင့် ပုံနှိပ်ရန်"
 
 #: ⁨admin/modules/bibliography/printed_card - Copy.php⁩:313
 #: admin/modules/bibliography/printed_card-fixes2.php:379
@@ -5194,7 +5195,7 @@ msgstr "URL မမှန်ပါ။"
 
 #: admin/modules/bibliography/scrape_image.php:83
 msgid "Image is not valid!"
-msgstr "ရုပ်ပုံမမှန်ပါ။"
+msgstr "ရုပ်ပုံမမှန်ကန်ပါ။"
 
 #: admin/modules/bibliography/submenu.php:27
 msgid "BIBLIOGRAPHIC"
@@ -5202,11 +5203,11 @@ msgstr "BIBLIOGRAPHIC"
 
 #: admin/modules/bibliography/submenu.php:28
 msgid "Show Existing Bibliographic Data"
-msgstr "လက်ရှိ စာကြည့်တိုက်ဆိုင်ရာ သိုမှီးထားပြီး အချက်အလက်များကို ပြပါ"
+msgstr "လက်ရှိ သိုမှီးထားသောစာအုပ်အချက်အလက်များကို ပြပါ။"
 
 #: admin/modules/bibliography/submenu.php:29
 msgid "Add New Bibliographic Data/Catalog"
-msgstr "စာအုပ်ဆိုင်ရာ အချက်အလက်အသစ်များ/ကက်တလောက် ထပ်ဖြည့်ပါ။"
+msgstr "ကတ်တလောက်အသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/bibliography/submenu.php:30
 msgid "ITEMS"
@@ -5226,7 +5227,7 @@ msgstr "ငှားရမ်းသည့် စာအုပ်များစ�
 
 #: admin/modules/bibliography/submenu.php:33
 msgid "COPY CATALOGUING"
-msgstr "မိတ္တူကူးကတ်တလောက်"
+msgstr "ကတ်တလောက် ကူးယူခြင်း"
 
 #: admin/modules/bibliography/submenu.php:34
 msgid "MARC SRU"
@@ -5242,7 +5243,7 @@ msgstr "Z3950 SRU"
 
 #: admin/modules/bibliography/submenu.php:35
 msgid "Grab Bibliographic Data from Z3950 SRU Web Services"
-msgstr "Z3950 SRU အင်တာနက် ဝန်ဆောင်မှုများမှ စာကြည့်တိုက်ဆိုင်ရာ အချက်အလက်များကို ရယူပါ"
+msgstr "Z3950 SRU အင်တာနက် ဝန်ဆောင်မှုများမှ စာအုပ်ဆိုင်ရာ အချက်အလက်များကို ရယူပါ"
 
 #: admin/modules/bibliography/submenu.php:37
 msgid "Grab Bibliographic Data from Other SLiMS Web Services"
@@ -5256,7 +5257,7 @@ msgstr "ကိရိယာများ"
 
 #: admin/modules/bibliography/submenu.php:39
 msgid "Print Document Labels"
-msgstr "စာရွက်စာတမ်းများ၏ လေဘယ်များ ပုံနှိပ်ခြင်း"
+msgstr "စာရွက်စာတမ်းများ၏ လေဘယ်များ ပုံနှိပ်ရန်"
 
 #: admin/modules/bibliography/submenu.php:40
 msgid "Print Item Barcodes"
@@ -5264,7 +5265,7 @@ msgstr "စာအုပ်ဘားကုဒ်များ ပုံနှိ�
 
 #: admin/modules/bibliography/submenu.php:41
 msgid "MARC Export"
-msgstr "MARC ပို့ရန်"
+msgstr "MARC ထုတ်ယူခြင်း"
 
 #: admin/modules/bibliography/submenu.php:41
 msgid "Export Bibliographic Data to MARC file"
@@ -5272,7 +5273,7 @@ msgstr "စာအုပ်ဆိုင်ရာ အချက်အလက်မ�
 
 #: admin/modules/bibliography/submenu.php:42
 msgid "MARC Import"
-msgstr "MARC တင်သွင်းရန်"
+msgstr "MARC တင်သွင်းခြင်း"
 
 #: admin/modules/bibliography/submenu.php:42
 msgid "Import Bibliographic Data from MARC file"
@@ -5280,11 +5281,11 @@ msgstr "MARC ဖိုင်မှ အချက်အလက်များရယ
 
 #: admin/modules/bibliography/submenu.php:43
 msgid "Print Catalog Card"
-msgstr "ကက်တလောက်ကဒ်ကို ပုံနှိပ်ရန်"
+msgstr "ကက်တလောက်ကဒ်ပုံနှိပ်ရန်"
 
 #: admin/modules/bibliography/submenu.php:44
 msgid "Biblio Data Export"
-msgstr "စာအုပ်အချက်အလက်များ ပြင်ပသို့ ပို့ ခြင်း"
+msgstr "စာအုပ်အချက်အလက်များ ပြင်ပသို့ ထုတ်ယူခြင်း"
 
 #: admin/modules/bibliography/submenu.php:44
 msgid "Export Bibliographic Data To CSV format"
@@ -5304,20 +5305,20 @@ msgstr "Biblio Item များအား Export ထုတ်ရန်"
 
 #: admin/modules/bibliography/submenu.php:46
 msgid "Export Item/Copies data To CSV format"
-msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်များကို CSV ပုံစံသို့ ပို့ရန်"
+msgstr "items များ / အုပ်ရေများကို CSV ပုံစံသို့ ပို့ရန်"
 
 #: admin/modules/bibliography/submenu.php:47
 msgid "Biblio Item Import"
-msgstr "ပစ္စည်းဒေတာကို တင်သွင်းပါ"
+msgstr "Item ဒေတာတင်သွင်းရန်"
 
 #: admin/modules/bibliography/submenu.php:47
 msgid "Import Data to Item/Copies database from CSV file"
-msgstr "CSV ဖိုင်မှ အုပ်ရေဆိုင်ရာ အချက်အလက်များ ရယူပါ"
+msgstr "CSV ဖိုင်မှ item/အုပ်ရေဆိုင်ရာ အချက်အလက်များ ရယူပါ"
 
 #: admin/modules/bibliography/ucs_upload.php:34
 #: admin/modules/bibliography/ucs_upload.sh.php:40
 msgid "UCS is not enabled! Change global system configuration to enable UCS"
-msgstr "UCS ကို အသုံးပြုနိုင်အောင် ပြုလုပ်မထားပါ။ UCS ကိုဖွင့်ရန် စနစ်ဖွဲ့စည်းပုံကို ပြောင်းလဲပါ။"
+msgstr "UCS (Union Catalog Server) ကို ဖွင့်မထားပါ! UCS ကိုဖွင့်ရန် စနစ်ဖွဲ့စည်းပုံကို ပြောင်းလဲပါ။"
 
 #: admin/modules/bibliography/z3950.php:57
 msgid "YAZ extension library is not loaded/installed yet. YAZ library is needed to use z3950 enabled service. Please refer to official <a href=\"http://www.php.net/manual/en/book.yaz.php\" class=\"notAJAX\" target=\"_blank\">YAZ PHP Manual</a> on how to setup/install YAZ extension library in PHP."
@@ -5325,11 +5326,11 @@ msgstr "YAZ တိုးချဲ့ထားသော စာကြည့်တ�
 
 #: admin/modules/bibliography/z3950.php:183
 msgid "{recordCount} records inserted into the database."
-msgstr "{recordCount} ဒေတာဗေ့စ်ထဲသို့ ထည့်သည့်အရေအတွက်"
+msgstr "{recordCount} ဒေတာဗေ့စ်ထဲသို့ ထည့်သည့်မှတ်တမ်းများအရေအတွက်"
 
 #: admin/modules/bibliography/z3950.php:243
 msgid "Found {hits} records from Z3950 Server, {maxHits} listed."
-msgstr "စာရင်းသွင်းထားသော Z3950 Server မှ {hits}  မှတ်တမ်းများ၊ {maxHits} တွေ့ရှိသောစာရင်း။"
+msgstr "Z3950 Server မှ မှတ်တမ်း {hits} ခု တွေ့ရှိခဲ့ပြီး {maxHits} စာရင်းတွင် ပါဝင်သည်။"
 
 #: admin/modules/bibliography/z3950.php:252
 #: admin/modules/bibliography/z3950sru.php:229
@@ -5342,13 +5343,11 @@ msgstr "Z3950"
 
 #: admin/modules/bibliography/z3950sru.php:182
 msgid "%s insert bibliographic data from Z3950 service (server : %s) with title (%s) and biblio_id (%s)"
-msgstr ""
-"%s သည် Z39.50 ဝန်ဆောင်မှုမှ (Server : %s) \n"
-"စာအုပ်ခေါင်းစဉ် (%s) နှင့် biblio_id (%s) ပါဝင်သော Bibliographic အချက်အလက်များကို ထည့်သွင်းခဲ့ပါသည်။"
+msgstr "%s သည် Z3950 ဝန်ဆောင်မှုမှ (Server : %s) စာအုပ်ခေါင်းစဉ် (%s) နှင့် biblio_id (%s) ပါဝင်သော Bibliographic အချက်အလက်များကို ထည့်သွင်းခဲ့ပါသည်။"
 
 #: admin/modules/bibliography/z3950sru.php:196
 msgid "Current z3950 SRU address is not register in database!"
-msgstr "လက်ရှိ z3950 SRU လိပ်စာသည် ဒေတာဘေ့စ်တွင် မှတ်ပုံတင်မထားပါ။"
+msgstr "လက်ရှိ Z3950 SRU လိပ်စာသည် ဒေတာဘေ့စ်တွင် မှတ်ပုံတင်မထားပါ။"
 
 #: admin/modules/bibliography/z3950sru.php:223
 msgid "Found {hits} records from Z3950 SRU Server."
@@ -5356,89 +5355,87 @@ msgstr "Z3950 SRU Server မှ {hits} မှတ်တမ်းများက�
 
 #: admin/modules/bibliography/z3950sru.php:328
 msgid "Z3950 Search/Retrieve via URL (SRU)"
-msgstr "Z3950 URL မှတဆင့်ရှာဖွေခြင်း/ ပြန်လည်ရယူခြင်း (SRU)"
+msgstr "URL မှတဆင့် Z3950 ရှာဖွေခြင်း/ရယူခြင်း (SRU)"
 
 #: admin/modules/bibliography/z3950sru.php:341
 msgid "SRU Server"
-msgstr "SRU ကွန်ပျူတာနှင့် ယင်းကို အသုံးပြုသူများကိုသော်လည်းကောင်း၊ အခြားကွန်ပျူတာများနှင့်သော်လည်းကောင်း ပံ့ပိုးပေးသော အစီအစဉ်"
+msgstr "SRU ဆာဗာ"
 
 #: admin/modules/circulation/circulation_action.php:64
 msgid "ERROR! Can't insert visitor counter data"
-msgstr "အမှား! ဧည့်မှတ်တမ်းအချက်အလက် ထည့်သွင်းမရပါ။"
+msgstr "အမှား! ဧည့်သည်ရေတွက်မှု အချက်အလက်ကို ထည့်သွင်း၍မရပါ"
 
 #: admin/modules/circulation/circulation_action.php:82
 msgid "ERROR! Loan data can't be saved to database"
-msgstr "အမှား! စာငှားအချက်အလက်များ စုဆောင်းသိမ်းဆည်း၍ မရပါ။"
+msgstr "အမှား! စာငှားအချက်အလက်များကိုဒေတာဘေ့စ်သို့ သိမ်းဆည်း၍မရပါ။"
 
 #: admin/modules/circulation/circulation_action.php:97
 msgid "Transaction finished"
-msgstr "စာငှားခြင်း ဆောင်ရွက်ခြင်းပြီးပြီ။"
+msgstr "စာငှားလုပ်ငန်းစဉ် ပြီးဆုံးပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:127
 #: admin/modules/circulation/circulation_action.php:151
 msgid "Overdue fines inserted to fines database"
-msgstr "ရက်လွန်ဒဏ်ငွေကို ဒဏ်ငွေအချက်အလက်စုဘဏ်တွင် ထည့်သွင်းပြီး။"
+msgstr "ရက်လွန်ဒဏ်ငွေကို ဒဏ်ကြေးဒေတာဘေ့စ်သို့ ထည့်သွင်းပြီးပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:142
 msgid "Item CANNOT BE Extended! This Item is being reserved by other member"
-msgstr "ဤစာအုပ်သည် အခြားအသင်းဝင်မှ သီးသန့်လျာထားသည့်အတွက် ငှားရက်တိုးမြှင့်၍ မရပါ။"
+msgstr "ဤစာအုပ်သည် အခြားအသင်းဝင်မှ သီးသန့်လျာထားသည့်အတွက် သက်တမ်းတိုး၍ မရနိုင်ပါ!"
 
 #: admin/modules/circulation/circulation_action.php:149
 msgid "Loan Extended"
-msgstr "ငှားရမ်းခြင်းကာလ တိုးမြှင့်ပြီး။"
+msgstr "စာငှားသက်တမ်း တိုးလိုက်ပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:179
 #: admin/modules/circulation/circulation_action.php:185
 msgid "Loan Limit Reached!"
-msgstr "ငှားရမ်းခြင်း ကန့်သတ်ချက်သို့ရောက်ပြီး။"
+msgstr "ငှားရမ်းနိုင်သော ကန့်သတ်ချက် ပြည့်သွားပါပြီ!"
 
 #: admin/modules/circulation/circulation_action.php:179
 #: admin/modules/circulation/circulation_action.php:200
 msgid "Do You Want To Overide This?"
-msgstr "သင်ဤအရာကို အစားထိုး သိမ်းဆည်းမလား။"
+msgstr "ဤကန့်သတ်ချက်ကို ကျော်လွန်၍ ဆက်လက်လုပ်ဆောင်လိုပါသလား?"
 
 #: admin/modules/circulation/circulation_action.php:200
 msgid "WARNING! This Item is reserved by another member"
-msgstr "အသိပေးချက်! ၊ ဤစာအုပ်ကို အခြားအသင်းဝင်မှ သီးသန့်လျာထားသည်။"
+msgstr "သတိပေးချက်! ဤစာအုပ်ကို အခြားအသင်းဝင်မှ သီးသန့်လျာထားပါသည်။"
 
 #: admin/modules/circulation/circulation_action.php:209
 msgid "This Item is not registered in database"
-msgstr "ဤစာအုပ်ကို အချက်အလက်များဘဏ်တွင် မှတ်ပုံတင်ထားခြင်း မရှိပါ။"
+msgstr "ဤစာအုပ်ကို ဒေတာဘေ့စ်တွင် မှတ်ပုံတင်ထားခြင်း မရှိပါ။"
 
 #: admin/modules/circulation/circulation_action.php:214
 msgid "This Item is currently not available"
-msgstr "ဤစာအုပ်ကို လက်ရှိအချိန်တွင် မရနိုင်ပါ။"
+msgstr "ဤစာအုပ်ကို လက်ရှိတွင် မရနိုင်ပါ။"
 
 #: admin/modules/circulation/circulation_action.php:219
 msgid "Loan NOT PERMITTED! Membership already EXPIRED!"
-msgstr "စာငှားခြင်းခွင့်မပြုပါ၊ အသင်းဝင်အဖြစ် ကုန်ဆုံးသွားပြီ။"
+msgstr "စာငှားရမ်းခွင့် မပြုပါ! အသင်းဝင်သက်တမ်း ကုန်ဆုံးသွားပါပြီ!"
 
 #: admin/modules/circulation/circulation_action.php:224
 msgid "Loan NOT PERMITTED! Membership under PENDING State!"
-msgstr "စာငှားခြင်းခွင့်မပြုပါ။ အသင်းဝင်အဖြစ် စီစစ်ဆဲကာလတွင်း ဖြစ်ပါသည်။"
+msgstr "စာငှားခြင်းခွင့်မပြုပါ။ အသင်းဝင်အဖြစ် ဆိုင်းငံ့ထားဆဲအခြေအနေ ဖြစ်နေပါသည်!"
 
 #: admin/modules/circulation/circulation_action.php:229
 msgid "Loan Forbidden for this Item!"
-msgstr "ဤစာအုပ်အတွက် စာငှားတားမြစ်ထားသည်။"
+msgstr "ဤစာအုပ်အတွက် ငှားရမ်းခွင့်တားမြစ်ထားပါသည်!"
 
 #: admin/modules/circulation/circulation_action.php:265
 msgid "Item {removeID} removed from session"
-msgstr ""
-"စာအုပ် {removeID} ကို လုပ်ငန်းဆောင်တာလုပ်ကွင်းမှ ဖယ်ထုတ်ပြီး\n"
-"။"
+msgstr "စာအုပ် {removeID} ကို လက်ရှိလုပ်ငန်းစဉ် (session) မှ ဖယ်ရှားလိုက်ပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:284
 msgid "This is item already returned or not exists in loan database"
-msgstr "ဤအုပ်ရေကို ပြန်လည်အပ်နှံပြီး၊ သိုမဟုတ် ငှါးရမ်းခြင်း အချက်အလက်များ စုဆောင်းသိမ်းဆည်းရာနေရာတွင် မရှိပါ။"
+msgstr "ဤစာအုပ်သည် ပြန်အပ်ပြီးသား သို့မဟုတ် စာငှားဒေတာဘေ့စ်တွင် မရှိပါ"
 
 #: admin/modules/circulation/circulation_action.php:302
 msgid "OVERDUED for {overdueDays} days(s) with fines value of"
-msgstr "ရက်လွန် အတွက် {overdueDays} ရက်(များ) နှင့် ဒဏ်ငွေတန်ဖိုး ပမာဏ"
+msgstr "{overdueDays} ရက် နောက်ကျနေပြီး ကျသင့်သောဒဏ်ကြေးတန်ဖိုး"
 
 #: admin/modules/circulation/circulation_action.php:315
 #: admin/modules/circulation/loan_list.php:172
 msgid "Item {itemCode} is being reserved by member {member}"
-msgstr "ဤစာအုပ် {itemCode} သည် အသင်းဝင်မှသီးသန့်လျာထားသည် {member}"
+msgstr "ဤစာအုပ် {itemCode} သည် အသင်းဝင်မှသီးသန့်လျာထားပါသည် {member}"
 
 #: admin/modules/circulation/circulation_action.php:342
 msgid "Item {itemCode} successfully returned on&nbsp;{returnDate}"
@@ -5446,27 +5443,27 @@ msgstr "ဤစာအုပ် {itemCode} ကို &nbsp;{returnDate} နေ့�
 
 #: admin/modules/circulation/circulation_action.php:368
 msgid "NO DATA Selected to reserve!"
-msgstr "အငှားသီးသန့်လျာထားခြင်းအတွက် အချက်အလက်မရှိပါ။"
+msgstr "စာငှားသီးသန့်လျာထားခြင်းအတွက် မည်သည့်ဒေတာကိုမျှ ရွေးချယ်ထားခြင်းမရှိပါ!"
 
 #: admin/modules/circulation/circulation_action.php:381
 msgid "Can not add more reservation. Maximum limit reached"
-msgstr "ငှားရမ်းရန် ကြိုတင်ရယူခြင်းတွင် ထပ်ဖြည့်၍ မရပါ။ သတ်မှတ်ထားသည့် အမြင့်ဆုံးကျော်နေပြီ။"
+msgstr "ငှားရမ်းရန် ကြိုတင်ရယူခြင်းတွင် ထပ်ဖြည့်၍ မရပါ။ အများဆုံးကန့်သတ်ချက် ပြည့်သွားပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:399
 msgid "Can't reserve this Item. Loan Forbidden!"
-msgstr "ဤစာအုပ်ကို သီးသန့်လျာထား၍ မရပါ၊ ငှားရမ်းခြင်း တားမြစ်ထားသည်။"
+msgstr "ဤစာအုပ်ကို သီးသန့်လျာထား၍ မရပါ၊ ငှားရမ်းခွင့် တားမြစ်ထားပါသည်!"
 
 #: admin/modules/circulation/circulation_action.php:417
 msgid "Reservation added"
-msgstr "ကြိုတင်ရယူခြင်း ထပ်ဖြည့်ထားသည်။"
+msgstr "ကြိုတင်မှာယူမှုကို ထည့်သွင်းပြီးပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:422
 msgid "Item for this title is already available or already on hold by this member!"
-msgstr "ဤစာအုပ်သည် စာကြည့်တိုက်တွင် ရရှိနိုင်သည် သို့မဟုတ် ဤအသင်းဝင်အတွက် လျာထားသည်။"
+msgstr "ဤစာအုပ်သည် စာကြည့်တိုက်တွင်ရရှိနိုင်နေပြီ သို့မဟုတ်ဤအသင်းဝင်မှ ကြိုတင်ရယူ (on hold) ထားပြီးဖြစ်ပါသည်!"
 
 #: admin/modules/circulation/circulation_action.php:440
 msgid "Reservation removed"
-msgstr "ကြိုတင်ရယူထားခြင်း ဖယ်ရှားပြီး။"
+msgstr "ကြိုတင်မှာယူမှုကို ဖယ်ရှားလိုက်ပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:454
 msgid "Fines data removed"
@@ -5474,12 +5471,12 @@ msgstr "ဒဏ်ငွေအချက်အလက်ဖယ်ရှားပြ
 
 #: admin/modules/circulation/circulation_action.php:481
 msgid " not valid (unregistered in database)"
-msgstr " ခွင့်ပြုချက်နှင့် မညီပါ၊ (အချက်အလက်များဘဏ်တွင် မှတ်ပုံတင်ထားခြင်းမရှိပါ)။"
+msgstr " မှန်ကန်မှုမရှိပါ (ဒေတာဘေ့စ်တွင် မှတ်ပုံတင်မထားပါ)။"
 
 #: admin/modules/circulation/circulation_action.php:515
 #: admin/modules/membership/index.php:533
 msgid "Membership Already Expired"
-msgstr "အသင်းဝင်သက်တမ်း ကုန်ဆုံးပြီး"
+msgstr "အသင်းဝင်သက်တမ်း ကုန်ဆုံးသွားပါပြီ"
 
 #: admin/modules/circulation/circulation_action.php:527
 #: admin/modules/circulation/index.php:58
@@ -5494,15 +5491,15 @@ msgstr ""
 
 #: admin/modules/circulation/circulation_action.php:538
 msgid "Are you sure want to finish current transaction?"
-msgstr "သင်သည် ယခုဆောင်ရွက်ခြင်းပြီးဆုံးရန် သေချာပါရဲ့လား။"
+msgstr "လက်ရှိလုပ်ငန်းစဉ်ကို အဆုံးသတ်ရန် သေချာပါသလား?"
 
 #: admin/modules/circulation/circulation_action.php:538
 msgid "Finish Transaction"
-msgstr "ညှိနှိုင်းဆောင်ရွက်ရန် ပေးပို့ ခြင်း ပြီးဆုံးပြီ။"
+msgstr "စာငှားလုပ်ငန်းစဉ်ကို ပြီးဆုံးရန်"
 
 #: admin/modules/circulation/circulation_action.php:583
 msgid "Membership currently in pending state, loan transaction is locked."
-msgstr "အသင်းဝင်အဖြစ် လက်ရှိဆိုင်းငံ့ထားဆဲ၊ စာငှါးခြင်းကို ထိမ်းချုပ်ထားသည်။"
+msgstr "အသင်းဝင်အဖြစ် ဆိုင်းငံ့ထားဆဲအခြေအနေဖြစ်၍ စာငှားလုပ်ငန်းစဉ်ကို ပိတ်ထား (Lock ချထား) ပါသည်။"
 
 #: admin/modules/circulation/circulation_action.php:616
 #: admin/modules/reporting/customs/staff_act.php:120
@@ -5511,7 +5508,7 @@ msgstr "စာငှားခြင်းများ"
 
 #: admin/modules/circulation/circulation_action.php:617
 msgid "Current Loans"
-msgstr "လက်ရှိစာငှားများ"
+msgstr "လက်ရှိငှားရမ်းထားမှုများ"
 
 #: admin/modules/circulation/circulation_action.php:619
 #: admin/modules/membership/member_type.php:304
@@ -5530,47 +5527,47 @@ msgstr "စာအုပ် {item_code} များအတွက် ရက်လ�
 
 #: admin/modules/circulation/fines_list.php:67
 msgid "Fines Description and Debet value can't be empty"
-msgstr "ဒဏ်ငွေအကြောင်းအရာနှင့် ကျသင့်ငွေကို ဗလာထား၍မရပါ။"
+msgstr "ရက်လွန်ကြေးငွေဖော်ပြချက်နှင့် ကျသင့်ငွေကို ဗလာထား၍မရပါ။"
 
 #: admin/modules/circulation/fines_list.php:69
 msgid "Value of Credit can not be higher that Debet Value"
-msgstr "ပေးသွင်းငွေသည် ကျသင့်ငွေထက် မကျော်စေရပါ။"
+msgstr "ပေးသွင်းငွေတန်ဖိုးသည် ကျသင့်ငွေတန်ဖိုးထက် မပိုနိုင်ပါ"
 
 #: admin/modules/circulation/fines_list.php:91
 msgid "Fines Data Successfully Updated"
-msgstr "ဒဏ်ငွေအချက်အလက်ကို အောင်မြင်စွာ ထပ်မံဖြည့်စွက်ပြီး"
+msgstr "ရက်လွန်ကြေးငွေအချက်အလက်ကို အောင်မြင်စွာ ထပ်မံဖြည့်စွက်ပြီး"
 
 #: admin/modules/circulation/fines_list.php:92
 msgid "Fines Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ဒဏ်ငွေအချက်အလက် ထပ်မံဖြည့်စွက်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ရက်လွန်ကြေးငွေအချက်အလက် ထပ်မံဖြည့်စွက်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/circulation/fines_list.php:98
 msgid "New Fines Data Successfully Saved"
-msgstr "ဒဏ်ငွေ အချက်အလက်အသစ်ကို အောင်မြင်စွာ သိမ်းဆည်းပြီး။"
+msgstr "ရက်လွန်ကြေးငွေအချက်အလက်အသစ်ကို အောင်မြင်စွာ သိမ်းဆည်းပြီး။"
 
 #: admin/modules/circulation/fines_list.php:99
 msgid "Fines Data FAILED to Save. Please Contact System Administrator"
-msgstr "ဒဏ်ငွေအချက်အလက် သိမ်းဆည်းခြင်းမအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ရက်လွန်ကြေးငွေအချက်အလက် သိမ်းဆည်းခြင်းမအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/circulation/fines_list.php:125
 msgid "Fines data succesfully deleted!"
-msgstr "ဒဏ်ကြေးငွေဆိုင်ရာအချက်အလက်များကို ပယ်ဖျက်ပြီး"
+msgstr "ဒဏ်ကြေးငွေဆိုင်ရာအချက်အလက်များကို အောင်မြင်စွာ ဖျက်ပစ်လိုက်ပါပြီ!"
 
 #: admin/modules/circulation/fines_list.php:127
 msgid "Fines data FAILED to delete!"
-msgstr "ဒဏ်ကြေးငွေဆိုင်ရာအချက်အလက်များကို ပယ်ဖျက်ရန် မအောင်မြင်ပါ။"
+msgstr "ရက်လွန်ကြေးငွေဆိုင်ရာအချက်အလက်များကို ပယ်ဖျက်ရန် မအောင်မြင်ပါ။"
 
 #: admin/modules/circulation/fines_list.php:136
 msgid "Add New Fines"
-msgstr "ဒဏ်ငွေအသစ် ဖြည့်စွက်ပါ။"
+msgstr "ရက်လွန်ကြေးငွေဒဏ်ငွေအသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/circulation/fines_list.php:137
 msgid "Fines List"
-msgstr "ဒဏ်ငွေ စာရင်းဇယား"
+msgstr "ရက်လွန်ကြေးငွေစာရင်း"
 
 #: admin/modules/circulation/fines_list.php:138
 msgid "View Balanced Overdue"
-msgstr "ရက်လွန်ကြေး ပေးဆောင်ရန် ကြည့်ရှုပါ။"
+msgstr "ရက်လွန်ကြေးလက်ကျန်ကိုကြည့်ရန်"
 
 #: admin/modules/circulation/fines_list.php:176
 #: admin/modules/circulation/fines_list.php:214
@@ -5578,33 +5575,33 @@ msgstr "ရက်လွန်ကြေး ပေးဆောင်ရန် က�
 #: admin/modules/reporting/customs/member_fines_list.php:97
 #: admin/modules/reporting/customs/member_fines_list.php:215
 msgid "Fines Date"
-msgstr "ဒဏ်‌ငွေပေးဆောင်ရမည့် နေ့"
+msgstr "ရက်လွန်ကြေးငွေဒဏ်‌ငွေပေးဆောင်ရမည့် နေ့"
 
 #: admin/modules/circulation/fines_list.php:178
 #: admin/modules/circulation/fines_list.php:213
 msgid "Description/Name"
-msgstr "အကြာင်းအရာ/အမည်"
+msgstr "ဖော်ပြချက် / အမည်"
 
 #: admin/modules/circulation/fines_list.php:180
 #: admin/modules/circulation/fines_list.php:215
 #: admin/modules/reporting/customs/member_fines_list.php:215
 msgid "Debit"
-msgstr "တောင်းခံသည့်ငွေ"
+msgstr "ကျသင့်ငွေ (Debit)"
 
 #: admin/modules/circulation/fines_list.php:182
 #: admin/modules/circulation/fines_list.php:216
 #: admin/modules/reporting/customs/member_fines_list.csv.php:46
 #: admin/modules/reporting/customs/member_fines_list.php:215
 msgid "Credit"
-msgstr "ပေးဆောင်သည့်ငွေ"
+msgstr "ပေးသွင်းငွေ (Credit)"
 
 #: admin/modules/circulation/fines_list.php:186
 msgid "You are going to edit fines data"
-msgstr "သင်သည် ဒဏ်ငွေ အချက်အလက်များကို တည်းဖြတ်တော့မည်။"
+msgstr "သင်သည် ရက်လွန်ကြေးငွေအချက်အလက်များကို တည်းဖြတ်တော့မည်။"
 
 #: admin/modules/circulation/fines_list.php:203
 msgid "Total of unpaid fines"
-msgstr "မပေးဆောင်ရသေးသော ဒဏ်ကြေးငွေစုစုပေါင်း"
+msgstr "ပေးဆောင်ရန်ကျန်ရှိသော စုစုပေါင်းရက်လွန်ကြေးငွေ"
 
 #: admin/modules/circulation/index.php:47 admin/modules/circulation/loan.php:43
 #: admin/modules/circulation/loan_rules.php:51
@@ -5648,12 +5645,12 @@ msgstr "သင်တွင် ဤအပိုင်းသို့ ဝင်ရ�
 
 #: admin/modules/circulation/index.php:61
 msgid "CIRCULATION - Insert a member ID to start transaction with keyboard or barcode reader"
-msgstr "စာငှားရန်အသင်းဝင်နံပါတ်ကို ကီးဘုတ် သို့မဟုတ် ဘားကုတ် ဖတ်သည့်ကိရိယာဖြင့်ထည့်ပါ။"
+msgstr "စာငှားရန်အသင်းဝင်နံပါတ်ကို ကီးဘုတ် သို့မဟုတ် ဘားကုဒ်ဖတ်စက်ဖြင့်ထည့်ပါ။"
 
 #: admin/modules/circulation/index.php:74
 #: admin/modules/circulation/submenu.php:27
 msgid "Start Transaction"
-msgstr "စာငှားဆောင်ရွက်ခြင်းစတင်ပါ။"
+msgstr "စာငှားလုပ်ငန်းစဉ်ကို စတင်ရန်"
 
 #: admin/modules/circulation/index.php:76
 msgid "Open Barcode Reader - Experimental (F8)"
@@ -5661,7 +5658,7 @@ msgstr "ဘားကုဒ်ဖတ်စက်ကို ဖွင့်ရန�
 
 #: admin/modules/circulation/index.php:107
 msgid "Transaction with member {member_id} is completed"
-msgstr "စာငှားခြင်းဆောင်ရွက်ရန် အသင်းဝင်{member_id} ပြီးပြည့်စုံပြီး။"
+msgstr "အသင်းဝင် {member_id} နှင့် စာငှားလုပ်ငန်းစဉ်ပြီးဆုံးပါပြီ။"
 
 #: admin/modules/circulation/loan.php:165
 msgid "Insert Item Code/Barcode"
@@ -5677,13 +5674,13 @@ msgstr "စာငှားနေ့စွဲပြောင်းရန်"
 
 #: admin/modules/circulation/loan.php:209
 msgid "Click To Change Due Date"
-msgstr "ပြန်လည်အပ်နှံရမည့်နေ့စွဲ ပြောင်းရန်နှိပ်ပါ။"
+msgstr "ပြန်အပ်ရမည့်ရက်စွဲကို ပြောင်းလဲရန် နှိပ်ပါ"
 
 #: admin/modules/circulation/loan_history_maintenance.php:68
 #: admin/modules/circulation/loan_history_maintenance.php:219
 #: admin/modules/circulation/submenu.php:35
 msgid "Loan History Maintenance"
-msgstr "စာငှားမှတ်တမ်းများကို ထိန်းသိမ်းခြင်း"
+msgstr "စာငှားမှတ်တမ်းများကို ပြုပြင်ထိန်းသိမ်းမှု"
 
 #: admin/modules/circulation/loan_history_maintenance.php:136
 #: admin/modules/circulation/loan_history_maintenance.php:151
@@ -5693,11 +5690,11 @@ msgstr "စာငှားမှတ်တမ်းများကို ထိ�
 #: admin/modules/system/ImageMaintenanceTool.inc.php:261
 #: admin/modules/system/ImageMaintenanceTool.inc.php:355
 msgid "You are not authorized to perform this action"
-msgstr "သင့်မှာ ဤအပိုင်းကို ဝင်ရောက်ကြည့်ရှုခွင့် မရှိပါ။"
+msgstr "ဤလုပ်ဆောင်ချက်ကို ပြုလုပ်ရန် သင့်တွင် ခွင့်ပြုချက်မရှိပါ။"
 
 #: admin/modules/circulation/loan_history_maintenance.php:139
 msgid "Truncating loan_history ..."
-msgstr "စာငှားမှတ်တမ်းဟောင်းများကို ဖယ်ရှား၍ အသစ်ပြန်တည်ဆောက်ရန် ပြင်ဆင်နေပါသည်…"
+msgstr "စာငှားမှတ်တမ်း (loan_history) ကို ရှင်းလင်းနေပါသည် …"
 
 #: admin/modules/circulation/loan_history_maintenance.php:143
 msgid "OK"
@@ -5730,11 +5727,11 @@ msgstr "ပြန်လည်တည်ဆောက်ခြင်း မအေ�
 
 #: admin/modules/circulation/loan_history_maintenance.php:189
 msgid "Done. Inserted %d rows"
-msgstr "ပြီးဆုံးပါပြီ။ အတန်း %d ခုကို ထည့်သွင်းပြီးပါပြီ။"
+msgstr "ပြီးစီးပါပြီ။ အတန်း %d ခုကို ထည့်သွင်းပြီးပါပြီ။"
 
 #: admin/modules/circulation/loan_history_maintenance.php:195
 msgid "No task specified."
-msgstr "လုပ်ဆောင်ရန် တာဝန်ကို မသတ်မှတ်ထားပါ။"
+msgstr "မည်သည့်လုပ်ငန်းစဉ်မျှ သတ်မှတ်ထားခြင်း မရှိပါ"
 
 #: admin/modules/circulation/loan_history_maintenance.php:201
 #: admin/modules/system/ImageMaintenanceTool.inc.php:403
@@ -5747,7 +5744,7 @@ msgstr "ပျောက်ဆုံးစာအုပ်စာရင်း ထ�
 
 #: admin/modules/circulation/loan_history_maintenance.php:224
 msgid "This will rebuild all loan history. Continue?"
-msgstr "ဤလုပ်ဆောင်ချက်သည် စာငှားမှတ်တမ်း  ကိုပြန်လည်ဖန်တီးခြင်းဖြစ်စေပါမည်။ ဆက်လက်လုပ်ဆောင်လိုပါသလား?"
+msgstr "၎င်းသည် စာငှားမှတ်တမ်းအားလုံးကို ပြန်လည်တည်ဆောက်ပါမည်။ ဆက်လုပ်မည်လား?"
 
 #: admin/modules/circulation/loan_history_maintenance.php:224
 msgid "Rebuild All"
@@ -5755,11 +5752,11 @@ msgstr "အားလုံးကို ပြန်လည်တည်ဆော�
 
 #: admin/modules/circulation/loan_history_maintenance.php:225
 msgid "This will empty loan history table. Continue?"
-msgstr "ဤလုပ်ဆောင်ချက်သည် စာငှားမှတ်တမ်း ဇယားကို အလွတ်ဖြစ်စေပါမည်။ ဆက်လက်လုပ်ဆောင်လိုပါသလား?"
+msgstr "၎င်းသည် စာငှားမှတ်တမ်းဇယားအားလုံးကို ဗလာဖြစ်သွားစေပါမည်။ ဆက်လုပ်မည်လား?"
 
 #: admin/modules/circulation/loan_history_maintenance.php:225
 msgid "Empty History"
-msgstr "စာအုပ်ငှားရမ်းမှုမှတ်တမ်းကို ရှင်းလင်းပါ။"
+msgstr "စာငှားမှတ်တမ်းကို ရှင်းလင်းရန်"
 
 #: admin/modules/circulation/loan_history_maintenance.php:226
 msgid "Refresh Stats"
@@ -5767,7 +5764,7 @@ msgstr "စာရင်းအင်းများကို ပြန်လည�
 
 #: admin/modules/circulation/loan_history_maintenance.php:230
 msgid "Re-indexes and/or regenerates loan history data by rebuilding history records from current loan entries"
-msgstr "လက်ရှိ ငှားရမ်းမှုမှတ်တမ်းများကို အခြေခံပြီးစာငှားမှတ်တမ်း  ဒေတာများကို ပြန်လည်အညွှန်းသွင်းခြင်း သို့မဟုတ် ပြန်လည်ဖန်တီးခြင်း ပြုလုပ်ပါသည်။"
+msgstr "လက်ရှိစာငှားစာရင်းများမှ မှတ်တမ်းများကို ပြန်လည်တည်ဆောက်ခြင်းဖြင့် စာငှားမှတ်တမ်းဒေတာကို အညွှန်းပြန်တပ်ခြင်း (Re-indexes) နှင့်/သို့မဟုတ် ပြန်လည်ထုတ်လုပ်ခြင်းများ ပြုလုပ်ပါ"
 
 #: admin/modules/circulation/loan_history_maintenance.php:232
 msgid "Current Stats"
@@ -5776,7 +5773,7 @@ msgstr "လက်ရှိစာရင်းအင်းများ"
 #: admin/modules/circulation/loan_history_maintenance.php:235
 #: admin/modules/stock_take/current.php:153
 msgid "Missing"
-msgstr "ရှာမတွေ့ပါ။"
+msgstr "ပျောက်ဆုံးနေခြင်း"
 
 #: admin/modules/circulation/loan_list.php:60
 msgid "Are you sure you want to return the item"
@@ -5784,7 +5781,7 @@ msgstr "သင်သည် ငှားရမ်းထားသည့်စာ�
 
 #: admin/modules/circulation/loan_list.php:62
 msgid "Are you sure to extend loan for"
-msgstr "သင်သည် စာငှားရက်တိုးမြှင့်လိုသည်မှာ သေချာရဲ့လား။"
+msgstr "စာငှားသက်တမ်းတိုးရန် သေချာပါသလား -"
 
 #: admin/modules/circulation/loan_list.php:98
 msgid "Col. Type"
@@ -5792,57 +5789,57 @@ msgstr "စာစုအမျိုးအစား"
 
 #: admin/modules/circulation/loan_list.php:114
 msgid "Return this item"
-msgstr "ဤစာအုပ်ကို ပြန်လည်အပ်နှံပါ။"
+msgstr "ဤစာအုပ်ကို ပြန်အပ်ပါ။"
 
 #: admin/modules/circulation/loan_list.php:118
 #: admin/modules/circulation/loan_list.php:122
 msgid "No Extend"
-msgstr "ငှားရမ်းခွင့် ရက်တိုးမြှင့် မပေးပါ။"
+msgstr "ငှားရမ်းခွင့် သက်တမ်းမတိုးပါ။"
 
 #: admin/modules/circulation/loan_list.php:124
 msgid "Extend loan for this item"
-msgstr "ဤ စာငှားအတွက် ရက်တိုးမြှင့်ပေးပါ။"
+msgstr "ဤ စာငှားအတွက်သက်တမ်းတိုးရန်"
 
 #: admin/modules/circulation/loan_list.php:129
 #: admin/modules/circulation/pop_loan_receipt.php:88
 msgid "Extended"
-msgstr "ရက်တိုးမြှင့်ပေးသည်။"
+msgstr "သက်တမ်းတိုးပြီးပါပြီ"
 
 #: admin/modules/circulation/loan_list.php:136
 msgid "OVERDUED for"
-msgstr "ရက်လွန်နေသော"
+msgstr "ရက်လွန်နေသည်မှာ"
 
 #: admin/modules/circulation/loan_list.php:136
 msgid "days(s) with fines value"
-msgstr "ရက်လွန်အရေအတွက်နှင့် ဒဏ်ငွေတန်ဖိုး"
+msgstr "ရက်လွန်အရေအတွက်နှင့် ရက်လွန်ကြေးငွေတန်ဖိုး"
 
 #: admin/modules/circulation/loan_list.php:180
 msgid "Total amount of fine is"
-msgstr "ရက်လွန်ကြေးငွေစုစုပေါင်းတန်ဖိုး -"
+msgstr "စုစုပေါင်းရက်လွန်ကြေးငွေတန်ဖိုး -"
 
 #: admin/modules/circulation/loan_list.php:181
 msgid "Send overdues notice e-mail"
-msgstr "ရက်လွန်နေကြောင်း အီးမေးလ် ပို့ပါ။"
+msgstr "ရက်လွန်နေကြောင်း အီးမေးလ် ပို့ရန်"
 
 #: admin/modules/circulation/loan_rules.php:77
 msgid "Loan Rules Successfully Updated"
-msgstr "စာငှားစည်းမျဉ်းစည်းကမ်းများ အောင်မြင်စွာ ဖြည့်စွက်ပြုပြင်ပြီး။"
+msgstr "စာငှားစည်းမျဉ်းများ အောင်မြင်စွာ ဖြည့်စွက်ပြုပြင်ပြီး။"
 
 #: admin/modules/circulation/loan_rules.php:79
 msgid "Loan Rules FAILED to Updated. Please Contact System Administrator"
-msgstr "စာငှားစည်းမျဉ်းစည်းကမ်း ဖြည့်စွက်ပြုပြင်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစံနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ"
+msgstr "စာငှားစည်းမျဉ်းဖြည့်စွက်ပြုပြင်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစံနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ"
 
 #: admin/modules/circulation/loan_rules.php:85
 msgid "New Loan Rules Successfully Saved"
-msgstr "စာငှား စည်းမျဉ်းစည်းကမ်းအသစ်အား အောင်မြင်စွာသိမ်းဆည်းပြီး။"
+msgstr "စာငှား စည်းမျဉ်းအသစ်အား အောင်မြင်စွာသိမ်းဆည်းပြီး။"
 
 #: admin/modules/circulation/loan_rules.php:87
 msgid "Loan Rules FAILED to Save. Please Contact System Administrator"
-msgstr "စာငှားစည်းမျဉ်းစည်းကမ်းသိမ်းဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
+msgstr "စာငှားစည်းမျဉ်းသိမ်းဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/circulation/loan_rules.php:123
 msgid "Sorry. There is active loan transaction(s) using this loan rules."
-msgstr "ဝမ်းနည်းပါတယ်။ စာငှားစည်းမျဉ်းစည်းကမ်းများကိုအသုံးပြု၍ စာငှားခြင်း(များ)ရှိပါသည်။"
+msgstr "တောင်းပန်ပါသည်။ ဤစာငှားစည်းမျဉ်းကို အသုံးပြုနေသော လက်ရှိစာငှားလုပ်ငန်းစဉ်(များ) ရှိနေပါသည်"
 
 #: admin/modules/circulation/loan_rules.php:139
 #: admin/modules/circulation/submenu.php:29
@@ -5851,11 +5848,11 @@ msgstr "စာငှားစည်းမျဉ်းစည်းကမ်း"
 
 #: admin/modules/circulation/loan_rules.php:143
 msgid "Loan Rules List"
-msgstr "စာငှားစည်းမျဉ်းစည်းကမ်းများစာရင်း"
+msgstr "စာငှားစည်းမျဉ်းများစာရင်း"
 
 #: admin/modules/circulation/loan_rules.php:144
 msgid "Add New Loan Rules"
-msgstr "စာငှားစည်းမျဉ်းစည်းကမ်း အသစ်အား ဖြည့်စွက်ပါ။"
+msgstr "စာငှားစည်းမျဉ်းစည်းကမ်းအသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/circulation/loan_rules.php:215
 #: admin/modules/circulation/loan_rules.php:246
@@ -5881,44 +5878,44 @@ msgstr "ဆက်လက်ငှားရမ်းခွင့် ကန့်�
 
 #: admin/modules/circulation/loan_rules.php:221
 msgid "Fines Each Day"
-msgstr "တစ်ရက် အတွက် ဒဏ်ငွေ"
+msgstr "တစ်ရက်အတွက်ရက်လွန်ကြေးငွေ"
 
 #: admin/modules/circulation/loan_rules.php:223
 msgid "Overdue Grace Periode"
-msgstr "ရက်နောက်ကျသော်လည်း ဒဏ်ကြေးကောက်ခံခြင်းမပြုဘဲ သည်းခံခွင့်လွှတ်ပေးမည့် ရက်ကာလ"
+msgstr "ရက်လွန်ခွင့်ပြုကာလ"
 
 #: admin/modules/circulation/loan_rules.php:227
 msgid "You are going to edit loan rules"
-msgstr "သင်သည် စာငှား စည်းမျဉ်းစည်းကမ်းများကို တည်းဖြတ်တော့မည်။"
+msgstr "သင်သည် စာငှားစည်းမျဉ်းများကို ပြင်ဆင်တော့မည်ဖြစ်ပါသည်"
 
 #: admin/modules/circulation/member_loan_hist.php:65
 msgid "Not Returned Yet"
-msgstr "ပြန်လည်မအပ်နှံသေးပါ။"
+msgstr "ပြန်မအပ်ရသေးပါ"
 
 #: admin/modules/circulation/member_loan_hist.php:65
 msgid "Returned Date"
-msgstr "ပြန်လည်အပ်နှံသည့် နေ့စွဲ"
+msgstr "ပြန်အပ်သည့် ရက်စွဲ"
 
 #: admin/modules/circulation/quick_return.php:53
 msgid "Quick Return is disabled"
-msgstr "အမြန်ပြန်လည်အပ်နှံခြင်းကို မရနိုင်ရန် ပြုလုပ်ထားသည်။"
+msgstr "အမြန်ပြန်အပ်ပိတ်ထားပါသည်။"
 
 #: admin/modules/circulation/quick_return.php:82
 #: admin/modules/circulation/submenu.php:28 admin/modules/system/index.php:469
 msgid "Quick Return"
-msgstr "အမြန်ပြန်လည်အပ်နှံခြင်း"
+msgstr "အမြန်ပြန်အပ်ခြင်း"
 
 #: admin/modules/circulation/quick_return.php:85
 msgid "Insert an item ID to return collection with keyboard or barcode reader"
-msgstr "စာအုပ်ကိုပြန်လည်အပ်နှံရန် စာအုပ်၏အမှတ်အသားကို ကီးဘုတ် သို့မဟုတ် ဘားကုတ်ဖတ်သည့်ကိရိယာဖြင့် ထည့်သွင်းပါ။"
+msgstr "စာအုပ်ကိုပြန်အပ်ရန် စာအုပ်၏အမှတ်အသားကို ကီးဘုတ် သို့မဟုတ် ဘားကုတ်ဖတ်စက်ဖြင့် ထည့်သွင်းပါ။"
 
 #: admin/modules/circulation/quick_return.php:89
 msgid "Item ID"
-msgstr "စာအုပ်၏သင်္ကေတ"
+msgstr "စာအုပ် ID"
 
 #: admin/modules/circulation/reserve_list.php:55
 msgid "Are you sure to remove reservation for"
-msgstr "ကြိုတင်ရယူထားခြင်းကို ဖယ်ထုတ်မှာ သေချာရဲ့လား"
+msgstr "ကြိုတင်မှာယူထားခြင်းကို ဖယ်ထုတ်မှာ သေချာရဲ့လား"
 
 #: admin/modules/circulation/reserve_list.php:69
 msgid "Search Collection"
@@ -5939,7 +5936,7 @@ msgstr "ကြိုတင်မှာယူမှုကို ဖယ်ရှ�
 
 #: admin/modules/circulation/reserve_list.php:114
 msgid "ALREADY EXPIRED"
-msgstr "ကုန်ဆုံးပြီး"
+msgstr "သက်တမ်းကုန်ဆုံးသွားပါပြီ"
 
 #: admin/modules/circulation/submenu.php:26
 msgid "CIRCULATION"
@@ -5947,30 +5944,30 @@ msgstr "စာငှားဌာန"
 
 #: admin/modules/circulation/submenu.php:27
 msgid "Start Circulation Transaction Proccess"
-msgstr "စာငှားဆောင်ရွက်ခြင်း လုပ်ငန်းစဉ်စတင်ပါ။"
+msgstr "စာငှားလုပ်ငန်းစဉ်ကို စတင်ရန်"
 
 #: admin/modules/circulation/submenu.php:28
 msgid "Quick Return Collection"
-msgstr "အမြန်ပြန်လည်အပ်နှံခြင်းများစာစု"
+msgstr "အမြန်ပြန်အပ်ခြင်းများစာစု"
 
 #: admin/modules/circulation/submenu.php:29
 msgid "View and Modify Circulation Loan Rules"
-msgstr "စာငှားစည်းမျဉ်းစည်းကမ်းကိုဆန်းစစ်၍ လိုအပ်သလို ပြင်ဆင်ရေးသားရန်"
+msgstr "စာငှားစည်းမျဉ်းများကို ကြည့်ရှုရန်နှင့် ပြင်ဆင်ရန်"
 
 #: admin/modules/circulation/submenu.php:30
 #: admin/modules/reporting/customs/customs_report_list.inc.php:35
 msgid "Loan History Overview"
-msgstr "စာငှားမှတ်တမ်းအား ဆန်းစစ်လေ့လာခြင်း"
+msgstr "စာငှားမှတ်တမ်း အကျဉ်းချုပ်"
 
 #: admin/modules/circulation/submenu.php:31
 #: admin/modules/reporting/customs/customs_report_list.inc.php:36
 #: admin/modules/reporting/customs/due_date_warning.php:64
 msgid "Due Date Warning"
-msgstr "ပြန်လည်အပ်နှံရမည့်နေ့စွဲ သတိပေးခြင်း"
+msgstr "ပြန်အပ်ရမည့်ရက်စွဲ သတိပေးချက်"
 
 #: admin/modules/circulation/submenu.php:31
 msgid "View Members That About to Have Overdues"
-msgstr "သတ်မှတ်ရက် ကျော်လွန်တော့မည့် အဖွဲ့ဝင်များကို ကြည့်ရန်"
+msgstr "ရက်လွန်တော့မည့်အသင်းဝင်များကို ကြည့်ရန်"
 
 #: admin/modules/circulation/submenu.php:32
 #: admin/modules/reporting/customs/customs_report_list.inc.php:37
@@ -5981,12 +5978,12 @@ msgstr "ငှားရမ်းရက်လွန်စာရင်း"
 #: admin/modules/circulation/submenu.php:32
 #: admin/modules/reporting/customs/customs_report_list.inc.php:37
 msgid "View Members Having Overdues"
-msgstr "ရက်လွန် အသင်းဝင်များကို ကြည့်ရှုခြင်း"
+msgstr "ရက်လွန် အသင်းဝင်များကို ကြည့်ရှုရန်"
 
 #: admin/modules/circulation/submenu.php:33
 #: admin/modules/reporting/customs/reserve_list.php:63
 msgid "Reservation"
-msgstr "ငှားရမ်းခွင့် ကြိုတင် ရယူထားခြင်း"
+msgstr "ငှားရမ်းခွင့် ကြိုတင်မှာယူခြင်း"
 
 #: admin/modules/circulation/submenu.php:34
 msgid "MAINTENANCE"
@@ -6002,7 +5999,7 @@ msgstr "စာရေးသူအချက်အလက် အောင်မြ�
 
 #: admin/modules/master_file/author.php:106
 msgid "Author Data FAILED to Updated. Please Contact System Administrator"
-msgstr "စာရေးသူအချက်အလက် ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "စာရေးသူအချက်အလက် ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/author.php:114
 msgid "New Author Data Successfully Saved"
@@ -6011,7 +6008,7 @@ msgstr "စာရေးသူဆိုင်ရာ အချက်အလက်�
 #: admin/modules/master_file/author.php:125
 #: admin/modules/master_file/coll_type.php:85
 msgid "Author Data FAILED to Save. Please Contact System Administrator"
-msgstr "စာရေးသူ အချက်အလက်သိမ်ဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စာရေးသူ အချက်အလက်သိမ်ဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/author.php:207
 #: admin/modules/master_file/submenu.php:48
@@ -6058,7 +6055,7 @@ msgstr "စာစုအမျိုးအစားစာရင်းအချက
 
 #: admin/modules/master_file/coll_type.php:76
 msgid "Colllection Type Data FAILED to Updated. Please Contact System Administrator"
-msgstr "စာစုအမျိုးအစားအချက်အလက်များ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စာစုအမျိုးအစားအချက်အလက်များ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/coll_type.php:83
 msgid "New Colllection Type Data Successfully Saved"
@@ -6066,7 +6063,7 @@ msgstr "စာစုအမျိုးအစားအချက်အလက်အ
 
 #: admin/modules/master_file/coll_type.php:116
 msgid "Collection type %s still used by %s items"
-msgstr "စုစည်းမှုအမျိုးအစား %s ကို Items %s ခုတွင် အသုံးပြုနေဆဲ ဖြစ်သည်။"
+msgstr "စာစုအမျိုးအစား %s ကို Items %s ခုတွင် အသုံးပြုနေဆဲ ဖြစ်သည်။"
 
 #: admin/modules/master_file/coll_type.php:154
 msgid "Collection Type List"
@@ -6074,7 +6071,7 @@ msgstr "စာစုအမျိုးအစားစာရင်း"
 
 #: admin/modules/master_file/coll_type.php:155
 msgid "Add New Collection Type"
-msgstr "စာစုအမျိုးအစားအသစ်ထပ်ထည့်ရန်"
+msgstr "စာစုအမျိုးအစားအသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/coll_type.php:201
 msgid "You are going to edit collection type data"
@@ -6090,7 +6087,7 @@ msgstr "အပြန်အလှန်အညွှန်းအချက်အလ
 
 #: admin/modules/master_file/cross_reference.php:73
 msgid "Cross Reference Data FAILED to Updated. Please Contact System Administrator"
-msgstr "အပြန်အလှန်အညွှန်းအချက်အလက်များ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "အပြန်အလှန်အညွှန်းအချက်အလက်များ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/cross_reference.php:80
 msgid "New Cross Reference Data Successfully Saved"
@@ -6098,7 +6095,7 @@ msgstr "အပြန်အလှန်အညွှန်းအချက်အလ
 
 #: admin/modules/master_file/cross_reference.php:82
 msgid "Cross Reference Data FAILED to Save. Please Contact System Administrator"
-msgstr "အပြန်အလှန်အညွှန်းအချက်အလက်များ သိမ်းဆည်းခြင်းအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "အပြန်အလှန်အညွှန်းအချက်အလက်များ သိမ်းဆည်းခြင်းအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/cross_reference.php:126
 #: admin/modules/master_file/cross_reference.php:200
@@ -6112,7 +6109,7 @@ msgstr "အပြန်အလှန် အညွှန်း စာရင်း"
 
 #: admin/modules/master_file/cross_reference.php:131
 msgid "Add New Term"
-msgstr "စကားလုံးအသစ် ထပ်ထည့်ရန်"
+msgstr "စကားလုံးအသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/cross_reference.php:132
 #: admin/modules/master_file/topic.php:200
@@ -6179,7 +6176,7 @@ msgstr "ဘာသာစကားအချက်အလက်များ အေ�
 
 #: admin/modules/master_file/doc_language.php:79
 msgid "Language Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ဘာသာစကားအချက်အလက်များ ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ဘာသာစကားအချက်အလက်များ ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/doc_language.php:86
 msgid "New Language Data Successfully Saved"
@@ -6187,7 +6184,7 @@ msgstr "ဘာသာစကားအချက်အလက်အသစ်မျာ
 
 #: admin/modules/master_file/doc_language.php:88
 msgid "Language Data FAILED to Save. Please Contact System Administrator"
-msgstr "ဘာသာစကားအချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ဘာသာစကားအချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/doc_language.php:123
 #: admin/modules/master_file/publisher.php:134
@@ -6216,7 +6213,7 @@ msgstr "အကြိမ်အချက်အလက် အောင်မြင�
 
 #: admin/modules/master_file/frequency.php:78
 msgid "Frequency Data FAILED to Updated. Please Contact System Administrator"
-msgstr "အကြိမ်အချက်အလက် လတ်တလော ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "အကြိမ်အချက်အလက် လတ်တလော ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/frequency.php:84
 msgid "New Frequency Data Successfully Saved"
@@ -6224,7 +6221,7 @@ msgstr "အကြိမ် အချက်အလက် အောင်မြင�
 
 #: admin/modules/master_file/frequency.php:86
 msgid "Frequency Data FAILED to Save. Please Contact System Administrator"
-msgstr "အကြိမ်အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပြူတာစံနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "အကြိမ်အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပြူတာစံနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/frequency.php:117
 msgid "Frequency %s still in use %d biblio(s)"
@@ -6236,7 +6233,7 @@ msgstr "ရရှိနိုင်သော အကြိမ်"
 
 #: admin/modules/master_file/frequency.php:158
 msgid "Add New Frequency"
-msgstr "အကြိမ် အသစ် ထပ်ဖြည့်ပါ"
+msgstr "အကြိမ် အသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/frequency.php:211
 #: admin/modules/master_file/frequency.php:237
@@ -6308,7 +6305,7 @@ msgstr "GMD အချက်အလက်အောင်မြင်စွာ ဖ�
 
 #: admin/modules/master_file/index.php:81
 msgid "GMD Data FAILED to Updated. Please Contact System Administrator"
-msgstr "GMD အချက်အလက် ဖြည့်ထည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစံနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "GMD အချက်အလက် ဖြည့်ထည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစံနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/index.php:87
 msgid "New GMD Data Successfully Saved"
@@ -6316,7 +6313,7 @@ msgstr "GMD အချက်အလက်အသစ် အောင်မြင်�
 
 #: admin/modules/master_file/index.php:90
 msgid "GMD Data FAILED to Save. Please Contact System Administrator"
-msgstr "GMD အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "GMD အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/index.php:128
 msgid "%s still in use %d biblio "
@@ -6328,7 +6325,7 @@ msgstr "GMD စာရင်း"
 
 #: admin/modules/master_file/index.php:167
 msgid "Add New GMD"
-msgstr "GMD အသစ် ထပ်ဖြည့်ပါ"
+msgstr "GMD အသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/index.php:210
 #: admin/modules/master_file/index.php:229
@@ -6379,7 +6376,7 @@ msgstr "ပစ္စည်းအသစ်အခြေအနေကို အေ�
 
 #: admin/modules/master_file/item_status.php:101
 msgid "Item Status Data FAILED to Updated. Please Contact System Administrator"
-msgstr "စာအုပ်အချက်အလက်အခြေအနေ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စာအုပ်အချက်အလက်အခြေအနေ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/item_status.php:109
 msgid "New Item Status Data Successfully Saved"
@@ -6387,7 +6384,7 @@ msgstr "စာအုပ်အချက်အလက်အခြေအနေအသ
 
 #: admin/modules/master_file/item_status.php:112
 msgid "Item Status Data FAILED to Save. Please Contact System Administrator"
-msgstr "စာအုပ်အချက်အလက်အခြေအနေ သိမ်ဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စာအုပ်အချက်အလက်အခြေအနေ သိမ်ဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/item_status.php:148
 msgid "%s still in use %d item "
@@ -6395,7 +6392,7 @@ msgstr "%s ကို Item %d ခုတွင် အသုံးပြုနေ�
 
 #: admin/modules/master_file/item_status.php:189
 msgid "Add New Item Status"
-msgstr "စာအုပ်အသစ် အခြေအနေထပ်ဖြည့်ရန်"
+msgstr "item အခြေအနေအသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/item_status.php:232
 #: admin/modules/master_file/item_status.php:259
@@ -6457,7 +6454,7 @@ msgstr "လေဘယ်အချက်အလက်အောင်မြင်စ
 
 #: admin/modules/master_file/label.php:109
 msgid "Label Data FAILED to Updated. Please Contact System Administrator"
-msgstr "လေယ်အချက်အလက်ဖြည့်ထည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "လေယ်အချက်အလက်ဖြည့်ထည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/label.php:115
 msgid "New Label Data Successfully Saved"
@@ -6465,7 +6462,7 @@ msgstr "လေဘယ်အချက်အလက်အသစ်အောင်မ
 
 #: admin/modules/master_file/label.php:117
 msgid "Label Data FAILED to Save. Please Contact System Administrator"
-msgstr "လေဘယ်အချက်အလက်အသစ် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "လေဘယ်အချက်အလက်အသစ် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/label.php:146
 msgid "Label %s still in use %d biblio(s)"
@@ -6477,7 +6474,7 @@ msgstr "လေဘယ် အချက်အလက် စာရင်း"
 
 #: admin/modules/master_file/label.php:187
 msgid "Add New Label"
-msgstr "လေဘယ်အသစ်များထပ်ထည့်ရန်"
+msgstr "လေဘယ်အသစ်များထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/label.php:230
 #: admin/modules/master_file/label.php:261
@@ -6505,7 +6502,7 @@ msgstr "တည်နေရာအချက်အလက် အောင်မြ�
 
 #: admin/modules/master_file/location.php:80
 msgid "Location Data FAILED to Updated. Please Contact System Administrator"
-msgstr "တည်နေရာအချက်အလက်ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "တည်နေရာအချက်အလက်ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ၊ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/location.php:87
 msgid "New Location Data Successfully Saved"
@@ -6513,7 +6510,7 @@ msgstr "နေရာအချက်အလက်အသစ် အောင်မ�
 
 #: admin/modules/master_file/location.php:89
 msgid "Location Data FAILED to Save. Please Contact System Administrator"
-msgstr "တည်နေရာအချက်အလက်သိမ်းဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "တည်နေရာအချက်အလက်သိမ်းဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/location.php:119
 msgid "Location %s still in use %s item(s)"
@@ -6525,7 +6522,7 @@ msgstr "စာအုပ်တည်နေရာစာရင်း"
 
 #: admin/modules/master_file/location.php:154
 msgid "Add New Location"
-msgstr "နေရာအသစ် ထပ်မံဖြည့်ပါ"
+msgstr "နေရာအသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/location.php:197
 #: admin/modules/master_file/location.php:216
@@ -6549,9 +6546,7 @@ msgstr "Server အမည်နှင့် URI ဗလာမထားရပါ။
 
 #: admin/modules/master_file/p2pservers.php:60
 msgid "URI isn't valid, start witch prefix like e.g: http://, https:// etc."
-msgstr ""
-"URI သည် မှန်ကန်မှု မရှိပါ။\n"
-"http:// သို့မဟုတ် https:// ကဲ့သို့သော Prefix ဖြင့် စတင်ရပါမည်။"
+msgstr "URI သည် မှန်ကန်မှု မရှိပါ။ http:// သို့မဟုတ် https:// ကဲ့သို့သော ရှေ့ဆက် (Prefix) ဖြင့် စတင်ရပါမည်။"
 
 #: admin/modules/master_file/p2pservers.php:76
 msgid "Server Data Successfully Updated"
@@ -6559,7 +6554,7 @@ msgstr "Server ဒေတာများကို အောင်မြင်စ�
 
 #: admin/modules/master_file/p2pservers.php:78
 msgid "Server Data FAILED to Updated. Please Contact System Administrator"
-msgstr "Server ဒေတာများကို နောက်ဆုံးရေးသားရန် မအောင်မြင်ခဲ့ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "Server ဒေတာများကို နောက်ဆုံးရေးသားရန် မအောင်မြင်ခဲ့ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/p2pservers.php:83
 msgid "New Server Data Successfully Saved"
@@ -6567,7 +6562,7 @@ msgstr "Server အသစ်အချက်အလက်ကို အောင်�
 
 #: admin/modules/master_file/p2pservers.php:85
 msgid "Server Data FAILED to Save. Please Contact System Administrator"
-msgstr "Server ဒေတာများ သိမ်းဆည်းရန် မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "Server ဒေတာများ သိမ်းဆည်းရန် မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/p2pservers.php:125
 msgid "Copy Cataloging Server Configuration"
@@ -6579,7 +6574,7 @@ msgstr "Server များစာရင်း"
 
 #: admin/modules/master_file/p2pservers.php:130
 msgid "Add New Server"
-msgstr "Server အသစ် ထပ်ထည့်ရန်"
+msgstr "Server အသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/p2pservers.php:172
 #: admin/modules/master_file/p2pservers.php:193
@@ -6630,7 +6625,7 @@ msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ အ�
 
 #: admin/modules/master_file/place.php:85
 msgid "Place Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ အချက်အလက်ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ အချက်အလက်ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/place.php:93
 msgid "New Place Data Successfully Saved"
@@ -6638,7 +6633,7 @@ msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ အ�
 
 #: admin/modules/master_file/place.php:96
 msgid "Place Data FAILED to Save. Please Contact System Administrator"
-msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ အချက်အလက်အောင်မြင်စွာ မသိမ်းဆည်းပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ပုံနှိပ်ထုတ်ဝေသည့်နေရာ အချက်အလက်အောင်မြင်စွာ မသိမ်းဆည်းပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/place.php:138
 msgid "%s still in use %d biblio <br/>"
@@ -6647,7 +6642,7 @@ msgstr "%s ကို bibliographic မှတ်တမ်း %d ခုတွင�
 #: admin/modules/master_file/place.php:169
 #: admin/modules/master_file/submenu.php:51
 msgid "Orphaned Place"
-msgstr "အသုံးပြုထားခြင်းမရှိတော့သောပုံနှိပ်ထုတ်ဝေသည့်နေရာ"
+msgstr "အသုံးပြုထားခြင်းမရှိတော့သောထုတ်ဝေသည့်နေရာ"
 
 #: admin/modules/master_file/place.php:173
 msgid "Place List"
@@ -6743,7 +6738,7 @@ msgstr "ထုတ်ဝေသူ အချက်အလက် အောင်မ�
 
 #: admin/modules/master_file/publisher.php:84
 msgid "PUBLISHER Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ထုတ်ဝေသူအချက်အလက် ထပ်ဖြည့်ခြင်းမအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "ထုတ်ဝေသူအချက်အလက် ထပ်ဖြည့်ခြင်းမအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/publisher.php:91
 msgid "New Publisher Data Successfully Saved"
@@ -6751,20 +6746,20 @@ msgstr "ထုတ်ဝေသူအချက်အလက်အသစ်အော
 
 #: admin/modules/master_file/publisher.php:93
 msgid "Publisher Data FAILED to Save. Please Contact System Administrator"
-msgstr "ထုတ်ဝေသူအချက်အလက်သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ်စီမံခန့်ခွဲသူနှင့်ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "ထုတ်ဝေသူအချက်အလက်သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ်စီမံခန့်ခွဲသူနှင့်ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/publisher.php:166
 #: admin/modules/master_file/submenu.php:50
 msgid "Orphaned Publisher"
-msgstr "အသုံးပြုထားခြင်းမရှိတော့သောပုံနှိပ်ထုတ်ဝေသူ"
+msgstr "အသုံးပြုထားခြင်းမရှိတော့သောထုတ်ဝေသူ"
 
 #: admin/modules/master_file/publisher.php:170
 msgid "Publisher List"
-msgstr "ထုတ်ဝေသူစာ ရင်း"
+msgstr "ထုတ်ဝေသူစာရင်း"
 
 #: admin/modules/master_file/publisher.php:171
 msgid "Add New Publisher"
-msgstr "ထုတ်ဝေသူအသစ် ထပ်ထည့်ပါ။"
+msgstr "ထုတ်ဝေသူအသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/publisher.php:214
 #: admin/modules/master_file/publisher.php:238
@@ -6799,7 +6794,7 @@ msgstr "အချက်အလက်အသစ် အောင်မြင်စ�
 #: admin/modules/master_file/rda_cmc.php:97
 #: admin/modules/master_file/visitor_room.php:96
 msgid "Data FAILED to Save. Please Contact System Administrator"
-msgstr "အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/rda_cmc.php:143
 msgid " Type List"
@@ -6807,7 +6802,7 @@ msgstr " အမျိုးအစား စာရင်း"
 
 #: admin/modules/master_file/rda_cmc.php:144
 msgid "Add New "
-msgstr "အသစ်ထပ်ထည့်ရန် "
+msgstr "အသစ်ထပ်ဖြည့်ရန် "
 
 #: admin/modules/master_file/rda_cmc.php:187
 #: admin/modules/master_file/rda_cmc.php:208
@@ -6914,7 +6909,7 @@ msgstr "ဖြန့်ဝေသူအချက်အလက် အောင်�
 
 #: admin/modules/master_file/supplier.php:82
 msgid "Supplier Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ဖြန့်ဝေသူအချက်အလက် ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။၊ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ဖြန့်ဝေသူအချက်အလက် ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။၊ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/supplier.php:89
 msgid "New Supplier Data Successfully Saved"
@@ -6922,7 +6917,7 @@ msgstr "ဖြန့်ဝေသူအချက်အလက်အသစ် အ�
 
 #: admin/modules/master_file/supplier.php:92
 msgid "Supplier Data FAILED to Save. Please Contact System Administrator"
-msgstr "ဖြန့်ဝေသူအချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ဖြန့်ဝေသူအချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/supplier.php:124
 msgid "Supplier %s still used by %s item(s)"
@@ -7002,15 +6997,15 @@ msgstr "ပညာရပ်အချက်အလက်များ အောင�
 
 #: admin/modules/master_file/topic.php:103
 msgid "Subject Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ပညာရပ်အချက်အလက်များ လတ်တလောအချိန်ထိ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "ပညာရပ်အချက်အလက်များ လတ်တလောအချိန်ထိ ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/topic.php:111
 msgid "New Subject Data Successfully Saved"
-msgstr "ဘာသာရပ်ဆိုင်ရာ အချက်အလက်အသစ် အောင်မြင်စွာ သိမ်းဆည်းပြီး"
+msgstr "ပညာရပ်ဆိုင်ရာ အချက်အလက်အသစ် အောင်မြင်စွာ သိမ်းဆည်းပြီး"
 
 #: admin/modules/master_file/topic.php:119
 msgid "Subject Data FAILED to Save. Please Contact System Administrator"
-msgstr "ပညာရပ်အချက်အလက် သိမ်ဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "ပညာရပ်အချက်အလက် သိမ်ဆည်းခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/topic.php:164
 msgid "%s ... still used biblio %s"
@@ -7032,7 +7027,7 @@ msgstr "ပညာရပ်အမျိုးအစား"
 
 #: admin/modules/master_file/topic.php:266
 msgid "Add New Vocabulary"
-msgstr "ဝေါဟာရ အသစ်ထည့်ရန်"
+msgstr "ဝေါဟာရ အသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/topic.php:267
 msgid "Scope Note"
@@ -7049,7 +7044,7 @@ msgstr "အခန်းစာရင်း"
 
 #: admin/modules/master_file/visitor_room.php:145
 msgid "Add New Room"
-msgstr "အခန်းအသစ်ထည့်ပါ။"
+msgstr "အခန်းအသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/master_file/visitor_room.php:188
 #: admin/modules/master_file/visitor_room.php:207
@@ -7104,7 +7099,7 @@ msgstr "အသင်းဝင်များအချက်အလက် ဘဏ�
 
 #: admin/modules/membership/export.php:136
 msgid "Export Data"
-msgstr "အချက်အလက်များ အခြားသို့ ပို့ဆောင်ခြင်း"
+msgstr "အသင်းဝင်အချက်အလက်များ ထုတ်ယူခြင်း"
 
 #: admin/modules/membership/export.php:139
 msgid "Export member(s) data to CSV file"
@@ -7112,7 +7107,7 @@ msgstr "အသင်းဝင်များ၏ သတင်းအချက်�
 
 #: admin/modules/membership/import.php:285
 msgid "Success importing member data : {member}"
-msgstr "အသင်းဝင်အချက်အလက်များ တင်သွင်းမှု အောင်မြင်သည် - {member}"
+msgstr "အသင်းဝင်အချက်အလက်များ တင်သွင်းမှု အောင်မြင်ပါသည် - {member}"
 
 #: admin/modules/membership/import.php:335
 msgid "Import Data"
@@ -7139,7 +7134,7 @@ msgstr "နောက်ဆုံးကော်လံသည် စကားဝ�
 
 #: admin/modules/membership/index.php:110
 msgid "Member ID, Name and Birthday cannot be empty"
-msgstr "အသင်းဝင်နံပါတ်၊ အမည်နှင့် မွေးနေ့ကို ချန်လပ်၍မရပါ။"
+msgstr "အသင်းဝင်နံပါတ်၊ အမည်နှင့် မွေးနေ့ကို ဗလာထား၍မရပါ။"
 
 #: admin/modules/membership/index.php:141
 #: admin/modules/membership/index.php:145
@@ -7160,7 +7155,7 @@ msgstr "ရုပ်ပုံတင်ခြင်း မအောင်မြ�
 #: admin/modules/membership/index.php:332
 #: admin/modules/membership/index.php:369
 msgid "Member Data FAILED to Save/Update. Please Contact System Administrator"
-msgstr "အသင်းဝင်၏ ကိုယ်ရေးအချက်အလက်များ ထည့်သွင်းခြင်း ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "အသင်းဝင်၏ ကိုယ်ရေးအချက်အလက်များ ထည့်သွင်းခြင်း ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/membership/index.php:349
 msgid "New Member Data Successfully Saved"
@@ -7168,7 +7163,7 @@ msgstr "အသင်းဝင်အသစ်၏ ကိုယ်ရေးအခ�
 
 #: admin/modules/membership/index.php:435
 msgid "Below member data can't be deleted because still have unreturned item(s)"
-msgstr "အောက်တွင်ရှိသော အသင်းဝင်၏ ကိုယ်ရေးအချက်အလက်များ ပယ်ဖျက်ရန် မဖြစ်နိုင်ပါ၊ ပြန်လည်အပ်နှံရန် စာအုပ်များရှိနေသည်။"
+msgstr "အောက်ပါ အသင်းဝင်အချက်အလက်များပယ်ဖျက်ရန် မဖြစ်နိုင်ပါ၊ ပြန်လည်အပ်နှံရန် စာအုပ်များရှိနေသည်။"
 
 #: admin/modules/membership/index.php:453
 msgid "Expired Member List"
@@ -7177,15 +7172,15 @@ msgstr "အသင်းဝင်အဖြစ် ကုန်ဆုံးသွ�
 #: admin/modules/membership/index.php:464
 #: admin/modules/membership/submenu.php:28
 msgid "Add New Member"
-msgstr "အသင်းဝင်အသစ် ထပ်ထည့်ရန်"
+msgstr "အသင်းဝင်အသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/membership/index.php:465
 msgid "View Expired Member"
-msgstr "အသင်းဝင်အဖြစ်မှ ရပ်ဆိုင်းသွားသူများကို ကြည့်ရန်"
+msgstr "သက်တမ်းကုန်ဆုံးသွားသော အသင်းဝင်များကို ကြည့်ရန်"
 
 #: admin/modules/membership/index.php:532
 msgid "Extend Membership"
-msgstr "အသင်းဝင်သက်တမ်း တိုးမြှင့်ရန်"
+msgstr "အသင်းဝင်သက်တမ်း တိုးရန်"
 
 #: admin/modules/membership/index.php:554
 msgid "Birth Date"
@@ -7193,11 +7188,11 @@ msgstr "မွေးရက်၊ လ၊ ခုနှစ်"
 
 #: admin/modules/membership/index.php:556
 msgid "Member Since"
-msgstr "အသင်းဝင်အဖြစ် စတင်သည့်နေ့စွဲ"
+msgstr "အသင်းဝင်စတင်သည့်ရက်"
 
 #: admin/modules/membership/index.php:563
 msgid "Auto Set"
-msgstr "အလိုအလျှောက် အစုအဝေး"
+msgstr "အလိုအလျောက် သတ်မှတ်ရန်"
 
 #: admin/modules/membership/index.php:577
 #: admin/modules/membership/index.php:817
@@ -7217,7 +7212,7 @@ msgstr "အလိုအလျှောက် အစုအဝေး"
 #: admin/modules/reporting/customs/visitor_list.php:163
 #: admin/modules/reporting/customs/visitor_list.php:214
 msgid "Membership Type"
-msgstr "စာကြည့်တိုက်အသင်းဝင် အမျိုးအစား"
+msgstr "အသင်းဝင်အမျိုးအစား"
 
 #: admin/modules/membership/index.php:579
 #: admin/modules/reporting/customs/member_list.php:95
@@ -7246,11 +7241,11 @@ msgstr "စာပေးပို့ရန်လိပ်စာ"
 #: files/membercard/classic/membercard.php:280
 #: files/membercard/old/membercard.php:307
 msgid "Personal ID Number"
-msgstr "မိမိ၏ ကိုယ်ရေးဖေါ်ပြ သင်္ကေတနံပါတ်"
+msgstr "ကိုယ်ပိုင်မှတ်ပုံတင်အမှတ်"
 
 #: admin/modules/membership/index.php:607
 msgid "Pending Membership"
-msgstr "ဆိုင်းငံ့ထားသည့် အသင်းဝင်"
+msgstr "ဆိုင်းငံ့ထားသော အသင်းဝင်ဖြစ်မှု"
 
 #: admin/modules/membership/index.php:642 admin/modules/system/app_user.php:505
 msgid "or take a photo"
@@ -7281,7 +7276,7 @@ msgstr "သင်သည် အသင်းဝင်အချက်အလက်�
 
 #: admin/modules/membership/index.php:692 admin/modules/system/app_user.php:611
 msgid "Leave Password field blank if you don't want to change the password"
-msgstr "စကားဝှက်ထည့်သည့်အကွက်အား စကားဝှက်ကို မပြောင်းလဲလိုပါက ဗလာထားပါ။"
+msgstr "စကားဝှက်ကို မပြောင်းလဲလိုပါက စကားဝှက်ထည့်သည့်အကွက်အားဗလာထားပါ။"
 
 #: admin/modules/membership/index.php:853
 msgid "Extend Selected Member(s)"
@@ -7303,7 +7298,7 @@ msgstr "တွေ့ရှိသည်။"
 #: admin/modules/membership/index.php:862
 #: admin/modules/membership/member_card_generator.php:260
 msgid "from your search with keyword"
-msgstr "သင်ရှာဖွေသော အဓိကစာလုံးမှ"
+msgstr "သင်ရှာဖွေသော သော့ချက်စကားလုံးမှ"
 
 #: admin/modules/membership/member_base_lib.inc.php:181
 msgid "Overdue Notice for Member {member_name} ({member_email})"
@@ -7342,7 +7337,7 @@ msgstr "အသင်းဝင်အမျိုးအစား အောင်�
 #: admin/modules/membership/member_type.php:157
 #: admin/modules/membership/member_type.php:165
 msgid "Member Type Data FAILED to Save/Update. Please Contact System Administrator"
-msgstr "အသင်းဝင်အမျိုးအစားအချက်အလက်များ ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ"
+msgstr "အသင်းဝင်အမျိုးအစားအချက်အလက်များ ဖြည့်စွက်ခြင်း မအောင်မြင်ပါ။ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ"
 
 #: admin/modules/membership/member_type.php:163
 msgid "New Member Type Successfully Saved"
@@ -7362,7 +7357,7 @@ msgstr "အသင်းဝင်အမျိုးအစားစာရင်း
 
 #: admin/modules/membership/member_type.php:253
 msgid "Add New Member Type"
-msgstr "အသင်းဝင်အမျိုးအစား အသစ် ထပ်ထည့်ရန်"
+msgstr "အသင်းဝင်အမျိုးအစား အသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/membership/member_type.php:296
 msgid "Member Type Name"
@@ -7415,7 +7410,7 @@ msgstr "တစ်ရက်အတွက် ဒဏ်ငွေ"
 
 #: admin/modules/membership/member_type.php:314
 msgid "Overdue Grace Period"
-msgstr "ရက်နောက်ကျသော်လည်း ဒဏ်ကြေးကောက်ခံခြင်းမပြုဘဲ သည်းခံခွင့်လွှတ်ပေးမည့် ရက်ကာလ"
+msgstr "ရက်လွန်ခွင့်ပြုကာလ"
 
 #: admin/modules/membership/submenu.php:26
 msgid "MEMBERSHIP"
@@ -7423,15 +7418,15 @@ msgstr "အသင်းဝင်ခြင်း"
 
 #: admin/modules/membership/submenu.php:27
 msgid "View Member List"
-msgstr "အသင်းဝင်များစာရင်း ကြည့်ရန်"
+msgstr "အသင်းဝင်စာရင်း ကြည့်ရန်"
 
 #: admin/modules/membership/submenu.php:27
 msgid "View Library Member List"
-msgstr "စာကြည့်တိုက်အသင်းဝင်များစာရင်း ကြည့်ရန်"
+msgstr "စာကြည့်တိုက်အသင်းဝင်စာရင်း ကြည့်ရန်"
 
 #: admin/modules/membership/submenu.php:28
 msgid "Add New Library Member Data"
-msgstr "စာကြည့်တိုက်အသင်းဝင်အသစ်များ၏ အချက်အလက်များ ထပ်ထည့်ပါ"
+msgstr "စာကြည့်တိုက်အသင်းဝင်အသစ်၏ အချက်အလက်များ ထပ်ဖြည့်ရန်"
 
 #: admin/modules/membership/submenu.php:29
 msgid "View and modify member type"
@@ -7439,11 +7434,11 @@ msgstr "အသင်းဝင်အမျိုးအစားကြည့်၍
 
 #: admin/modules/membership/submenu.php:31
 msgid "Print Member Card"
-msgstr "အသင်းဝင်ကတ်ပုံနှိပ်ပါ"
+msgstr "အသင်းဝင်ကတ်ပုံနှိပ်ရန်"
 
 #: admin/modules/membership/submenu.php:32
 msgid "Member Data Export"
-msgstr "အသင်းဝင်ဆိုင်ရာအချက်အလက်ထည့်သွင်းခြင်း"
+msgstr "အသင်းဝင်ဆိုင်ရာအချက်အလက်ထုတ်ယူခြင်း"
 
 #: admin/modules/membership/submenu.php:32
 msgid "Export Members Data To CSV File"
@@ -7451,7 +7446,7 @@ msgstr "CSV ဖိုင်သို့ အသင်းဝင်များ၏�
 
 #: admin/modules/membership/submenu.php:33
 msgid "Member Data Import"
-msgstr "အချက်အလက်များ ရယူခြင်း"
+msgstr "အသင်းဝင်အချက်အလက်များ တင်သွင်းခြင်း"
 
 #: admin/modules/membership/submenu.php:33
 msgid "Import Members Data From CSV File"
@@ -7460,7 +7455,7 @@ msgstr "CSV ဖိုင်မှ အသင်းဝင်များ၏အခ�
 #: admin/modules/reporting/charts_report.php:77
 #: admin/modules/reporting/index.php:88 admin/modules/reporting/index.php:93
 msgid "Total Titles By Medium/GMD"
-msgstr "GMD/Medium၏ စုစုပေါင်းခေါင်းစည်းများ"
+msgstr "GMD/Medium၏ စုစုပေါင်းခေါင်းစဥ်များ"
 
 #: admin/modules/reporting/charts_report.php:89
 #: admin/modules/reporting/index.php:103 admin/modules/reporting/index.php:108
@@ -7581,7 +7576,7 @@ msgstr "စာအုပ်ခေါင်းစည်းအမည်စာရင
 #: admin/modules/reporting/customs/customs_report_list.inc.php:30
 #: admin/modules/reporting/customs/item_titles_list.php:64
 msgid "Items Title List"
-msgstr "စာအုပ်ခေါင်းစည်းအမည်များစာရင်း"
+msgstr "စာအုပ် item များအမည်စာရင်း"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:30
 msgid "List of collection/items"
@@ -7637,17 +7632,17 @@ msgstr "စာကြည့်တိုက်သို့ လာရောက်�
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:40
 msgid "Visitor Statistic (by Day)"
-msgstr "စာကြည့်တိုက်သို့ လာရောက်သူစာရင်း လေ့လာဖေါ်ပြခြင်း (နေ့အလိုက်)"
+msgstr "စာကြည့်တိုက်သို့ လာရောက်သူစာရင်း (နေ့အလိုက်)"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:41
 #: admin/modules/reporting/customs/visitor_list.php:66
 msgid "Visitor List"
-msgstr "စာကြည့်တိုက်သို့ လာရောက်သူစာရင်း"
+msgstr "စာကြည့်တိုက်သို့ လာရောက်သူမှတ်တမ်း"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:42
 #: admin/modules/reporting/customs/fines_report.php:74
 msgid "Fines Report"
-msgstr "ဒဏ်ငွေအစီရင်ခံစာ"
+msgstr "ရက်လွန်ကြေးငွေအစီရင်ခံစာ"
 
 #: admin/modules/reporting/customs/customs_report_list.inc.php:43
 #: admin/modules/reporting/customs/fines_report.php:158
@@ -7760,7 +7755,7 @@ msgstr "အရေအတွက်အားဖြင့် ၂၀ မှ ၂၀၀
 #: admin/modules/stock_take/lost_item_list.php:123
 #: plugins/read_counter/report.php:61
 msgid "Show More Filter Options"
-msgstr "စစ်ထုတ်နည်းများ ဖေါ်ပြပါ။"
+msgstr "စစ်ထုတ်ရန် ရွေးချယ်စရာများ ပိုမိုပြသရန်"
 
 #: admin/modules/reporting/customs/dl_counter.php:131
 #: admin/modules/reporting/customs/dl_counter.php:219
@@ -7997,7 +7992,7 @@ msgstr "တစ်နှစ်အတွက်"
 #: admin/modules/reporting/loan_report.php:76
 #: admin/modules/reporting/member_report.php:75
 msgid "Show in chart/plot"
-msgstr "ဇယားထဲမှာပြပါ"
+msgstr "ဇယား/ပုံစံဖြင့် ပြသရန်"
 
 #: admin/modules/reporting/customs/loan_history.php:103
 #: admin/modules/reporting/customs/member_loan_list.php:94
@@ -8125,7 +8120,7 @@ msgstr "ဝင်ရောက်ရန်အသုံးပြုသည့်အ
 
 #: admin/modules/reporting/customs/staff_act.php:117
 msgid "Bibliography Data Entry"
-msgstr "ကက်တလောက်အချက်အလက်ထည့်သွင်းခြင်း"
+msgstr "စာအုပ်စာရင်း (သို့) စာအုပ်အချက်အလက်များထည့်သွင်းခြင်း"
 
 #: admin/modules/reporting/customs/staff_act.php:118
 msgid "Item Data Entry"
@@ -8176,7 +8171,7 @@ msgstr "စာကြည့်တိုက်သို့ လာရောက်�
 
 #: admin/modules/reporting/customs/visitor_report.php:61
 msgid "Library Visitor Report"
-msgstr "စာကြည့်တိုက်ကို\t အသုံးပြုသူအစီရင်ခံစာ"
+msgstr "စာကြည့်တိုက်ကိုလာရောက်သူစာရင်းအစီရင်ခံစာ"
 
 #: admin/modules/reporting/customs/visitor_report.php:171
 msgid "NON-Member Visitor"
@@ -8203,7 +8198,7 @@ msgstr "<strong>{selectedMonth}, {selectedYear}</strong> အတွက် ဧည�
 
 #: admin/modules/reporting/index.php:60
 msgid "Total Titles"
-msgstr "စုစုပေါင်းခေါင်းစည်းများ"
+msgstr "စုစုပေါင်းခေါင်းစဥ်များ"
 
 #: admin/modules/reporting/index.php:60
 msgid " (including titles that still don't have items yet)"
@@ -8211,7 +8206,7 @@ msgstr " (Item မရှိသေးသော ခေါင်းစဉ်မျ�
 
 #: admin/modules/reporting/index.php:65
 msgid "Total Titles with items"
-msgstr "စာအုပ်ခေါင်းစည်းအမည်နှင့် အုပ်ရေစုစုပေါင်း"
+msgstr "စာအုပ်ခေါင်းစဥ်အမည်နှင့် အုပ်ရေစုစုပေါင်း"
 
 #: admin/modules/reporting/index.php:65
 msgid " (only titles that have items)"
@@ -8227,7 +8222,7 @@ msgstr " (item မရှိသော စာအုပ်အမည်များ�
 
 #: admin/modules/reporting/index.php:71 admin/modules/reporting/index.php:80
 msgid "Total Items/Copies"
-msgstr "စာအုပ်အမျိုးအစား စုစုပေါင်း/ စောင်ရေစုစုပေါင်း"
+msgstr "စာအုပ်စုစုပေါင်း/ စောင်ရေစုစုပေါင်း"
 
 #: admin/modules/reporting/index.php:77 admin/modules/reporting/index.php:80
 msgid "Total Checkout Items"
@@ -8243,11 +8238,11 @@ msgstr "လူကြိုက်များသော စာအုပ်ခေ�
 
 #: admin/modules/reporting/index.php:123
 msgid "Collection Statistic Summary"
-msgstr "စာစုစာရင်းများ အကျဉ်းချုပ်"
+msgstr "စုဆောင်းမှုစာရင်းအင်းများအကျဉ်းချုပ်"
 
 #: admin/modules/reporting/index.php:138
 msgid "Collection Statistic Report"
-msgstr "စာစုစာရင်းများ အစီရင်ခံစာ"
+msgstr "စုဆောင်းမှု စာရင်းအင်းများအစီရင်ခံစာ"
 
 #: admin/modules/reporting/index.php:156
 msgid "ERROR! Collection Statistic Report failed to generate, possibly because {directory} directory is not writable"
@@ -8255,7 +8250,7 @@ msgstr "အမှား! စာစုများစာရင်းကိုထ�
 
 #: admin/modules/reporting/index.php:164 admin/modules/reporting/submenu.php:28
 msgid "Collection Statistic"
-msgstr "စာစုစာရင်းများ"
+msgstr "စုဆောင်းမှု စာရင်းအင်းများ"
 
 #: admin/modules/reporting/index.php:169
 #: admin/modules/reporting/loan_report.php:165
@@ -8271,7 +8266,7 @@ msgstr "စာငှားစုစုပေါင်း"
 #: admin/modules/reporting/loan_report.php:90
 #: admin/modules/reporting/loan_report.php:96
 msgid "Total Loan Transactions"
-msgstr "စာငှားခြင်းဆောင်ရွက်ပြီးစီးမှုစုစုပေါင်း"
+msgstr "စာငှားလုပ်ငန်းစဉ်များစုစုပေါင်း"
 
 #: admin/modules/reporting/loan_report.php:96
 msgid "Transaction Average (Per Day)"
@@ -8380,7 +8375,7 @@ msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်မျ
 
 #: admin/modules/serial_control/index.php:93
 msgid "Add New Subscription"
-msgstr "စာနယ်ဇင်းဆက်တိုက်မှာယူခြင်း အသစ်ကို ထပ်ဖြည့်ပါ"
+msgstr "စာနယ်ဇင်းအသစ်မှာယူမှုထည့်သွင်းရန်"
 
 #: admin/modules/serial_control/index.php:95
 msgid "View Subscriptions"
@@ -8422,7 +8417,7 @@ msgstr "မှတ်သားထားချက်"
 
 #: admin/modules/serial_control/serial_base_lib.inc.php:160
 msgid "Add New Kardex"
-msgstr "Kardex အသစ်ထည်ရန်"
+msgstr "Kardex အသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/serial_control/serial_base_lib.inc.php:181
 msgid "Trash"
@@ -8454,7 +8449,7 @@ msgstr "ဆက်တိုက်မှာယူခြင်းအချက်အ
 
 #: admin/modules/serial_control/subscription.php:92
 msgid "Subscription Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ဆက်တိုက်မှာယူခြင်း အကြောင်းအရာအချက်အလက်ထပ်မံ ထည့်သွင်းခြင်း မအောင်မြင်၊ ကွန်ပျုတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "ဆက်တိုက်မှာယူခြင်း အကြောင်းအရာအချက်အလက်ထပ်မံ ထည့်သွင်းခြင်း မအောင်မြင်၊ ကွန်ပျုတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/serial_control/subscription.php:106
 msgid "New Subscription Data Successfully Saved"
@@ -8462,7 +8457,7 @@ msgstr "စာနယ်ဇင်း ဆက်တိုက်မှာယူခ�
 
 #: admin/modules/serial_control/subscription.php:108
 msgid "Subscription Data FAILED to Save. Please Contact System Administrator"
-msgstr "ဆက်တိုက်မှာယူခြင်း သတင်းအချက်အလက်အား သိမ်းဆည်းရာ မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "ဆက်တိုက်မှာယူခြင်း သတင်းအချက်အလက်အား သိမ်းဆည်းရာ မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/serial_control/subscription.php:144
 msgid "Subscription data successfully deleted"
@@ -8479,7 +8474,7 @@ msgstr "ဆက်တိုက်မှာယူခြင်း စတင်သ�
 
 #: admin/modules/serial_control/subscription.php:186
 msgid "Total Exemplar Expected"
-msgstr "အားလုံးသောနမူနာများ မျှော်မှန်းထားပါသည်။"
+msgstr "မျှော်မှန်းထားသော စုစုပေါင်းအရေအတွက်"
 
 #: admin/modules/serial_control/subscription.php:189
 #: admin/modules/serial_control/subscription.php:225
@@ -8577,7 +8572,7 @@ msgstr "စာကြည့်တိုက်စာရင်းကောက်ယ
 #: admin/modules/stock_take/finish.php:178
 #: admin/modules/stock_take/submenu.php:44
 msgid "Finish Stock Take"
-msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်းအဆုံး သတ်ပါ။"
+msgstr "စာရင်းစစ်ဆေးမှုပြီးဆုံးခြင်း"
 
 #: admin/modules/stock_take/finish.php:171
 msgid "Are you sure to end current stock take proccess? Once it finished there is no way you can rollback this stock take"
@@ -8585,7 +8580,7 @@ msgstr "သင်သည် စာကြည့်တိုက်စာရင်�
 
 #: admin/modules/stock_take/finish.php:188
 msgid "Purge Lost Item"
-msgstr "ပျောက်ဆုံးသွားသော စာအုပ်ကိုပယ်ထုတ်ပြစ်ပါ။"
+msgstr "ပျောက်ဆုံး item များကို ရှင်းလင်းမည်"
 
 #: admin/modules/stock_take/index.php:55
 msgid "Stock Take"
@@ -8847,16 +8842,16 @@ msgstr "စာရင်းကောက်ယူခြင်း"
 
 #: admin/modules/stock_take/submenu.php:29
 msgid "Stock Take History"
-msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း အစဉ်အဆက်မှတ်တမ်း"
+msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း မှတ်တမ်း"
 
 #: admin/modules/stock_take/submenu.php:29
 msgid "View Stock Take History"
-msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်း အစဉ်အဆက်မှတ်တမ်း စစ်ဆေးကြည့်ရှု့ခြင်း"
+msgstr "စာကြည့်တိုက်စာရင်းကောက်ယူခြင်းမှတ်တမ်း စစ်ဆေးကြည့်ရှု့ခြင်း"
 
 #: admin/modules/stock_take/submenu.php:32
 #: admin/modules/stock_take/submenu.php:46
 msgid "Initialize"
-msgstr "စတင်ဖန်တီးပါ။"
+msgstr "ကနဦးပြင်ဆင်ခြင်း"
 
 #: admin/modules/stock_take/submenu.php:32
 #: admin/modules/stock_take/submenu.php:46
@@ -8937,7 +8932,7 @@ msgstr "အသုံးပြုသူအချက်အလက် အောင�
 
 #: admin/modules/system/app_user.php:306
 msgid "User Data FAILED to Updated. Please Contact System Administrator"
-msgstr "အသုံးပြုသူ အချက်အလက် ထပ်ဖြည့်ခြင်းမအောင်မြင်ပါ။ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "အသုံးပြုသူ အချက်အလက် ထပ်ဖြည့်ခြင်းမအောင်မြင်ပါ။ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/system/app_user.php:315
 msgid "New User Data Successfully Saved"
@@ -8945,7 +8940,7 @@ msgstr "စာကြည့်တိုက် အသုံးပြုသူ အ�
 
 #: admin/modules/system/app_user.php:332
 msgid "User Data FAILED to Save. Please Contact System Administrator"
-msgstr "အသုံးပြုသူ အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ"
+msgstr "အသုံးပြုသူ အချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ။ စနစ်စီမံခန့်ခွဲသူကို ဆက်သွယ်ပါ။"
 
 #: admin/modules/system/app_user.php:382 admin/modules/system/submenu.php:52
 msgid "Librarian & System Users"
@@ -8970,7 +8965,7 @@ msgstr "လူမှုမီဒီယာ"
 
 #: admin/modules/system/app_user.php:414
 msgid "REMOVE IMAGE"
-msgstr "ရုပ်ပုံများကိုဖယ်ထုတ်ပါ။"
+msgstr "ရုပ်ပုံကိုဖယ်ရှားရန်။"
 
 #: admin/modules/system/app_user.php:530
 msgid "User Photo"
@@ -9014,7 +9009,7 @@ msgstr "အဆင့်နှစ်ဆင့်ဖြင့် အတည်ပ�
 
 #: admin/modules/system/app_user.php:610
 msgid "You are going to edit user profile"
-msgstr "သင်သည် စာကြည့်တိုက်အသုံးပြုသူ၏ ကိုယ်ရေးကိုယ်တာဖေါ်ပြချက်များကို တည်းဖြတ်တော့မည်။"
+msgstr "သင်သည် စာကြည့်တိုက်အသုံးပြုသူ၏ အသင်းဝင်အချက်အလက်များကို တည်းဖြတ်တော့မည်။"
 
 #: admin/modules/system/app_user.php:715 admin/modules/system/app_user.php:722
 msgid "Last Login"
@@ -9023,15 +9018,15 @@ msgstr "ကွန်ပြူတာစနစ်သို့ နောက်ဆ�
 #: admin/modules/system/backup.php:150 admin/modules/system/backup.php:153
 #: admin/modules/system/backup.php:164 admin/modules/system/submenu.php:60
 msgid "Database Backup"
-msgstr "အချက်အလက်စုဘဏ်ကို ထပ်မံသိမ်းဆည်းပါ"
+msgstr "ဒေတာဘေ့စ် အရန်သိမ်းဆည်းခြင်း"
 
 #: admin/modules/system/backup.php:178
 msgid "Start New Backup"
-msgstr "အသစ်တဖန် ပံ့ပိုးသိမ်းဆည်းခြင်း စတင်ပါ"
+msgstr "အရန်သိမ်းဆည်းခြင်းအသစ်စတင်ရန်"
 
 #: admin/modules/system/backup.php:181
 msgid "Database Backup Configuration"
-msgstr "ဒေတာဘေ့စ် အရန်ကူးယူခြင်း ပုံစံပြင်ဆင်ခြင်း"
+msgstr "ဒေတာဘေ့စ် အရန်သိမ်းဆည်းခြင်း ပုံစံပြင်ဆင်ခြင်း"
 
 #: admin/modules/system/backup.php:186
 msgid "Backup Configuration"
@@ -9116,7 +9111,7 @@ msgstr "အရန်သိမ်းဆည်းပါ။"
 #: admin/modules/system/barcode_generator.php:134
 #: admin/modules/system/submenu.php:58
 msgid "Barcode Generator"
-msgstr "ဘားကုဒ်ထုတ်လုပ်သည့် ကိရိယာ"
+msgstr "ဘားကုဒ် ထုတ်ပေးသည့်စနစ်"
 
 #: admin/modules/system/barcode_generator.php:103
 msgid "ERROR! Barcodes failed to generate, possibly because {directory} directory is not writable"
@@ -9144,7 +9139,7 @@ msgstr "အသေးစား"
 
 #: admin/modules/system/barcode_generator.php:153
 msgid "Medium"
-msgstr "အလပ်စား"
+msgstr "အလတ်စား"
 
 #: admin/modules/system/barcode_generator.php:154
 msgid "Big"
@@ -9335,7 +9330,7 @@ msgstr "ဒဿမနေရာအရေအတွက်"
 
 #: admin/modules/system/custom_field.php:73
 msgid "Bibliography Item"
-msgstr "စာအုပ်အချက်အလက်ဆိုင်ရာ item"
+msgstr "စာအုပ်စာရင်း (သို့) စာအုပ်အချက်အလက်များဆိုင်ရာ item"
 
 #: admin/modules/system/custom_field.php:81
 #: admin/modules/system/custom_field.php:96
@@ -9363,7 +9358,7 @@ msgstr "ဒေတာစာရင်းကို ဗလာထား၍မရပ�
 
 #: admin/modules/system/custom_field.php:125
 msgid "You can not change primary table if the field already has data, "
-msgstr "အကွက်တွင် ဒေတာရှိပြီးသားဖြစ်ပါက မူလဇယားကို ပြောင်းလဲ၍မရပါ။ "
+msgstr "အကွက်တွင် ဒေတာရှိပြီးသားဖြစ်ပါက မူလဇယားကို ပြောင်းလဲ၍မရပါ၊ "
 
 #: admin/modules/system/custom_field.php:141
 msgid "New Custom Field Successfully Updated"
@@ -9391,7 +9386,7 @@ msgstr "အချက်အလက်အကွက်စာရင်း"
 
 #: admin/modules/system/custom_field.php:225
 msgid "Add New Field"
-msgstr "အချက်အကွက်အသစ်ထည့်ရန်"
+msgstr "အချက်အကွက်အသစ်ထပ်ဖြည့်ရန်"
 
 #: admin/modules/system/custom_field.php:270
 #: admin/modules/system/custom_field.php:331
@@ -9491,7 +9486,7 @@ msgstr "Browser/User Agent"
 
 #: admin/modules/system/envinfo.php:59
 msgid "Hostname"
-msgstr "Hostname"
+msgstr "Host အမည်"
 
 #: admin/modules/system/envinfo.php:60
 msgid "jQuery version"
@@ -9552,7 +9547,7 @@ msgstr ""
 msgid "Leave it empty, if you want to set environment to impact for all IP"
 msgstr ""
 "IP အားလုံးအပေါ် သက်ရောက်စေရန်\n"
-"ဤနေရာကို အလွတ်ထားနိုင်ပါသည်။"
+"ဤနေရာကို ဗလာထားနိုင်ပါသည်။"
 
 #: admin/modules/system/holiday.php:58 admin/modules/system/holiday.php:63
 #: admin/modules/system/holiday.php:78 admin/modules/system/holiday.php:85
@@ -9560,61 +9555,61 @@ msgstr ""
 #: admin/modules/system/holiday.php:124 admin/modules/system/holiday.php:161
 #: admin/modules/system/holiday.php:164 admin/modules/system/holiday.php:175
 msgid "Holiday Settings"
-msgstr "ပိတ်ရက် ပုံစံများ"
+msgstr "စာကြည့်တိုက်ပိတ်ရက် ပုံစံများ"
 
 #: admin/modules/system/holiday.php:58
 msgid "Holiday description can't be empty!"
-msgstr "အားလပ်ရက်ဆိုင်ရာ အချက်အလက်ကို ဗလာထား၍မရပါ။"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်ဆိုင်ရာ အချက်အလက်ကို ဗလာထား၍မရပါ။"
 
 #: admin/modules/system/holiday.php:63
 msgid "Holiday Date Start must have the format YYYY-MM-DD!"
-msgstr "အားလပ်ရက်အချက်အလက် ပုံစံမှာ YYYY-MM-DD!"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်အချက်အလက် ပုံစံမှာ YYYY-MM-DD!"
 
 #: admin/modules/system/holiday.php:78
 msgid "Holiday Data Successfully updated"
-msgstr "အားလပ်ရက်အချက်အလက် အောင်မြင်စွာထပ်ဖြည့်ပြီး"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်အချက်အလက် အောင်မြင်စွာထပ်ဖြည့်ပြီး"
 
 #: admin/modules/system/holiday.php:85
 msgid "Holiday FAILED to update. Please Contact System Administrator"
-msgstr "အားလပ်ရက် ထပ်ဖြည့်ခြင်းမအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်ထပ်ဖြည့်ခြင်းမအောင်မြင်ပါ။ ကွန်ပျူတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်လုပ်ဆောင်ပါ။"
 
 #: admin/modules/system/holiday.php:92
 msgid "New Holiday Successfully Saved"
-msgstr "အားလပ်ရက် အသစ် အောင်မြင်စွာ သိမ်းဆည်းပြီး"
+msgstr "စာကြည့်တိုက်ပိတ်ရက် အသစ် အောင်မြင်စွာ သိမ်းဆည်းပြီး"
 
 #: admin/modules/system/holiday.php:99
 msgid "Holiday Date End must have the format YYYY-MM-DD if it is not empty!"
-msgstr "အားလပ်ရက်အချက်အလက် ပုံစံမှာ YYYY-MM-DD ဖြစ်ရမည်၊ အားလပ်ရက်ဆိုင်ရာ အချက်အလက်ကို ဗလာထား၍မရပါ။"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်အချက်အလက် ပုံစံမှာ YYYY-MM-DD ဖြစ်ရမည်၊ အားလပ်ရက်ဆိုင်ရာ အချက်အလက်ကို ဗလာထား၍မရပါ။"
 
 #: admin/modules/system/holiday.php:124
 msgid "Holiday FAILED to Save. Please Contact System Administrator"
-msgstr "အားလပ်ရက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ် လုပ်ဆောင်ပါ။"
 
 #: admin/modules/system/holiday.php:179 admin/modules/system/submenu.php:57
 msgid "Holiday Setting"
-msgstr "အားလပ်ရက် ဖေါ်ပြထားပုံ"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်သတ်မှတ်ချက်များ"
 
 #: admin/modules/system/holiday.php:180
 msgid "Special holiday"
-msgstr "အထူး အားလပ်ရက်"
+msgstr "အထူး စာကြည့်တိုက်ပိတ်ရက်"
 
 #: admin/modules/system/holiday.php:181
 msgid "Add Special holiday"
-msgstr "အထူး အားလပ်ရက် ထပ်ထည့်ပါ"
+msgstr "စာကြည့်တိုက်ပိတ်ရက် ထပ်ထည့်ပါ"
 
 #: admin/modules/system/holiday.php:216 admin/modules/system/holiday.php:240
 #: admin/modules/system/holiday.php:244
 msgid "Holiday Date Start"
-msgstr "အားလပ်ရက် စတင်သည့်နေ့စွဲ"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်စတင်သည့်နေ့စွဲ"
 
 #: admin/modules/system/holiday.php:219
 msgid "Holiday Date End"
-msgstr "အားလပ်ရက် ပြီးဆုံးသည့်နေ့ စွဲ"
+msgstr "စာကြည့်တိုက်ပိတ်ရက် ပြီးဆုံးသည့်နေ့ စွဲ"
 
 #: admin/modules/system/holiday.php:222 admin/modules/system/holiday.php:241
 #: admin/modules/system/holiday.php:245
 msgid "Holiday Description"
-msgstr "အားလပ်ရက် အကြောင်းအရာ"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်အကြောင်းအရာ"
 
 #: admin/modules/system/holiday.php:226
 msgid "You are going to edit holiday data"
@@ -9661,11 +9656,11 @@ msgstr "စနေ"
 
 #: admin/modules/system/holiday.php:308
 msgid "Maximum 6 day can be set as holiday!"
-msgstr "အများဆုံး ၆ ရက် ထိသာ အားလပ်ရက်အဖြစ် သတ်မှတ်နိုင်သည်။"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်အများဆုံး ၆ ရက် ထိသာ အဖြစ် သတ်မှတ်နိုင်သည်။"
 
 #: admin/modules/system/holiday.php:322
 msgid "Holiday settings saved"
-msgstr "အားလပ်ရက်သတ်မှတ်ခြင်းသိမ်းဆည်းပြီး"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်သတ်မှတ်ခြင်းသိမ်းဆည်းပြီး"
 
 #: admin/modules/system/index.php:86 admin/modules/system/index.php:122
 #: admin/modules/system/index.php:315 admin/modules/system/submenu.php:31
@@ -9761,7 +9756,7 @@ msgstr "ငှားရမ်းခြင်း ကန့်သတ်ချက�
 
 #: admin/modules/system/index.php:494
 msgid "Ignore Holidays Fine Calculation"
-msgstr "မသိကျိုးကျွန်ပြုထားသော အားလပ်ရက်များ တွက်ချက်ရှာဖွေပါ။"
+msgstr "မသိကျိုးကျွန်ပြုထားသော စာကြည့်တိုက်ပိတ်ရက်များ တွက်ချက်ရှာဖွေပါ။"
 
 #: admin/modules/system/index.php:500
 msgid "OPAC XML Detail"
@@ -10035,7 +10030,7 @@ msgstr "လုပ်ငန်းအစိတ်အပိုင်း စာရ�
 
 #: admin/modules/system/module.php:147
 msgid "Add New Modules"
-msgstr "Module အသစ်များ ထပ်ဖြည့်ပါ"
+msgstr "Module အသစ်များ ထပ်ဖြည့်ရန်"
 
 #: admin/modules/system/module.php:187 admin/modules/system/module.php:207
 #: admin/modules/system/module_priv_form.inc.php:31
@@ -10318,7 +10313,7 @@ msgstr "စာကြည့်တိုက်အသုံးပြုသူ သ�
 
 #: admin/modules/system/submenu.php:57
 msgid "Configure Holiday Setting"
-msgstr "အားလပ်ရက်ဖေါ်ပြထားသည်ကို စီစဉ်ပါ"
+msgstr "စာကြည့်တိုက်ပိတ်ရက်ဖေါ်ပြထားသည်ကို စီစဉ်ပါ"
 
 #: admin/modules/system/submenu.php:59 admin/modules/system/sys_log.php:61
 #: admin/modules/system/sys_log.php:71
@@ -10343,7 +10338,7 @@ msgstr "သင်သည် ကွန်ပျုတာစနစ် မှတ်�
 
 #: admin/modules/system/sys_log.php:76
 msgid "CLEAR LOGS"
-msgstr "ကွန်ပြူတာစနစ် မှတ်တမ်းများကို ဖျက်ထုပ်ပါ"
+msgstr "မှတ်တမ်းများကို ရှင်းလင်းပါ"
 
 #: admin/modules/system/sys_log.php:77
 msgid "Save Logs record to file?"
@@ -10446,7 +10441,7 @@ msgstr "အုပ်စု စာရင်း"
 
 #: admin/modules/system/user_group.php:192
 msgid "Add New Group"
-msgstr "အသုံးပြုသူ အုပ်စုအသစ် ထပ်ဖြည့်ပါ"
+msgstr "အသုံးပြုသူ အုပ်စုအသစ် ထပ်ဖြည့်ရန်"
 
 #: admin/modules/system/user_group.php:232
 #: admin/modules/system/user_group.php:260
@@ -10508,12 +10503,12 @@ msgstr "နောက်ဖက် ခေါင်းစီး ၂ စာသား
 #: files/membercard/classic/tinfo.inc.php:50
 #: files/membercard/old/tinfo.inc.php:121
 msgid "Box Width"
-msgstr "သေတ္တာအကျယ်"
+msgstr "လေဘယ်အကျယ်အကျယ်"
 
 #: files/membercard/classic/tinfo.inc.php:57
 #: files/membercard/old/tinfo.inc.php:127
 msgid "Box Height"
-msgstr "သေတ္တာအမြင့်"
+msgstr "လေဘယ်အမြင့်"
 
 #: files/membercard/classic/tinfo.inc.php:64
 #: files/membercard/old/tinfo.inc.php:133
@@ -10579,15 +10574,15 @@ msgstr "နောက်ဖက် ခေါင်းစီး ၂ စာလုံ
 
 #: files/membercard/old/tinfo.inc.php:85
 msgid "Header Color"
-msgstr "ခေါင်းစီး အရောင်"
+msgstr "ခေါင်းစီးအရောင်"
 
 #: files/membercard/old/tinfo.inc.php:99
 msgid "Rules Font Size"
-msgstr "စည်းမျဉ်းများ ဖောင့်အရွယ်အစား"
+msgstr "စည်းမျဉ်းများစာလုံးအရွယ်အစား"
 
 #: files/membercard/old/tinfo.inc.php:113
 msgid "Address Font Size"
-msgstr "လိပ်စာ ဖောင့်အရွယ်အစား"
+msgstr "လိပ်စာစာလုံးအရွယ်အစား"
 
 #: files/membercard/old/tinfo.inc.php:151
 msgid "Job Title"
@@ -10777,7 +10772,7 @@ msgstr "ဤစာရေးသူအမည်ဖြင့် အခြားစ�
 
 #: lib/detail.inc.php:484
 msgid "Click to view others documents with this subject"
-msgstr "ဤဘာသာရပ်အမည်ဖြင့် အခြားစာအုပ်စာတမ်းများကို ကြည့်ရှုရန် နှိပ်ပါ"
+msgstr "ဤပညာရပ်အမည်ဖြင့် အခြားစာအုပ်စာတမ်းများကို ကြည့်ရှုရန် နှိပ်ပါ"
 
 #: lib/lang/string.php:26
 msgid "System"
@@ -10803,7 +10798,7 @@ msgstr "သတိပေးချက်"
 msgid "You don't have access to interact with this module. Call system administrator to give you right to access it."
 msgstr ""
 "ဒီ Module ကို အသုံးပြုခွင့် မရှိပါ။\n"
-"အသုံးပြုခွင့်ပေးနိုင်ရန် System Administrator ကို ဆက်သွယ်ပါ။"
+"အသုံးပြုခွင့်ပေးနိုင်ရန် စနစ်စီမံခန့်ခွဲသူကို ဆက်သွယ်ပါ။"
 
 #: plugins/label_barcode/index.php:281
 msgid "Labels & Barcode Printing"
@@ -10998,7 +10993,7 @@ msgstr "စာရေးသူအချက်အလက် အောင်မြ�
 
 #: admin/modules/bibliography/pop_author_edit.php:105
 msgid "Biblio Author"
-msgstr "စာအုပ်ဆိုင်ရာစာရေးသူ"
+msgstr "စာအုပ်၏ စာရေးသူ"
 
 #: admin/modules/bibliography/pop_biblio.php:65
 msgid "Bibliographic Data"
@@ -11006,12 +11001,12 @@ msgstr "စာအုပ်ဆိုင်ရာအချက်အလက်မျ
 
 #: admin/modules/bibliography/pop_item.php:40
 msgid "Bibliography Items"
-msgstr "စာအုပ်အချက်အလက်ဆိုင်ရာ item"
+msgstr "စာအုပ်စာရင်း (သို့) စာအုပ်အချက်အလက်များဆိုင်ရာ item များ"
 
 #: admin/modules/bibliography/pop_pattern.php:129
 #: admin/modules/bibliography/pop_pattern.php:161
 msgid "Edit Pattern"
-msgstr "ပုံစံပြင်ဆင်ရန်"
+msgstr "ပုံစံ (Pattern) ကို တည်းဖြတ်ရန်"
 
 #: admin/modules/bibliography/scrape_image.php:75
 msgid "Failed to connect to image source or connection timed out. Check the URL and server connectivity."
@@ -11023,7 +11018,7 @@ msgstr "ဤပုံအမျိုးအစားကို ခွင့်မ�
 
 #: admin/modules/master_file/item_code_pattern.php:130
 msgid "Edit pattern"
-msgstr "ပုံစံပြင်ဆင်ရန်"
+msgstr "ပုံစံ (Pattern) ကို တည်းဖြတ်ရန်"
 
 #: admin/modules/master_file/item_code_pattern.php:154
 msgid "Please select data to delete!"
@@ -11103,7 +11098,7 @@ msgstr "အရန်သိမ်းဆည်းခဲ့သော စုစု�
 
 #: admin/modules/system/ImageMaintenanceTool.inc.php:203
 msgid "Backup file size: %.2f MB"
-msgstr "အရန်သိမ်းဆည်းထားသောဖိုင်၏ အရွယ်အစား - %.2f MB"
+msgstr "အရန်သိမ်းဆည်းထားသောဖိုင်အရွယ်အစား - %.2f MB"
 
 #: admin/modules/system/ImageMaintenanceTool.inc.php:204
 msgid "Time taken: %.2f second(s)"
@@ -11516,3 +11511,47 @@ msgstr "GD ဖြင့် ပုံကို လုပ်ဆောင်ရန�
 #: lib/contents/visitor.inc.php:47
 msgid "Invalid CSRF Token! Please refresh the page."
 msgstr "CSRF တိုကင် (Token) မှားယွင်းနေပါသည်! ကျေးဇူးပြု၍ စာမျက်နှာကို Refresh ပြန်လုပ်ပါ။"
+
+#: /admin/modules/bibliography/index.php:1155
+msgid "Url for current label"
+msgstr "လက်ရှိလေဘယ်အတွက် URL"
+
+#: /admin/modules/bibliography/index.php:1155
+msgid "Enter a website link/URL to make this label clickable"
+msgstr "နှိပ်ရမည့် ဝက်ဘ်ဆိုက်လင့်ခ်/URL ကို ရိုက်ထည့်ပါ"
+
+msgid "Border Size"
+msgstr "ဘောင်အရွယ်အစား"
+
+msgid "Font Size"
+msgstr "စာလုံးအရွယ်အစား"
+
+msgid "Fonts"
+msgstr "စာလုံးများ"
+
+msgid "Header Text"
+msgstr "ခေါင်းစီးစာသား"
+
+msgid "Include Header Text"
+msgstr "ခေါင်းစီးစာသားပါရန်"
+
+msgid "Items Margin"
+msgstr "items အနားသတ်"
+
+msgid "Page Margin"
+msgstr "စာမျက်နှာအနားသတ်"
+
+msgid "Self List Card"
+msgstr "စင်စာရင်းကတ်"
+
+msgid "Title Card"
+msgstr "ခေါင်းစဉ်ကတ်"
+
+msgid "Author Card"
+msgstr "စာရေးသူကတ်"
+
+msgid "Subject Card"
+msgstr "ပညာရပ်ကတ်"
+
+msgid "(options)"
+msgstr "(ရွေးချယ်စရာများ)"
