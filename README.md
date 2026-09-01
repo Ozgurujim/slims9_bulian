@@ -2,7 +2,8 @@ SLiMS 9 Bulian
 ===============
 SLiMS 9 Bulian - Australian and Myanmar enhancements. Details regarding the base software are below. 
 This fork aims to provide additional translations of the admin interface and the OPAC, and enhanced Help files. 
-As of 23/01/2026 the focus of this project is on providing increased language choice while maintaining compatibility with the official SLiMS9 development branch. 
+At 23/01/2026 the focus of this project was to provide increased language choice while maintaining compatibility with the official SLiMS9 development branch. 
+It has proven impossible to maintain that compatibility and provide full compatibility with Myanmar fonts and standards.
 Platform support for translation is being provided by Poeditor.com under their Open Source support license tier. 
 Jim Richardson.
 ***************
