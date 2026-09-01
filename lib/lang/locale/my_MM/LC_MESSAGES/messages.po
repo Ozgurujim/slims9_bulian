@@ -4,7 +4,7 @@ msgstr ""
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: Burma Study Center translation team\n"
-"Language-Team: BSC SLiMS team\n"
+"Language-Team: \n"
 "Language: my\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,9 +14,8 @@ msgstr ""
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. This translation based on Australian English library terminology, spelling and reduced capitalisation, with some grammatical improvements contains the strings necessary for SLIMS OPAC translation to Myanmar language
-#.
-#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 23/06/2026
+#. This Myanmar translation is influenced by Australian English library terminology. It could not have been completed with the incredible work of Daw Ah Win.
+#. It is provided as-is, under the same license conditions as SLiMS. Jim Richardson. 25/08/2026
 #: admin/admin_template/akasia-dz/function.php:84
 #: admin/admin_template/akasia/function.php:93 lib/contents/chat.php:81
 #: lib/module.inc.php:48 template/default-BSC/parts/_navbar.php:100
@@ -1292,7 +1291,7 @@ msgstr "သတင်းများ"
 #: template/default/biblio_list_template.php:123
 #: template/default/biblio_list_template.php:156
 msgid "Add to basket"
-msgstr "ခြင်းထဲသို့ ထည့်ရန်"
+msgstr "စာအုပ်ရွေးချယ်စာရင်း (Basket) ထဲသို့ ထည့်ရန်"
 
 #: template/default-BSC/biblio_list_template.php:129
 #: template/default-BSC/biblio_list_template.php:153
@@ -1737,7 +1736,7 @@ msgstr "%s လိပ်စာမှ အဖွဲ့ဝင် %s အတွက် 
 
 #: lib/contents/member.inc.php:155
 msgid "Title has been added in the basket."
-msgstr "ခေါင်းစဉ်ကိုခြင်းထဲသို့ထည့်သွင်းပြီးပါပြီ။"
+msgstr "ခေါင်းစဉ်ကို စာအုပ်ရွေးချယ်စာရင်း (Basket)ထဲသို့ထည့်သွင်းပြီးပါပြီ။"
 
 #: lib/contents/member.inc.php:178
 msgid "Data has been deleted"
@@ -2333,19 +2332,19 @@ msgstr "ဖယ်ရှားရန်"
 
 #: lib/contents/member.inc.php:570
 msgid "Reserve title(s) on Basket"
-msgstr "စာအုပ်အမည်(များ) ကို မိမိ၏စာအုပ်ခြင်းတောင်းတွင်သီးသန့်လျာထားရန်"
+msgstr "စာအုပ်အမည်(များ) ကို မိမိ၏စာအုပ်ရွေးချယ်စာရင်း (Basket)တွင်သီးသန့်လျာထားရန်"
 
 #: lib/contents/member.inc.php:571
 msgid "Clear Basket"
-msgstr "သင့် ခြင်း (Basket) ရှင်းပါ"
+msgstr "သင့်စာအုပ်ရွေးချယ်စာရင်း (Basket) ရှင်းပါ"
 
 #: lib/contents/member.inc.php:572
 msgid "Remove selected title(s) from Basket"
-msgstr "ရွေးချယ်ထားသောစာအုပ်အမည်(များ) ကို Basket မှဖယ်ရှားရန်"
+msgstr "ရွေးချယ်ထားသောစာအုပ်အမည်(များ) ကို စာအုပ်ရွေးချယ်စာရင်း (Basket) မှဖယ်ရှားရန်"
 
 #: lib/contents/member.inc.php:574
 msgid "title(s) on basket"
-msgstr "ခြင်းတောင်းပေါ်ရှိ ခေါင်းစဉ်(များ)"
+msgstr "စာအုပ်ရွေးချယ်စာရင်း (Basket) ပေါ်ရှိ ခေါင်းစဉ်(များ)"
 
 #: lib/contents/member.inc.php:643
 msgid "%s already reseved"
@@ -2446,7 +2445,7 @@ msgstr "ကျွန်ုပ်၏ ခေါင်းစဉ် စာညှပ�
 
 #: lib/contents/member.inc.php:893
 msgid "My Title Basket"
-msgstr "ကျွန်တော့်လှည်းထဲက စာအုပ်နာမည်တွေ"
+msgstr "ကျွန်ုပ်စာအုပ်ရွေးချယ်စာရင်း (Basket) ထဲက စာအုပ်နာမည်တွေ"
 
 #: lib/contents/member.inc.php:899
 msgid "My Loan History"
@@ -3074,7 +3073,7 @@ msgstr "OPAC မှာ ဖုံးကွယ်ထားသည်။"
 
 #: admin/modules/bibliography/biblio_utils.inc.php:231
 msgid "Promoted To Homepage"
-msgstr "Homepage တွင်ကြေညာရန်"
+msgstr "ပင်မစာမျက်နှာတွင် ဦးစားပေးဖော်ပြရန်"
 
 #: admin/modules/bibliography/checkout_item.php:58
 #: admin/modules/bibliography/submenu.php:32
@@ -3805,17 +3804,17 @@ msgstr "OPAC တွင် မမြင်ရအောင်ဖုံးကွယ
 #: admin/modules/bibliography/index.php:673
 #: admin/modules/bibliography/index.php:1129
 msgid "Promote To Homepage"
-msgstr "ပင်မစာမျက်နှာတွင် ဖော်ပြရန်"
+msgstr "ပင်မစာမျက်နှာတွင် ဦးစားပေးဖော်ပြရန်"
 
 #: admin/modules/bibliography/index.php:676
 #: admin/modules/bibliography/index.php:1127
 msgid "Don't Promote"
-msgstr "မဖော်ပြရန်"
+msgstr "ဦးစားပေးမဖော်ပြရန်"
 
 #: admin/modules/bibliography/index.php:677
 #: admin/modules/bibliography/index.php:1128
 msgid "Promote"
-msgstr "ဖော်ပြရန်"
+msgstr "ဦးစားပေးဖော်ပြရန်"
 
 #: admin/modules/bibliography/index.php:686
 msgid "Upload Selected Bibliographic data to Union Catalog Server*"
@@ -4010,7 +4009,7 @@ msgstr "မသက်ဆိုင်ပါ (သို့မဟုတ် မလိ
 #: admin/modules/master_file/supplier.php:143
 #: admin/modules/master_file/supplier.php:155
 msgid "Supplier"
-msgstr "ဖြန့်ဝေသူ"
+msgstr "ပေးသွင်းသူ"
 
 #: admin/modules/bibliography/index.php:934
 #: admin/modules/bibliography/item.php:408
@@ -4063,7 +4062,7 @@ msgstr "ဤအချက်အလက်ကို စာနယ်ဇင်းမ�
 #: admin/modules/master_file/frequency.php:241
 #: admin/modules/master_file/submenu.php:42
 msgid "Frequency"
-msgstr "ထုတ်ဝေမှု အကြိမ်ရေ"
+msgstr "ထုတ်ဝေသည့်အကြိမ်ရေ"
 
 #: admin/modules/bibliography/index.php:986
 msgid "Unique publishing number for each title of publication."
@@ -5318,7 +5317,7 @@ msgstr "CSV ဖိုင်မှ item/အုပ်ရေဆိုင်ရာ �
 #: admin/modules/bibliography/ucs_upload.php:34
 #: admin/modules/bibliography/ucs_upload.sh.php:40
 msgid "UCS is not enabled! Change global system configuration to enable UCS"
-msgstr "UCS (Union Catalog Server) ကို ဖွင့်မထားပါ! UCS ကိုဖွင့်ရန် စနစ်ဖွဲ့စည်းပုံကို ပြောင်းလဲပါ။"
+msgstr "UCS (Union Catalog Server) ကို ဖွင့်မထားပါ! UCS ကိုဖွင့်ရန် စနစ်၏ လုပ်ဆောင်ပုံဆိုင်ရာ သတ်မှတ်ချက်များ ပြောင်းလဲပါ။"
 
 #: admin/modules/bibliography/z3950.php:57
 msgid "YAZ extension library is not loaded/installed yet. YAZ library is needed to use z3950 enabled service. Please refer to official <a href=\"http://www.php.net/manual/en/book.yaz.php\" class=\"notAJAX\" target=\"_blank\">YAZ PHP Manual</a> on how to setup/install YAZ extension library in PHP."
@@ -5430,7 +5429,7 @@ msgstr "ဤစာအုပ်သည် ပြန်အပ်ပြီးသာ�
 
 #: admin/modules/circulation/circulation_action.php:302
 msgid "OVERDUED for {overdueDays} days(s) with fines value of"
-msgstr "{overdueDays} ရက် နောက်ကျနေပြီး ကျသင့်သောဒဏ်ကြေးတန်ဖိုး"
+msgstr "{overdueDays} ရက် နောက်ကျနေပြီး ကျသင့်သောဒဏ်ကြေးတန်ဖိုး "
 
 #: admin/modules/circulation/circulation_action.php:315
 #: admin/modules/circulation/loan_list.php:172
@@ -6034,7 +6033,7 @@ msgstr "စာရေးသူ မွေးဖွားသည့်နှစ်"
 #: admin/modules/master_file/topic.php:300
 #: admin/modules/master_file/topic.php:306
 msgid "Authority Files"
-msgstr "ဝေါဟာရအသုံးအနှုန်းများ ဖိုင်"
+msgstr "ထိန်းချုပ်ထားသော စံဝေါဟာရနှင့် အမည်ဖိုင်များ"
 
 #: admin/modules/master_file/author.php:276
 msgid "You are going to edit author data"
@@ -6821,7 +6820,7 @@ msgstr "သင်သည် တည်းဖြတ်ခြင်းကို ပ�
 
 #: admin/modules/master_file/submenu.php:26
 msgid "AUTHORITY FILES"
-msgstr "လုပ်ပိုင်ခွင့်အဆင့်ဖိုင်များ"
+msgstr "ထိန်းချုပ်ထားသော စံဝေါဟာရနှင့် အမည်ဖိုင်များ"
 
 #: admin/modules/master_file/submenu.php:27
 #: lib/SearchEngine/SearchFilter.php:76
@@ -6846,7 +6845,7 @@ msgstr "စာရွက်စာတမ်း ထုတ်ဝေသူ"
 
 #: admin/modules/master_file/submenu.php:32
 msgid "Item Supplier"
-msgstr "ဖြန့်ဝေသူ"
+msgstr "ပေးသွင်းသူ"
 
 #: admin/modules/master_file/submenu.php:33
 msgid "Document Authors"
@@ -6901,41 +6900,41 @@ msgstr "အသုံးပြုထားခြင်းမရှိတော့
 
 #: admin/modules/master_file/supplier.php:56
 msgid "Supplier Name can't be empty"
-msgstr "ဖြန့်ဝေသူအမည်ကို ဗလာထား၍မရပါ။"
+msgstr "ပေးသွင်းသူအမည်ကို ဗလာထား၍မရပါ။"
 
 #: admin/modules/master_file/supplier.php:80
 msgid "Supplier Data Successfully Updated"
-msgstr "ဖြန့်ဝေသူအချက်အလက် အောင်မြင်စွာ ထပ်ဖြည့်ပြီး"
+msgstr "ပေးသွင်းသူအချက်အလက် အောင်မြင်စွာ ထပ်ဖြည့်ပြီး"
 
 #: admin/modules/master_file/supplier.php:82
 msgid "Supplier Data FAILED to Updated. Please Contact System Administrator"
-msgstr "ဖြန့်ဝေသူအချက်အလက် ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။၊ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
+msgstr "ပေးသွင်းသူအချက်အလက် ထပ်ဖြည့်ခြင်း မအောင်မြင်ပါ။၊ ကွန်ပျူတာစနစ်စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/supplier.php:89
 msgid "New Supplier Data Successfully Saved"
-msgstr "ဖြန့်ဝေသူအချက်အလက်အသစ် အောင်မြင်စွာသိမ်းဆည်းနိုင်သည်၊၊"
+msgstr "ပေးသွင်းသူအချက်အလက်အသစ် အောင်မြင်စွာသိမ်းဆည်းနိုင်သည်၊၊"
 
 #: admin/modules/master_file/supplier.php:92
 msgid "Supplier Data FAILED to Save. Please Contact System Administrator"
-msgstr "ဖြန့်ဝေသူအချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
+msgstr "ပေးသွင်းသူအချက်အလက် သိမ်းဆည်းခြင်း မအောင်မြင်ပါ၊ ကွန်ပျုတာစနစ် စီမံခန့်ခွဲသူနှင့် ဆက်သွယ်ပါ။"
 
 #: admin/modules/master_file/supplier.php:124
 msgid "Supplier %s still used by %s item(s)"
-msgstr "ဖြန့်ဝေသူ %s ကို Item %s ခုတွင် အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
+msgstr "ပေးသွင်းသူ %s ကို Item %s ခုတွင် အသုံးပြုနေဆဲ ဖြစ်ပါသည်။"
 
 #: admin/modules/master_file/supplier.php:159
 msgid "Supplier List"
-msgstr "ဖြန့်ဝေသူစာရင်း"
+msgstr "ပေးသွင်းသူစာရင်း"
 
 #: admin/modules/master_file/supplier.php:160
 msgid "Add New Supplier"
-msgstr "ဖြန့်ဝေသူအသစ်ထပ်ဖြည့်ပါ။"
+msgstr "ပေးသွင်းသူအသစ်ထပ်ဖြည့်ပါ။"
 
 #: admin/modules/master_file/supplier.php:203
 #: admin/modules/master_file/supplier.php:232
 #: admin/modules/master_file/supplier.php:238
 msgid "Supplier Name"
-msgstr "ဖြန့်ဝေသူအမည်"
+msgstr "ပေးသွင်းသူအမည်"
 
 #: admin/modules/master_file/supplier.php:205
 #: admin/modules/membership/index.php:583
@@ -6985,7 +6984,7 @@ msgstr "အီးမေးလိပ်စာ"
 
 #: admin/modules/master_file/supplier.php:219
 msgid "You are going to edit Supplier data"
-msgstr "သင်သည် ဖြန့်ဝေသူ၏အချက်အလက်များကို တည်းဖြတ်တော့မည်။"
+msgstr "သင်သည် ပေးသွင်းသူ၏အချက်အလက်များကို တည်းဖြတ်တော့မည်။"
 
 #: admin/modules/master_file/topic.php:74
 msgid "Subject can't be empty"
@@ -8317,11 +8316,11 @@ msgstr "စာကြည့်တိုက်ကို အသုံးမပြ�
 
 #: admin/modules/reporting/member_report.php:117
 msgid "There are no active members in this period"
-msgstr "ဤကာလအတွင်း တက်ကြွသောအဖွဲ့ဝင်များ မရှိပါ။"
+msgstr "ဤကာလအတွင်း စာကြည့်တိုက်အသုံးပြုထားသော အသင်းဝင် မရှိပါ။"
 
 #: admin/modules/reporting/member_report.php:119
 msgid "10 most active members"
-msgstr "စာကြည့်တိုက်ကို အသုံးအများဆုံး အသင်းဝင် ၁၀ ဦး"
+msgstr "စာကြည့်တိုက်ကိုအသုံးပြုမှုအများဆုံးအသင်းဝင် ၁၀ ဦး"
 
 #: admin/modules/reporting/member_report.php:122
 msgid "Membership Data Summary"
@@ -8727,7 +8726,7 @@ msgstr "အချက်အလက်များ ညီညွတ်စေရန�
 
 #: admin/modules/stock_take/resync.php:70
 msgid "Resynchronize Now"
-msgstr "အသစ်တဖန်အချက်အလက်များ ညီညွတ်စေရန်ညှိပါ။"
+msgstr "အသစ်တဖန်အချက်အလက်များ ပြန်လည်ချိန်ညှိရန်"
 
 #: admin/modules/stock_take/st_log.php:56
 #: admin/modules/stock_take/submenu.php:41
@@ -8888,11 +8887,11 @@ msgstr "စာရင်းဇယားကို စာဖိုင်အနေ�
 
 #: admin/modules/stock_take/submenu.php:43
 msgid "Resynchronize"
-msgstr "အကြောင်းအရာ အချက်အလက်များညီညွတ်စေရန် ညှိပါ။"
+msgstr "အချက်အလက်များ ပြန်လည်ချိန်ညှိရန်"
 
 #: admin/modules/stock_take/submenu.php:43
 msgid "Resynchronize bibliographic data with current stock take"
-msgstr "စာကြည့်တိုက်ဆိုင်ရာအချက်အလက်များနှင့် စာကြည့်တိုက်စာရင်းကောက်ယူခြင်းအချက်အလက်များ ညီညွတ်စေရန် ညှိပါ။"
+msgstr "စာကြည့်တိုက်ဆိုင်ရာအချက်အလက်များနှင့် စာကြည့်တိုက်စာရင်းကောက်ယူခြင်းအချက်အလက်များ ပြန်လည်ချိန်ညှိရန်"
 
 #: admin/modules/stock_take/submenu.php:44
 msgid "Finish Current Stock Take Proccess"
@@ -9198,7 +9197,7 @@ msgstr "အညွှန်းဖြည့်စွက်ရန်"
 
 #: admin/modules/system/biblio_indexes.php:155
 msgid "Bibliographic indexing will speed up on cataloging search"
-msgstr "Bibliographic indexing ပြုလုပ်ပါက ကကိတလောက်ရှာဖွေမှု ကို ပိုမိုမြန်ဆန်စေပါမည်။"
+msgstr "Bibliographic indexing ပြုလုပ်ပါက ကက်တလောက်ရှာဖွေမှု ကို ပိုမိုမြန်ဆန်စေပါမည်။"
 
 #: admin/modules/system/biblio_indexes.php:177
 msgid "Total data on biblio: "
@@ -9665,7 +9664,7 @@ msgstr "စာကြည့်တိုက်ပိတ်ရက်သတ်မှ
 #: admin/modules/system/index.php:86 admin/modules/system/index.php:122
 #: admin/modules/system/index.php:315 admin/modules/system/submenu.php:31
 msgid "System Configuration"
-msgstr "ကွန်ပျုတာစနစ်သတ်မှတ်ခြင်း"
+msgstr "စနစ်၏ လုပ်ဆောင်ပုံဆိုင်ရာ သတ်မှတ်ချက်များ"
 
 #: admin/modules/system/index.php:90
 msgid "Your site is not register"
@@ -9681,7 +9680,7 @@ msgstr "သင်၏ ဝဘ်ဆိုဒ်ကို မှတ်ပုံတ�
 
 #: admin/modules/system/index.php:100
 msgid "Modify global application preferences"
-msgstr "ကမ္ဘာလုံးဆိုင်ရာ application ၏ ဦးစားပေးရွေးချယ်မှုကို ပြုပြင်ပါ"
+msgstr "စနစ်တစ်ခုလုံး၏ အသုံးပြုမှုဆိုင်ရာ သတ်မှတ်ချက်များကို ပြင်ဆင်ရန်"
 
 #: admin/modules/system/index.php:122
 msgid "Logo Image removed. Refreshing page"
@@ -9736,7 +9735,7 @@ msgstr "OPAC ရလဒ်စာရင်းတွင် ဖေါ်ပြရန
 
 #: admin/modules/system/index.php:463
 msgid "Show Promoted Titles at Homepage"
-msgstr "မူလကနဦး စာမျက်နှာတွင်အများသိရန် စာအုပ်များပြရန်"
+msgstr "ပင်မစာမျက်နှာတွင် ဦးစားပေးဖော်ပြထားသည့်စာအုပ်များပြရန်"
 
 #: admin/modules/system/index.php:473
 msgid "Don't Print"
@@ -9998,7 +9997,7 @@ msgstr "စိတ်ကြိုက်ပြုလုပ်ပါ"
 
 #: admin/modules/system/module.php:56
 msgid "Module name and path can't be empty"
-msgstr "လုပ်ငန်းအစိတ်အပိုင်းအမည်နှင့် လမ်းကြောင်းကို ဗလာထား၍ မရပါ"
+msgstr "မော်ဂျူးအမည်နှင့် လမ်းကြောင်းကို ဗလာထား၍ မရပါ"
 
 #: admin/modules/system/module.php:62
 msgid "Modules path doesn't exists! Please check again in module base directory"
@@ -10035,7 +10034,7 @@ msgstr "Module အသစ်များ ထပ်ဖြည့်ရန်"
 #: admin/modules/system/module.php:187 admin/modules/system/module.php:207
 #: admin/modules/system/module_priv_form.inc.php:31
 msgid "Module Name"
-msgstr "လုပ်ငန်း အမည်"
+msgstr "မော်ဂျူးအမည်"
 
 #: admin/modules/system/module.php:189
 msgid "Module Path"
@@ -10043,7 +10042,7 @@ msgstr "လုပ်ငန်းအစိတ်အပိုင်း လမ်�
 
 #: admin/modules/system/module.php:191 admin/modules/system/module.php:208
 msgid "Module Description"
-msgstr "လုပ်ငန်းအစိတ်အပိုင်း အကြောင်းအရာ"
+msgstr "မော်ဂျူးအကြောင်းအရာ"
 
 #: admin/modules/system/module.php:195
 msgid "You are going to edit data"
@@ -10728,7 +10727,7 @@ msgstr "ပိုမိုကြည့်ရှုရန်"
 
 #: lib/biblio_list_elasticsearch.inc.php:279 lib/biblio_list_model.inc.php:221
 msgid "Put marked selection into basket"
-msgstr "အမှတ်အသားလုပ်၍ ရွေးချယ်ထားသော စာအုပ်အမည်(များ)ကို Basket တွင် ထည့်ရန်"
+msgstr "အမှတ်အသားလုပ်၍ ရွေးချယ်ထားသော စာအုပ်အမည်(များ)ကို စာအုပ်ရွေးချယ်စာရင်း (Basket) တွင်ထည့်ရန်"
 
 #: lib/comment.inc.php:66
 msgid " comments available"
@@ -10780,7 +10779,7 @@ msgstr "ကွန်ပျူတာစနစ်"
 
 #: lib/lang/string.php:27
 msgid "Reporting"
-msgstr "အစီရင်ခံခြင်း"
+msgstr "အစီရင်ခံစာများ"
 
 #: lib/marc/XMLParser.inc.php:43
 msgid "Can't load MARC Source."
